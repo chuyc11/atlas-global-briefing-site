@@ -1,17 +1,17 @@
 {
   "schemaVersion": 4,
   "reportDate": "2026-07-11",
-  "retrievedAt": "2026-07-11 09:48:49",
+  "retrievedAt": "2026-07-11 10:33:33",
   "issue": "VOL. 019",
-  "contentHash": "9457474592988d426580fbee3d7a3b26d3b47d441affc9b8ae164edbd17ecced",
-  "generatedAt": "2026-07-11T09:48:49+08:00",
+  "contentHash": "73c55c5d9dfd09858a8386c17876f5073f44e4b12ad06a47c13fb16ac1600680",
+  "generatedAt": "2026-07-11T10:33:33+08:00",
   "hero": {
     "eyebrow": "每日全球晨间简报",
     "headline": [
-      "结论：霍尔木兹短线关键",
-      "是承诺能否转成航运执行"
+      "结论：美方把要求从“停止攻击”提高到“公开承诺开放海峡”，",
+      "说明私下沟通不足以恢复航运信心"
     ],
-    "dek": "霍尔木兹短线关键是承诺能否转成航运执行。",
+    "dek": "美方把要求从“停止攻击”提高到“公开承诺开放海峡”，说明私下沟通不足以恢复航运信心；伊朗—阿曼会谈是外交节点，却不是船流恢复的充分条件。",
     "editorNote": "霍尔木兹谈判窗口打开，但船流与保险风险维持高波动"
   },
   "metrics": {
@@ -21,13 +21,13 @@
     "freshness": "受限",
     "sourceHealth": {
       "label": "受限",
-      "score": 43,
-      "rssItemCount": 490,
-      "rssFresh24hCount": 195,
-      "rssStaleCount": 265,
-      "rssUnknownTimestampCount": 30,
-      "rssErrorCount": 6,
-      "rssFallbackCount": 1,
+      "score": 34,
+      "rssItemCount": 286,
+      "rssFresh24hCount": 191,
+      "rssStaleCount": 51,
+      "rssUnknownTimestampCount": 44,
+      "rssErrorCount": 7,
+      "rssFallbackCount": 2,
       "rssSourceCoveragePct": 81.82,
       "chinaErrorCount": 4,
       "chinaFallbackItemCount": 35,
@@ -36,8 +36,8 @@
       "priorCloseMarketItemCount": 10,
       "marketItemCount": 10,
       "limitations": [
-        "RSS 采集出现 6 个错误。",
-        "RSS 使用 1 次回退。",
+        "RSS 采集出现 7 个错误。",
+        "RSS 使用 2 次回退。",
         "中国结构化行情出现 4 个错误，35/35 条使用备用报价。"
       ],
       "method": "artifact_backed_source_health_v1"
@@ -50,22 +50,22 @@
       "mediumScenarioCount": 3,
       "riskItemCount": 3
     },
-    "readingMinutes": 7
+    "readingMinutes": 11
   },
   "events": [
     {
       "category": "地缘",
       "time": "首要变量",
-      "title": "结论：霍尔木兹短线关键是承诺能否转成航运执行",
-      "cardTitle": "结论：霍尔木兹短线关键是承诺能否转成航运执行",
-      "body": "霍尔木兹短线关键是承诺能否转成航运执行。",
-      "implication": "关注外交表态是否转化为可核验的停火、航运与能源价格变化。",
+      "title": "结论：美方把要求从“停止攻击”提高到“公开承诺开放海峡”，说明私下沟通不足以恢复航运信心",
+      "cardTitle": "结论：美方把要求从“停止攻击”提高到“公开承诺开放海峡”，说明私下沟通不足以恢复航运信心",
+      "body": "美方把要求从“停止攻击”提高到“公开承诺开放海峡”，说明私下沟通不足以恢复航运信心；伊朗—阿曼会谈是外交节点，却不是船流恢复的充分条件。",
+      "implication": "伊朗—阿曼会谈是外交节点，却不是船流恢复的充分条件。",
       "source": "查看来源",
       "href": "#sources",
       "facts": [
-        "结论： 霍尔木兹短线关键是承诺能否转成航运执行。",
-        "硬证据： 美国要求伊朗公开保证海峡开放；伊朗外长拟与阿曼会谈。AP 联合国",
-        "机制： 公开文本→执行主体→船流/保险→运价与能源价格。"
+        "结论： 美方把要求从“停止攻击”提高到“公开承诺开放海峡”，说明私下沟通不足以恢复航运信心；伊朗—阿曼会谈是外交节点，却不是船流恢复的充分条件。",
+        "硬证据： AP 报道美国要求伊朗作出公开保证，并指出德黑兰内部权力博弈；IMO专题页 持续汇总海事安全行动，IMO此前明确表示海峡不存在可被可靠保证的“安全通道”。英国、法国与阿曼的联合声明把重点放在通航与降级。",
+        "机制： 时间线是军事打击与袭船→航运公司减少暴露→战争险和运价上升→美国要求公开承诺→阿曼斡旋。关键参与方的激励并不一致：美国需要降低能源与航运尾部风险；伊朗政府需要保留谈判空间，却未必能完全约束所有安全力量；阿曼希望维持中介角色和区域贸易稳定；船东只认实际通航、承保条款与救援能力。"
       ],
       "sources": [
         {
@@ -73,8 +73,12 @@
           "href": "https://apnews.com/article/4bf4fdd1f4d782ff08f60d152909faee"
         },
         {
-          "label": "联合国",
-          "href": "https://www.un.org/en/us-iran-war-renewed-attacks-strait-hormuz-prompts-another-global-energy-alert"
+          "label": "IMO专题页",
+          "href": "https://www.imo.org/en/mediacentre/hottopics/pages/middle-east-strait-of-hormuz.aspx"
+        },
+        {
+          "label": "联合声明",
+          "href": "https://www.gov.uk/government/news/joint-statement-on-the-strait-of-hormuz-3-july-2026"
         }
       ],
       "predictionId": "2026-07-11-P01",
@@ -126,25 +130,29 @@
     {
       "category": "安全",
       "time": "一周窗口",
-      "title": "结论：防务方向得到政策支持，盈利仍需合同和交付验证",
-      "cardTitle": "结论：防务方向得到政策支持，盈利仍需合同和交付验证",
-      "body": "防务方向得到政策支持，盈利仍需合同和交付验证。",
-      "implication": "防务方向得到政策支持，盈利仍需合同和交付验证。",
+      "title": "结论：防务主题得到比昨日更强的政策验证，因为NATO披露了采购与基础设施金额",
+      "cardTitle": "结论：防务主题得到比昨日更强的政策验证，因为NATO披露了采购与基础设施金额",
+      "body": "防务主题得到比昨日更强的政策验证，因为NATO披露了采购与基础设施金额；但盈利判断仍要穿过成员国拨款、承包商产能和交付周期。",
+      "implication": "防务主题得到比昨日更强的政策验证，因为NATO披露了采购与基础设施金额；但盈利判断仍要穿过成员国拨款、承包商产能和交付周期。",
       "source": "查看来源",
       "href": "#sources",
       "facts": [
-        "结论： 防务方向得到政策支持，盈利仍需合同和交付验证。",
-        "硬证据： NATO安卡拉峰会重申高防务投入并强化燃料供应链。NATO 俄燃料供应继续受攻击扰动。AP",
-        "机制： 安全缺口→预算→采购/产线→交付；能源攻击→库存/出口约束。"
+        "结论： 防务主题得到比昨日更强的政策验证，因为NATO披露了采购与基础设施金额；但盈利判断仍要穿过成员国拨款、承包商产能和交付周期。",
+        "硬证据： NATO安卡拉峰会称形成逾€500亿采购安排、未来五年$400亿“Drone Edge”、€270亿燃料基础设施，并计划2026年和2027年分别至少提供€700亿对乌援助，见NATO官方通报。多国打击能力倡议和合同路径见NATO另一份官方材料。乌方关于Patriot本地生产的表述仍是“若获得美国许可”，见乌克兰总统府。",
+        "机制： 威胁评估→成员国预算→联合采购→供应链扩产→交付与维护。燃料基础设施单列，说明联盟关注的不只是武器数量，还包括持续作战和基地韧性。"
       ],
       "sources": [
         {
-          "label": "NATO",
+          "label": "NATO官方通报",
           "href": "https://www.nato.int/en/news-and-events/articles/news/2026/07/08/secretary-general-on-the-ankara-summit-nato-delivers"
         },
         {
-          "label": "AP",
-          "href": "https://apnews.com/article/83bcba8bb972ce248a805bc576a7322c"
+          "label": "NATO另一份官方材料",
+          "href": "https://www.nato.int/en/news-and-events/articles/news/2026/07/07/allies-meet-strike-capability-requirements-with-multinational-initiatives"
+        },
+        {
+          "label": "乌克兰总统府",
+          "href": "https://www.president.gov.ua/en/news/yakbi-ukrayina-otrimala-vid-ameriki-licenziyi-na-virobnictvo-105273"
         }
       ],
       "predictionId": "2026-07-11-P03",
@@ -194,21 +202,25 @@
     {
       "category": "科技",
       "time": "结构迁移",
-      "title": "结论：AI竞争由算力扩展到商业秘密、人才流动和产品治理",
-      "cardTitle": "结论：AI竞争由算力扩展到商业秘密、人才流动和产品治理",
-      "body": "AI竞争由算力扩展到商业秘密、人才流动和产品治理。",
-      "implication": "关注资本开支、基础设施约束和监管变化能否转化为订单与现金流。",
+      "title": "结论：AI仍有硬件韧性，但最新风险不在模型参数，而在商业秘密、人才流动、隐私边界和产品发布治理",
+      "cardTitle": "结论：AI仍有硬件韧性，但最新风险不在模型参数，而在商业秘密、人才流动、隐私边界和产品发布治理",
+      "body": "AI仍有硬件韧性，但最新风险不在模型参数，而在商业秘密、人才流动、隐私边界和产品发布治理；这会扩大芯片、平台、网络安全与应用公司的收益差。",
+      "implication": "这会扩大芯片、平台、网络安全与应用公司的收益差。",
       "source": "查看来源",
       "href": "#sources",
       "facts": [
-        "结论： AI竞争由算力扩展到商业秘密、人才流动和产品治理。",
-        "硬证据： Apple起诉OpenAI及两名前员工；这是诉讼指控而非法院认定。AP Meta撤回受争议AI图像功能。BBC",
-        "机制： 诉讼/隐私风险→招聘、研发和发布节奏变化→合规成本。"
+        "结论： AI仍有硬件韧性，但最新风险不在模型参数，而在商业秘密、人才流动、隐私边界和产品发布治理；这会扩大芯片、平台、网络安全与应用公司的收益差。",
+        "硬证据： AP 报道Apple起诉OpenAI及两名前员工，相关内容是原告诉讼主张，并非法院事实认定；Axios提供人才与竞争背景。Meta撤回引发反弹的AI图像功能，见BBC。价格上SMH +0.54%、QQQ +0.31%，CIBR -2.52%。",
+        "机制： 诉讼可能提高敏感岗位招聘和信息隔离成本；产品争议会提高上线审批、内容溯源和隐私审查门槛；这些成本未必立刻利好网络安全ETF，因为ETF成分公司的订单要经过预算周期。硬件则仍由云资本开支和推理需求驱动。"
       ],
       "sources": [
         {
           "label": "AP",
           "href": "https://apnews.com/article/6fff8833f5889d86406b89a02dd8fb16"
+        },
+        {
+          "label": "Axios",
+          "href": "https://www.axios.com/2026/07/10/apple-sues-openai-trade-secret-theft"
         },
         {
           "label": "BBC",
@@ -263,29 +275,33 @@
     {
       "category": "气候",
       "time": "复合冲击",
-      "title": "结论：高温已是电网和健康运营风险，但不是水务资产上涨的充分条件",
-      "cardTitle": "结论：高温已是电网和健康运营风险，但不是水务资产上涨的充分条件",
-      "body": "高温已是电网和健康运营风险，但不是水务资产上涨的充分条件。",
+      "title": "结论：气候事件已经从气象标题进入疏散、消防、医疗和电网运营，但资产兑现仍需预算和订单证据",
+      "cardTitle": "结论：气候事件已经从气象标题进入疏散、消防、医疗和电网运营，但资产兑现仍需预算和订单证据",
+      "body": "气候事件已经从气象标题进入疏散、消防、医疗和电网运营，但资产兑现仍需预算和订单证据。",
       "implication": "关注极端天气是否进一步影响电网、保险、农业与公共卫生数据。",
       "source": "查看来源",
       "href": "#sources",
       "facts": [
-        "结论： 高温已是电网和健康运营风险，但不是水务资产上涨的充分条件。",
-        "硬证据： WHO称欧洲未来仍可能有致命高温；WMO确认欧洲破纪录热浪。WHO WMO",
-        "机制： 高温→峰值负荷/制冷→停电、医院压力和劳动损失→适应预算。"
+        "结论： 气候事件已经从气象标题进入疏散、消防、医疗和电网运营，但资产兑现仍需预算和订单证据。",
+        "硬证据： WHO欧洲警告更致命的高温周仍可能到来；西班牙山火已造成重大伤亡与失踪，约3,200公顷受影响，消防与军方应急力量投入，见AP。台风Bavi促使浙江疏散约1.7万人、部署约17万救援人员，台湾停课，见AP；香港天文台7月11日08:00记录其中心附近最高持续风速约195公里/小时，见香港天文台。",
+        "机制： 高温提高制冷峰值与医疗压力；干燥与风加速山火并消耗消防资源；台风则冲击港口、电网、道路和供应链。共同的慢变量是电网冗余、水处理、应急物流和保险定价。"
       ],
       "sources": [
         {
-          "label": "WHO",
+          "label": "WHO欧洲",
           "href": "https://www.who.int/europe/news/item/07-07-2026-statement---extreme-heat--more-deadly-weeks-may-still-lie-ahead-for-the-european-region"
         },
         {
-          "label": "WMO",
-          "href": "https://public.wmo.int/media/news/record-breaking-heat-spreads-through-europe"
+          "label": "AP",
+          "href": "https://apnews.com/article/760ecfff1316d56837888de4ab9efa21"
         },
         {
-          "label": "INPE",
-          "href": "https://www.gov.br/inpe/pt-br/assuntos/ultimas-noticias/ciencia-e-tecnologia-do-inpe-tem-papel-de-destaque-na-reducao-historica-do-desmatamento-na-amazonia"
+          "label": "AP",
+          "href": "https://apnews.com/article/b24529aa2b014bf55a6d7fecc4172e6b"
+        },
+        {
+          "label": "香港天文台",
+          "href": "https://www.weather.gov.hk/textonly/v2/tc/tcp.htm"
         }
       ],
       "predictionId": "2026-07-11-P05",
@@ -337,18 +353,26 @@
     {
       "category": "宏观",
       "time": "价格验证",
-      "title": "结论：当前是美股温和上涨、能源和避险未确认的交叉行情",
-      "cardTitle": "结论：当前是美股温和上涨、能源和避险未确认的交叉行情",
-      "body": "当前是美股温和上涨、能源和避险未确认的交叉行情。",
-      "implication": "关注价格、利率、汇率与库存数据能否确认当前市场方向。",
+      "title": "结论：美国资产呈温和风险偏好，中国则是“生产端价格上行、消费与成长资产承压”的混合状态",
+      "cardTitle": "结论：美国资产呈温和风险偏好，中国则是“生产端价格上行、消费与成长资产承压”的混合状态",
+      "body": "美国资产呈温和风险偏好，中国则是“生产端价格上行、消费与成长资产承压”的混合状态；不能把流动性工具等同于全面复苏。",
+      "implication": "不能把流动性工具等同于全面复苏。",
       "source": "查看来源",
       "href": "#sources",
       "facts": [
-        "结论： 当前是美股温和上涨、能源和避险未确认的交叉行情。",
-        "硬证据： SPY +0.43%、QQQ +0.31%，GLD -0.31%、USO -0.28%、TLT -0.02%。PBOC此前宣布1万亿元买断式逆回购。中国政府网",
-        "机制： 风险偏好支撑股票；谈判/替代供应对冲海峡风险；中国流动性只托资金面。"
+        "结论： 美国资产呈温和风险偏好，中国则是“生产端价格上行、消费与成长资产承压”的混合状态；不能把流动性工具等同于全面复苏。",
+        "硬证据： SPY +0.43%、QQQ +0.31%、TLT -0.02%、USO -0.28%。中国国家统计局公布6月CPI同比+1.0%、环比-0.3%，见NBS CPI；PPI同比+4.1%、环比-0.3%，见NBS PPI。此前PBOC实施1万亿元三个月期买断式逆回购，见中国政府网。",
+        "机制： 流动性工具降低资金尾部风险，却不能直接创造终端需求；PPI同比上行可能来自基数、供给或原材料，也可能压缩部分下游利润。CPI环比下降提示需求并非单边增强。"
       ],
       "sources": [
+        {
+          "label": "NBS CPI",
+          "href": "https://www.stats.gov.cn/english/PressRelease/202607/t20260710_1964094.html"
+        },
+        {
+          "label": "NBS PPI",
+          "href": "https://www.stats.gov.cn/english/PressRelease/202607/t20260710_1964093.html"
+        },
         {
           "label": "中国政府网",
           "href": "https://english.www.gov.cn/news/202607/03/content_WS6a47bb34c6d00ca5f9a0c05b.html"
@@ -405,25 +429,33 @@
     {
       "category": "社会",
       "time": "中期影响",
-      "title": "结论：委内瑞拉救援已转入长期医疗与WASH阶段",
-      "cardTitle": "结论：委内瑞拉救援已转入长期医疗与WASH阶段",
-      "body": "委内瑞拉救援已转入长期医疗与WASH阶段。",
-      "implication": "关注下一项可核验的执行与价格信号。",
+      "title": "结论：灾后风险中心正在从最初伤亡转向医院承载、慢性病用药、腹泻与供水卫生",
+      "cardTitle": "结论：灾后风险中心正在从最初伤亡转向医院承载、慢性病用药、腹泻与供水卫生",
+      "body": "灾后风险中心正在从最初伤亡转向医院承载、慢性病用药、腹泻与供水卫生；这类二次冲击通常持续更久。",
+      "implication": "这类二次冲击通常持续更久。",
       "source": "查看来源",
       "href": "#sources",
       "facts": [
-        "结论： 委内瑞拉救援已转入长期医疗与WASH阶段。",
-        "硬证据： 灾区慢病治疗中断和腹泻上升。AP 联合国扩大医疗与供水援助。UN Geneva",
-        "机制： 住房/供水受损→治疗中断与传染风险→长期公共支出。"
+        "结论： 灾后风险中心正在从最初伤亡转向医院承载、慢性病用药、腹泻与供水卫生；这类二次冲击通常持续更久。",
+        "硬证据： PAHO 7月9日简报与专题页说明区域卫生响应；联合国日内瓦指出医院承压与疾病风险；AP报道慢病治疗中断与腹泻问题。",
+        "机制： 住房和供水受损→人口聚集与卫生条件下降→腹泻/感染风险上升；医院受损和物流中断→胰岛素、透析、心血管等持续治疗受阻。"
       ],
       "sources": [
         {
-          "label": "AP",
-          "href": "https://apnews.com/article/66b3b64d5ad37d7c8a8c0e276d8405a7"
+          "label": "PAHO 7月9日简报",
+          "href": "https://www.paho.org/en/documents/press-briefing-health-response-earthquakes-venezuela-remarks-dr-jarbas-barbosa"
         },
         {
-          "label": "UN Geneva",
-          "href": "https://www.ungeneva.org/es/news-media/news/2026/07/120358/la-onu-amplia-la-ayuda-tras-los-terremotos-en-venezuela-mientras"
+          "label": "专题页",
+          "href": "https://www.paho.org/en/earthquakes-venezuela-2026"
+        },
+        {
+          "label": "联合国日内瓦",
+          "href": "https://www.ungeneva.org/en/news-media/news/2026/07/120277/venezuelas-earthquake-hit-hospitals-pushed-brink-disease-risk-grows"
+        },
+        {
+          "label": "AP",
+          "href": "https://apnews.com/article/66b3b64d5ad37d7c8a8c0e276d8405a7"
         }
       ],
       "predictionId": "2026-07-11-P05",
@@ -475,16 +507,16 @@
     {
       "category": "中国",
       "time": "结构分化",
-      "title": "A股：上证 -1.00%、沪深300 -1.96%、创业板 -4.37%、科创50 -5.53%",
-      "cardTitle": "A股：上证 -1.00%、沪深300 -1.96%、创业板 -4.37%、科创50 -5.53%",
-      "body": "上证 -1.00%、沪深300 -1.96%、创业板 -4.37%、科创50 -5.53%；588000.SH -5.11%、半导体ETF -6.93%、军工ETF +3.06%。白酒、银行、公用事业相对抗跌。",
-      "implication": "588000.SH -5.11%、半导体ETF -6.93%、军工ETF +3.06%。白酒、银行、公用事业相对抗跌。",
+      "title": "A股价格：上证 -1.00%、沪深300 -1.96%、深证成指 -2.29%、创业板 -4.37%、科创50 -…",
+      "cardTitle": "A股价格：上证 -1.00%、沪深300 -1.96%、深证成指 -2.29%、创业板 -4.37%、科创50 -…",
+      "body": "上证 -1.00%、沪深300 -1.96%、深证成指 -2.29%、创业板 -4.37%、科创50 -5.53%；588000.SH -5.11%、512480.SH -6.93%，512660.SH +3.06%、600900.SH +0.94%。这是显著的风格再定价，不是普通指数回调。",
+      "implication": "588000.SH -5.11%、512480.SH -6.93%，512660.SH +3.06%、600900.SH +0.94%。这是显著的风格再定价，不是普通指数回调。",
       "source": "查看来源",
       "href": "#sources",
       "facts": [
-        "A股： 上证 -1.00%、沪深300 -1.96%、创业板 -4.37%、科创50 -5.53%；588000.SH -5.11%、半导体ETF -6.93%、军工ETF +3.06%。白酒、银行、公用事业相对抗跌。",
-        "香港： 恒指 +0.60%、恒科 -0.21%；2800.HK +0.65%、3033.HK -0.13%，内部差异大于指数方向。",
-        "驱动： PBOC流动性支持资金面，但社融、消费、地产、盈利未同步确认。"
+        "A股价格： 上证 -1.00%、沪深300 -1.96%、深证成指 -2.29%、创业板 -4.37%、科创50 -5.53%；588000.SH -5.11%、512480.SH -6.93%，512660.SH +3.06%、600900.SH +0.94%。这是显著的风格再定价，不是普通指数回调。",
+        "香港价格： 恒生指数 +0.60%，恒生科技 -0.21%；2800.HK +0.65%、3033.HK -0.13%、阿里巴巴 +2.04%，说明宽基与平台内部仍分化。",
+        "宏观映射： 6月CPI同比回升与PPI同比上行改善名义价格环境，但环比仍弱；PBOC工具支持资金面，不替代需求和盈利验证。"
       ],
       "sources": [
         {
@@ -599,8 +631,20 @@
           "href": "https://apnews.com/article/4bf4fdd1f4d782ff08f60d152909faee"
         },
         {
-          "label": "联合国",
-          "href": "https://www.un.org/en/us-iran-war-renewed-attacks-strait-hormuz-prompts-another-global-energy-alert"
+          "label": "IMO专题页",
+          "href": "https://www.imo.org/en/mediacentre/hottopics/pages/middle-east-strait-of-hormuz.aspx"
+        },
+        {
+          "label": "联合声明",
+          "href": "https://www.gov.uk/government/news/joint-statement-on-the-strait-of-hormuz-3-july-2026"
+        },
+        {
+          "label": "NBS CPI",
+          "href": "https://www.stats.gov.cn/english/PressRelease/202607/t20260710_1964094.html"
+        },
+        {
+          "label": "NBS PPI",
+          "href": "https://www.stats.gov.cn/english/PressRelease/202607/t20260710_1964093.html"
         },
         {
           "label": "中国政府网",
@@ -657,6 +701,10 @@
           "href": "https://apnews.com/article/6fff8833f5889d86406b89a02dd8fb16"
         },
         {
+          "label": "Axios",
+          "href": "https://www.axios.com/2026/07/10/apple-sues-openai-trade-secret-theft"
+        },
+        {
           "label": "BBC",
           "href": "https://www.bbc.co.uk/news/articles/c2dy6e8klw0o"
         }
@@ -706,12 +754,16 @@
       ],
       "sourceRefs": [
         {
-          "label": "NATO",
+          "label": "NATO官方通报",
           "href": "https://www.nato.int/en/news-and-events/articles/news/2026/07/08/secretary-general-on-the-ankara-summit-nato-delivers"
         },
         {
-          "label": "AP",
-          "href": "https://apnews.com/article/83bcba8bb972ce248a805bc576a7322c"
+          "label": "NATO另一份官方材料",
+          "href": "https://www.nato.int/en/news-and-events/articles/news/2026/07/07/allies-meet-strike-capability-requirements-with-multinational-initiatives"
+        },
+        {
+          "label": "乌克兰总统府",
+          "href": "https://www.president.gov.ua/en/news/yakbi-ukrayina-otrimala-vid-ameriki-licenziyi-na-virobnictvo-105273"
         }
       ]
     },
@@ -769,6 +821,14 @@
       ],
       "sourceRefs": [
         {
+          "label": "NBS CPI",
+          "href": "https://www.stats.gov.cn/english/PressRelease/202607/t20260710_1964094.html"
+        },
+        {
+          "label": "NBS PPI",
+          "href": "https://www.stats.gov.cn/english/PressRelease/202607/t20260710_1964093.html"
+        },
+        {
           "label": "中国政府网",
           "href": "https://english.www.gov.cn/news/202607/03/content_WS6a47bb34c6d00ca5f9a0c05b.html"
         }
@@ -820,24 +880,36 @@
       ],
       "sourceRefs": [
         {
-          "label": "WHO",
+          "label": "WHO欧洲",
           "href": "https://www.who.int/europe/news/item/07-07-2026-statement---extreme-heat--more-deadly-weeks-may-still-lie-ahead-for-the-european-region"
         },
         {
-          "label": "WMO",
-          "href": "https://public.wmo.int/media/news/record-breaking-heat-spreads-through-europe"
+          "label": "AP",
+          "href": "https://apnews.com/article/760ecfff1316d56837888de4ab9efa21"
         },
         {
-          "label": "INPE",
-          "href": "https://www.gov.br/inpe/pt-br/assuntos/ultimas-noticias/ciencia-e-tecnologia-do-inpe-tem-papel-de-destaque-na-reducao-historica-do-desmatamento-na-amazonia"
+          "label": "AP",
+          "href": "https://apnews.com/article/b24529aa2b014bf55a6d7fecc4172e6b"
+        },
+        {
+          "label": "香港天文台",
+          "href": "https://www.weather.gov.hk/textonly/v2/tc/tcp.htm"
+        },
+        {
+          "label": "PAHO 7月9日简报",
+          "href": "https://www.paho.org/en/documents/press-briefing-health-response-earthquakes-venezuela-remarks-dr-jarbas-barbosa"
+        },
+        {
+          "label": "专题页",
+          "href": "https://www.paho.org/en/earthquakes-venezuela-2026"
+        },
+        {
+          "label": "联合国日内瓦",
+          "href": "https://www.ungeneva.org/en/news-media/news/2026/07/120277/venezuelas-earthquake-hit-hospitals-pushed-brink-disease-risk-grows"
         },
         {
           "label": "AP",
           "href": "https://apnews.com/article/66b3b64d5ad37d7c8a8c0e276d8405a7"
-        },
-        {
-          "label": "UN Geneva",
-          "href": "https://www.ungeneva.org/es/news-media/news/2026/07/120358/la-onu-amplia-la-ayuda-tras-los-terremotos-en-venezuela-mientras"
         }
       ]
     },
@@ -886,6 +958,14 @@
         }
       ],
       "sourceRefs": [
+        {
+          "label": "NBS CPI",
+          "href": "https://www.stats.gov.cn/english/PressRelease/202607/t20260710_1964094.html"
+        },
+        {
+          "label": "NBS PPI",
+          "href": "https://www.stats.gov.cn/english/PressRelease/202607/t20260710_1964093.html"
+        },
         {
           "label": "中国政府网",
           "href": "https://english.www.gov.cn/news/202607/03/content_WS6a47bb34c6d00ca5f9a0c05b.html"
@@ -972,27 +1052,27 @@
       "allocations": [
         {
           "label": "现金",
-          "pct": 59.9
+          "pct": 29.9
         },
         {
           "label": "SMH",
-          "pct": 11.0
+          "pct": 23.0
         },
         {
           "label": "ITA",
-          "pct": 9.1
+          "pct": 17.1
         },
         {
           "label": "其他",
-          "pct": 20.0
+          "pct": 30.0
         }
       ],
       "accountId": "global-briefing-us-paper-trading",
       "asOf": "2026-07-11",
       "baseCurrency": "USD",
       "initialCash": 100000.0,
-      "cash": 60000.0,
-      "cashPct": 59.85,
+      "cash": 30000.0,
+      "cashPct": 29.93,
       "equity": 100249.91,
       "realizedPnl": 0.0,
       "positions": [
@@ -1003,16 +1083,16 @@
           "currency": "USD",
           "baseCurrency": "USD",
           "fxToBase": 1.0,
-          "quantity": 18.0491,
-          "avgCost": 609.45,
+          "quantity": 37.688,
+          "avgCost": 610.2733,
           "lastPrice": 611.03,
-          "marketValue": 11028.52,
-          "marketValueNative": 11028.52,
-          "costBasis": 11000.0,
+          "marketValue": 23028.52,
+          "marketValueNative": 23028.52,
+          "costBasis": 23000.0,
           "unrealizedPnl": 28.52,
-          "returnPct": 0.26,
-          "priceDate": "2026-07-10",
-          "priceSource": "work/global-briefing/data/market-snapshot-2026-07-11.json; yfinance.download batch"
+          "returnPct": 0.12,
+          "priceDate": "2026-07-11",
+          "priceSource": "data/market-snapshot-2026-07-11.json; yfinance close 2026-07-10"
         },
         {
           "symbol": "ITA",
@@ -1021,16 +1101,34 @@
           "currency": "USD",
           "baseCurrency": "USD",
           "fxToBase": 1.0,
-          "quantity": 38.2684,
-          "avgCost": 209.05,
+          "quantity": 71.7328,
+          "avgCost": 223.0501,
           "lastPrice": 239.06,
-          "marketValue": 9148.43,
-          "marketValueNative": 9148.43,
-          "costBasis": 8000.0,
+          "marketValue": 17148.43,
+          "marketValueNative": 17148.43,
+          "costBasis": 16000.0,
           "unrealizedPnl": 1148.43,
-          "returnPct": 14.36,
-          "priceDate": "2026-07-10",
-          "priceSource": "work/global-briefing/data/market-snapshot-2026-07-11.json; yfinance.download batch"
+          "returnPct": 7.18,
+          "priceDate": "2026-07-11",
+          "priceSource": "data/market-snapshot-2026-07-11.json; yfinance close 2026-07-10; NATO Ankara summit"
+        },
+        {
+          "symbol": "GLD",
+          "exchange": "NYSE ARCA",
+          "marketType": "US",
+          "currency": "USD",
+          "baseCurrency": "USD",
+          "fxToBase": 1.0,
+          "quantity": 26.5245,
+          "avgCost": 377.01,
+          "lastPrice": 377.01,
+          "marketValue": 10000.0,
+          "marketValueNative": 10000.0,
+          "costBasis": 10000.0,
+          "unrealizedPnl": 0.0,
+          "returnPct": 0.0,
+          "priceDate": "2026-07-11",
+          "priceSource": "data/market-snapshot-2026-07-11.json; yfinance close 2026-07-10; AP/IMO Hormuz evidence"
         },
         {
           "symbol": "JETS",
@@ -1094,34 +1192,34 @@
     },
     "china": {
       "name": "CHINA 虚拟组合",
-      "value": "102,513.83",
-      "return": "+2.51%",
-      "returnPct": 2.51,
+      "value": "102,494.23",
+      "return": "+2.49%",
+      "returnPct": 2.49,
       "allocations": [
         {
           "label": "现金",
-          "pct": 65.3
+          "pct": 31.1
         },
         {
           "label": "510300.SH",
-          "pct": 11.3
+          "pct": 20.7
         },
         {
-          "label": "588000.SH",
-          "pct": 11.0
+          "label": "512660.SH",
+          "pct": 14.7
         },
         {
           "label": "其他",
-          "pct": 12.4
+          "pct": 33.5
         }
       ],
       "accountId": "global-briefing-china-paper-trading",
       "asOf": "2026-07-11",
       "baseCurrency": "CNY",
       "initialCash": 100000.0,
-      "cash": 66938.2,
-      "cashPct": 65.3,
-      "equity": 102513.83,
+      "cash": 31849.24,
+      "cashPct": 31.07,
+      "equity": 102494.23,
       "realizedPnl": 0.0,
       "positions": [
         {
@@ -1131,16 +1229,34 @@
           "currency": "CNY",
           "baseCurrency": "CNY",
           "fxToBase": 1.0,
-          "quantity": 2400.0,
-          "avgCost": 4.82,
+          "quantity": 4400.0,
+          "avgCost": 4.8252,
           "lastPrice": 4.829,
-          "marketValue": 11589.6,
-          "marketValueNative": 11589.6,
-          "costBasis": 11568.0,
-          "unrealizedPnl": 21.6,
-          "returnPct": 0.19,
-          "priceDate": "2026-07-10",
-          "priceSource": "work/global-briefing/data/china-market-snapshot-2026-07-11.json; Tencent quote fallback"
+          "marketValue": 21247.6,
+          "marketValueNative": 21247.6,
+          "costBasis": 21231.0,
+          "unrealizedPnl": 16.6,
+          "returnPct": 0.08,
+          "priceDate": "2026-07-11",
+          "priceSource": "data/china-market-snapshot-2026-07-11.json; Tencent quote fallback; NBS/PBOC"
+        },
+        {
+          "symbol": "512660.SH",
+          "exchange": "SH",
+          "marketType": "A_SHARE",
+          "currency": "CNY",
+          "baseCurrency": "CNY",
+          "fxToBase": 1.0,
+          "quantity": 11800.0,
+          "avgCost": 1.2667,
+          "lastPrice": 1.281,
+          "marketValue": 15115.8,
+          "marketValueNative": 15115.8,
+          "costBasis": 14947.2,
+          "unrealizedPnl": 168.6,
+          "returnPct": 1.13,
+          "priceDate": "2026-07-11",
+          "priceSource": "data/china-market-snapshot-2026-07-11.json; Tencent quote fallback; NATO procurement evidence"
         },
         {
           "symbol": "588000.SH",
@@ -1161,22 +1277,40 @@
           "priceSource": "work/global-briefing/data/china-market-snapshot-2026-07-11.json; Tencent quote fallback"
         },
         {
-          "symbol": "512660.SH",
+          "symbol": "2800.HK",
+          "exchange": "HK",
+          "marketType": "HK",
+          "currency": "HKD",
+          "baseCurrency": "CNY",
+          "fxToBase": 0.92,
+          "quantity": 400.0,
+          "avgCost": 24.6325,
+          "lastPrice": 24.62,
+          "marketValue": 9060.16,
+          "marketValueNative": 9848.0,
+          "costBasis": 9064.76,
+          "unrealizedPnl": -4.6,
+          "returnPct": -0.05,
+          "priceDate": "2026-07-11",
+          "priceSource": "data/china-market-snapshot-2026-07-11.json; Tencent quote fallback"
+        },
+        {
+          "symbol": "600900.SH",
           "exchange": "SH",
           "marketType": "A_SHARE",
           "currency": "CNY",
           "baseCurrency": "CNY",
           "fxToBase": 1.0,
-          "quantity": 5600.0,
-          "avgCost": 1.25,
-          "lastPrice": 1.281,
-          "marketValue": 7173.6,
-          "marketValueNative": 7173.6,
-          "costBasis": 7000.0,
-          "unrealizedPnl": 173.6,
-          "returnPct": 2.48,
-          "priceDate": "2026-07-10",
-          "priceSource": "work/global-briefing/data/china-market-snapshot-2026-07-11.json; Tencent quote fallback"
+          "quantity": 300.0,
+          "avgCost": 28.0467,
+          "lastPrice": 28.03,
+          "marketValue": 8409.0,
+          "marketValueNative": 8409.0,
+          "costBasis": 8414.0,
+          "unrealizedPnl": -5.0,
+          "returnPct": -0.06,
+          "priceDate": "2026-07-11",
+          "priceSource": "data/china-market-snapshot-2026-07-11.json; Tencent quote fallback; WHO/WMO heat evidence"
         },
         {
           "symbol": "3033.HK",
@@ -1204,16 +1338,16 @@
     }
   },
   "watchlist": [
-    "伊朗—阿曼会谈与海峡执行文本。",
-    "船流、战争险、油价是否同向。",
-    "Apple—OpenAI诉讼是否改变运营。",
-    "A股科创/半导体宽度与承接。",
-    "欧洲高温是否转成停电或医院压力。"
+    "伊朗—阿曼会谈是否产生有执行主体、时间表和监督方式的文本。",
+    "霍尔木兹实际船流、战争险和油价是否同向，而不是只看政治声明。",
+    "Apple—OpenAI案件是否出现公司答辩、禁令请求或运营变化。",
+    "Bavi路径、浙江/台湾损失与港口、电网恢复速度。",
+    "西班牙山火失踪人员、过火面积与跨区域消防资源压力。"
   ],
   "risks": [
-    "有谈判而船流不恢复：外交与实体风险脱节。",
-    "SMH涨、CIBR跌且诉讼增加：AI内部相关性下降。",
-    "科创持续弱于宽基：政策托底仅是局部流动性。"
+    "外交—实体脱节： 有会谈但船流与保险不恢复，说明政治标题不能消除执行风险。",
+    "AI相关性下降： SMH强、CIBR弱，意味着组合需要链条级而不是主题级风控。",
+    "中国拥挤出清： 若科创和半导体继续弱于宽基，政策托底仅能降低尾部风险，不能阻止估值压缩。"
   ],
   "sources": [
     {
@@ -1221,48 +1355,80 @@
       "href": "https://apnews.com/article/4bf4fdd1f4d782ff08f60d152909faee"
     },
     {
-      "label": "联合国",
-      "href": "https://www.un.org/en/us-iran-war-renewed-attacks-strait-hormuz-prompts-another-global-energy-alert"
+      "label": "IMO专题页",
+      "href": "https://www.imo.org/en/mediacentre/hottopics/pages/middle-east-strait-of-hormuz.aspx"
+    },
+    {
+      "label": "联合声明",
+      "href": "https://www.gov.uk/government/news/joint-statement-on-the-strait-of-hormuz-3-july-2026"
     },
     {
       "label": "AP",
       "href": "https://apnews.com/article/6fff8833f5889d86406b89a02dd8fb16"
     },
     {
+      "label": "Axios",
+      "href": "https://www.axios.com/2026/07/10/apple-sues-openai-trade-secret-theft"
+    },
+    {
       "label": "BBC",
       "href": "https://www.bbc.co.uk/news/articles/c2dy6e8klw0o"
     },
     {
-      "label": "WHO",
+      "label": "WHO欧洲",
       "href": "https://www.who.int/europe/news/item/07-07-2026-statement---extreme-heat--more-deadly-weeks-may-still-lie-ahead-for-the-european-region"
     },
     {
-      "label": "WMO",
-      "href": "https://public.wmo.int/media/news/record-breaking-heat-spreads-through-europe"
-    },
-    {
-      "label": "INPE",
-      "href": "https://www.gov.br/inpe/pt-br/assuntos/ultimas-noticias/ciencia-e-tecnologia-do-inpe-tem-papel-de-destaque-na-reducao-historica-do-desmatamento-na-amazonia"
-    },
-    {
-      "label": "NATO",
-      "href": "https://www.nato.int/en/news-and-events/articles/news/2026/07/08/secretary-general-on-the-ankara-summit-nato-delivers"
+      "label": "AP",
+      "href": "https://apnews.com/article/760ecfff1316d56837888de4ab9efa21"
     },
     {
       "label": "AP",
-      "href": "https://apnews.com/article/83bcba8bb972ce248a805bc576a7322c"
+      "href": "https://apnews.com/article/b24529aa2b014bf55a6d7fecc4172e6b"
+    },
+    {
+      "label": "香港天文台",
+      "href": "https://www.weather.gov.hk/textonly/v2/tc/tcp.htm"
+    },
+    {
+      "label": "NATO官方通报",
+      "href": "https://www.nato.int/en/news-and-events/articles/news/2026/07/08/secretary-general-on-the-ankara-summit-nato-delivers"
+    },
+    {
+      "label": "NATO另一份官方材料",
+      "href": "https://www.nato.int/en/news-and-events/articles/news/2026/07/07/allies-meet-strike-capability-requirements-with-multinational-initiatives"
+    },
+    {
+      "label": "乌克兰总统府",
+      "href": "https://www.president.gov.ua/en/news/yakbi-ukrayina-otrimala-vid-ameriki-licenziyi-na-virobnictvo-105273"
+    },
+    {
+      "label": "NBS CPI",
+      "href": "https://www.stats.gov.cn/english/PressRelease/202607/t20260710_1964094.html"
+    },
+    {
+      "label": "NBS PPI",
+      "href": "https://www.stats.gov.cn/english/PressRelease/202607/t20260710_1964093.html"
     },
     {
       "label": "中国政府网",
       "href": "https://english.www.gov.cn/news/202607/03/content_WS6a47bb34c6d00ca5f9a0c05b.html"
     },
     {
-      "label": "AP",
-      "href": "https://apnews.com/article/66b3b64d5ad37d7c8a8c0e276d8405a7"
+      "label": "PAHO 7月9日简报",
+      "href": "https://www.paho.org/en/documents/press-briefing-health-response-earthquakes-venezuela-remarks-dr-jarbas-barbosa"
     },
     {
-      "label": "UN Geneva",
-      "href": "https://www.ungeneva.org/es/news-media/news/2026/07/120358/la-onu-amplia-la-ayuda-tras-los-terremotos-en-venezuela-mientras"
+      "label": "专题页",
+      "href": "https://www.paho.org/en/earthquakes-venezuela-2026"
+    },
+    {
+      "label": "联合国日内瓦",
+      "href": "https://www.ungeneva.org/en/news-media/news/2026/07/120277/venezuelas-earthquake-hit-hospitals-pushed-brink-disease-risk-grows"
+    },
+    {
+      "label": "AP",
+      "href": "https://apnews.com/article/66b3b64d5ad37d7c8a8c0e276d8405a7"
     }
   ],
   "system": {
@@ -1442,9 +1608,11 @@
   },
   "forecastReviews": [],
   "frameworkUpdates": [
-    "地缘验证采用承诺—执行—船流—保险—价格五层门禁。",
-    "AI拆为硬件、基建、合规、应用四链。",
-    "中国成长单日涨逾5%后，必须通过次日承接与宽度门槛；结构化数据缺失默认HOLD。"
+    "地缘事件采用“声明—执行主体—实体流量—保险—资产价格”五层门禁。",
+    "AI拆为硬件、基础设施、合规与应用四链，分别计算证据质量、价格趋势、宽度、催化和流动性。",
+    "中国成长在单日急涨后必须通过连续两日承接；回退行情源使置信度自动降一级。",
+    "激进策略以提高资金使用率为目标，但不得突破单仓35%、日动作4次、现金2%和4%日损熔断。",
+    "复盘先判断事件对错，再判断传导对错；“新闻判断正确、资产映射错误”必须单独计为失败来源。"
   ],
   "evolution": {
     "active_rules": [
@@ -1613,27 +1781,33 @@
   },
   "reportQuality": {
     "passed": true,
-    "characterCount": 5654,
-    "sourceCount": 12,
+    "characterCount": 9668,
+    "sourceCount": 20,
     "coreDecisionCount": 5,
     "primaryThesisCount": 5,
     "topicSectionCount": 6,
-    "sourceDomainCount": 9,
+    "sourceDomainCount": 13,
+    "deepResearchMode": true,
+    "deepResearchEnforced": false,
+    "deepResearchEnforceFromDate": "2026-07-12",
+    "minimumCharacters": 5000,
+    "maximumCharacters": 12000,
+    "minimumDistinctLinks": 12,
+    "minimumDistinctDomains": 8,
     "observationCount": 7,
     "fillerCount": 0,
     "repeatedPairCount": 0,
-    "decisionLayerDensityPct": 34.09,
+    "decisionLayerDensityPct": 30.0,
     "errors": [],
     "warnings": [],
     "repeatedPairs": []
   },
   "limitations": [
-    "> 截至09:50（Asia/Shanghai），覆盖最近约24小时。美股为7月10日收盘；中国行情为腾讯回退报价，AKShare四类结构化接口超时，故中国结论最高为中置信。",
-    "|588000.SH/SSE|科创承接|连续去拥挤|宽度/成交；腾讯回退|",
-    "限制： AKShare四类接口超时，35个标的使用腾讯回退报价，仅支持中置信映射。",
-    "主要来源已逐项链接于正文：AP、UN、BBC、WHO、WMO、INPE、NATO、中国政府网及本地行情快照。RSS限制：The Hindu、Caixin Global、IAEA返回403；AKShare四类行情超时，均已用独立公开来源或腾讯报价补充并降置信。",
-    "RSS 采集出现 6 个错误。",
-    "RSS 使用 1 次回退。",
+    "> 截至 10:35（Asia/Shanghai），主窗口为最近24小时，必要背景回看30日。今天为周六：美国与中国价格均为7月10日收盘，不是实时盘中报价。中国35个标的由腾讯回退源提供，AKShare结构化接口超时，故中国交易映射最高为中置信。RSS只用于发现线索；核心结论均回到政府、国际组织、公司/法院材料或高质量通讯社复核。",
+    "数据限制： 腾讯回退报价时间为7月11日抓取、对应7月10日收盘；结构化接口失败，因此不使用盘中措辞，不把单一报价源升级为高置信基本面判断。",
+    "3. 中国成长在单日急涨后必须通过连续两日承接；回退行情源使置信度自动降一级。",
+    "RSS 采集出现 7 个错误。",
+    "RSS 使用 2 次回退。",
     "中国结构化行情出现 4 个错误，35/35 条使用备用报价。"
   ]
 }
