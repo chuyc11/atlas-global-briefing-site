@@ -1,34 +1,34 @@
 {
   "schemaVersion": 4,
-  "reportDate": "2026-07-11",
-  "retrievedAt": "2026-07-11 10:33:33",
-  "issue": "VOL. 019",
-  "contentHash": "73c55c5d9dfd09858a8386c17876f5073f44e4b12ad06a47c13fb16ac1600680",
-  "generatedAt": "2026-07-11T10:33:33+08:00",
+  "reportDate": "2026-07-12",
+  "retrievedAt": "2026-07-12 01:29:07",
+  "issue": "VOL. 020",
+  "contentHash": "8ab39432e66c0a8de8133dc0916580ed5c835c0860ee85e26d4b5607b37ca3ee",
+  "generatedAt": "2026-07-12T01:29:07+08:00",
   "hero": {
     "eyebrow": "每日全球晨间简报",
     "headline": [
-      "结论：美方把要求从“停止攻击”提高到“公开承诺开放海峡”，",
-      "说明私下沟通不足以恢复航运信心"
+      "结论：当前最重要的不是口头上是否继续谈，",
+      "而是能否出现同时约束袭船、…"
     ],
-    "dek": "美方把要求从“停止攻击”提高到“公开承诺开放海峡”，说明私下沟通不足以恢复航运信心；伊朗—阿曼会谈是外交节点，却不是船流恢复的充分条件。",
-    "editorNote": "霍尔木兹谈判窗口打开，但船流与保险风险维持高波动"
+    "dek": "当前最重要的不是口头上是否继续谈，而是能否出现同时约束袭船、军事打击和执行监督的公开文本。报复表态使短期内形成完整文本的概率下降，但没有证明谈判已经终止。",
+    "editorNote": "美伊在7月13日前不会形成包含执行主体、时间表和航运监督机制的公开降级文本"
   },
   "metrics": {
-    "riskTemperature": 71,
+    "riskTemperature": 67,
     "posture": "谨慎均衡",
     "signalCount": 7,
     "freshness": "受限",
     "sourceHealth": {
       "label": "受限",
-      "score": 34,
-      "rssItemCount": 286,
-      "rssFresh24hCount": 191,
-      "rssStaleCount": 51,
-      "rssUnknownTimestampCount": 44,
-      "rssErrorCount": 7,
-      "rssFallbackCount": 2,
-      "rssSourceCoveragePct": 81.82,
+      "score": 42,
+      "rssItemCount": 281,
+      "rssFresh24hCount": 171,
+      "rssStaleCount": 93,
+      "rssUnknownTimestampCount": 17,
+      "rssErrorCount": 6,
+      "rssFallbackCount": 1,
+      "rssSourceCoveragePct": 72.73,
       "chinaErrorCount": 4,
       "chinaFallbackItemCount": 35,
       "chinaItemCount": 35,
@@ -36,8 +36,8 @@
       "priorCloseMarketItemCount": 10,
       "marketItemCount": 10,
       "limitations": [
-        "RSS 采集出现 7 个错误。",
-        "RSS 使用 2 次回退。",
+        "RSS 采集出现 6 个错误。",
+        "RSS 使用 1 次回退。",
         "中国结构化行情出现 4 个错误，35/35 条使用备用报价。"
       ],
       "method": "artifact_backed_source_health_v1"
@@ -47,171 +47,144 @@
       "calibrated": false,
       "formula": "20 + 高概率情景×8 + 中概率情景×4 + 风险条目×5，上限100",
       "highScenarioCount": 3,
-      "mediumScenarioCount": 3,
+      "mediumScenarioCount": 2,
       "riskItemCount": 3
     },
-    "readingMinutes": 11
+    "readingMinutes": 10
   },
   "events": [
     {
       "category": "地缘",
       "time": "首要变量",
-      "title": "结论：美方把要求从“停止攻击”提高到“公开承诺开放海峡”，说明私下沟通不足以恢复航运信心",
-      "cardTitle": "结论：美方把要求从“停止攻击”提高到“公开承诺开放海峡”，说明私下沟通不足以恢复航运信心",
-      "body": "美方把要求从“停止攻击”提高到“公开承诺开放海峡”，说明私下沟通不足以恢复航运信心；伊朗—阿曼会谈是外交节点，却不是船流恢复的充分条件。",
-      "implication": "伊朗—阿曼会谈是外交节点，却不是船流恢复的充分条件。",
+      "title": "结论：当前最重要的不是口头上是否继续谈，而是能否出现同时约束袭船、军事打击和执行监督的公开文本",
+      "cardTitle": "结论：当前最重要的不是口头上是否继续谈，而是能否出现同时约束袭船、军事打击和执行监督的公开文本",
+      "body": "当前最重要的不是口头上是否继续谈，而是能否出现同时约束袭船、军事打击和执行监督的公开文本。报复表态使短期内形成完整文本的概率下降，但没有证明谈判已经终止。",
+      "implication": "关注外交表态是否转化为可核验的停火、航运与能源价格变化。",
       "source": "查看来源",
       "href": "#sources",
       "facts": [
-        "结论： 美方把要求从“停止攻击”提高到“公开承诺开放海峡”，说明私下沟通不足以恢复航运信心；伊朗—阿曼会谈是外交节点，却不是船流恢复的充分条件。",
-        "硬证据： AP 报道美国要求伊朗作出公开保证，并指出德黑兰内部权力博弈；IMO专题页 持续汇总海事安全行动，IMO此前明确表示海峡不存在可被可靠保证的“安全通道”。英国、法国与阿曼的联合声明把重点放在通航与降级。",
-        "机制： 时间线是军事打击与袭船→航运公司减少暴露→战争险和运价上升→美国要求公开承诺→阿曼斡旋。关键参与方的激励并不一致：美国需要降低能源与航运尾部风险；伊朗政府需要保留谈判空间，却未必能完全约束所有安全力量；阿曼希望维持中介角色和区域贸易稳定；船东只认实际通航、承保条款与救援能力。"
+        "结论： 当前最重要的不是口头上是否继续谈，而是能否出现同时约束袭船、军事打击和执行监督的公开文本。报复表态使短期内形成完整文本的概率下降，但没有证明谈判已经终止。",
+        "硬证据： AP报道伊朗最高领袖Mojtaba Khamenei称报复“必须实施”，并记录美国继续威胁打击；Axios独立报道同一表态；Reuters Connect保存伊朗国家电视台播报材料。表态和通讯社转述不等同于攻击已经执行。",
+        "机制： 领导层报复承诺提高国内政治退让成本；美国威胁提高误判风险；阿曼等调停方若不能提供监督与违约处理，船东和保险人不会只依据外交标题恢复暴露。"
       ],
       "sources": [
         {
           "label": "AP",
-          "href": "https://apnews.com/article/4bf4fdd1f4d782ff08f60d152909faee"
+          "href": "https://apnews.com/article/533b52cf249314ba1d9b5f9a30b1ca43"
         },
         {
-          "label": "IMO专题页",
-          "href": "https://www.imo.org/en/mediacentre/hottopics/pages/middle-east-strait-of-hormuz.aspx"
+          "label": "Axios",
+          "href": "https://www.axios.com/2026/07/11/iran-trump-revenge-assassination"
         },
         {
-          "label": "联合声明",
-          "href": "https://www.gov.uk/government/news/joint-statement-on-the-strait-of-hormuz-3-july-2026"
+          "label": "Reuters Connect",
+          "href": "https://www.reutersconnect.com/item/irans-supreme-leader-vows-revenge-for-the-death-of-his-father/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX1ZBMzQxMjEyMDMyMDI2UlAx"
         }
       ],
-      "predictionId": "2026-07-11-P01",
+      "predictionId": "2026-07-12-P02",
       "relatedPredictionIds": [
-        "2026-07-11-P01"
+        "2026-07-12-P02"
       ],
-      "analysis": "霍尔木兹谈判窗口打开，但船流与保险风险维持高波动",
+      "analysis": "美伊在7月13日前不会形成包含执行主体、时间表和航运监督机制的公开降级文本",
       "confidence": "高",
       "horizon": "1日",
       "drivers": [
-        "美国要求伊朗公开保证海峡开放并停止袭船",
-        "伊朗与阿曼会谈成为下一验证点",
-        "实体通航和保险成本尚未正常化"
+        "伊朗最高领袖公开承诺报复，美国继续威胁打击，调停仍未形成执行文本"
       ],
-      "beneficiaries": [
-        "黄金与防务对冲",
-        "航运保险",
-        "非海峡能源供应"
-      ],
-      "pressures": [
-        "航空旅游",
-        "高耗能制造",
-        "依赖海峡进口的亚洲经济体"
-      ],
+      "beneficiaries": [],
+      "pressures": [],
       "verificationSignals": [
-        "每日船舶通过量",
-        "战争险保费",
-        "美伊与阿曼官方文本",
-        "Brent、GLD、JETS相对表现"
+        "美伊或阿曼官方文本",
+        "霍尔木兹通航与战争险",
+        "公开停火执行主体"
       ],
       "instruments": [
         {
           "symbol": "GLD",
           "exchange": "NYSE Arca",
-          "type": "ETF",
-          "thesis": "观察地缘与实际利率共同作用下的避险需求",
-          "risk": "美元和实际利率可压过地缘风险"
+          "type": "观察标的",
+          "thesis": "等待进一步验证",
+          "risk": "存在价格与执行偏差风险"
         },
         {
           "symbol": "JETS",
           "exchange": "NYSE Arca",
-          "type": "ETF",
-          "thesis": "观察燃油、保险和需求对航空的净影响",
-          "risk": "油价下跌可能抵消航运风险"
+          "type": "观察标的",
+          "thesis": "等待进一步验证",
+          "risk": "存在价格与执行偏差风险"
         }
       ],
-      "id": "2026-07-11-01-地缘"
+      "id": "2026-07-12-01-地缘"
     },
     {
       "category": "安全",
       "time": "一周窗口",
-      "title": "结论：防务主题得到比昨日更强的政策验证，因为NATO披露了采购与基础设施金额",
-      "cardTitle": "结论：防务主题得到比昨日更强的政策验证，因为NATO披露了采购与基础设施金额",
-      "body": "防务主题得到比昨日更强的政策验证，因为NATO披露了采购与基础设施金额；但盈利判断仍要穿过成员国拨款、承包商产能和交付周期。",
-      "implication": "防务主题得到比昨日更强的政策验证，因为NATO披露了采购与基础设施金额；但盈利判断仍要穿过成员国拨款、承包商产能和交付周期。",
+      "title": "结论：俄乌冲突的短期变量是防空弹药消耗、无人机规模与能源运输设施损伤",
+      "cardTitle": "结论：俄乌冲突的短期变量是防空弹药消耗、无人机规模与能源运输设施损伤",
+      "body": "俄乌冲突的短期变量是防空弹药消耗、无人机规模与能源运输设施损伤；防务ETF只有在合同、产能和相对收益同时确认时才构成资产映射。",
+      "implication": "防务ETF只有在合同、产能和相对收益同时确认时才构成资产映射。",
       "source": "查看来源",
       "href": "#sources",
       "facts": [
-        "结论： 防务主题得到比昨日更强的政策验证，因为NATO披露了采购与基础设施金额；但盈利判断仍要穿过成员国拨款、承包商产能和交付周期。",
-        "硬证据： NATO安卡拉峰会称形成逾€500亿采购安排、未来五年$400亿“Drone Edge”、€270亿燃料基础设施，并计划2026年和2027年分别至少提供€700亿对乌援助，见NATO官方通报。多国打击能力倡议和合同路径见NATO另一份官方材料。乌方关于Patriot本地生产的表述仍是“若获得美国许可”，见乌克兰总统府。",
-        "机制： 威胁评估→成员国预算→联合采购→供应链扩产→交付与维护。燃料基础设施单列，说明联盟关注的不只是武器数量，还包括持续作战和基地韧性。"
+        "结论： 俄乌冲突的短期变量是防空弹药消耗、无人机规模与能源运输设施损伤；防务ETF只有在合同、产能和相对收益同时确认时才构成资产映射。",
+        "硬证据： AP报道俄罗斯一夜发射12枚导弹、其中6枚弹道导弹，以及121架无人机，并记录乌方对油轮的打击；乌克兰总统府保存总统与安全部门的官方更新；Le Monde提供基辅防空压力的独立现场背景。交战双方损失声明仍需分别归因。",
+        "机制： 大规模无人机与弹道导弹消耗拦截弹和雷达资源；对油轮、炼化和燃料设施的攻击把战场压力传到运输、库存与保险；最终资产收益仍取决于采购、交付与估值。"
       ],
       "sources": [
         {
-          "label": "NATO官方通报",
-          "href": "https://www.nato.int/en/news-and-events/articles/news/2026/07/08/secretary-general-on-the-ankara-summit-nato-delivers"
-        },
-        {
-          "label": "NATO另一份官方材料",
-          "href": "https://www.nato.int/en/news-and-events/articles/news/2026/07/07/allies-meet-strike-capability-requirements-with-multinational-initiatives"
+          "label": "AP",
+          "href": "https://apnews.com/article/578044d589f94cc985b699ffcf301297"
         },
         {
           "label": "乌克兰总统府",
-          "href": "https://www.president.gov.ua/en/news/yakbi-ukrayina-otrimala-vid-ameriki-licenziyi-na-virobnictvo-105273"
+          "href": "https://www.president.gov.ua/en/news/last"
+        },
+        {
+          "label": "Le Monde",
+          "href": "https://www.lemonde.fr/en/international/article/2026/07/11/war-in-ukraine-kyiv-spends-sleepless-nights-underground-as-russia-intensifies-attacks_6755371_4.html"
         }
       ],
-      "predictionId": "2026-07-11-P03",
+      "predictionId": "2026-07-12-P04",
       "relatedPredictionIds": [
-        "2026-07-11-P03"
+        "2026-07-12-P04"
       ],
-      "analysis": "NATO防务与燃料供应链承诺继续转化为采购验证",
-      "confidence": "中",
+      "analysis": "俄乌双方在7月19日前至少再出现一次由官方确认的大规模导弹、无人机或能源运输设施打击",
+      "confidence": "高",
       "horizon": "1周",
       "drivers": [
-        "NATO安卡拉峰会重申高防务投入路径",
-        "联盟宣布强化燃料供应链",
-        "乌俄双方继续打击燃料基础设施"
+        "俄罗斯单夜发射12枚导弹和121架无人机，乌方同时扩大对油轮与能源链打击"
       ],
-      "beneficiaries": [
-        "防空与反无人机",
-        "军工电子",
-        "军事燃料与物流"
-      ],
-      "pressures": [
-        "俄能源出口链",
-        "黑海与波罗的海高风险航运"
-      ],
+      "beneficiaries": [],
+      "pressures": [],
       "verificationSignals": [
-        "NATO成员采购合同",
-        "Patriot许可与产线文件",
-        "俄柴油出口和加油站供应数据"
+        "乌克兰总统府和紧急服务通报",
+        "俄罗斯官方损失声明",
+        "独立通讯社交叉确认"
       ],
       "instruments": [
         {
           "symbol": "ITA",
           "exchange": "NYSE Arca",
-          "type": "ETF",
-          "thesis": "观察美国防务工业订单与补库",
-          "risk": "采购延迟或事件已计价"
-        },
-        {
-          "symbol": "512660.SH",
-          "exchange": "SSE",
-          "type": "ETF",
-          "thesis": "仅观察中国本地军工风险偏好，不假设直接承接NATO订单",
-          "risk": "跨市场盈利传导弱且主题波动高"
+          "type": "观察标的",
+          "thesis": "等待进一步验证",
+          "risk": "存在价格与执行偏差风险"
         }
       ],
-      "id": "2026-07-11-02-安全"
+      "id": "2026-07-12-02-安全"
     },
     {
       "category": "科技",
       "time": "结构迁移",
-      "title": "结论：AI仍有硬件韧性，但最新风险不在模型参数，而在商业秘密、人才流动、隐私边界和产品发布治理",
-      "cardTitle": "结论：AI仍有硬件韧性，但最新风险不在模型参数，而在商业秘密、人才流动、隐私边界和产品发布治理",
-      "body": "AI仍有硬件韧性，但最新风险不在模型参数，而在商业秘密、人才流动、隐私边界和产品发布治理；这会扩大芯片、平台、网络安全与应用公司的收益差。",
-      "implication": "这会扩大芯片、平台、网络安全与应用公司的收益差。",
+      "title": "结论：Apple对OpenAI及前员工的诉讼把AI硬件竞争从产品路线延伸到人才、商业秘密和供应链信息治理",
+      "cardTitle": "结论：Apple对OpenAI及前员工的诉讼把AI硬件竞争从产品路线延伸到人才、商业秘密和供应链信息治理",
+      "body": "Apple对OpenAI及前员工的诉讼把AI硬件竞争从产品路线延伸到人才、商业秘密和供应链信息治理；现阶段只能确认“Apple提出指控”，不能把指控写成法院事实，也不能自动推导CIBR或SMH上涨。",
+      "implication": "现阶段只能确认“Apple提出指控”，不能把指控写成法院事实，也不能自动推导CIBR或SMH上涨。",
       "source": "查看来源",
       "href": "#sources",
       "facts": [
-        "结论： AI仍有硬件韧性，但最新风险不在模型参数，而在商业秘密、人才流动、隐私边界和产品发布治理；这会扩大芯片、平台、网络安全与应用公司的收益差。",
-        "硬证据： AP 报道Apple起诉OpenAI及两名前员工，相关内容是原告诉讼主张，并非法院事实认定；Axios提供人才与竞争背景。Meta撤回引发反弹的AI图像功能，见BBC。价格上SMH +0.54%、QQQ +0.31%，CIBR -2.52%。",
-        "机制： 诉讼可能提高敏感岗位招聘和信息隔离成本；产品争议会提高上线审批、内容溯源和隐私审查门槛；这些成本未必立刻利好网络安全ETF，因为ETF成分公司的订单要经过预算周期。硬件则仍由云资本开支和推理需求驱动。"
+        "结论： Apple对OpenAI及前员工的诉讼把AI硬件竞争从产品路线延伸到人才、商业秘密和供应链信息治理；现阶段只能确认“Apple提出指控”，不能把指控写成法院事实，也不能自动推导CIBR或SMH上涨。",
+        "硬证据： AP梳理Apple在加州联邦法院提出的商业秘密主张并记录OpenAI回应；Axios补充招聘与硬件竞争背景；CBS交叉确认诉讼请求。以上均是诉状主张和被告回应，尚无实体裁判。",
+        "机制： 诉讼可能提高敏感岗位招聘、设备归还、数据隔离与供应商沟通成本；只有当禁令、产品延期、招聘变化或合规订单出现时，才形成经营传导。"
       ],
       "sources": [
         {
@@ -223,741 +196,198 @@
           "href": "https://www.axios.com/2026/07/10/apple-sues-openai-trade-secret-theft"
         },
         {
-          "label": "BBC",
-          "href": "https://www.bbc.co.uk/news/articles/c2dy6e8klw0o"
+          "label": "CBS",
+          "href": "https://www.cbsnews.com/news/apple-sues-openai-chatgpt-stealing-trade-secrets/"
         }
       ],
-      "predictionId": "2026-07-11-P02",
-      "relatedPredictionIds": [
-        "2026-07-11-P02"
-      ],
-      "analysis": "AI硬件维持韧性，但法律、估值与基础设施约束提高分化",
-      "confidence": "中",
-      "horizon": "1日",
+      "predictionId": "",
+      "relatedPredictionIds": [],
+      "analysis": "现阶段只能确认“Apple提出指控”，不能把指控写成法院事实，也不能自动推导CIBR或SMH上涨。",
+      "confidence": "待验证",
+      "horizon": "结构迁移",
       "drivers": [
-        "Apple起诉OpenAI并指控商业秘密被盗",
-        "Meta撤回引发反弹的AI图像功能",
-        "SMH小幅跑赢QQQ但CIBR明显下跌"
+        "结论： Apple对OpenAI及前员工的诉讼把AI硬件竞争从产品路线延伸到人才、商业秘密和供应链信息治理；现阶段只能确认“Apple提出指控”，不能把指控写成法院事实，也不能自动推导CIBR或SMH上涨。",
+        "硬证据： AP梳理Apple在加州联邦法院提出的商业秘密主张并记录OpenAI回应；Axios补充招聘与硬件竞争背景；CBS交叉确认诉讼请求。以上均是诉状主张和被告回应，尚无实体裁判。",
+        "机制： 诉讼可能提高敏感岗位招聘、设备归还、数据隔离与供应商沟通成本；只有当禁令、产品延期、招聘变化或合规订单出现时，才形成经营传导。"
       ],
-      "beneficiaries": [
-        "合规与身份验证",
-        "知识产权治理",
-        "选择性半导体硬件"
-      ],
-      "pressures": [
-        "无清晰治理路径的消费AI",
-        "高估值纯AI beta",
-        "受许可约束的数据中心项目"
-      ],
+      "beneficiaries": [],
+      "pressures": [],
       "verificationSignals": [
-        "法院文件与公司回应",
-        "云厂商capex/现金流指引",
-        "SMH和CIBR相对QQQ表现"
+        "现阶段只能确认“Apple提出指控”，不能把指控写成法院事实，也不能自动推导CIBR或SMH上涨。"
       ],
-      "instruments": [
-        {
-          "symbol": "SMH",
-          "exchange": "NASDAQ",
-          "type": "ETF",
-          "thesis": "观察AI硬件订单和半导体相对强度",
-          "risk": "估值、出口管制与capex回报下修"
-        },
-        {
-          "symbol": "CIBR",
-          "exchange": "NASDAQ",
-          "type": "ETF",
-          "thesis": "观察合规与安全支出能否转成企业收入",
-          "risk": "新闻风险未必对应ETF成分股订单"
-        }
-      ],
-      "id": "2026-07-11-03-科技"
+      "instruments": [],
+      "id": "2026-07-12-03-科技"
     },
     {
       "category": "气候",
       "time": "复合冲击",
-      "title": "结论：气候事件已经从气象标题进入疏散、消防、医疗和电网运营，但资产兑现仍需预算和订单证据",
-      "cardTitle": "结论：气候事件已经从气象标题进入疏散、消防、医疗和电网运营，但资产兑现仍需预算和订单证据",
-      "body": "气候事件已经从气象标题进入疏散、消防、医疗和电网运营，但资产兑现仍需预算和订单证据。",
+      "title": "结论：台风登陆后逐步减弱，但研究重点应转向交通、电网、港口与防汛响应持续多久",
+      "cardTitle": "结论：台风登陆后逐步减弱，但研究重点应转向交通、电网、港口与防汛响应持续多久",
+      "body": "台风登陆后逐步减弱，但研究重点应转向交通、电网、港口与防汛响应持续多久。周一公用事业相对表现只能作为风险偏好观察，不能证明公司因此盈利。",
       "implication": "关注极端天气是否进一步影响电网、保险、农业与公共卫生数据。",
       "source": "查看来源",
       "href": "#sources",
       "facts": [
-        "结论： 气候事件已经从气象标题进入疏散、消防、医疗和电网运营，但资产兑现仍需预算和订单证据。",
-        "硬证据： WHO欧洲警告更致命的高温周仍可能到来；西班牙山火已造成重大伤亡与失踪，约3,200公顷受影响，消防与军方应急力量投入，见AP。台风Bavi促使浙江疏散约1.7万人、部署约17万救援人员，台湾停课，见AP；香港天文台7月11日08:00记录其中心附近最高持续风速约195公里/小时，见香港天文台。",
-        "机制： 高温提高制冷峰值与医疗压力；干燥与风加速山火并消耗消防资源；台风则冲击港口、电网、道路和供应链。共同的慢变量是电网冗余、水处理、应急物流和保险定价。"
+        "结论： 台风登陆后逐步减弱，但研究重点应转向交通、电网、港口与防汛响应持续多久。周一公用事业相对表现只能作为风险偏好观察，不能证明公司因此盈利。",
+        "硬证据： AP报道Bavi登陆浙江并称超过100万人疏散；香港天文台7月12日08:00仍记录中心附近最高持续风速约140公里/小时；日本气象厅与中国国家气象中心提供独立路径和强度记录。",
+        "机制： 风速下降并不立即消除累积降雨、道路中断、电力抢修和水库调度压力；运营恢复速度决定经济损失，风暴名称本身不决定资产方向。"
       ],
       "sources": [
         {
-          "label": "WHO欧洲",
-          "href": "https://www.who.int/europe/news/item/07-07-2026-statement---extreme-heat--more-deadly-weeks-may-still-lie-ahead-for-the-european-region"
-        },
-        {
           "label": "AP",
-          "href": "https://apnews.com/article/760ecfff1316d56837888de4ab9efa21"
-        },
-        {
-          "label": "AP",
-          "href": "https://apnews.com/article/b24529aa2b014bf55a6d7fecc4172e6b"
+          "href": "https://apnews.com/article/bfdfdbb239f38b6c22a54c8349ce8d28"
         },
         {
           "label": "香港天文台",
           "href": "https://www.weather.gov.hk/textonly/v2/tc/tcp.htm"
+        },
+        {
+          "label": "日本气象厅",
+          "href": "https://www.data.jma.go.jp/multi/cyclone/index.html"
+        },
+        {
+          "label": "中国国家气象中心",
+          "href": "https://nmc.cn/publish/typhoon/typhoon_new.html"
         }
       ],
-      "predictionId": "2026-07-11-P05",
+      "predictionId": "2026-07-12-P01",
       "relatedPredictionIds": [
-        "2026-07-11-P05"
+        "2026-07-12-P01"
       ],
-      "analysis": "欧洲高温与灾后卫生压力推动适应投入，但资产兑现继续滞后",
+      "analysis": "台风Bavi登陆后继续减弱，但浙江及邻近地区在7月13日前仍出现可核验的交通、电力或防汛运营扰动通报",
       "confidence": "高",
-      "horizon": "1个月",
+      "horizon": "1日",
       "drivers": [
-        "WHO欧洲警告更致命高温周可能到来",
-        "WMO确认西欧最热六月",
-        "委内瑞拉地震灾区出现慢性病和腹泻等卫生压力"
+        "Bavi登陆浙江、超过100万人疏散，香港天文台7月12日仍将其列为台风"
       ],
-      "beneficiaries": [
-        "电网韧性",
-        "冷却与水处理",
-        "公共卫生与灾害物流"
-      ],
-      "pressures": [
-        "户外劳动与旅游",
-        "电力冗余不足的数据中心",
-        "财政脆弱地区"
-      ],
+      "beneficiaries": [],
+      "pressures": [],
       "verificationSignals": [
-        "WHO/WMO与国家警报",
-        "电网负荷和停电",
-        "住院与疾病监测",
-        "保险损失和公共采购"
+        "中国气象部门降级路径",
+        "浙江交通电力恢复通报",
+        "官方伤亡与损失更新"
       ],
       "instruments": [
         {
-          "symbol": "PHO",
-          "exchange": "NASDAQ",
-          "type": "ETF",
-          "thesis": "观察水处理和基础设施订单的慢变量",
-          "risk": "资产传导慢、估值和利率可主导短期表现"
-        },
-        {
           "symbol": "600900.SH",
           "exchange": "SSE",
-          "type": "Stock",
-          "thesis": "观察防御型公用事业相对强度",
-          "risk": "来水、监管与市场风格切换"
+          "type": "观察标的",
+          "thesis": "等待进一步验证",
+          "risk": "存在价格与执行偏差风险"
         }
       ],
-      "id": "2026-07-11-04-气候"
+      "id": "2026-07-12-04-气候"
     },
     {
       "category": "宏观",
       "time": "价格验证",
-      "title": "结论：美国资产呈温和风险偏好，中国则是“生产端价格上行、消费与成长资产承压”的混合状态",
-      "cardTitle": "结论：美国资产呈温和风险偏好，中国则是“生产端价格上行、消费与成长资产承压”的混合状态",
-      "body": "美国资产呈温和风险偏好，中国则是“生产端价格上行、消费与成长资产承压”的混合状态；不能把流动性工具等同于全面复苏。",
-      "implication": "不能把流动性工具等同于全面复苏。",
+      "title": "结论：一周内两次全国停电说明风险来自燃料、老化机组和系统同步的组合",
+      "cardTitle": "结论：一周内两次全国停电说明风险来自燃料、老化机组和系统同步的组合",
+      "body": "一周内两次全国停电说明风险来自燃料、老化机组和系统同步的组合；一次恢复并网不能证明约束解除。",
+      "implication": "一次恢复并网不能证明约束解除。",
       "source": "查看来源",
       "href": "#sources",
       "facts": [
-        "结论： 美国资产呈温和风险偏好，中国则是“生产端价格上行、消费与成长资产承压”的混合状态；不能把流动性工具等同于全面复苏。",
-        "硬证据： SPY +0.43%、QQQ +0.31%、TLT -0.02%、USO -0.28%。中国国家统计局公布6月CPI同比+1.0%、环比-0.3%，见NBS CPI；PPI同比+4.1%、环比-0.3%，见NBS PPI。此前PBOC实施1万亿元三个月期买断式逆回购，见中国政府网。",
-        "机制： 流动性工具降低资金尾部风险，却不能直接创造终端需求；PPI同比上行可能来自基数、供给或原材料，也可能压缩部分下游利润。CPI环比下降提示需求并非单边增强。"
+        "结论： 一周内两次全国停电说明风险来自燃料、老化机组和系统同步的组合；一次恢复并网不能证明约束解除。",
+        "硬证据： AP报道第二次全国停电并引述古巴电力联盟确认；古巴官方媒体Granma此前宣布全国恢复并网；EFE记录本周较早的全国系统崩溃。恢复—再崩溃序列比单一停电标题更有信息量。",
+        "机制： 燃料不足降低可调度容量，老化机组提高故障率，低备用容量使局部故障更容易扩散为系统失稳。"
       ],
       "sources": [
         {
-          "label": "NBS CPI",
-          "href": "https://www.stats.gov.cn/english/PressRelease/202607/t20260710_1964094.html"
+          "label": "AP",
+          "href": "https://apnews.com/article/1a812d96a36c301cba6214767a87630f"
         },
         {
-          "label": "NBS PPI",
-          "href": "https://www.stats.gov.cn/english/PressRelease/202607/t20260710_1964093.html"
+          "label": "Granma",
+          "href": "https://www.granma.cu/cuba/2026-07-08/interconectado-el-sistema-electrico-nacional-08-07-2026-11-07-23"
         },
         {
-          "label": "中国政府网",
-          "href": "https://english.www.gov.cn/news/202607/03/content_WS6a47bb34c6d00ca5f9a0c05b.html"
+          "label": "EFE",
+          "href": "https://efe.com/economia/2026-07-06/cuba-nueva-caida-nacional-sistema-electrico-julio-2026/"
         }
       ],
-      "predictionId": "2026-07-11-P01",
+      "predictionId": "2026-07-12-P03",
       "relatedPredictionIds": [
-        "2026-07-11-P01",
-        "2026-07-11-P04",
-        "2026-07-11-P06"
+        "2026-07-12-P03"
       ],
-      "analysis": "霍尔木兹谈判窗口打开，但船流与保险风险维持高波动",
-      "confidence": "高",
-      "horizon": "1日",
+      "analysis": "古巴电网在7月19日前仍将出现全国性系统失稳、显著供电缺口或大范围轮流停电的官方通报",
+      "confidence": "中",
+      "horizon": "1周",
       "drivers": [
-        "美国要求伊朗公开保证海峡开放并停止袭船",
-        "伊朗与阿曼会谈成为下一验证点",
-        "实体通航和保险成本尚未正常化"
+        "一周内第二次全国停电，燃料短缺与老化电网同时存在"
       ],
-      "beneficiaries": [
-        "黄金与防务对冲",
-        "航运保险",
-        "非海峡能源供应"
-      ],
-      "pressures": [
-        "航空旅游",
-        "高耗能制造",
-        "依赖海峡进口的亚洲经济体"
-      ],
+      "beneficiaries": [],
+      "pressures": [],
       "verificationSignals": [
-        "每日船舶通过量",
-        "战争险保费",
-        "美伊与阿曼官方文本",
-        "Brent、GLD、JETS相对表现"
+        "Unión Eléctrica供需通报",
+        "全国电网同步状态",
+        "燃料和机组可用率"
       ],
-      "instruments": [
-        {
-          "symbol": "GLD",
-          "exchange": "NYSE Arca",
-          "type": "ETF",
-          "thesis": "观察地缘与实际利率共同作用下的避险需求",
-          "risk": "美元和实际利率可压过地缘风险"
-        },
-        {
-          "symbol": "JETS",
-          "exchange": "NYSE Arca",
-          "type": "ETF",
-          "thesis": "观察燃油、保险和需求对航空的净影响",
-          "risk": "油价下跌可能抵消航运风险"
-        }
-      ],
-      "id": "2026-07-11-05-宏观"
+      "instruments": [],
+      "id": "2026-07-12-05-宏观"
     },
     {
       "category": "社会",
       "time": "中期影响",
-      "title": "结论：灾后风险中心正在从最初伤亡转向医院承载、慢性病用药、腹泻与供水卫生",
-      "cardTitle": "结论：灾后风险中心正在从最初伤亡转向医院承载、慢性病用药、腹泻与供水卫生",
-      "body": "灾后风险中心正在从最初伤亡转向医院承载、慢性病用药、腹泻与供水卫生；这类二次冲击通常持续更久。",
-      "implication": "这类二次冲击通常持续更久。",
+      "title": "结论：今天没有足够证据支持新的全球疫情主线",
+      "cardTitle": "结论：今天没有足够证据支持新的全球疫情主线",
+      "body": "今天没有足够证据支持新的全球疫情主线；更可验证的公共卫生风险来自台风疏散与古巴停电对供水、制冷、医院和慢病用药的二次影响。",
+      "implication": "今天没有足够证据支持新的全球疫情主线；更可验证的公共卫生风险来自台风疏散与古巴停电对供水、制冷、医院和慢病用药的二次影响。",
       "source": "查看来源",
       "href": "#sources",
       "facts": [
-        "结论： 灾后风险中心正在从最初伤亡转向医院承载、慢性病用药、腹泻与供水卫生；这类二次冲击通常持续更久。",
-        "硬证据： PAHO 7月9日简报与专题页说明区域卫生响应；联合国日内瓦指出医院承压与疾病风险；AP报道慢病治疗中断与腹泻问题。",
-        "机制： 住房和供水受损→人口聚集与卫生条件下降→腹泻/感染风险上升；医院受损和物流中断→胰岛素、透析、心血管等持续治疗受阻。"
+        "结论： 今天没有足够证据支持新的全球疫情主线；更可验证的公共卫生风险来自台风疏散与古巴停电对供水、制冷、医院和慢病用药的二次影响。",
+        "硬证据： Bavi的大规模疏散见AP登陆报道与香港天文台；古巴停电覆盖全国系统，见AP古巴电网报道。医院和供水对备用电力高度敏感。当前RSS中的健康线索没有达到“一手来源+独立确认”的核心门槛，因此不升级为新疫情判断。",
+        "机制： 疏散和积水增加人群聚集与水卫生压力；长时间停电破坏冷链、制冷、供水和医疗设备连续运行。"
       ],
       "sources": [
         {
-          "label": "PAHO 7月9日简报",
-          "href": "https://www.paho.org/en/documents/press-briefing-health-response-earthquakes-venezuela-remarks-dr-jarbas-barbosa"
-        },
-        {
-          "label": "专题页",
-          "href": "https://www.paho.org/en/earthquakes-venezuela-2026"
-        },
-        {
-          "label": "联合国日内瓦",
-          "href": "https://www.ungeneva.org/en/news-media/news/2026/07/120277/venezuelas-earthquake-hit-hospitals-pushed-brink-disease-risk-grows"
-        },
-        {
-          "label": "AP",
-          "href": "https://apnews.com/article/66b3b64d5ad37d7c8a8c0e276d8405a7"
-        }
-      ],
-      "predictionId": "2026-07-11-P05",
-      "relatedPredictionIds": [
-        "2026-07-11-P05"
-      ],
-      "analysis": "欧洲高温与灾后卫生压力推动适应投入，但资产兑现继续滞后",
-      "confidence": "高",
-      "horizon": "1个月",
-      "drivers": [
-        "WHO欧洲警告更致命高温周可能到来",
-        "WMO确认西欧最热六月",
-        "委内瑞拉地震灾区出现慢性病和腹泻等卫生压力"
-      ],
-      "beneficiaries": [
-        "电网韧性",
-        "冷却与水处理",
-        "公共卫生与灾害物流"
-      ],
-      "pressures": [
-        "户外劳动与旅游",
-        "电力冗余不足的数据中心",
-        "财政脆弱地区"
-      ],
-      "verificationSignals": [
-        "WHO/WMO与国家警报",
-        "电网负荷和停电",
-        "住院与疾病监测",
-        "保险损失和公共采购"
-      ],
-      "instruments": [
-        {
-          "symbol": "PHO",
-          "exchange": "NASDAQ",
-          "type": "ETF",
-          "thesis": "观察水处理和基础设施订单的慢变量",
-          "risk": "资产传导慢、估值和利率可主导短期表现"
-        },
-        {
-          "symbol": "600900.SH",
-          "exchange": "SSE",
-          "type": "Stock",
-          "thesis": "观察防御型公用事业相对强度",
-          "risk": "来水、监管与市场风格切换"
-        }
-      ],
-      "id": "2026-07-11-06-社会"
-    },
-    {
-      "category": "中国",
-      "time": "结构分化",
-      "title": "A股价格：上证 -1.00%、沪深300 -1.96%、深证成指 -2.29%、创业板 -4.37%、科创50 -…",
-      "cardTitle": "A股价格：上证 -1.00%、沪深300 -1.96%、深证成指 -2.29%、创业板 -4.37%、科创50 -…",
-      "body": "上证 -1.00%、沪深300 -1.96%、深证成指 -2.29%、创业板 -4.37%、科创50 -5.53%；588000.SH -5.11%、512480.SH -6.93%，512660.SH +3.06%、600900.SH +0.94%。这是显著的风格再定价，不是普通指数回调。",
-      "implication": "588000.SH -5.11%、512480.SH -6.93%，512660.SH +3.06%、600900.SH +0.94%。这是显著的风格再定价，不是普通指数回调。",
-      "source": "查看来源",
-      "href": "#sources",
-      "facts": [
-        "A股价格： 上证 -1.00%、沪深300 -1.96%、深证成指 -2.29%、创业板 -4.37%、科创50 -5.53%；588000.SH -5.11%、512480.SH -6.93%，512660.SH +3.06%、600900.SH +0.94%。这是显著的风格再定价，不是普通指数回调。",
-        "香港价格： 恒生指数 +0.60%，恒生科技 -0.21%；2800.HK +0.65%、3033.HK -0.13%、阿里巴巴 +2.04%，说明宽基与平台内部仍分化。",
-        "宏观映射： 6月CPI同比回升与PPI同比上行改善名义价格环境，但环比仍弱；PBOC工具支持资金面，不替代需求和盈利验证。"
-      ],
-      "sources": [
-        {
-          "label": "中国政府网",
-          "href": "https://english.www.gov.cn/news/202607/03/content_WS6a47bb34c6d00ca5f9a0c05b.html"
-        }
-      ],
-      "predictionId": "2026-07-11-P04",
-      "relatedPredictionIds": [
-        "2026-07-11-P04",
-        "2026-07-11-P06"
-      ],
-      "analysis": "A股成长从急涨转入高波动再定价，防御和港股内部相对占优",
-      "confidence": "高",
-      "horizon": "1周",
-      "drivers": [
-        "科创50与半导体ETF单日大幅回撤",
-        "军工、白酒、公用事业相对抗跌",
-        "恒生指数上涨但恒生科技近乎持平"
-      ],
-      "beneficiaries": [
-        "高股息公用事业",
-        "部分消费龙头",
-        "军工对冲",
-        "港股宽基"
-      ],
-      "pressures": [
-        "拥挤的国产半导体",
-        "高波动科创成长",
-        "高估值新能源"
-      ],
-      "verificationSignals": [
-        "涨跌家数与成交额",
-        "588000.SH和512480.SH承接",
-        "恒指相对科创50",
-        "官方流动性操作"
-      ],
-      "instruments": [
-        {
-          "symbol": "588000.SH",
-          "exchange": "SSE",
-          "type": "ETF",
-          "thesis": "观察科创拥挤交易能否稳定",
-          "risk": "盈利验证不足和连续去杠杆"
-        },
-        {
-          "symbol": "510300.SH",
-          "exchange": "SSE",
-          "type": "ETF",
-          "thesis": "观察宽基是否获得政策流动性托底",
-          "risk": "需求与盈利修复落后"
-        },
-        {
-          "symbol": "2800.HK",
-          "exchange": "HKEX",
-          "type": "ETF",
-          "thesis": "观察港股宽基相对A股成长的分化",
-          "risk": "美元利率、地缘与南向资金波动"
-        }
-      ],
-      "id": "2026-07-11-07-中国"
-    }
-  ],
-  "scenarios": [
-    {
-      "id": "2026-07-11-P01",
-      "horizon": "1日",
-      "scenario": "霍尔木兹谈判窗口打开，但船流与保险风险维持高波动",
-      "chance": "高",
-      "status": "open",
-      "drivers": [
-        "美国要求伊朗公开保证海峡开放并停止袭船",
-        "伊朗与阿曼会谈成为下一验证点",
-        "实体通航和保险成本尚未正常化"
-      ],
-      "beneficiaries": [
-        "黄金与防务对冲",
-        "航运保险",
-        "非海峡能源供应"
-      ],
-      "pressures": [
-        "航空旅游",
-        "高耗能制造",
-        "依赖海峡进口的亚洲经济体"
-      ],
-      "verificationSignals": [
-        "每日船舶通过量",
-        "战争险保费",
-        "美伊与阿曼官方文本",
-        "Brent、GLD、JETS相对表现"
-      ],
-      "watch": "每日船舶通过量",
-      "instruments": [
-        {
-          "symbol": "GLD",
-          "exchange": "NYSE Arca",
-          "type": "ETF",
-          "thesis": "观察地缘与实际利率共同作用下的避险需求",
-          "risk": "美元和实际利率可压过地缘风险"
-        },
-        {
-          "symbol": "JETS",
-          "exchange": "NYSE Arca",
-          "type": "ETF",
-          "thesis": "观察燃油、保险和需求对航空的净影响",
-          "risk": "油价下跌可能抵消航运风险"
-        }
-      ],
-      "sourceRefs": [
-        {
-          "label": "AP",
-          "href": "https://apnews.com/article/4bf4fdd1f4d782ff08f60d152909faee"
-        },
-        {
-          "label": "IMO专题页",
-          "href": "https://www.imo.org/en/mediacentre/hottopics/pages/middle-east-strait-of-hormuz.aspx"
-        },
-        {
-          "label": "联合声明",
-          "href": "https://www.gov.uk/government/news/joint-statement-on-the-strait-of-hormuz-3-july-2026"
-        },
-        {
-          "label": "NBS CPI",
-          "href": "https://www.stats.gov.cn/english/PressRelease/202607/t20260710_1964094.html"
-        },
-        {
-          "label": "NBS PPI",
-          "href": "https://www.stats.gov.cn/english/PressRelease/202607/t20260710_1964093.html"
-        },
-        {
-          "label": "中国政府网",
-          "href": "https://english.www.gov.cn/news/202607/03/content_WS6a47bb34c6d00ca5f9a0c05b.html"
-        }
-      ]
-    },
-    {
-      "id": "2026-07-11-P02",
-      "horizon": "1日",
-      "scenario": "AI硬件维持韧性，但法律、估值与基础设施约束提高分化",
-      "chance": "中",
-      "status": "open",
-      "drivers": [
-        "Apple起诉OpenAI并指控商业秘密被盗",
-        "Meta撤回引发反弹的AI图像功能",
-        "SMH小幅跑赢QQQ但CIBR明显下跌"
-      ],
-      "beneficiaries": [
-        "合规与身份验证",
-        "知识产权治理",
-        "选择性半导体硬件"
-      ],
-      "pressures": [
-        "无清晰治理路径的消费AI",
-        "高估值纯AI beta",
-        "受许可约束的数据中心项目"
-      ],
-      "verificationSignals": [
-        "法院文件与公司回应",
-        "云厂商capex/现金流指引",
-        "SMH和CIBR相对QQQ表现"
-      ],
-      "watch": "法院文件与公司回应",
-      "instruments": [
-        {
-          "symbol": "SMH",
-          "exchange": "NASDAQ",
-          "type": "ETF",
-          "thesis": "观察AI硬件订单和半导体相对强度",
-          "risk": "估值、出口管制与capex回报下修"
-        },
-        {
-          "symbol": "CIBR",
-          "exchange": "NASDAQ",
-          "type": "ETF",
-          "thesis": "观察合规与安全支出能否转成企业收入",
-          "risk": "新闻风险未必对应ETF成分股订单"
-        }
-      ],
-      "sourceRefs": [
-        {
-          "label": "AP",
-          "href": "https://apnews.com/article/6fff8833f5889d86406b89a02dd8fb16"
-        },
-        {
-          "label": "Axios",
-          "href": "https://www.axios.com/2026/07/10/apple-sues-openai-trade-secret-theft"
-        },
-        {
-          "label": "BBC",
-          "href": "https://www.bbc.co.uk/news/articles/c2dy6e8klw0o"
-        }
-      ]
-    },
-    {
-      "id": "2026-07-11-P03",
-      "horizon": "1周",
-      "scenario": "NATO防务与燃料供应链承诺继续转化为采购验证",
-      "chance": "中",
-      "status": "open",
-      "drivers": [
-        "NATO安卡拉峰会重申高防务投入路径",
-        "联盟宣布强化燃料供应链",
-        "乌俄双方继续打击燃料基础设施"
-      ],
-      "beneficiaries": [
-        "防空与反无人机",
-        "军工电子",
-        "军事燃料与物流"
-      ],
-      "pressures": [
-        "俄能源出口链",
-        "黑海与波罗的海高风险航运"
-      ],
-      "verificationSignals": [
-        "NATO成员采购合同",
-        "Patriot许可与产线文件",
-        "俄柴油出口和加油站供应数据"
-      ],
-      "watch": "NATO成员采购合同",
-      "instruments": [
-        {
-          "symbol": "ITA",
-          "exchange": "NYSE Arca",
-          "type": "ETF",
-          "thesis": "观察美国防务工业订单与补库",
-          "risk": "采购延迟或事件已计价"
-        },
-        {
-          "symbol": "512660.SH",
-          "exchange": "SSE",
-          "type": "ETF",
-          "thesis": "仅观察中国本地军工风险偏好，不假设直接承接NATO订单",
-          "risk": "跨市场盈利传导弱且主题波动高"
-        }
-      ],
-      "sourceRefs": [
-        {
-          "label": "NATO官方通报",
-          "href": "https://www.nato.int/en/news-and-events/articles/news/2026/07/08/secretary-general-on-the-ankara-summit-nato-delivers"
-        },
-        {
-          "label": "NATO另一份官方材料",
-          "href": "https://www.nato.int/en/news-and-events/articles/news/2026/07/07/allies-meet-strike-capability-requirements-with-multinational-initiatives"
-        },
-        {
-          "label": "乌克兰总统府",
-          "href": "https://www.president.gov.ua/en/news/yakbi-ukrayina-otrimala-vid-ameriki-licenziyi-na-virobnictvo-105273"
-        }
-      ]
-    },
-    {
-      "id": "2026-07-11-P04",
-      "horizon": "1周",
-      "scenario": "A股成长从急涨转入高波动再定价，防御和港股内部相对占优",
-      "chance": "高",
-      "status": "open",
-      "drivers": [
-        "科创50与半导体ETF单日大幅回撤",
-        "军工、白酒、公用事业相对抗跌",
-        "恒生指数上涨但恒生科技近乎持平"
-      ],
-      "beneficiaries": [
-        "高股息公用事业",
-        "部分消费龙头",
-        "军工对冲",
-        "港股宽基"
-      ],
-      "pressures": [
-        "拥挤的国产半导体",
-        "高波动科创成长",
-        "高估值新能源"
-      ],
-      "verificationSignals": [
-        "涨跌家数与成交额",
-        "588000.SH和512480.SH承接",
-        "恒指相对科创50",
-        "官方流动性操作"
-      ],
-      "watch": "涨跌家数与成交额",
-      "instruments": [
-        {
-          "symbol": "588000.SH",
-          "exchange": "SSE",
-          "type": "ETF",
-          "thesis": "观察科创拥挤交易能否稳定",
-          "risk": "盈利验证不足和连续去杠杆"
-        },
-        {
-          "symbol": "510300.SH",
-          "exchange": "SSE",
-          "type": "ETF",
-          "thesis": "观察宽基是否获得政策流动性托底",
-          "risk": "需求与盈利修复落后"
-        },
-        {
-          "symbol": "2800.HK",
-          "exchange": "HKEX",
-          "type": "ETF",
-          "thesis": "观察港股宽基相对A股成长的分化",
-          "risk": "美元利率、地缘与南向资金波动"
-        }
-      ],
-      "sourceRefs": [
-        {
-          "label": "NBS CPI",
-          "href": "https://www.stats.gov.cn/english/PressRelease/202607/t20260710_1964094.html"
-        },
-        {
-          "label": "NBS PPI",
-          "href": "https://www.stats.gov.cn/english/PressRelease/202607/t20260710_1964093.html"
-        },
-        {
-          "label": "中国政府网",
-          "href": "https://english.www.gov.cn/news/202607/03/content_WS6a47bb34c6d00ca5f9a0c05b.html"
-        }
-      ]
-    },
-    {
-      "id": "2026-07-11-P05",
-      "horizon": "1个月",
-      "scenario": "欧洲高温与灾后卫生压力推动适应投入，但资产兑现继续滞后",
-      "chance": "高",
-      "status": "open",
-      "drivers": [
-        "WHO欧洲警告更致命高温周可能到来",
-        "WMO确认西欧最热六月",
-        "委内瑞拉地震灾区出现慢性病和腹泻等卫生压力"
-      ],
-      "beneficiaries": [
-        "电网韧性",
-        "冷却与水处理",
-        "公共卫生与灾害物流"
-      ],
-      "pressures": [
-        "户外劳动与旅游",
-        "电力冗余不足的数据中心",
-        "财政脆弱地区"
-      ],
-      "verificationSignals": [
-        "WHO/WMO与国家警报",
-        "电网负荷和停电",
-        "住院与疾病监测",
-        "保险损失和公共采购"
-      ],
-      "watch": "WHO/WMO与国家警报",
-      "instruments": [
-        {
-          "symbol": "PHO",
-          "exchange": "NASDAQ",
-          "type": "ETF",
-          "thesis": "观察水处理和基础设施订单的慢变量",
-          "risk": "资产传导慢、估值和利率可主导短期表现"
-        },
-        {
-          "symbol": "600900.SH",
-          "exchange": "SSE",
-          "type": "Stock",
-          "thesis": "观察防御型公用事业相对强度",
-          "risk": "来水、监管与市场风格切换"
-        }
-      ],
-      "sourceRefs": [
-        {
-          "label": "WHO欧洲",
-          "href": "https://www.who.int/europe/news/item/07-07-2026-statement---extreme-heat--more-deadly-weeks-may-still-lie-ahead-for-the-european-region"
-        },
-        {
-          "label": "AP",
-          "href": "https://apnews.com/article/760ecfff1316d56837888de4ab9efa21"
-        },
-        {
-          "label": "AP",
-          "href": "https://apnews.com/article/b24529aa2b014bf55a6d7fecc4172e6b"
+          "label": "AP登陆报道",
+          "href": "https://apnews.com/article/bfdfdbb239f38b6c22a54c8349ce8d28"
         },
         {
           "label": "香港天文台",
           "href": "https://www.weather.gov.hk/textonly/v2/tc/tcp.htm"
         },
         {
-          "label": "PAHO 7月9日简报",
-          "href": "https://www.paho.org/en/documents/press-briefing-health-response-earthquakes-venezuela-remarks-dr-jarbas-barbosa"
-        },
-        {
-          "label": "专题页",
-          "href": "https://www.paho.org/en/earthquakes-venezuela-2026"
-        },
-        {
-          "label": "联合国日内瓦",
-          "href": "https://www.ungeneva.org/en/news-media/news/2026/07/120277/venezuelas-earthquake-hit-hospitals-pushed-brink-disease-risk-grows"
-        },
-        {
-          "label": "AP",
-          "href": "https://apnews.com/article/66b3b64d5ad37d7c8a8c0e276d8405a7"
+          "label": "AP古巴电网报道",
+          "href": "https://apnews.com/article/1a812d96a36c301cba6214767a87630f"
         }
-      ]
+      ],
+      "predictionId": "",
+      "relatedPredictionIds": [
+        "2026-07-12-P01",
+        "2026-07-12-P03"
+      ],
+      "analysis": "今天没有足够证据支持新的全球疫情主线；更可验证的公共卫生风险来自台风疏散与古巴停电对供水、制冷、医院和慢病用药的二次影响。",
+      "confidence": "待验证",
+      "horizon": "中期影响",
+      "drivers": [
+        "结论： 今天没有足够证据支持新的全球疫情主线；更可验证的公共卫生风险来自台风疏散与古巴停电对供水、制冷、医院和慢病用药的二次影响。",
+        "硬证据： Bavi的大规模疏散见AP登陆报道与香港天文台；古巴停电覆盖全国系统，见AP古巴电网报道。医院和供水对备用电力高度敏感。当前RSS中的健康线索没有达到“一手来源+独立确认”的核心门槛，因此不升级为新疫情判断。",
+        "机制： 疏散和积水增加人群聚集与水卫生压力；长时间停电破坏冷链、制冷、供水和医疗设备连续运行。"
+      ],
+      "beneficiaries": [],
+      "pressures": [],
+      "verificationSignals": [
+        "今天没有足够证据支持新的全球疫情主线；更可验证的公共卫生风险来自台风疏散与古巴停电对供水、制冷、医院和慢病用药的二次影响。"
+      ],
+      "instruments": [],
+      "id": "2026-07-12-06-社会"
     },
     {
-      "id": "2026-07-11-P06",
-      "horizon": "1个月",
-      "scenario": "中国流动性托底延续，但盈利和需求确认落后于主题轮动",
-      "chance": "中",
-      "status": "open",
-      "drivers": [
-        "PBOC维持适度宽松并实施大额流动性工具",
-        "宽基和成长在大涨后同步回撤",
-        "银行、消费、公用事业与港股内部表现分化"
+      "category": "中国",
+      "time": "结构分化",
+      "title": "7月12日是周日，35个中国观察标的仍对应7月10日收盘",
+      "cardTitle": "7月12日是周日，35个中国观察标的仍对应7月10日收盘",
+      "body": "上证 -1.00%、沪深300 -1.96%、创业板 -4.37%、科创50 -5.53%；510300.SH -1.77%、588000.SH -5.11%、512480.SH -6.93%、512660.SH +3.06%。香港方面恒生指数 +0.60%、恒生科技 -0.21%。",
+      "implication": "流动性与名义价格改善不能替代企业盈利和市场宽度验证。",
+      "source": "查看来源",
+      "href": "#sources",
+      "facts": [
+        "7月12日是周日，35个中国观察标的仍对应7月10日收盘。上证 -1.00%、沪深300 -1.96%、创业板 -4.37%、科创50 -5.53%；510300.SH -1.77%、588000.SH -5.11%、512480.SH -6.93%、512660.SH +3.06%。香港方面恒生指数 +0.60%、恒生科技 -0.21%。四个结构化接口均在8秒门限超时，全部标的使用腾讯报价回退，因此今天不生成新的盘中结论，最高只保留中置信相对表现假设。 中国国家统计局此前公布6月CPI同比+1.0%、环比-0.3%，见NBS CPI；PPI同比+4.1%、环比-0.3%，见NBS PPI。流动性与名义价格改善不能替代企业盈利和市场宽度验证。"
       ],
-      "beneficiaries": [
-        "宽基ETF",
-        "高股息公用事业",
-        "盈利可见的消费与平台龙头"
-      ],
-      "pressures": [
-        "缺乏盈利支撑的主题成长",
-        "地产链",
-        "高波动小盘股"
-      ],
-      "verificationSignals": [
-        "PBOC操作和资金利率",
-        "社融与贷款结构",
-        "消费和地产数据",
-        "指数宽度及盈利预期"
-      ],
-      "watch": "PBOC操作和资金利率",
-      "instruments": [
-        {
-          "symbol": "510300.SH",
-          "exchange": "SSE",
-          "type": "ETF",
-          "thesis": "观察政策流动性是否稳定大盘",
-          "risk": "需求疲弱和政策边际收紧"
-        },
-        {
-          "symbol": "9988.HK",
-          "exchange": "HKEX",
-          "type": "Stock",
-          "thesis": "观察云、电商盈利与政策环境能否共振",
-          "risk": "竞争、消费、美元利率与监管"
-        }
-      ],
-      "sourceRefs": [
+      "sources": [
         {
           "label": "NBS CPI",
           "href": "https://www.stats.gov.cn/english/PressRelease/202607/t20260710_1964094.html"
@@ -965,10 +395,241 @@
         {
           "label": "NBS PPI",
           "href": "https://www.stats.gov.cn/english/PressRelease/202607/t20260710_1964093.html"
+        }
+      ],
+      "predictionId": "2026-07-12-P05",
+      "relatedPredictionIds": [
+        "2026-07-12-P05"
+      ],
+      "analysis": "7月13日收盘510300.SH单日回报高于588000.SH，宽基继续相对跑赢拥挤成长",
+      "confidence": "中",
+      "horizon": "1日",
+      "drivers": [
+        "7月10日科创50与半导体ETF大幅回撤，而宽基跌幅较小；周末无新交易价格"
+      ],
+      "beneficiaries": [],
+      "pressures": [],
+      "verificationSignals": [
+        "7月13日两只ETF复权收盘价",
+        "成交额与涨跌家数",
+        "科创相对沪深300强弱"
+      ],
+      "instruments": [
+        {
+          "symbol": "510300.SH",
+          "exchange": "SSE",
+          "type": "观察标的",
+          "thesis": "等待进一步验证",
+          "risk": "存在价格与执行偏差风险"
         },
         {
-          "label": "中国政府网",
-          "href": "https://english.www.gov.cn/news/202607/03/content_WS6a47bb34c6d00ca5f9a0c05b.html"
+          "symbol": "588000.SH",
+          "exchange": "SSE",
+          "type": "观察标的",
+          "thesis": "等待进一步验证",
+          "risk": "存在价格与执行偏差风险"
+        }
+      ],
+      "id": "2026-07-12-07-中国"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "2026-07-12-P01",
+      "horizon": "1日",
+      "scenario": "台风Bavi登陆后继续减弱，但浙江及邻近地区在7月13日前仍出现可核验的交通、电力或防汛运营扰动通报",
+      "chance": "高",
+      "status": "open",
+      "drivers": [
+        "Bavi登陆浙江、超过100万人疏散，香港天文台7月12日仍将其列为台风"
+      ],
+      "beneficiaries": [],
+      "pressures": [],
+      "verificationSignals": [
+        "中国气象部门降级路径",
+        "浙江交通电力恢复通报",
+        "官方伤亡与损失更新"
+      ],
+      "watch": "中国气象部门降级路径",
+      "instruments": [
+        {
+          "symbol": "600900.SH",
+          "exchange": "SSE",
+          "type": "观察标的",
+          "thesis": "等待进一步验证",
+          "risk": "存在价格与执行偏差风险"
+        }
+      ],
+      "sourceRefs": [
+        {
+          "label": "Hong Kong Observatory",
+          "href": "https://www.weather.gov.hk/textonly/v2/tc/tcp.htm"
+        },
+        {
+          "label": "AP",
+          "href": "https://apnews.com/article/bfdfdbb239f38b6c22a54c8349ce8d28"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-12-P02",
+      "horizon": "1日",
+      "scenario": "美伊在7月13日前不会形成包含执行主体、时间表和航运监督机制的公开降级文本",
+      "chance": "高",
+      "status": "open",
+      "drivers": [
+        "伊朗最高领袖公开承诺报复，美国继续威胁打击，调停仍未形成执行文本"
+      ],
+      "beneficiaries": [],
+      "pressures": [],
+      "verificationSignals": [
+        "美伊或阿曼官方文本",
+        "霍尔木兹通航与战争险",
+        "公开停火执行主体"
+      ],
+      "watch": "美伊或阿曼官方文本",
+      "instruments": [
+        {
+          "symbol": "GLD",
+          "exchange": "NYSE Arca",
+          "type": "观察标的",
+          "thesis": "等待进一步验证",
+          "risk": "存在价格与执行偏差风险"
+        },
+        {
+          "symbol": "JETS",
+          "exchange": "NYSE Arca",
+          "type": "观察标的",
+          "thesis": "等待进一步验证",
+          "risk": "存在价格与执行偏差风险"
+        }
+      ],
+      "sourceRefs": [
+        {
+          "label": "AP",
+          "href": "https://apnews.com/article/533b52cf249314ba1d9b5f9a30b1ca43"
+        },
+        {
+          "label": "Axios",
+          "href": "https://www.axios.com/2026/07/11/iran-trump-revenge-assassination"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-12-P05",
+      "horizon": "1日",
+      "scenario": "7月13日收盘510300.SH单日回报高于588000.SH，宽基继续相对跑赢拥挤成长",
+      "chance": "中",
+      "status": "open",
+      "drivers": [
+        "7月10日科创50与半导体ETF大幅回撤，而宽基跌幅较小；周末无新交易价格"
+      ],
+      "beneficiaries": [],
+      "pressures": [],
+      "verificationSignals": [
+        "7月13日两只ETF复权收盘价",
+        "成交额与涨跌家数",
+        "科创相对沪深300强弱"
+      ],
+      "watch": "7月13日两只ETF复权收盘价",
+      "instruments": [
+        {
+          "symbol": "510300.SH",
+          "exchange": "SSE",
+          "type": "观察标的",
+          "thesis": "等待进一步验证",
+          "risk": "存在价格与执行偏差风险"
+        },
+        {
+          "symbol": "588000.SH",
+          "exchange": "SSE",
+          "type": "观察标的",
+          "thesis": "等待进一步验证",
+          "risk": "存在价格与执行偏差风险"
+        }
+      ],
+      "sourceRefs": [
+        {
+          "label": "ATLAS China market snapshot",
+          "href": "https://qt.gtimg.cn/"
+        },
+        {
+          "label": "National Bureau of Statistics of China",
+          "href": "https://www.stats.gov.cn/english/PressRelease/202607/t20260710_1964094.html"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-12-P03",
+      "horizon": "1周",
+      "scenario": "古巴电网在7月19日前仍将出现全国性系统失稳、显著供电缺口或大范围轮流停电的官方通报",
+      "chance": "中",
+      "status": "open",
+      "drivers": [
+        "一周内第二次全国停电，燃料短缺与老化电网同时存在"
+      ],
+      "beneficiaries": [],
+      "pressures": [],
+      "verificationSignals": [
+        "Unión Eléctrica供需通报",
+        "全国电网同步状态",
+        "燃料和机组可用率"
+      ],
+      "watch": "Unión Eléctrica供需通报",
+      "instruments": [],
+      "sourceRefs": [
+        {
+          "label": "Granma",
+          "href": "https://www.granma.cu/cuba/2026-07-08/interconectado-el-sistema-electrico-nacional-08-07-2026-11-07-23"
+        },
+        {
+          "label": "AP",
+          "href": "https://apnews.com/article/1a812d96a36c301cba6214767a87630f"
+        },
+        {
+          "label": "EFE",
+          "href": "https://efe.com/economia/2026-07-06/cuba-nueva-caida-nacional-sistema-electrico-julio-2026/"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-12-P04",
+      "horizon": "1周",
+      "scenario": "俄乌双方在7月19日前至少再出现一次由官方确认的大规模导弹、无人机或能源运输设施打击",
+      "chance": "高",
+      "status": "open",
+      "drivers": [
+        "俄罗斯单夜发射12枚导弹和121架无人机，乌方同时扩大对油轮与能源链打击"
+      ],
+      "beneficiaries": [],
+      "pressures": [],
+      "verificationSignals": [
+        "乌克兰总统府和紧急服务通报",
+        "俄罗斯官方损失声明",
+        "独立通讯社交叉确认"
+      ],
+      "watch": "乌克兰总统府和紧急服务通报",
+      "instruments": [
+        {
+          "symbol": "ITA",
+          "exchange": "NYSE Arca",
+          "type": "观察标的",
+          "thesis": "等待进一步验证",
+          "risk": "存在价格与执行偏差风险"
+        }
+      ],
+      "sourceRefs": [
+        {
+          "label": "AP",
+          "href": "https://apnews.com/article/578044d589f94cc985b699ffcf301297"
+        },
+        {
+          "label": "President of Ukraine",
+          "href": "https://www.president.gov.ua/en/news/last"
+        },
+        {
+          "label": "Le Monde",
+          "href": "https://www.lemonde.fr/en/international/article/2026/07/11/war-in-ukraine-kyiv-spends-sleepless-nights-underground-as-russia-intensifies-attacks_6755371_4.html"
         }
       ]
     }
@@ -1010,7 +671,7 @@
     },
     "china": {
       "label": "中国 / 香港",
-      "asOf": "2026-07-11",
+      "asOf": "2026-07-12",
       "freshness": "报告日",
       "isStale": false,
       "items": [
@@ -1338,29 +999,29 @@
     }
   },
   "watchlist": [
-    "伊朗—阿曼会谈是否产生有执行主体、时间表和监督方式的文本。",
-    "霍尔木兹实际船流、战争险和油价是否同向，而不是只看政治声明。",
-    "Apple—OpenAI案件是否出现公司答辩、禁令请求或运营变化。",
-    "Bavi路径、浙江/台湾损失与港口、电网恢复速度。",
-    "西班牙山火失踪人员、过火面积与跨区域消防资源压力。"
+    "Bavi降级速度与浙江交通、电力、防汛恢复通报。",
+    "美伊或阿曼是否发布包含执行、时间表和监督机制的文本。",
+    "古巴电力联盟是否再次报告显著供电缺口或大范围轮停。",
+    "俄乌下一轮无人机、导弹与能源运输设施打击是否达到预注册阈值。",
+    "Apple诉讼是否出现禁令申请、法院日程或被告正式答辩。"
   ],
   "risks": [
-    "外交—实体脱节： 有会谈但船流与保险不恢复，说明政治标题不能消除执行风险。",
-    "AI相关性下降： SMH强、CIBR弱，意味着组合需要链条级而不是主题级风控。",
-    "中国拥挤出清： 若科创和半导体继续弱于宽基，政策托底仅能降低尾部风险，不能阻止估值压缩。"
+    "外交—执行脱节： 会谈继续但没有监督机制，不能视为航运风险解除。",
+    "灾害—运营脱节： 台风减弱不代表道路、电网和港口即时恢复。",
+    "新闻—资产脱节： 诉讼、军事和气候事实成立，都不自动等于ETF上涨。"
   ],
   "sources": [
     {
       "label": "AP",
-      "href": "https://apnews.com/article/4bf4fdd1f4d782ff08f60d152909faee"
+      "href": "https://apnews.com/article/533b52cf249314ba1d9b5f9a30b1ca43"
     },
     {
-      "label": "IMO专题页",
-      "href": "https://www.imo.org/en/mediacentre/hottopics/pages/middle-east-strait-of-hormuz.aspx"
+      "label": "Axios",
+      "href": "https://www.axios.com/2026/07/11/iran-trump-revenge-assassination"
     },
     {
-      "label": "联合声明",
-      "href": "https://www.gov.uk/government/news/joint-statement-on-the-strait-of-hormuz-3-july-2026"
+      "label": "Reuters Connect",
+      "href": "https://www.reutersconnect.com/item/irans-supreme-leader-vows-revenge-for-the-death-of-his-father/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX1ZBMzQxMjEyMDMyMDI2UlAx"
     },
     {
       "label": "AP",
@@ -1371,36 +1032,48 @@
       "href": "https://www.axios.com/2026/07/10/apple-sues-openai-trade-secret-theft"
     },
     {
-      "label": "BBC",
-      "href": "https://www.bbc.co.uk/news/articles/c2dy6e8klw0o"
-    },
-    {
-      "label": "WHO欧洲",
-      "href": "https://www.who.int/europe/news/item/07-07-2026-statement---extreme-heat--more-deadly-weeks-may-still-lie-ahead-for-the-european-region"
+      "label": "CBS",
+      "href": "https://www.cbsnews.com/news/apple-sues-openai-chatgpt-stealing-trade-secrets/"
     },
     {
       "label": "AP",
-      "href": "https://apnews.com/article/760ecfff1316d56837888de4ab9efa21"
-    },
-    {
-      "label": "AP",
-      "href": "https://apnews.com/article/b24529aa2b014bf55a6d7fecc4172e6b"
+      "href": "https://apnews.com/article/bfdfdbb239f38b6c22a54c8349ce8d28"
     },
     {
       "label": "香港天文台",
       "href": "https://www.weather.gov.hk/textonly/v2/tc/tcp.htm"
     },
     {
-      "label": "NATO官方通报",
-      "href": "https://www.nato.int/en/news-and-events/articles/news/2026/07/08/secretary-general-on-the-ankara-summit-nato-delivers"
+      "label": "日本气象厅",
+      "href": "https://www.data.jma.go.jp/multi/cyclone/index.html"
     },
     {
-      "label": "NATO另一份官方材料",
-      "href": "https://www.nato.int/en/news-and-events/articles/news/2026/07/07/allies-meet-strike-capability-requirements-with-multinational-initiatives"
+      "label": "中国国家气象中心",
+      "href": "https://nmc.cn/publish/typhoon/typhoon_new.html"
+    },
+    {
+      "label": "AP",
+      "href": "https://apnews.com/article/578044d589f94cc985b699ffcf301297"
     },
     {
       "label": "乌克兰总统府",
-      "href": "https://www.president.gov.ua/en/news/yakbi-ukrayina-otrimala-vid-ameriki-licenziyi-na-virobnictvo-105273"
+      "href": "https://www.president.gov.ua/en/news/last"
+    },
+    {
+      "label": "Le Monde",
+      "href": "https://www.lemonde.fr/en/international/article/2026/07/11/war-in-ukraine-kyiv-spends-sleepless-nights-underground-as-russia-intensifies-attacks_6755371_4.html"
+    },
+    {
+      "label": "AP",
+      "href": "https://apnews.com/article/1a812d96a36c301cba6214767a87630f"
+    },
+    {
+      "label": "Granma",
+      "href": "https://www.granma.cu/cuba/2026-07-08/interconectado-el-sistema-electrico-nacional-08-07-2026-11-07-23"
+    },
+    {
+      "label": "EFE",
+      "href": "https://efe.com/economia/2026-07-06/cuba-nueva-caida-nacional-sistema-electrico-julio-2026/"
     },
     {
       "label": "NBS CPI",
@@ -1409,26 +1082,6 @@
     {
       "label": "NBS PPI",
       "href": "https://www.stats.gov.cn/english/PressRelease/202607/t20260710_1964093.html"
-    },
-    {
-      "label": "中国政府网",
-      "href": "https://english.www.gov.cn/news/202607/03/content_WS6a47bb34c6d00ca5f9a0c05b.html"
-    },
-    {
-      "label": "PAHO 7月9日简报",
-      "href": "https://www.paho.org/en/documents/press-briefing-health-response-earthquakes-venezuela-remarks-dr-jarbas-barbosa"
-    },
-    {
-      "label": "专题页",
-      "href": "https://www.paho.org/en/earthquakes-venezuela-2026"
-    },
-    {
-      "label": "联合国日内瓦",
-      "href": "https://www.ungeneva.org/en/news-media/news/2026/07/120277/venezuelas-earthquake-hit-hospitals-pushed-brink-disease-risk-grows"
-    },
-    {
-      "label": "AP",
-      "href": "https://apnews.com/article/66b3b64d5ad37d7c8a8c0e276d8405a7"
     }
   ],
   "system": {
@@ -1608,18 +1261,18 @@
   },
   "forecastReviews": [],
   "frameworkUpdates": [
-    "地缘事件采用“声明—执行主体—实体流量—保险—资产价格”五层门禁。",
-    "AI拆为硬件、基础设施、合规与应用四链，分别计算证据质量、价格趋势、宽度、催化和流动性。",
-    "中国成长在单日急涨后必须通过连续两日承接；回退行情源使置信度自动降一级。",
-    "激进策略以提高资金使用率为目标，但不得突破单仓35%、日动作4次、现金2%和4%日损熔断。",
-    "复盘先判断事件对错，再判断传导对错；“新闻判断正确、资产映射错误”必须单独计为失败来源。"
+    "Proper-scoring分母从今天起只包含到期v2预测；61条旧分类预测作为历史诊断，不再永久稀释新样本覆盖率。",
+    "旧历史的早关、缺评分和重复ID保留为诊断警告，但不再形成永远无法解除的晋升死锁。",
+    "每个命名标的必须有方向、基准、验证规则和独立 evaluation_deadline；周末截止日对齐下一可观察交易时点。",
+    "体育/生活方式新闻不能因“strike”等歧义词进入军事核心队列；World Cup聚类已从核心研究队列移除。",
+    "今日五条v2预测已通过契约验证；在首条样本到期前，Brier、Log Loss和ECE保持不可计算，系统继续 shadow。"
   ],
   "evolution": {
     "active_rules": [
       {
         "instruction": "事实成立不等于标的成立；资产映射必须补相对表现、成交/流量或盈利传导证据。",
         "rule_id": "failure-asset_mapping_error",
-        "trigger_count": 5
+        "trigger_count": 6
       },
       {
         "instruction": "证据不足时保持 open/HOLD，不用模糊措辞包装成 partial 或 validated。",
@@ -1639,12 +1292,17 @@
       {
         "instruction": "预测未到期不得提前关闭；除非记录 terminal_evidence，否则保持 open 并只更新置信度。",
         "rule_id": "failure-time_window_too_short",
-        "trigger_count": 1
+        "trigger_count": 2
+      },
+      {
+        "instruction": "陈旧或假期价格只能标记状态，不能验证当日市场传导。",
+        "rule_id": "failure-data_stale",
+        "trigger_count": 2
       },
       {
         "instruction": "partial/wrong/expired 必须填写 direction、timing、transmission、calibration 四项显式分数和失败原因。",
         "rule_id": "review-explicit-scoring",
-        "trigger_count": 4
+        "trigger_count": 3
       },
       {
         "instruction": "正文只保留结论、硬证据、因果机制、反方证据和证伪信号；背景只出现一次，删除同义改写。",
@@ -1652,21 +1310,20 @@
         "trigger_count": 1
       }
     ],
-    "as_of": "2026-07-10",
+    "as_of": "2026-07-12",
     "boundary": {
       "auto_promote_strategy": false,
       "auto_rewrite_historical_records": false,
       "real_broker_orders_allowed": false
     },
     "gate_reasons": [
-      "optimism_bias: ten or more reviews contain no wrong/expired outcome",
-      "early_closure_bias: forecasts were closed before maturity without terminal evidence",
-      "review_coverage_gap: matured forecasts remain unreviewed",
-      "score_coverage_low: fewer than 80% of reviews have explicit component scores",
-      "explicit_score_coverage_below_80pct"
+      "proper_scoring:minimum_sample",
+      "proper_scoring:resolved_coverage_at_least_80pct",
+      "proper_scoring:brier_at_or_below_threshold",
+      "proper_scoring:ece_at_or_below_threshold"
     ],
     "integrity": {
-      "as_of": "2026-07-10",
+      "as_of": "2026-07-12",
       "early_closed_without_terminal_evidence": [
         "2026-06-12-P02",
         "2026-06-12-P04",
@@ -1705,11 +1362,12 @@
         "2026-07-03-P03",
         "2026-07-03-P04"
       ],
-      "explicit_failure_reason_coverage_pct": 87.1,
-      "explicit_score_coverage_pct": 41.51,
-      "matured_prediction_count": 51,
-      "original_prediction_count": 107,
+      "explicit_failure_reason_coverage_pct": 82.86,
+      "explicit_score_coverage_pct": 42.11,
+      "matured_prediction_count": 61,
+      "original_prediction_count": 118,
       "overdue_unreviewed_prediction_ids": [
+        "2026-06-12-P03",
         "2026-06-13-P03",
         "2026-06-13-P06",
         "2026-06-14-P02",
@@ -1722,25 +1380,64 @@
         "2026-06-27-P02",
         "2026-06-27-P03",
         "2026-07-04-P02",
+        "2026-07-04-P03",
+        "2026-07-04-P04",
         "2026-07-05-P02",
+        "2026-07-05-P03",
+        "2026-07-05-P04",
         "2026-07-06-P01",
         "2026-07-06-P02"
       ],
-      "review_count": 53,
+      "review_count": 57,
       "status_counts": {
-        "partial": 31,
+        "expired": 1,
+        "partial": 34,
         "validated": 22
       },
       "warnings": [
-        "optimism_bias: ten or more reviews contain no wrong/expired outcome",
         "early_closure_bias: forecasts were closed before maturity without terminal evidence",
         "review_coverage_gap: matured forecasts remain unreviewed",
         "score_coverage_low: fewer than 80% of reviews have explicit component scores"
       ]
     },
+    "legacy_diagnostic_warnings": [
+      "early_closure_bias: forecasts were closed before maturity without terminal evidence",
+      "review_coverage_gap: matured forecasts remain unreviewed",
+      "score_coverage_low: fewer than 80% of reviews have explicit component scores",
+      "legacy_explicit_score_coverage_below_80pct"
+    ],
     "lookback_period": "month",
     "mode": "gated_self_evolution",
     "promotion_allowed": false,
+    "proper_scoring": {
+      "brier_score": null,
+      "calibration_bins": [],
+      "cutoff": "2026-07-12",
+      "eligible_sample_count": 0,
+      "exclusion_counts": {},
+      "expected_calibration_error": null,
+      "gates": {
+        "brier_at_or_below_threshold": false,
+        "ece_at_or_below_threshold": false,
+        "minimum_sample": false,
+        "resolved_coverage_at_least_80pct": false
+      },
+      "is_research_ready": false,
+      "legacy_matured_prediction_count_excluded": 61,
+      "log_loss": null,
+      "matured_prediction_count": 0,
+      "matured_v2_prediction_count": 0,
+      "metric_standard": "binary proper scoring; lower is better",
+      "resolved_coverage_pct": 0.0,
+      "samples": [],
+      "thresholds": {
+        "maximum_brier": 0.25,
+        "maximum_expected_calibration_error": 0.15,
+        "minimum_resolved_coverage_pct": 80.0,
+        "minimum_sample": 30
+      },
+      "total_matured_prediction_count": 61
+    },
     "report_contract": {
       "ban_generic_fillers": true,
       "executive_summary_max_items": 5,
@@ -1758,56 +1455,60 @@
     },
     "schema_version": 1,
     "scorecard": {
-      "average_score": 78.29,
-      "end": "2026-07-10",
+      "average_score": 73.32,
+      "end": "2026-07-12",
       "failure_reasons": {
-        "asset_mapping_error": 5,
+        "asset_mapping_error": 6,
+        "data_stale": 2,
         "event_reversal": 2,
         "insufficient_evidence": 5,
         "source_quality_issue": 3,
-        "time_window_too_short": 1
+        "time_window_too_short": 2
       },
-      "hit_rate_pct": 57.14,
-      "review_count": 21,
+      "hit_rate_pct": 48.0,
+      "review_count": 25,
       "start": "2026-07-01",
       "status_counts": {
-        "partial": 9,
+        "expired": 1,
+        "partial": 12,
         "validated": 12
       },
-      "useful_rate_pct": 100.0,
-      "wrong_or_expired_rate_pct": 0.0
+      "useful_rate_pct": 96.0,
+      "wrong_or_expired_rate_pct": 4.0
     },
     "state": "shadow"
   },
   "reportQuality": {
     "passed": true,
-    "characterCount": 9668,
-    "sourceCount": 20,
+    "characterCount": 8111,
+    "sourceCount": 18,
     "coreDecisionCount": 5,
     "primaryThesisCount": 5,
     "topicSectionCount": 6,
-    "sourceDomainCount": 13,
+    "sourceDomainCount": 12,
     "deepResearchMode": true,
-    "deepResearchEnforced": false,
+    "deepResearchEnforced": true,
     "deepResearchEnforceFromDate": "2026-07-12",
     "minimumCharacters": 5000,
     "maximumCharacters": 12000,
     "minimumDistinctLinks": 12,
     "minimumDistinctDomains": 8,
-    "observationCount": 7,
+    "observationCount": 6,
     "fillerCount": 0,
     "repeatedPairCount": 0,
-    "decisionLayerDensityPct": 30.0,
+    "decisionLayerDensityPct": 32.61,
     "errors": [],
     "warnings": [],
     "repeatedPairs": []
   },
   "limitations": [
-    "> 截至 10:35（Asia/Shanghai），主窗口为最近24小时，必要背景回看30日。今天为周六：美国与中国价格均为7月10日收盘，不是实时盘中报价。中国35个标的由腾讯回退源提供，AKShare结构化接口超时，故中国交易映射最高为中置信。RSS只用于发现线索；核心结论均回到政府、国际组织、公司/法院材料或高质量通讯社复核。",
-    "数据限制： 腾讯回退报价时间为7月11日抓取、对应7月10日收盘；结构化接口失败，因此不使用盘中措辞，不把单一报价源升级为高置信基本面判断。",
-    "3. 中国成长在单日急涨后必须通过连续两日承接；回退行情源使置信度自动降一级。",
-    "RSS 采集出现 7 个错误。",
-    "RSS 使用 2 次回退。",
+    "> 截至 01:30（Asia/Shanghai）。今天为周日，美股、A股与港股仍使用7月10日收盘，不使用“盘中”措辞。RSS采集294条、7条源错误；中国35个观察标的全部由腾讯报价回退链取得，四个结构化接口超时。RSS只负责发现，正文核心事实已回到气象机构、政府材料、法院主张或独立通讯社。预测系统从今天起使用v2预注册：数值概率、独立事件/资产截止日和二元解析标准。",
+    "7月12日是周日，35个中国观察标的仍对应7月10日收盘。上证 -1.00%、沪深300 -1.96%、创业板 -4.37%、科创50 -5.53%；510300.SH -1.77%、588000.SH -5.11%、512480.SH -6.93%、512660.SH +3.06%。香港方面恒生指数 +0.60%、恒生科技 -0.21%。四个结构化接口均在8秒门限超时，全部标的使用腾讯报价回退，因此今天不生成新的盘中结论，最高只保留中置信相对表现假设。",
+    "|CHINA|31,849.24 CNY|6|HOLD|market_closed_without_fresh_close；中国报价为7月10日收盘回退源|",
+    "5. 来源回退风险： 中国结构化接口全数超时，单一回退行情不能支撑高置信交易映射。",
+    "数据限制：RSS有7条抓取错误；五个核心RSS dossier在自动阶段均缺少一手来源，已通过人工公开检索补充或明确降级。中国四类结构化接口超时，35个标的全部使用腾讯回退报价；全球行情为7月10日收盘。严格研究晋升仍因合格到期v2样本少于30条而阻断。",
+    "RSS 采集出现 6 个错误。",
+    "RSS 使用 1 次回退。",
     "中国结构化行情出现 4 个错误，35/35 条使用备用报价。"
   ]
 }

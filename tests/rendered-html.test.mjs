@@ -1,11 +1,8 @@
 import assert from "node:assert/strict";
-import { access, readFile, readdir } from "node:fs/promises";
+import { access, readFile } from "node:fs/promises";
 import test from "node:test";
 
-const developmentPreviewMeta =
-  /<meta(?=[^>]*\bname=["']codex-preview["'])(?=[^>]*\bcontent=["']development["'])[^>]*>/i;
-const templateRoot = new URL("../", import.meta.url);
-const previewRoot = new URL("../app/_sites-preview/", import.meta.url);
+const projectRoot = new URL("../", import.meta.url);
 
 async function render() {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
@@ -28,60 +25,104 @@ async function render() {
   );
 }
 
-test("server-renders the starter loading skeleton", async () => {
+test("server-renders the ATLAS briefing", async () => {
+  const payload = JSON.parse(
+    await readFile(new URL("../app/briefing.generated.json", import.meta.url), "utf8"),
+  );
   const response = await render();
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
+  assert.equal(response.headers.get("x-content-type-options"), "nosniff");
+  assert.equal(response.headers.get("x-frame-options"), "DENY");
+  assert.equal(response.headers.get("referrer-policy"), "strict-origin-when-cross-origin");
+  const policy = response.headers.get("content-security-policy") ?? "";
+  assert.match(policy, /frame-ancestors 'none'/);
+  assert.match(policy, /script-src 'self' 'nonce-[A-Za-z0-9+/_-]+' 'strict-dynamic'/);
+  assert.doesNotMatch(policy, /script-src[^;]*'unsafe-inline'/);
 
   const html = await response.text();
-  assert.match(html, developmentPreviewMeta);
-  assert.match(html, /<title>Your site is taking shape<\/title>/i);
-  assert.match(html, /Codex is working/);
-  assert.match(html, /Your site is taking shape/);
-  assert.match(html, /Codex is building the first version/);
-  assert.match(html, /react-loading-skeleton/);
-  assert.match(html, /role="status"/);
+  const nonce = policy.match(/'nonce-([^']+)'/)?.[1];
+  assert.ok(nonce);
+  const inlineScripts = [...html.matchAll(/<script\b([^>]*)>/gi)];
+  assert.ok(inlineScripts.length > 0);
+  assert.ok(inlineScripts.every((match) => match[1].includes(`nonce="${nonce}"`)));
+  assert.match(html, /<title>ATLAS｜全球决策晨报<\/title>/i);
+  assert.match(html, /ATLAS/);
+  assert.match(html, /GLOBAL INTELLIGENCE/);
+  assert.ok(html.includes(payload.hero.editorNote));
+  assert.match(html, /今天必须知道的/);
+  assert.match(html, /查看完整分析/);
+  assert.match(html, /运行闭环/);
+  assert.match(html, /研究验证账户/);
+  assert.doesNotMatch(html, /codex-preview|Codex is working|react-loading-skeleton/i);
 });
 
-test("keeps the loading skeleton scoped and disposable", async () => {
-  const [preview, css, page, layout, packageJson, files] = await Promise.all([
-    readFile(new URL("SkeletonPreview.tsx", previewRoot), "utf8"),
-    readFile(new URL("preview.css", previewRoot), "utf8"),
+test("uses generated briefing data without starter preview residue", async () => {
+  const [page, layout, generated, runner] = await Promise.all([
     readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/layout.tsx", import.meta.url), "utf8"),
-    readFile(new URL("../package.json", import.meta.url), "utf8"),
-    readdir(previewRoot),
+    readFile(new URL("../app/briefing.generated.json", import.meta.url), "utf8"),
+    readFile(new URL("../build/run-vinext.mjs", import.meta.url), "utf8"),
   ]);
 
-  assert.deepEqual(files.sort(), ["SkeletonPreview.tsx", "preview.css"]);
-  assert.match(preview, /from "react-loading-skeleton"/);
-  assert.match(preview, /baseColor="#eceae7"/);
-  assert.match(preview, /highlightColor="#f9f8f6"/);
-  assert.match(preview, /duration=\{2\.8\}/);
-  assert.match(preview, /sites-skeleton-search-placeholder/);
-  assert.match(packageJson, /"react-loading-skeleton": "3\.5\.0"/);
+  const payload = JSON.parse(generated);
+  assert.match(page, /import generated from "\.\/briefing\.generated\.json"/);
+  assert.match(layout, /ATLAS｜全球决策晨报/);
+  assert.match(runner, /WRANGLER_LOG_PATH/);
+  assert.match(payload.reportDate, /^\d{4}-\d{2}-\d{2}$/);
+  assert.equal(payload.schemaVersion, 4);
+  assert.ok(Array.isArray(payload.events) && payload.events.length > 0);
+  assert.ok(payload.events.length >= 5 && payload.events.length <= 7);
+  assert.ok(payload.scenarios.length > 0 && payload.scenarios.length <= 7);
+  assert.ok(payload.sources.length >= 10);
+  assert.equal(new Set(payload.events.map((item) => item.id)).size, payload.events.length);
+  assert.ok(payload.events.every((item) => item.body.length >= 12));
+  assert.ok(payload.events.every((item) => item.facts.length > 0));
+  assert.ok(payload.events.every((item) => item.sources.length > 0));
+  assert.ok(payload.events.every((item) => item.verificationSignals.length > 0));
+  assert.ok(payload.scenarios.every((item) => item.sourceRefs.length > 0));
+  const eventsByCategory = new Map(payload.events.map((item) => [item.category, item]));
+  assert.equal(eventsByCategory.get("科技")?.predictionId, "");
+  assert.doesNotMatch(eventsByCategory.get("科技")?.analysis ?? "", /510300\.SH|588000\.SH/);
+  const typhoonScenario = payload.scenarios.find((item) => item.id === "2026-07-12-P01");
+  assert.deepEqual(
+    new Set(typhoonScenario?.sourceRefs.map((source) => source.href)),
+    new Set([
+      "https://www.weather.gov.hk/textonly/v2/tc/tcp.htm",
+      "https://apnews.com/article/bfdfdbb239f38b6c22a54c8349ce8d28",
+    ]),
+  );
+  assert.ok(Array.isArray(payload.portfolios.us.positions));
+  assert.ok(Array.isArray(payload.portfolios.china.positions));
+  assert.equal(payload.system.boundary.realBrokerOrdersAllowed, false);
+  assert.equal(payload.evolution.mode, "gated_self_evolution");
+  assert.equal(payload.evolution.state, "shadow");
+  assert.equal(payload.evolution.boundary.auto_promote_strategy, false);
+  assert.ok(payload.evolution.active_rules.length > 0);
+  assert.equal(payload.reportQuality.passed, true);
+  assert.equal(payload.reportQuality.fillerCount, 0);
+  assert.ok(payload.reportQuality.characterCount >= payload.reportQuality.minimumCharacters);
+  assert.ok(payload.reportQuality.characterCount <= payload.reportQuality.maximumCharacters);
+  assert.ok(new Set(payload.events.map((item) => item.implication)).size > 1);
+  assert.ok(payload.events.every((item) => /^(https?:\/\/|#[A-Za-z])/.test(item.href)));
 
-  const shellIndex = preview.indexOf('className="sites-skeleton-shell"');
-  const statusIndex = preview.indexOf('className="sites-skeleton-status"');
-  assert.ok(shellIndex >= 0 && statusIndex > shellIndex);
-  assert.match(css, /position:\s*fixed/);
-  assert.match(css, /inset:\s*0/);
-  assert.match(css, /opacity:\s*0\.52/);
-  assert.match(css, /prefers-reduced-motion:\s*reduce/);
-  assert.doesNotMatch(css, /#020617|canvas|pets|progress/i);
-  assert.doesNotMatch(
-    preview,
-    /loading-spinner|status-mark|status-progress|canvas|cookie|random/i,
+  await assert.rejects(access(new URL("app/_sites-preview", projectRoot)));
+});
+
+test("hardens image-optimizer error responses", async () => {
+  const workerUrl = new URL("../dist/server/index.js", import.meta.url);
+  workerUrl.searchParams.set("test", `image-${process.pid}-${Date.now()}`);
+  const { default: worker } = await import(workerUrl.href);
+  const response = await worker.fetch(
+    new Request("http://localhost/_vinext/image"),
+    {
+      ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) },
+    },
+    { waitUntil() {}, passThroughOnException() {} },
   );
 
-  assert.match(page, /export const metadata:\s*Metadata/);
-  assert.match(page, /"codex-preview": "development"/);
-  assert.match(page, /<SkeletonPreview \/>/);
-  assert.match(layout, /title:\s*"Starter Project"/);
-  assert.doesNotMatch(layout, /codex-preview|_sites-preview|themeColor|\bViewport\b/);
-  assert.doesNotMatch(css, /(^|\s)(html|body)\s*\{/m);
-
-  await assert.rejects(
-    access(new URL("public/_sites-preview", templateRoot)),
-  );
+  assert.ok(response.status >= 400);
+  assert.equal(response.headers.get("x-content-type-options"), "nosniff");
+  assert.equal(response.headers.get("cross-origin-resource-policy"), "same-origin");
+  assert.equal(response.headers.get("referrer-policy"), "strict-origin-when-cross-origin");
 });

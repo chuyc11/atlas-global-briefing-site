@@ -1,98 +1,47 @@
-# vinext-starter
+# ATLAS 全球决策晨报
 
-A clean full-stack starter running on
-[vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and
-Drizzle support.
+ATLAS 是统一研究工作台的网页展示层。页面读取
+`app/briefing.generated.json`，该文件由根目录的统一同步命令从最新中文晨报增量生成。
 
-## Prerequisites
+## 本地运行
 
-- Node.js `>=22.13.0`
+需要 Node.js `>=22.13.0`：
 
-## Quick Start
-
-```bash
+```powershell
 npm install
 npm run dev
-npm run build
 ```
 
-This starter does not use `wrangler.jsonc`.
+## 验证
 
-## Included Shape
-
-- edit site code under `app/`
-- `.openai/hosting.json` declares optional Sites D1 and R2 bindings
-- `vite.config.ts` simulates declared bindings for local development
-- `db/schema.ts` starts intentionally empty
-- `examples/d1/` contains an optional D1 example surface
-- `drizzle.config.ts` supports local migration generation when needed
-
-## Workspace Auth Headers
-
-OpenAI workspace sites can read the current user's email from
-`oai-authenticated-user-email`.
-
-SIWC-authenticated workspace sites may also receive
-`oai-authenticated-user-full-name` when the user's SIWC profile has a non-empty
-`name` claim. The full-name value is percent-encoded UTF-8 and is accompanied by
-`oai-authenticated-user-full-name-encoding: percent-encoded-utf-8`.
-
-Treat the full name as optional and fall back to email when it is absent:
-
-```tsx
-import { headers } from "next/headers";
-
-export default async function Home() {
-  const requestHeaders = await headers();
-  const email = requestHeaders.get("oai-authenticated-user-email");
-  const encodedFullName = requestHeaders.get("oai-authenticated-user-full-name");
-  const fullName =
-    encodedFullName &&
-    requestHeaders.get("oai-authenticated-user-full-name-encoding") ===
-      "percent-encoded-utf-8"
-      ? decodeURIComponent(encodedFullName)
-      : null;
-
-  const displayName = fullName ?? email;
-  // ...
-}
+```powershell
+npm test
 ```
 
-## Optional Dispatch-Owned ChatGPT Sign-In
+测试会完成 vinext/Cloudflare Worker 构建，并验证服务端输出、结构化深度数据、来源、情景和组合数据。
 
-Import the ready-to-use helpers from `app/chatgpt-auth.ts` when the site needs
-optional or required ChatGPT sign-in:
+页面运行后可执行真实浏览器回归：
 
-- Use `getChatGPTUser()` for optional signed-in UI.
-- Use `requireChatGPTUser(returnTo)` for server-rendered pages that should send
-  anonymous visitors through Sign in with ChatGPT.
-- Use `chatGPTSignInPath(returnTo)` and `chatGPTSignOutPath(returnTo)` for
-  browser links or actions.
-- Pass a same-origin relative `returnTo` path for the destination after sign-in
-  or sign-out. The helper validates and safely encodes it.
-- Mark protected pages with `export const dynamic = "force-dynamic"` because
-  they depend on per-request identity headers.
+```powershell
+npm run test:ui
+```
 
-Dispatch owns `/signin-with-chatgpt`, `/signout-with-chatgpt`, `/callback`, the
-OAuth cookies, and identity header injection. Do not implement app routes for
-those reserved paths. Routes that do not import and call the helper remain
-anonymous-compatible.
+该回归覆盖事件详情抽屉、情景展开、主题筛选、虚拟组合持仓、可持久化观察清单、移动导航、横向溢出、控制台错误和失败请求。
 
-SIWC establishes identity only; it does not prove workspace membership. Use the
-Sites hosting platform's access policy controls for workspace-wide restrictions,
-or enforce explicit server-side membership or allowlist checks.
+## 数据更新
 
-Use SIWC for account pages, user-specific dashboards, saved records, and write
-actions tied to the current ChatGPT user. Leave public content anonymous.
+推荐在工作区根目录执行：
 
-## Useful Commands
+```powershell
+python atlas.py sync
+```
 
-- `npm run dev`: start local development
-- `npm run build`: verify the vinext build output
-- `npm test`: build the starter and verify its rendered loading skeleton
-- `npm run db:generate`: generate Drizzle migrations after schema changes
+该命令同时更新 global-briefing → trading-core 数据桥和本页面使用的生成数据。若只需要重新生成网页数据，也可执行：
 
-## Learn More
+```powershell
+python work\global-briefing\scripts\sync_briefing_site.py --force
+```
 
-- [vinext Documentation](https://github.com/cloudflare/vinext)
-- [Drizzle D1 Guide](https://orm.drizzle.team/docs/get-started/d1-new)
+网页卡片只保留决策摘要；“查看完整分析”会展示已确认事实、驱动与传导、受益/承压方向、验证信号、观察标的、证伪条件和来源。运行闭环区域只读展示 cycle、canonical ledger、隔离 replay 与 shadow gate。
+
+网页为研究展示，不连接券商，也不产生真实订单。

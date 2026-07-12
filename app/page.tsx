@@ -1,39 +1,255 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { type KeyboardEvent as ReactKeyboardEvent, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import generated from "./briefing.generated.json";
 
-type BriefEvent = {
-  category: string;
-  time: string;
-  title: string;
-  body: string;
-  implication: string;
-  source: string;
-  href: string;
-};
+type SourceRef = { label: string; href: string };
+type BriefEvent = (typeof generated.events)[number];
+type Scenario = (typeof generated.scenarios)[number];
+type Portfolio = typeof generated.portfolios.us;
 
 const events = generated.events as BriefEvent[];
-
-const filters = ["全部", "地缘", "安全", "科技", "气候", "宏观", "中国"];
-
-const scenarios = generated.scenarios;
-
+const scenarios = generated.scenarios as Scenario[];
 const watchItems = generated.watchlist;
+const filters = ["全部", ...Array.from(new Set(events.map((item) => item.category)))];
+
+function safePublicHref(value: string): string {
+  if (/^#[A-Za-z][A-Za-z0-9_-]*$/.test(value)) return value;
+  try {
+    const url = new URL(value);
+    return url.protocol === "https:" || url.protocol === "http:" ? url.href : "#sources";
+  } catch {
+    return "#sources";
+  }
+}
+
+function SourceLink({ source, className = "" }: { source: SourceRef; className?: string }) {
+  const href = safePublicHref(source.href);
+  const external = href.startsWith("http://") || href.startsWith("https://");
+  return (
+    <a className={className} href={href} {...(external ? { target: "_blank", rel: "noreferrer" } : {})}>
+      {source.label} <span aria-hidden="true">↗</span>
+    </a>
+  );
+}
+
+function DetailList({ items }: { items: readonly string[] }) {
+  if (!items.length) return <p className="detail-empty">本期没有足够证据形成结构化结论。</p>;
+  return <ul className="detail-list">{items.map((item) => <li key={item}>{item}</li>)}</ul>;
+}
+
+function readStoredChecklist(): number[] {
+  try {
+    const stored = window.localStorage.getItem(`atlas-watch-${generated.reportDate}`);
+    if (!stored) return [];
+    const parsed: unknown = JSON.parse(stored);
+    if (!Array.isArray(parsed)) return [];
+    return Array.from(new Set(parsed.filter(
+      (item): item is number => Number.isInteger(item) && item >= 0 && item < watchItems.length,
+    )));
+  } catch {
+    return [];
+  }
+}
+
+function trapDialogFocus(keyboardEvent: ReactKeyboardEvent<HTMLElement>) {
+  if (keyboardEvent.key !== "Tab") return;
+  const focusable = Array.from(
+    keyboardEvent.currentTarget.querySelectorAll<HTMLElement>(
+      'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])',
+    ),
+  ).filter((element) => !element.hasAttribute("hidden") && element.getAttribute("aria-hidden") !== "true");
+  if (!focusable.length) {
+    keyboardEvent.preventDefault();
+    return;
+  }
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+  if (keyboardEvent.shiftKey && document.activeElement === first) {
+    keyboardEvent.preventDefault();
+    last.focus();
+  } else if (!keyboardEvent.shiftKey && document.activeElement === last) {
+    keyboardEvent.preventDefault();
+    first.focus();
+  }
+}
+
+function EventDialog({ event, onClose }: { event: BriefEvent; onClose: () => void }) {
+  const closeRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    closeRef.current?.focus();
+  }, []);
+
+  return (
+    <div className="detail-backdrop" onMouseDown={(mouseEvent) => mouseEvent.currentTarget === mouseEvent.target && onClose()}>
+      <section className="detail-panel" role="dialog" aria-modal="true" aria-labelledby="event-detail-title" onKeyDown={trapDialogFocus}>
+        <header className="detail-header">
+          <div>
+            <span>{event.category} · {event.horizon} · {event.confidence}置信</span>
+            <small>{event.predictionId || "研究事件"}</small>
+          </div>
+          <button ref={closeRef} type="button" className="icon-button" onClick={onClose} aria-label="关闭详细分析">×</button>
+        </header>
+        <div className="detail-scroll">
+          <p className="section-number">FULL ANALYSIS</p>
+          <h2 id="event-detail-title">{event.title}</h2>
+          <p className="detail-lead">{event.body}</p>
+          <div className="analysis-callout"><b>核心判断</b><p>{event.analysis}</p></div>
+
+          <div className="detail-columns">
+            <section><h3>已确认事实</h3><DetailList items={event.facts} /></section>
+            <section><h3>驱动与传导</h3><DetailList items={event.drivers} /></section>
+            <section><h3>潜在受益</h3><DetailList items={event.beneficiaries} /></section>
+            <section><h3>承压与反方风险</h3><DetailList items={event.pressures} /></section>
+          </div>
+
+          <section className="verification-block">
+            <h3>下一步验证信号</h3>
+            <DetailList items={event.verificationSignals} />
+          </section>
+
+          {event.instruments.length > 0 && (
+            <section className="instrument-section">
+              <h3>观察标的与证伪条件</h3>
+              <div className="instrument-table">
+                {event.instruments.map((instrument) => (
+                  <div className="instrument-row" key={`${event.id}-${instrument.symbol}`}>
+                    <strong>{instrument.symbol}</strong>
+                    <span>{instrument.thesis}</span>
+                    <small>{instrument.risk}</small>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+
+          <section className="detail-sources">
+            <h3>证据来源</h3>
+            <div>{event.sources.map((source) => <SourceLink source={source} key={source.href} />)}</div>
+          </section>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+function PortfolioDialog({ portfolio, onClose }: { portfolio: Portfolio; onClose: () => void }) {
+  const closeRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    closeRef.current?.focus();
+  }, []);
+
+  return (
+    <div className="detail-backdrop" onMouseDown={(mouseEvent) => mouseEvent.currentTarget === mouseEvent.target && onClose()}>
+      <section className="detail-panel portfolio-detail" role="dialog" aria-modal="true" aria-labelledby="portfolio-detail-title" onKeyDown={trapDialogFocus}>
+        <header className="detail-header">
+          <div><span>唯一虚拟执行域</span><small>{portfolio.accountId}</small></div>
+          <button ref={closeRef} type="button" className="icon-button" onClick={onClose} aria-label="关闭组合详情">×</button>
+        </header>
+        <div className="detail-scroll">
+          <p className="section-number">VIRTUAL PORTFOLIO</p>
+          <h2 id="portfolio-detail-title">{portfolio.name}</h2>
+          <p className="detail-lead">{portfolio.review}</p>
+          <div className="portfolio-facts">
+            <div><span>权益</span><strong>{portfolio.equity.toLocaleString(undefined, { minimumFractionDigits: 2 })}</strong></div>
+            <div><span>现金</span><strong>{portfolio.cash.toLocaleString(undefined, { minimumFractionDigits: 2 })}</strong></div>
+            <div><span>现金占比</span><strong>{portfolio.cashPct.toFixed(1)}%</strong></div>
+            <div><span>已实现盈亏</span><strong>{portfolio.realizedPnl.toFixed(2)}</strong></div>
+          </div>
+          {portfolio.limitations.length > 0 && <div className="data-limitation"><b>数据限制</b><DetailList items={portfolio.limitations} /></div>}
+          <section className="position-section">
+            <h3>持仓、成本与标记来源</h3>
+            {portfolio.positions.length ? (
+              <div className="position-table">
+                <div className="position-row position-head"><span>标的</span><span>数量</span><span>成本 / 现价</span><span>市值</span><span>未实现盈亏</span></div>
+                {portfolio.positions.map((position) => (
+                  <div className="position-row" key={`${portfolio.accountId}-${position.symbol}`}>
+                    <span><strong>{position.symbol}</strong><small>{position.exchange} · {position.priceDate}</small></span>
+                    <span>{position.quantity.toLocaleString()}</span>
+                    <span>{position.avgCost} / {position.lastPrice}<small>{position.priceSource}</small></span>
+                    <span>{position.marketValue.toLocaleString(undefined, { minimumFractionDigits: 2 })}</span>
+                    <span className={position.unrealizedPnl >= 0 ? "positive" : "negative"}>{position.unrealizedPnl.toFixed(2)}<small>{position.returnPct === null ? "N/A" : `${position.returnPct.toFixed(2)}%`}</small></span>
+                  </div>
+                ))}
+              </div>
+            ) : <p className="detail-empty">该历史日期只有账户估值汇总，没有使用未来持仓快照。</p>}
+          </section>
+          <p className="paper-boundary">仅用于虚拟研究验证，不连接券商，不产生真实订单。</p>
+        </div>
+      </section>
+    </div>
+  );
+}
 
 export default function Home() {
   const [activeFilter, setActiveFilter] = useState("全部");
   const [checked, setChecked] = useState<number[]>([]);
+  const [selectedEvent, setSelectedEvent] = useState<BriefEvent | null>(null);
+  const [selectedPortfolio, setSelectedPortfolio] = useState<Portfolio | null>(null);
+  const [expandedScenario, setExpandedScenario] = useState<string | null>(null);
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const dialogTriggerRef = useRef<HTMLButtonElement | null>(null);
   const reportDate = generated.reportDate.replaceAll("-", ".");
-  const highConfidenceSignals = scenarios.filter((item) => item.chance === "高").length;
+  const highConfidenceSignals = events.filter((item) => item.confidence === "高").length;
+  const modalOpen = Boolean(selectedEvent || selectedPortfolio);
+
+  const closeDialog = useCallback(() => {
+    setSelectedEvent(null);
+    setSelectedPortfolio(null);
+    const trigger = dialogTriggerRef.current;
+    dialogTriggerRef.current = null;
+    window.requestAnimationFrame(() => trigger?.focus());
+  }, []);
 
   const visibleEvents = useMemo(
     () => activeFilter === "全部" ? events : events.filter((item) => item.category === activeFilter),
     [activeFilter],
   );
 
+  useEffect(() => {
+    const frame = window.requestAnimationFrame(() => {
+      setChecked(readStoredChecklist());
+    });
+    return () => window.cancelAnimationFrame(frame);
+  }, []);
+
+  useEffect(() => {
+    if (!modalOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    const backgroundElements = Array.from(document.querySelectorAll<HTMLElement>("main > :not(.detail-backdrop)"));
+    document.body.style.overflow = "hidden";
+    backgroundElements.forEach((element) => { element.inert = true; });
+    const closeOnEscape = (keyboardEvent: KeyboardEvent) => {
+      if (keyboardEvent.key === "Escape") {
+        closeDialog();
+      }
+    };
+    window.addEventListener("keydown", closeOnEscape);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      backgroundElements.forEach((element) => { element.inert = false; });
+      window.removeEventListener("keydown", closeOnEscape);
+    };
+  }, [closeDialog, modalOpen]);
+
   const toggleWatch = (index: number) => {
-    setChecked((current) => current.includes(index) ? current.filter((item) => item !== index) : [...current, index]);
+    setChecked((current) => {
+      const next = current.includes(index) ? current.filter((item) => item !== index) : [...current, index];
+      try { window.localStorage.setItem(`atlas-watch-${generated.reportDate}`, JSON.stringify(next)); } catch { /* browser storage may be disabled */ }
+      return next;
+    });
+  };
+
+  const closeMobileNav = () => setMobileNavOpen(false);
+  const openEvent = (event: BriefEvent, trigger: HTMLButtonElement) => {
+    dialogTriggerRef.current = trigger;
+    setSelectedEvent(event);
+  };
+  const openPortfolio = (portfolio: Portfolio, trigger: HTMLButtonElement) => {
+    dialogTriggerRef.current = trigger;
+    setSelectedPortfolio(portfolio);
   };
 
   return (
@@ -44,202 +260,127 @@ export default function Home() {
           <span>ATLAS <small>GLOBAL INTELLIGENCE</small></span>
         </a>
         <nav aria-label="报告导航">
-          <a href="#signals">今日信号</a>
-          <a href="#scenarios">情景推演</a>
-          <a href="#markets">市场映射</a>
-          <a href="#sources">方法与来源</a>
+          <a href="#signals">今日信号</a><a href="#scenarios">情景推演</a><a href="#markets">市场映射</a><a href="#system">运行闭环</a><a href="#sources">方法与来源</a>
         </nav>
-        <button className="print-button" onClick={() => window.print()} aria-label="打印本期报告">打印本期</button>
+        <div className="header-actions">
+          <button type="button" className="mobile-nav-button" onClick={() => setMobileNavOpen((open) => !open)} aria-expanded={mobileNavOpen} aria-controls="mobile-navigation" aria-label={mobileNavOpen ? "关闭报告导航" : "打开报告导航"}><span></span><span></span><span></span></button>
+          <button type="button" className="print-button" onClick={() => window.print()} aria-label="打印本期报告">打印本期</button>
+        </div>
+        {mobileNavOpen && <nav className="mobile-navigation" id="mobile-navigation" aria-label="移动端报告导航"><a onClick={closeMobileNav} href="#signals">今日信号</a><a onClick={closeMobileNav} href="#scenarios">情景推演</a><a onClick={closeMobileNav} href="#markets">市场映射</a><a onClick={closeMobileNav} href="#system">运行闭环</a><a onClick={closeMobileNav} href="#sources">方法与来源</a></nav>}
       </header>
 
       <section className="hero" id="top">
-        <div className="issue-line">
-          <span>{generated.issue}</span>
-          <span>{reportDate} · {generated.retrievedAt}</span>
-          <span>决策者版</span>
-        </div>
+        <div className="issue-line"><span>{generated.issue}</span><span>{reportDate} · {generated.retrievedAt}</span><span>决策者版</span></div>
         <div className="hero-grid">
           <div className="hero-copy">
             <p className="eyebrow">{generated.hero.eyebrow}</p>
             <h1>{generated.hero.headline[0]}<br />{generated.hero.headline[1]}</h1>
             <p className="dek">{generated.hero.dek}</p>
-            <div className="hero-actions">
-              <a className="primary-action" href="#signals">进入今日判断 <span>↓</span></a>
-              <span className="reading-time">约 8 分钟读完</span>
-            </div>
+            <div className="hero-actions"><a className="primary-action" href="#signals">进入今日判断 <span>↓</span></a><span className="reading-time">约 {generated.metrics.readingMinutes} 分钟读完</span></div>
           </div>
-          <aside className="editor-note" aria-label="主编判断">
-            <div className="note-kicker"><span></span> 主编判断</div>
-            <p>{generated.hero.editorNote}</p>
-            <div className="signature">ATLAS RESEARCH DESK</div>
-          </aside>
+          <aside className="editor-note" aria-label="主编判断"><div className="note-kicker"><span></span> 主编判断</div><p>{generated.hero.editorNote}</p><div className="signature">ATLAS RESEARCH DESK</div></aside>
         </div>
       </section>
 
       <section className="signal-strip" aria-label="核心指标">
-        <article>
-          <span className="metric-label">风险温度</span>
-          <strong>{generated.metrics.riskTemperature}<small>/100</small></strong>
-          <div className="temperature-track"><span style={{ width: `${generated.metrics.riskTemperature}%` }}></span></div>
-          <p>{generated.risks[0] || "持续跟踪地缘、宏观与气候风险。"}</p>
-        </article>
-        <article>
-          <span className="metric-label">市场姿态</span>
-          <strong className="word-metric">{generated.metrics.posture}</strong>
-          <p><b>原则：</b>先验证执行与价格，再调整主题暴露。</p>
-        </article>
-        <article>
-          <span className="metric-label">今日信号</span>
-          <strong>{generated.metrics.signalCount}<small>条</small></strong>
-          <p>其中 {highConfidenceSignals} 条处于高置信验证窗口。</p>
-        </article>
-        <article className="freshness">
-          <span className="metric-label">数据新鲜度</span>
-          <strong className="word-metric">{generated.metrics.freshness}</strong>
-          <p>美国 {generated.markets.us.asOf}；中国 {generated.markets.china.asOf}。</p>
-        </article>
+        <article><span className="metric-label">风险信号指数</span><strong>{generated.metrics.riskTemperature}<small>/100</small></strong><div className="temperature-track"><span style={{ width: `${generated.metrics.riskTemperature}%` }}></span></div><p>启发式、未校准：{generated.metrics.riskModel.formula}</p></article>
+        <article><span className="metric-label">市场姿态</span><strong className="word-metric">{generated.metrics.posture}</strong><p><b>原则：</b>先验证执行与价格，再调整主题暴露。</p></article>
+        <article><span className="metric-label">今日信号</span><strong>{generated.metrics.signalCount}<small>条</small></strong><p>其中 {highConfidenceSignals} 条事件关联高置信预测。</p></article>
+        <article className="freshness"><span className="metric-label">来源健康度</span><strong className="word-metric">{generated.metrics.freshness} {generated.metrics.sourceHealth.score}<small>/100</small></strong><p>RSS 错误 {generated.metrics.sourceHealth.rssErrorCount} · 回退 {generated.metrics.sourceHealth.rssFallbackCount}；中国备用报价 {generated.metrics.sourceHealth.chinaFallbackItemCount}/{generated.metrics.sourceHealth.chinaItemCount}。</p></article>
       </section>
 
       <section className="brief-section" id="signals">
-        <div className="section-heading">
-          <div>
-            <p className="section-number">01 / TODAY</p>
-            <h2>今天必须知道的{generated.metrics.signalCount}件事</h2>
-          </div>
-          <p>先看事实，再看传导。选择主题以聚焦阅读。</p>
-        </div>
+        <div className="section-heading"><div><p className="section-number">01 / TODAY</p><h2>今天必须知道的{generated.metrics.signalCount}件事</h2></div><p>卡片给结论，完整分析给证据、传导、标的和证伪条件。</p></div>
         <div className="filter-row" role="group" aria-label="筛选简报主题">
-          {filters.map((filter) => (
-            <button
-              key={filter}
-              className={activeFilter === filter ? "active" : ""}
-              aria-pressed={activeFilter === filter}
-              onClick={() => setActiveFilter(filter)}
-            >{filter}</button>
-          ))}
+          {filters.map((filter) => <button type="button" key={filter} className={activeFilter === filter ? "active" : ""} aria-pressed={activeFilter === filter} onClick={() => setActiveFilter(filter)}>{filter}</button>)}
         </div>
         <div className="events-grid" aria-live="polite">
-          {visibleEvents.map((item, index) => (
-            <article className="event-card" key={item.title}>
-              <div className="event-meta">
-                <span>{item.category}</span>
-                <span>{item.time}</span>
-              </div>
-              <span className="event-index">0{events.indexOf(item) + 1}</span>
-              <h3>{item.title}</h3>
-              <p>{item.body}</p>
+          {visibleEvents.map((item, visibleIndex) => (
+            <article className="event-card" key={item.id}>
+              <div className="event-meta"><span>{item.category}</span><span>{item.horizon} · {item.confidence}</span></div>
+              <span className="event-index">{String(visibleIndex + 1).padStart(2, "0")}</span>
+              <h3>{item.cardTitle}</h3><p>{item.body}</p>
               <div className="implication"><b>决策含义</b>{item.implication}</div>
-              <a href={item.href} target="_blank" rel="noreferrer">{item.source} <span>↗</span></a>
+              <div className="event-actions"><button type="button" onClick={(clickEvent) => openEvent(item, clickEvent.currentTarget)}>查看完整分析 <span aria-hidden="true">→</span></button><SourceLink source={item.sources[0]} /></div>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="quote-break">
-        <p>THE SIGNAL</p>
-        <blockquote>“别问风险是否已经被市场知道，<br />要问它是否已经进入价格与执行。”</blockquote>
+      <section className="risk-band" aria-labelledby="risk-heading">
+        <div><p className="section-number">RISK CHECK</p><h2 id="risk-heading">不能只看主线，<br />还要盯住证伪。</h2></div>
+        <ol>{generated.risks.map((risk, index) => <li key={risk}><span>{String(index + 1).padStart(2, "0")}</span><p>{risk}</p></li>)}</ol>
       </section>
 
       <section className="brief-section scenario-section" id="scenarios">
-        <div className="section-heading">
-          <div>
-            <p className="section-number">02 / FORWARD MAP</p>
-            <h2>未来情景与验证信号</h2>
-          </div>
-          <p>概率不是结论，是下一步证据的优先级。</p>
-        </div>
-        <div className="scenario-table" role="table" aria-label="未来情景推演">
-          <div className="scenario-row scenario-head" role="row">
-            <span>期限</span><span>核心场景</span><span>概率</span><span>下一验证点</span>
-          </div>
-          {scenarios.map((item) => (
-            <div className="scenario-row" role="row" key={item.scenario}>
-              <span className="horizon">{item.horizon}</span>
-              <strong>{item.scenario}</strong>
-              <span className={`chance ${item.chance === "高" ? "high" : ""}`}>{item.chance}</span>
-              <span>{item.watch}</span>
-            </div>
-          ))}
+        <div className="section-heading"><div><p className="section-number">02 / FORWARD MAP</p><h2>未来情景与验证信号</h2></div><p>展开每一项，查看驱动、受益、承压、标的和来源。</p></div>
+        <div className="scenario-list">
+          <div className="scenario-summary scenario-head"><span>期限</span><span>核心场景</span><span>概率</span><span>下一验证点</span><span></span></div>
+          {scenarios.map((item) => {
+            const expanded = expandedScenario === item.id;
+            return <article className="scenario-item" key={item.id}>
+              <button type="button" className="scenario-summary" aria-expanded={expanded} onClick={() => setExpandedScenario(expanded ? null : item.id)}>
+                <span className="horizon">{item.horizon}</span><strong>{item.scenario}</strong><span className={`chance ${item.chance === "高" ? "high" : ""}`}>{item.chance}</span><span>{item.watch}</span><span className="expand-symbol" aria-hidden="true">{expanded ? "−" : "+"}</span>
+              </button>
+              {expanded && <div className="scenario-detail">
+                <section><h3>驱动因素</h3><DetailList items={item.drivers} /></section><section><h3>受益方向</h3><DetailList items={item.beneficiaries} /></section><section><h3>承压方向</h3><DetailList items={item.pressures} /></section><section><h3>验证信号</h3><DetailList items={item.verificationSignals} /></section>
+                {item.instruments.length > 0 && <section className="scenario-instruments"><h3>观察标的</h3>{item.instruments.map((instrument) => <p key={`${item.id}-${instrument.symbol}`}><b>{instrument.symbol}</b> {instrument.thesis}<small>{instrument.risk}</small></p>)}</section>}
+                <section className="scenario-sources"><h3>关联来源</h3><div>{item.sourceRefs.map((source) => <SourceLink source={source} key={source.href} />)}</div></section>
+              </div>}
+            </article>;
+          })}
         </div>
       </section>
 
       <section className="market-section" id="markets">
-        <div className="market-intro">
-          <p className="section-number">03 / MARKET PULSE</p>
-          <h2>不是一个市场，<br />是三种速度。</h2>
-          <p>美国资产等待节后新价格；中国流动性托底但内部高度分化；虚拟组合维持高现金，等待执行信号。</p>
-        </div>
-        <div className="market-board">
-          <div className="board-title"><span>观察面板</span><small>最近可用快照</small></div>
-          <div className="market-columns">
-            {[generated.markets.us, generated.markets.china].map((market, marketIndex) => (
-              <article key={market.label}>
-                <div className="market-label">{market.label} <span className={marketIndex === 0 ? "stale-dot" : "live-dot"}>{market.asOf}</span></div>
-                {market.items.map((item) => (
-                  <div className={`ticker ${item.direction}`} key={item.label}><span>{item.label}</span><strong>{item.change}</strong></div>
-                ))}
-                <p className="market-note">{market.note}</p>
-              </article>
-            ))}
-          </div>
-        </div>
+        <div className="market-intro"><p className="section-number">03 / MARKET PULSE</p><h2>不是一个市场，<br />是三种速度。</h2><p>美国资产等待节后新价格；中国流动性托底但内部高度分化；虚拟组合维持高现金，等待执行信号。</p></div>
+        <div className="market-board"><div className="board-title"><span>观察面板</span><small>最近可用快照</small></div><div className="market-columns">{[generated.markets.us, generated.markets.china].map((market) => <article key={market.label}><div className="market-label">{market.label} <span className={market.isStale ? "stale-dot" : "live-dot"}>{market.asOf}</span></div>{market.items.map((item) => <div className={`ticker ${item.direction}`} key={item.label}><span>{item.label}</span><strong>{item.change}</strong></div>)}<p className="market-note">{market.note}</p></article>)}</div></div>
       </section>
 
       <section className="portfolio-section">
-        {([generated.portfolios.us, generated.portfolios.china] as const).map((portfolio, index) => (
-          <div className={`portfolio-card ${index === 0 ? "dark" : "paper"}`} key={portfolio.name}>
-            <div className="portfolio-top"><span>{portfolio.name}</span><small>研究验证账户</small></div>
-            <strong className="portfolio-value">{portfolio.value}</strong>
-            <div className="return positive">{portfolio.return} 总收益</div>
-            <div className="allocation-bar" aria-label={`${portfolio.name}资产配置`}>
-              {portfolio.allocations.map((item) => <span style={{ width: `${item.pct}%` }} key={item.label}></span>)}
-            </div>
-            <div className="allocation-legend">{portfolio.allocations.map((item) => <span key={item.label}>{item.label} {item.pct}%</span>)}</div>
-          </div>
-        ))}
+        {([generated.portfolios.us, generated.portfolios.china] as Portfolio[]).map((portfolio, index) => <div className={`portfolio-card ${index === 0 ? "dark" : "paper"}`} key={portfolio.name}><div className="portfolio-top"><span>{portfolio.name}</span><small>研究验证账户</small></div><strong className="portfolio-value">{portfolio.value}</strong><div className={`return ${portfolio.returnPct >= 0 ? "positive" : "negative"}`}>{portfolio.return} 总收益</div><div className="allocation-bar" aria-label={`${portfolio.name}资产配置`}>{portfolio.allocations.map((item) => <span style={{ width: `${item.pct}%` }} key={item.label}></span>)}</div><div className="allocation-legend">{portfolio.allocations.map((item) => <span key={item.label}>{item.label} {item.pct}%</span>)}</div><button type="button" className="portfolio-open" onClick={(clickEvent) => openPortfolio(portfolio, clickEvent.currentTarget)}>查看持仓与归因 <span aria-hidden="true">→</span></button></div>)}
+      </section>
+
+      <section className="system-section" id="system">
+        <div className="system-heading"><p className="section-number">04 / ATLAS CYCLE</p><h2>研究不是结论，<br />是可审计的循环。</h2><p>只读展示最近完成的统一 cycle、唯一虚拟账本、隔离回放和影子晋升门禁。</p></div>
+        <div className="system-board">
+          <div className="system-metrics"><article><span>Cycle</span><strong>{generated.system.overallPassed ? "运行完成" : "阻断"}</strong><small>{generated.system.overallPassed ? "定向集成与安全门禁通过" : "存在阻断项"}</small></article><article><span>Canonical Ledger</span><strong>{generated.system.ledger.eventCount}</strong><small>{generated.system.ledger.accountCount} 个账户域 · audit {generated.system.ledger.auditPassed ? "pass" : "fail"}</small></article><article><span>Replay Safety</span><strong>{generated.system.replay.executionSafetyPassed ? "执行隔离通过" : "未通过"}</strong><small>策略证据：{generated.system.replay.strategyEvidencePassed ? "已验证" : "未验证"}</small></article><article><span>Shadow Gate</span><strong>{generated.system.shadow.recommendedState}</strong><small>evidence: {generated.system.shadow.evidenceStatus}</small></article></div>
+          <details className="system-detail"><summary>查看阶段、边界与限制</summary><div className="stage-list">{generated.system.stages.map((stage) => <span className={stage.status} key={stage.name}>{stage.name}<b>{stage.status}</b></span>)}</div><div className="boundary-list"><p>纸面虚拟交易：是</p><p>真实券商订单：禁止</p><p>测试范围：定向集成套件，非全量测试</p><p>回放范围：执行隔离，非策略收益证明</p><p>自动晋升 active-normal：禁止</p></div>{!generated.system.replay.strategyEvidencePassed && <div className="data-limitation"><b>策略有效性未验证</b><p>当前回放只证明隔离执行和账本安全，没有基准收益、回撤、成本与样本外标签证据。</p></div>}{generated.system.shadow.evidenceStatus !== "verified" && <div className="data-limitation"><b>门禁保持 shadow</b><p>当前缺少已验证的样本外证据，因此不会自动晋升。</p></div>}</details>
+        </div>
       </section>
 
       <section className="watch-section">
-        <div className="watch-copy">
-          <p className="section-number">04 / WATCHLIST</p>
-          <h2>今天收盘前，<br />检查这五件事。</h2>
-          <p>勾选状态仅保存在本次浏览期间。它不是任务管理器，而是一张帮助你保持判断纪律的清单。</p>
-          <span className="watch-progress">已完成 {checked.length} / {watchItems.length}</span>
-        </div>
-        <div className="checklist">
-          {watchItems.map((item, index) => (
-            <label className={checked.includes(index) ? "checked" : ""} key={item}>
-              <input type="checkbox" checked={checked.includes(index)} onChange={() => toggleWatch(index)} />
-              <span className="custom-check" aria-hidden="true">{checked.includes(index) ? "✓" : ""}</span>
-              <span className="check-number">0{index + 1}</span>
-              <span>{item}</span>
-            </label>
-          ))}
+        <div className="watch-copy"><p className="section-number">05 / WATCHLIST</p><h2>今天收盘前，<br />检查这{watchItems.length}件事。</h2><p>进度保存在当前浏览器，作为本期验证清单，不进入交易执行。</p><span className="watch-progress">已完成 {checked.length} / {watchItems.length}</span></div>
+        <div className="checklist">{watchItems.map((item, index) => <label className={checked.includes(index) ? "checked" : ""} key={item}><input type="checkbox" checked={checked.includes(index)} onChange={() => toggleWatch(index)} /><span className="custom-check" aria-hidden="true">{checked.includes(index) ? "✓" : ""}</span><span className="check-number">{String(index + 1).padStart(2, "0")}</span><span>{item}</span></label>)}</div>
+      </section>
+
+      <section className="review-section">
+        <div><p className="section-number">06 / SELF EVOLUTION</p><h2>不回避错判，<br />才算真的进化。</h2><p className="evolution-state">当前状态 <b>{generated.evolution.state}</b> · 自动晋升关闭</p></div>
+        <div>
+          <div className="evolution-scoreboard">
+            <span>本月复盘<strong>{generated.evolution.scorecard.review_count}</strong></span>
+            <span>命中率<strong>{generated.evolution.scorecard.hit_rate_pct}%</strong></span>
+            <span>显式评分覆盖<strong>{generated.evolution.integrity.explicit_score_coverage_pct}%</strong></span>
+            <span>错判 / 过期<strong>{generated.evolution.scorecard.wrong_or_expired_rate_pct}%</strong></span>
+          </div>
+          <h3>本轮暴露的问题</h3>
+          <ul className="evolution-warnings"><li>复盘结果没有 wrong / expired，存在乐观偏差。</li><li>{generated.evolution.integrity.early_closed_without_terminal_evidence.length} 条预测在到期前关闭。</li><li>{generated.evolution.integrity.overdue_unreviewed_prediction_ids.length} 条到期预测仍未复盘。</li></ul>
+          <h3>下一轮强制规则</h3>
+          <DetailList items={generated.evolution.active_rules.slice(0, 5).map((rule) => rule.instruction)} />
+          {generated.limitations.length > 0 && <div className="data-limitation"><b>本期数据限制</b><DetailList items={generated.limitations} /></div>}
         </div>
       </section>
 
       <section className="method-section" id="sources">
-        <div>
-          <p className="section-number">05 / METHOD & SOURCES</p>
-          <h2>证据优先，<br />明确区分事实与判断。</h2>
-        </div>
-        <div className="method-grid">
-          <article><span>01</span><h3>多源核验</h3><p>优先使用官方机构与一手报道；跨来源确认时间、地点与数字。</p></article>
-          <article><span>02</span><h3>传导拆分</h3><p>把事件、执行、实体流量、价格与资产反应分层，不用新闻替代市场验证。</p></article>
-          <article><span>03</span><h3>新鲜度标注</h3><p>假期、周末或回退数据一律降权，并标注最近有效时间。</p></article>
-        </div>
-        <div className="source-links">
-          <span>核心来源</span>
-          {generated.sources.map((source) => <a href={source.href} target="_blank" rel="noreferrer" key={source.href}>{source.label} ↗</a>)}
-        </div>
+        <div><p className="section-number">07 / METHOD & SOURCES</p><h2>证据优先，<br />明确区分事实与判断。</h2></div>
+        <div className="method-grid"><article><span>01</span><h3>多源核验</h3><p>优先使用官方机构与一手报道；跨来源确认时间、地点与数字。</p></article><article><span>02</span><h3>传导拆分</h3><p>把事件、执行、实体流量、价格与资产反应分层，不用新闻替代市场验证。</p></article><article><span>03</span><h3>来源健康度</h3><p>{generated.metrics.sourceHealth.rssFresh24hCount}/{generated.metrics.sourceHealth.rssItemCount} 条 RSS 在 24 小时内；覆盖 {generated.metrics.sourceHealth.rssSourceCoveragePct}% 已配置 RSS 来源。</p></article></div>
+        <div className="source-links"><span>本期全部来源</span>{generated.sources.map((source) => <SourceLink source={source} key={source.href} />)}</div>
       </section>
 
-      <footer>
-        <div className="footer-brand">ATLAS</div>
-        <p>每日全球决策情报 · {generated.issue}</p>
-        <p>内容用于研究与虚拟验证，不构成投资建议。</p>
-        <a href="#top">回到顶部 ↑</a>
-      </footer>
+      <footer><div className="footer-brand">ATLAS</div><p>每日全球决策情报 · {generated.issue}</p><p>内容用于研究与虚拟验证，不构成投资建议。</p><a href="#top">回到顶部 ↑</a></footer>
+
+      {selectedEvent && <EventDialog event={selectedEvent} onClose={closeDialog} />}
+      {selectedPortfolio && <PortfolioDialog portfolio={selectedPortfolio} onClose={closeDialog} />}
     </main>
   );
 }
