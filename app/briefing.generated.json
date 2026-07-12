@@ -3,7 +3,7 @@
   "reportDate": "2026-07-12",
   "retrievedAt": "2026-07-12 01:29:07",
   "issue": "VOL. 020",
-  "contentHash": "bfdd1f6f1423a73834de15b39164c67dc2f8bed088d133d5767041cadd32c544",
+  "contentHash": "6890bb5e735dec5793ae25be69b9f574c34f09dda34adfb391a2693e2e8b4234",
   "generatedAt": "2026-07-12T01:29:07+08:00",
   "hero": {
     "eyebrow": "每日全球晨间简报",
@@ -18,27 +18,26 @@
     "riskTemperature": 67,
     "posture": "谨慎均衡",
     "signalCount": 7,
-    "freshness": "受限",
+    "freshness": "中等",
     "sourceHealth": {
-      "label": "受限",
-      "score": 42,
-      "rssItemCount": 281,
-      "rssFresh24hCount": 171,
-      "rssStaleCount": 93,
-      "rssUnknownTimestampCount": 17,
-      "rssErrorCount": 6,
-      "rssFallbackCount": 1,
-      "rssSourceCoveragePct": 72.73,
-      "chinaErrorCount": 4,
-      "chinaFallbackItemCount": 35,
+      "label": "中等",
+      "score": 80,
+      "rssItemCount": 381,
+      "rssFresh24hCount": 179,
+      "rssStaleCount": 125,
+      "rssUnknownTimestampCount": 77,
+      "rssErrorCount": 2,
+      "rssFallbackCount": 2,
+      "rssSourceCoveragePct": 90.0,
+      "chinaErrorCount": 0,
+      "chinaFallbackItemCount": 0,
       "chinaItemCount": 35,
       "staleMarketItemCount": 0,
       "priorCloseMarketItemCount": 10,
       "marketItemCount": 10,
       "limitations": [
-        "RSS 采集出现 6 个错误。",
-        "RSS 使用 1 次回退。",
-        "中国结构化行情出现 4 个错误，35/35 条使用备用报价。"
+        "RSS 采集出现 2 个错误。",
+        "RSS 使用 2 次回退。"
       ],
       "method": "artifact_backed_source_health_v1"
     },
@@ -701,7 +700,7 @@
           "direction": "down"
         }
       ],
-      "note": "行情使用回退数据源，方向可观察，精度为中等。"
+      "note": "结构化行情源可用。"
     }
   },
   "portfolios": {
@@ -1535,8 +1534,7 @@
     "|CHINA|31,849.24 CNY|6|HOLD|market_closed_without_fresh_close；中国报价为7月10日收盘回退源|",
     "5. 来源回退风险： 中国结构化接口全数超时，单一回退行情不能支撑高置信交易映射。",
     "数据限制：RSS有7条抓取错误；五个核心RSS dossier在自动阶段均缺少一手来源，已通过人工公开检索补充或明确降级。中国四类结构化接口超时，35个标的全部使用腾讯回退报价；全球行情为7月10日收盘。严格研究晋升仍因合格到期v2样本少于30条而阻断。",
-    "RSS 采集出现 6 个错误。",
-    "RSS 使用 1 次回退。",
-    "中国结构化行情出现 4 个错误，35/35 条使用备用报价。"
+    "RSS 采集出现 2 个错误。",
+    "RSS 使用 2 次回退。"
   ]
 }
