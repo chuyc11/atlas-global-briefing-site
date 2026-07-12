@@ -3,7 +3,7 @@
   "reportDate": "2026-07-12",
   "retrievedAt": "2026-07-12 01:29:07",
   "issue": "VOL. 020",
-  "contentHash": "8ab39432e66c0a8de8133dc0916580ed5c835c0860ee85e26d4b5607b37ca3ee",
+  "contentHash": "7f0b8bec18eaa85e281b9b0fa56da7e3b71812a0c45e17840d9f847f90c4e291",
   "generatedAt": "2026-07-12T01:29:07+08:00",
   "hero": {
     "eyebrow": "每日全球晨间简报",
@@ -1480,7 +1480,7 @@
   },
   "reportQuality": {
     "passed": true,
-    "characterCount": 8111,
+    "characterCount": 8262,
     "sourceCount": 18,
     "coreDecisionCount": 5,
     "primaryThesisCount": 5,
