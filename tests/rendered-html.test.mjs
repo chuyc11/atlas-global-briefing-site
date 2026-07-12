@@ -95,6 +95,9 @@ test("uses generated briefing data without starter preview residue", async () =>
   assert.ok(Array.isArray(payload.portfolios.us.positions));
   assert.ok(Array.isArray(payload.portfolios.china.positions));
   assert.equal(payload.system.boundary.realBrokerOrdersAllowed, false);
+  assert.ok(payload.system.selfHealing);
+  assert.equal(payload.system.selfHealing.sourceCodeAutoModified, false);
+  assert.equal(payload.system.selfHealing.productionAutoDeployed, false);
   assert.equal(payload.evolution.mode, "gated_self_evolution");
   assert.equal(payload.evolution.state, "shadow");
   assert.equal(payload.evolution.boundary.auto_promote_strategy, false);

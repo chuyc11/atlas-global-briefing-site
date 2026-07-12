@@ -3,7 +3,7 @@
   "reportDate": "2026-07-12",
   "retrievedAt": "2026-07-12 01:29:07",
   "issue": "VOL. 020",
-  "contentHash": "7f0b8bec18eaa85e281b9b0fa56da7e3b71812a0c45e17840d9f847f90c4e291",
+  "contentHash": "bfdd1f6f1423a73834de15b39164c67dc2f8bed088d133d5767041cadd32c544",
   "generatedAt": "2026-07-12T01:29:07+08:00",
   "hero": {
     "eyebrow": "每日全球晨间简报",
@@ -1085,8 +1085,8 @@
     }
   ],
   "system": {
-    "asOf": "2026-07-10",
-    "cycleId": "ATLAS-CYCLE-20260710",
+    "asOf": "2026-07-12",
+    "cycleId": "ATLAS-CYCLE-20260712",
     "overallPassed": true,
     "blockingReasons": [],
     "stages": [
@@ -1131,6 +1131,12 @@
             "status": "ok"
           },
           {
+            "detail": "work\\global-briefing\\scripts\\research_quality.py",
+            "name": "research quality gate",
+            "required": true,
+            "status": "ok"
+          },
+          {
             "detail": "installed",
             "name": "Python data dependencies",
             "required": true,
@@ -1143,19 +1149,19 @@
             "status": "ok"
           },
           {
-            "detail": "2026-07-10 (每日全球晨间简报-2026-07-10.md); age_days=1; max_age_days=3",
+            "detail": "2026-07-12 (每日全球晨间简报-2026-07-12.md); age_days=0; max_age_days=3",
             "name": "latest briefing",
             "required": true,
             "status": "ok"
           },
           {
-            "detail": "reportDate=2026-07-10",
+            "detail": "reportDate=2026-07-12",
             "name": "site data",
             "required": false,
             "status": "ok"
           },
           {
-            "detail": "work\\global-briefing\\data\\macro_signals-2026-07-10.jsonl",
+            "detail": "work\\global-briefing\\data\\macro_signals-2026-07-12.jsonl",
             "name": "briefing → trading-core bridge",
             "required": false,
             "status": "ok"
@@ -1187,7 +1193,7 @@
         "detail": {
           "account_count": 4,
           "audit_path": "C:\\Users\\26084\\Documents\\Codex\\2026-06-12\\new-chat\\work\\shared\\atlas\\virtual_execution\\atlas_virtual_execution_audit.json",
-          "event_count": 575,
+          "event_count": 586,
           "write_performed": false,
           "write_requested": false
         }
@@ -1212,7 +1218,7 @@
             "full_suite": false,
             "kind": "targeted_integration_suite",
             "root_unittest_discovery": true,
-            "site_test_included": true,
+            "site_test_included": false,
             "trading_core_selected_file_count": 8
           }
         }
@@ -1229,13 +1235,13 @@
     ],
     "ledger": {
       "auditPassed": true,
-      "eventCount": 575,
+      "eventCount": 586,
       "accountCount": 4,
-      "contentHash": "da4e2aaabe0ed6e6e0eb338a6355592c0d007c0eac0b9446a1e1e7ae27e6b54f",
+      "contentHash": "52dfe115c385310235ef800418319a0d2126daaf3e9f00fe50aaf4b2f44adaa8",
       "sourceCounts": {
         "global_briefing_isolated_replay": 401,
-        "global_briefing_paper_china": 80,
-        "global_briefing_paper_us": 94
+        "global_briefing_paper_china": 86,
+        "global_briefing_paper_us": 99
       }
     },
     "replay": {
@@ -1252,6 +1258,17 @@
       "evidenceStatus": "insufficient",
       "recommendation": "keep_shadow_insufficient_verified_evidence",
       "autoApplied": false
+    },
+    "selfHealing": {
+      "status": "healthy",
+      "checks": 10,
+      "passed": 10,
+      "repairsAttempted": 0,
+      "repairsVerified": 0,
+      "unresolved": 0,
+      "blocking": 0,
+      "sourceCodeAutoModified": false,
+      "productionAutoDeployed": false
     },
     "boundary": {
       "paperTradingOnly": true,
