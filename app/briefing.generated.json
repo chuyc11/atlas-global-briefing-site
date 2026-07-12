@@ -1261,14 +1261,25 @@
     },
     "selfHealing": {
       "status": "healthy",
-      "checks": 10,
-      "passed": 10,
-      "repairsAttempted": 0,
-      "repairsVerified": 0,
+      "checks": 11,
+      "passed": 11,
+      "repairsAttempted": 1,
+      "repairsVerified": 1,
       "unresolved": 0,
       "blocking": 0,
       "sourceCodeAutoModified": false,
       "productionAutoDeployed": false
+    },
+    "improvements": {
+      "status": "degraded",
+      "total": 13,
+      "verified": 1,
+      "monitoring": 8,
+      "open": 3,
+      "regressed": 1,
+      "overdue": 0,
+      "blocking": 0,
+      "capabilityGaps": 4
     },
     "boundary": {
       "paperTradingOnly": true,

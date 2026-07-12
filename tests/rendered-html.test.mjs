@@ -98,6 +98,8 @@ test("uses generated briefing data without starter preview residue", async () =>
   assert.ok(payload.system.selfHealing);
   assert.equal(payload.system.selfHealing.sourceCodeAutoModified, false);
   assert.equal(payload.system.selfHealing.productionAutoDeployed, false);
+  assert.ok(payload.system.improvements);
+  assert.ok(payload.system.improvements.total >= payload.system.improvements.verified);
   assert.equal(payload.evolution.mode, "gated_self_evolution");
   assert.equal(payload.evolution.state, "shadow");
   assert.equal(payload.evolution.boundary.auto_promote_strategy, false);
