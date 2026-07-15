@@ -5,11 +5,12 @@ import os
 import tempfile
 from pathlib import Path
 
-from playwright.sync_api import Page, sync_playwright
+from playwright.sync_api import Page, expect, sync_playwright
 
 
 BASE_URL = os.environ.get("ATLAS_BASE_URL", "http://127.0.0.1:3000")
 ARTIFACT_DIR = Path(os.environ.get("ATLAS_UI_ARTIFACT_DIR", tempfile.gettempdir()))
+PAYLOAD = json.loads((Path(__file__).resolve().parents[1] / "app" / "briefing.generated.json").read_text(encoding="utf-8"))
 
 
 def assert_no_horizontal_overflow(page: Page) -> None:
@@ -36,7 +37,7 @@ def main() -> None:
         page.goto(BASE_URL, wait_until="networkidle")
 
         cards = page.locator(".event-card")
-        assert cards.count() == 7
+        assert cards.count() == len(PAYLOAD["events"])
         assert_no_horizontal_overflow(page)
         if os.environ.get("ATLAS_UI_SCREENSHOTS") == "1":
             page.screenshot(path=ARTIFACT_DIR / "atlas-desktop.png", full_page=True)
@@ -46,7 +47,7 @@ def main() -> None:
         dialog = page.get_by_role("dialog").first
         assert dialog.is_visible(), {"console_errors": console_errors, "failed_requests": failed_requests}
         detail_heading = dialog.get_by_role("heading", level=2).inner_text()
-        assert "执行监督" in detail_heading, detail_heading
+        assert detail_heading == PAYLOAD["events"][0]["title"], detail_heading
         for heading in ("已确认事实", "驱动与传导", "潜在受益", "承压与反方风险", "下一步验证信号", "证据来源"):
             assert dialog.get_by_role("heading", name=heading).is_visible()
         assert dialog.locator(".detail-sources a").count() >= 1
@@ -60,22 +61,21 @@ def main() -> None:
         scenario_sources = set(first_scenario.locator(".scenario-sources a").evaluate_all(
             "elements => elements.map(element => element.href)"
         ))
-        assert scenario_sources == {
-            "https://www.weather.gov.hk/textonly/v2/tc/tcp.htm",
-            "https://apnews.com/article/bfdfdbb239f38b6c22a54c8349ce8d28",
-        }
+        assert scenario_sources == {source["href"] for source in PAYLOAD["scenarios"][0]["sourceRefs"]}
 
         page.locator(".portfolio-open").first.click()
         portfolio_dialog = page.get_by_role("dialog", name="US 虚拟组合")
         assert portfolio_dialog.is_visible()
-        position_count = portfolio_dialog.locator(".position-row:not(.position-head)").count()
-        assert position_count >= 1
+        allocation_count = portfolio_dialog.locator(".allocation-legend span").count()
+        assert allocation_count >= 1
+        assert portfolio_dialog.locator(".position-row").count() == 0
+        assert PAYLOAD["portfolios"]["us"].get("accountId") is None
         portfolio_dialog.get_by_role("button", name="关闭组合详情").click()
 
         page.get_by_role("button", name="科技", exact=True).click()
-        assert cards.count() == 1
+        assert cards.count() == sum(item["category"] == "科技" for item in PAYLOAD["events"])
         page.get_by_role("button", name="全部", exact=True).click()
-        assert cards.count() == 7
+        assert cards.count() == len(PAYLOAD["events"])
 
         first_watch = page.locator(".checklist input").first
         first_watch_label = page.locator(".checklist label").first
@@ -89,7 +89,7 @@ def main() -> None:
             "eventCards": cards.count(),
             "detailDialog": "passed",
             "scenarioExpansion": "passed",
-            "portfolioPositions": position_count,
+            "publicPortfolioAllocations": allocation_count,
             "persistentWatchlist": "passed",
         }
 
@@ -120,7 +120,7 @@ def main() -> None:
         dialog_width = mobile_dialog.evaluate("element => element.getBoundingClientRect().width")
         assert dialog_width <= 390
         mobile.get_by_role("button", name="关闭详细分析").click()
-        assert mobile_event_trigger.evaluate("element => document.activeElement === element")
+        expect(mobile_event_trigger).to_be_focused()
         assert_no_horizontal_overflow(mobile)
 
         summary["mobile"] = {

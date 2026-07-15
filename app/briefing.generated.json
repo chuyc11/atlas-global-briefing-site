@@ -1,634 +1,576 @@
 {
   "schemaVersion": 4,
-  "reportDate": "2026-07-12",
-  "retrievedAt": "2026-07-12 01:29:07",
-  "issue": "VOL. 020",
-  "contentHash": "6890bb5e735dec5793ae25be69b9f574c34f09dda34adfb391a2693e2e8b4234",
-  "generatedAt": "2026-07-12T01:29:07+08:00",
+  "reportDate": "2026-07-15",
+  "retrievedAt": "2026-07-15 16:10",
+  "issue": "VOL. 023",
+  "contentHash": "b10f0c97ce066233c9c20e60bb66d2dca8b911b4a90b1e5be2919dd5ccb016e5",
+  "generatedAt": "2026-07-15T00:00:00+08:00",
   "hero": {
     "eyebrow": "每日全球晨间简报",
     "headline": [
-      "结论：当前最重要的不是口头上是否继续谈，",
-      "而是能否出现同时约束袭船、…"
+      "结论：最近24小时的新增是封锁、袭船与互袭升级，",
+      "不是可执行降级文本"
     ],
-    "dek": "当前最重要的不是口头上是否继续谈，而是能否出现同时约束袭船、军事打击和执行监督的公开文本。报复表态使短期内形成完整文本的概率下降，但没有证明谈判已经终止。",
-    "editorNote": "美伊在7月13日前不会形成包含执行主体、时间表和航运监督机制的公开降级文本"
+    "dek": "最近24小时的新增是封锁、袭船与互袭升级，不是可执行降级文本；外交窗口仍在，但尚未主导行为。",
+    "editorNote": "外交窗口仍在，但尚未主导行为。"
   },
   "metrics": {
-    "riskTemperature": 67,
-    "posture": "谨慎均衡",
+    "riskTemperature": 55,
+    "posture": "适度进取",
     "signalCount": 7,
     "freshness": "中等",
     "sourceHealth": {
       "label": "中等",
-      "score": 80,
-      "rssItemCount": 381,
-      "rssFresh24hCount": 179,
-      "rssStaleCount": 125,
-      "rssUnknownTimestampCount": 77,
-      "rssErrorCount": 2,
-      "rssFallbackCount": 2,
-      "rssSourceCoveragePct": 90.0,
+      "score": 73,
+      "rssItemCount": 379,
+      "rssFresh24hCount": 246,
+      "rssStaleCount": 88,
+      "rssUnknownTimestampCount": 45,
+      "rssStaleOrUnknownPct": 35.09,
+      "rssErrorCount": 1,
+      "rssFallbackCount": 1,
+      "rssSourceCoveragePct": 100.0,
       "chinaErrorCount": 0,
       "chinaFallbackItemCount": 0,
       "chinaItemCount": 35,
       "staleMarketItemCount": 0,
-      "priorCloseMarketItemCount": 10,
-      "marketItemCount": 10,
+      "priorCloseMarketItemCount": 8,
+      "marketItemCount": 8,
       "limitations": [
-        "RSS 采集出现 2 个错误。",
-        "RSS 使用 2 次回退。"
+        "RSS 采集出现 1 个错误。",
+        "RSS 使用 1 次回退。",
+        "RSS 时间戳质量受限：88 条过期、45 条未知，合计占 35.09%。"
       ],
-      "method": "artifact_backed_source_health_v1"
+      "method": "artifact_backed_source_health_v2"
     },
     "riskModel": {
       "kind": "heuristic_signal_index",
       "calibrated": false,
       "formula": "20 + 高概率情景×8 + 中概率情景×4 + 风险条目×5，上限100",
-      "highScenarioCount": 3,
-      "mediumScenarioCount": 2,
+      "highScenarioCount": 2,
+      "mediumScenarioCount": 1,
       "riskItemCount": 3
     },
-    "readingMinutes": 10
+    "readingMinutes": 14
   },
   "events": [
     {
       "category": "地缘",
       "time": "首要变量",
-      "title": "结论：当前最重要的不是口头上是否继续谈，而是能否出现同时约束袭船、军事打击和执行监督的公开文本",
-      "cardTitle": "结论：当前最重要的不是口头上是否继续谈，而是能否出现同时约束袭船、军事打击和执行监督的公开文本",
-      "body": "当前最重要的不是口头上是否继续谈，而是能否出现同时约束袭船、军事打击和执行监督的公开文本。报复表态使短期内形成完整文本的概率下降，但没有证明谈判已经终止。",
-      "implication": "关注外交表态是否转化为可核验的停火、航运与能源价格变化。",
+      "title": "结论：最近24小时的新增是封锁、袭船与互袭升级，不是可执行降级文本",
+      "cardTitle": "结论：最近24小时的新增是封锁、袭船与互袭升级，不是可执行降级文本",
+      "body": "最近24小时的新增是封锁、袭船与互袭升级，不是可执行降级文本；外交窗口仍在，但尚未主导行为。",
+      "implication": "外交窗口仍在，但尚未主导行为。",
       "source": "查看来源",
       "href": "#sources",
       "facts": [
-        "结论： 当前最重要的不是口头上是否继续谈，而是能否出现同时约束袭船、军事打击和执行监督的公开文本。报复表态使短期内形成完整文本的概率下降，但没有证明谈判已经终止。",
-        "硬证据： AP报道伊朗最高领袖Mojtaba Khamenei称报复“必须实施”，并记录美国继续威胁打击；Axios独立报道同一表态；Reuters Connect保存伊朗国家电视台播报材料。表态和通讯社转述不等同于攻击已经执行。",
-        "机制： 领导层报复承诺提高国内政治退让成本；美国威胁提高误判风险；阿曼等调停方若不能提供监督与违约处理，船东和保险人不会只依据外交标题恢复暴露。"
+        "结论： 最近24小时的新增是封锁、袭船与互袭升级，不是可执行降级文本；外交窗口仍在，但尚未主导行为。",
+        "硬证据： 7月12日联合国秘书长要求美伊紧急恢复谈判；7月14日联合国又确认美国打击伊朗、伊朗攻击周边目标，以及霍尔木兹附近最新袭船造成至少两名船员死亡。7月15日美联社报道美国重新实施港口封锁并出现新一轮互袭。联合国声明｜联合国简报｜France 24地区进展",
+        "反证： 伊朗政府公布最新伤亡数字，美方把行动描述为对袭船与航行受阻的回应；战时伤亡和具体目标效果尚未充分独立核验。地区调停仍在继续，有限行动也可能服务于谈判筹码，而非无限升级。"
       ],
       "sources": [
         {
-          "label": "AP",
-          "href": "https://apnews.com/article/533b52cf249314ba1d9b5f9a30b1ca43"
+          "label": "美联社",
+          "href": "https://apnews.com/article/b7c592f269d822407dd6b5641602bf25"
         },
         {
-          "label": "Axios",
-          "href": "https://www.axios.com/2026/07/11/iran-trump-revenge-assassination"
+          "label": "联合国声明",
+          "href": "https://www.un.org/sg/en/content/sg/statements/2026-07-12/statement-attributable-the-spokesperson-for-the-secretary-general-the-middle-east"
         },
         {
-          "label": "Reuters Connect",
-          "href": "https://www.reutersconnect.com/item/irans-supreme-leader-vows-revenge-for-the-death-of-his-father/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX1ZBMzQxMjEyMDMyMDI2UlAx"
+          "label": "联合国简报",
+          "href": "https://www.un.org/sg/en/content/highlight/2026-07-14.html"
+        },
+        {
+          "label": "France 24地区进展",
+          "href": "https://www.france24.com/en/middle-east/20260715-middle-east-live-tehran-and-us-exchange-strikes-as-blockade-of-iranian-ports-resumes"
+        },
+        {
+          "label": "半岛电视台",
+          "href": "https://www.aljazeera.com/tag/strait-of-hormuz/"
+        },
+        {
+          "label": "英国政府",
+          "href": "https://www.gov.uk/government/news/the-countdown-begins-uk-india-fta-enters-into-force-on-july-15th"
+        },
+        {
+          "label": "印度新闻信息局",
+          "href": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2274280&lang=1&reg=20"
+        },
+        {
+          "label": "英国议会研究简报",
+          "href": "https://commonslibrary.parliament.uk/research-briefings/cbp-10258/"
         }
       ],
-      "predictionId": "2026-07-12-P02",
+      "predictionId": "",
       "relatedPredictionIds": [
-        "2026-07-12-P02"
+        "2026-07-15-P01",
+        "2026-07-15-P02"
       ],
-      "analysis": "美伊在7月13日前不会形成包含执行主体、时间表和航运监督机制的公开降级文本",
-      "confidence": "高",
-      "horizon": "1日",
+      "analysis": "外交窗口仍在，但尚未主导行为。",
+      "confidence": "待验证",
+      "horizon": "首要变量",
       "drivers": [
-        "伊朗最高领袖公开承诺报复，美国继续威胁打击，调停仍未形成执行文本"
+        "结论： 最近24小时的新增是封锁、袭船与互袭升级，不是可执行降级文本；外交窗口仍在，但尚未主导行为。",
+        "硬证据： 7月12日联合国秘书长要求美伊紧急恢复谈判；7月14日联合国又确认美国打击伊朗、伊朗攻击周边目标，以及霍尔木兹附近最新袭船造成至少两名船员死亡。7月15日美联社报道美国重新实施港口封锁并出现新一轮互袭。联合国声明｜联合国简报｜France 24地区进展",
+        "反证： 伊朗政府公布最新伤亡数字，美方把行动描述为对袭船与航行受阻的回应；战时伤亡和具体目标效果尚未充分独立核验。地区调停仍在继续，有限行动也可能服务于谈判筹码，而非无限升级。"
       ],
       "beneficiaries": [],
       "pressures": [],
       "verificationSignals": [
-        "美伊或阿曼官方文本",
-        "霍尔木兹通航与战争险",
-        "公开停火执行主体"
+        "外交窗口仍在，但尚未主导行为。"
       ],
-      "instruments": [
-        {
-          "symbol": "GLD",
-          "exchange": "NYSE Arca",
-          "type": "观察标的",
-          "thesis": "等待进一步验证",
-          "risk": "存在价格与执行偏差风险"
-        },
-        {
-          "symbol": "JETS",
-          "exchange": "NYSE Arca",
-          "type": "观察标的",
-          "thesis": "等待进一步验证",
-          "risk": "存在价格与执行偏差风险"
-        }
-      ],
-      "id": "2026-07-12-01-地缘"
+      "instruments": [],
+      "id": "2026-07-15-01-地缘"
     },
     {
       "category": "安全",
       "time": "一周窗口",
-      "title": "结论：俄乌冲突的短期变量是防空弹药消耗、无人机规模与能源运输设施损伤",
-      "cardTitle": "结论：俄乌冲突的短期变量是防空弹药消耗、无人机规模与能源运输设施损伤",
-      "body": "俄乌冲突的短期变量是防空弹药消耗、无人机规模与能源运输设施损伤；防务ETF只有在合同、产能和相对收益同时确认时才构成资产映射。",
-      "implication": "防务ETF只有在合同、产能和相对收益同时确认时才构成资产映射。",
-      "source": "查看来源",
-      "href": "#sources",
+      "title": "确认事实：霍尔木兹军事风险已经从口头威胁回到船舶遇袭、港口封锁和跨境打击",
+      "cardTitle": "确认事实：霍尔木兹军事风险已经从口头威胁回到船舶遇袭、港口封锁和跨境打击",
+      "body": "霍尔木兹军事风险已经从口头威胁回到船舶遇袭、港口封锁和跨境打击。IMO在联合国7月14日简报中称最新航运攻击造成船员死亡和受伤；持续强调船员安全与航行自由。",
+      "implication": "持续强调船员安全与航行自由。",
+      "source": "IMO海峡专题",
+      "href": "https://www.imo.org/en/MediaCentre/HotTopics/Pages/Middle-East-Strait-of-Hormuz.aspx",
       "facts": [
-        "结论： 俄乌冲突的短期变量是防空弹药消耗、无人机规模与能源运输设施损伤；防务ETF只有在合同、产能和相对收益同时确认时才构成资产映射。",
-        "硬证据： AP报道俄罗斯一夜发射12枚导弹、其中6枚弹道导弹，以及121架无人机，并记录乌方对油轮的打击；乌克兰总统府保存总统与安全部门的官方更新；Le Monde提供基辅防空压力的独立现场背景。交战双方损失声明仍需分别归因。",
-        "机制： 大规模无人机与弹道导弹消耗拦截弹和雷达资源；对油轮、炼化和燃料设施的攻击把战场压力传到运输、库存与保险；最终资产收益仍取决于采购、交付与估值。"
+        "确认事实： 霍尔木兹军事风险已经从口头威胁回到船舶遇袭、港口封锁和跨境打击。IMO在联合国7月14日简报中称最新航运攻击造成船员死亡和受伤；IMO海峡专题持续强调船员安全与航行自由。",
+        "当事方主张： 美方称行动回应商业船舶受袭并保障通行；伊朗方面把地区军事设施和能源出口作为反制对象。具体打击战果、伤亡规模与责任链条仍处冲突叙事环境，未独立确认的数字不作为确定事实。",
+        "因果链： 海上事件→护航和反无人机/防空需求→基地、雷达、通信、弹药和维修保障消耗上升；若冲突持续，采购关注会从平台扩展到补给、网络防护和关键基础设施。第二阶风险是误判导致海湾国家被卷入，以及民用卫星、港口和能源设施的军民两用边界模糊。"
       ],
       "sources": [
         {
-          "label": "AP",
-          "href": "https://apnews.com/article/578044d589f94cc985b699ffcf301297"
+          "label": "IMO海峡专题",
+          "href": "https://www.imo.org/en/MediaCentre/HotTopics/Pages/Middle-East-Strait-of-Hormuz.aspx"
         },
         {
-          "label": "乌克兰总统府",
-          "href": "https://www.president.gov.ua/en/news/last"
+          "label": "联合国",
+          "href": "https://www.un.org/sg/en/content/highlight/2026-07-14.html"
         },
         {
-          "label": "Le Monde",
-          "href": "https://www.lemonde.fr/en/international/article/2026/07/11/war-in-ukraine-kyiv-spends-sleepless-nights-underground-as-russia-intensifies-attacks_6755371_4.html"
+          "label": "美联社",
+          "href": "https://apnews.com/article/b7c592f269d822407dd6b5641602bf25"
+        },
+        {
+          "label": "半岛电视台",
+          "href": "https://www.aljazeera.com/tag/strait-of-hormuz/"
         }
       ],
-      "predictionId": "2026-07-12-P04",
+      "predictionId": "2026-07-15-P01",
       "relatedPredictionIds": [
-        "2026-07-12-P04"
+        "2026-07-15-P01"
       ],
-      "analysis": "俄乌双方在7月19日前至少再出现一次由官方确认的大规模导弹、无人机或能源运输设施打击",
+      "analysis": "截至7月16日23:59（上海时间），美伊仍不会形成同时具备执行方、时间表和监督机制的公开降级文本",
       "confidence": "高",
-      "horizon": "1周",
+      "horizon": "1日",
       "drivers": [
-        "俄罗斯单夜发射12枚导弹和121架无人机，乌方同时扩大对油轮与能源链打击"
+        "港口封锁重新实施",
+        "双方报复链条延续",
+        "联合国与地区调停方尚未公布执行文本"
       ],
-      "beneficiaries": [],
-      "pressures": [],
+      "beneficiaries": [
+        "避险资产研究",
+        "能源安全与航运风险研究"
+      ],
+      "pressures": [
+        "航空与高燃油敏感行业",
+        "海湾航运和保险"
+      ],
       "verificationSignals": [
-        "乌克兰总统府和紧急服务通报",
-        "俄罗斯官方损失声明",
-        "独立通讯社交叉确认"
+        "公开协议是否具备三项执行要素",
+        "IMO航运安全通报",
+        "GLD相对SPY的完整收盘窗口"
       ],
       "instruments": [
         {
-          "symbol": "ITA",
-          "exchange": "NYSE Arca",
-          "type": "观察标的",
-          "thesis": "等待进一步验证",
-          "risk": "存在价格与执行偏差风险"
+          "symbol": "GLD",
+          "exchange": "NYSE ARCA",
+          "type": "ETF",
+          "thesis": "观察冲突风险与实际利率的净效应",
+          "risk": "美元和实际利率上升可能压过避险买盘"
         }
       ],
-      "id": "2026-07-12-02-安全"
+      "id": "2026-07-15-02-安全"
     },
     {
       "category": "科技",
       "time": "结构迁移",
-      "title": "结论：Apple对OpenAI及前员工的诉讼把AI硬件竞争从产品路线延伸到人才、商业秘密和供应链信息治理",
-      "cardTitle": "结论：Apple对OpenAI及前员工的诉讼把AI硬件竞争从产品路线延伸到人才、商业秘密和供应链信息治理",
-      "body": "Apple对OpenAI及前员工的诉讼把AI硬件竞争从产品路线延伸到人才、商业秘密和供应链信息治理；现阶段只能确认“Apple提出指控”，不能把指控写成法院事实，也不能自动推导CIBR或SMH上涨。",
-      "implication": "现阶段只能确认“Apple提出指控”，不能把指控写成法院事实，也不能自动推导CIBR或SMH上涨。",
-      "source": "查看来源",
-      "href": "#sources",
+      "title": "确认事实：最近约24小时没有达到“三个独立来源＋一手文件”门槛的全新全球AI核心发布",
+      "cardTitle": "确认事实：最近约24小时没有达到“三个独立来源＋一手文件”门槛的全新全球AI核心发布",
+      "body": "最近约24小时没有达到“三个独立来源＋一手文件”门槛的全新全球AI核心发布。连续性背景是欧盟7月7日提出先进AI网络安全行动计划，计划建立欧盟评估能力、第三方能力/风险测试及与ENISA协作的安全测试平台；AI生成内容标识指引与AI Act适用时间表仍在推进。",
+      "implication": "AI生成内容标识指引与AI Act适用时间表仍在推进。｜｜",
+      "source": "欧盟委员会行动计划",
+      "href": "https://commission.europa.eu/news-and-media/news/new-eu-plan-address-risks-and-opportunities-advanced-ai-cybersecurity-2026-07-07_en",
       "facts": [
-        "结论： Apple对OpenAI及前员工的诉讼把AI硬件竞争从产品路线延伸到人才、商业秘密和供应链信息治理；现阶段只能确认“Apple提出指控”，不能把指控写成法院事实，也不能自动推导CIBR或SMH上涨。",
-        "硬证据： AP梳理Apple在加州联邦法院提出的商业秘密主张并记录OpenAI回应；Axios补充招聘与硬件竞争背景；CBS交叉确认诉讼请求。以上均是诉状主张和被告回应，尚无实体裁判。",
-        "机制： 诉讼可能提高敏感岗位招聘、设备归还、数据隔离与供应商沟通成本；只有当禁令、产品延期、招聘变化或合规订单出现时，才形成经营传导。"
+        "确认事实： 最近约24小时没有达到“三个独立来源＋一手文件”门槛的全新全球AI核心发布。连续性背景是欧盟7月7日提出先进AI网络安全行动计划，计划建立欧盟评估能力、第三方能力/风险测试及与ENISA协作的安全测试平台；AI生成内容标识指引与AI Act适用时间表仍在推进。欧盟委员会行动计划｜AI Act官方页面｜AI内容标识规范",
+        "分析判断： 当前投资与产业变量不是“监管更多/更少”这一句口号，而是测试能力、责任边界、合规工具是否足以让能源、金融、医疗和公共部门部署先进模型。企业激励是缩短部署周期；监管方激励是降低系统性网络风险与信息真实性风险。",
+        "因果链： 明确评估规则和安全测试入口→合规预算与第三方验证需求上升→身份、网络安全、审计和模型治理受关注；若期限推迟或范围收窄，短期摩擦下降但长期信任建设可能减慢。反证是政策仍处过渡期，不能直接推导收入或ETF超额收益。"
       ],
       "sources": [
         {
-          "label": "AP",
-          "href": "https://apnews.com/article/6fff8833f5889d86406b89a02dd8fb16"
+          "label": "欧盟委员会行动计划",
+          "href": "https://commission.europa.eu/news-and-media/news/new-eu-plan-address-risks-and-opportunities-advanced-ai-cybersecurity-2026-07-07_en"
         },
         {
-          "label": "Axios",
-          "href": "https://www.axios.com/2026/07/10/apple-sues-openai-trade-secret-theft"
+          "label": "AI Act官方页面",
+          "href": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         },
         {
-          "label": "CBS",
-          "href": "https://www.cbsnews.com/news/apple-sues-openai-chatgpt-stealing-trade-secrets/"
+          "label": "AI内容标识规范",
+          "href": "https://digital-strategy.ec.europa.eu/en/news/commission-publishes-code-practice-marking-and-labelling-ai-generated-content"
         }
       ],
       "predictionId": "",
       "relatedPredictionIds": [],
-      "analysis": "现阶段只能确认“Apple提出指控”，不能把指控写成法院事实，也不能自动推导CIBR或SMH上涨。",
+      "analysis": "AI生成内容标识指引与AI Act适用时间表仍在推进。｜｜",
       "confidence": "待验证",
       "horizon": "结构迁移",
       "drivers": [
-        "结论： Apple对OpenAI及前员工的诉讼把AI硬件竞争从产品路线延伸到人才、商业秘密和供应链信息治理；现阶段只能确认“Apple提出指控”，不能把指控写成法院事实，也不能自动推导CIBR或SMH上涨。",
-        "硬证据： AP梳理Apple在加州联邦法院提出的商业秘密主张并记录OpenAI回应；Axios补充招聘与硬件竞争背景；CBS交叉确认诉讼请求。以上均是诉状主张和被告回应，尚无实体裁判。",
-        "机制： 诉讼可能提高敏感岗位招聘、设备归还、数据隔离与供应商沟通成本；只有当禁令、产品延期、招聘变化或合规订单出现时，才形成经营传导。"
+        "确认事实： 最近约24小时没有达到“三个独立来源＋一手文件”门槛的全新全球AI核心发布。连续性背景是欧盟7月7日提出先进AI网络安全行动计划，计划建立欧盟评估能力、第三方能力/风险测试及与ENISA协作的安全测试平台；AI生成内容标识指引与AI Act适用时间表仍在推进。欧盟委员会行动计划｜AI Act官方页面｜AI内容标识规范",
+        "分析判断： 当前投资与产业变量不是“监管更多/更少”这一句口号，而是测试能力、责任边界、合规工具是否足以让能源、金融、医疗和公共部门部署先进模型。企业激励是缩短部署周期；监管方激励是降低系统性网络风险与信息真实性风险。",
+        "因果链： 明确评估规则和安全测试入口→合规预算与第三方验证需求上升→身份、网络安全、审计和模型治理受关注；若期限推迟或范围收窄，短期摩擦下降但长期信任建设可能减慢。反证是政策仍处过渡期，不能直接推导收入或ETF超额收益。"
       ],
       "beneficiaries": [],
       "pressures": [],
       "verificationSignals": [
-        "现阶段只能确认“Apple提出指控”，不能把指控写成法院事实，也不能自动推导CIBR或SMH上涨。"
+        "AI生成内容标识指引与AI Act适用时间表仍在推进。｜｜"
       ],
       "instruments": [],
-      "id": "2026-07-12-03-科技"
+      "id": "2026-07-15-03-科技"
     },
     {
       "category": "气候",
       "time": "复合冲击",
-      "title": "结论：台风登陆后逐步减弱，但研究重点应转向交通、电网、港口与防汛响应持续多久",
-      "cardTitle": "结论：台风登陆后逐步减弱，但研究重点应转向交通、电网、港口与防汛响应持续多久",
-      "body": "台风登陆后逐步减弱，但研究重点应转向交通、电网、港口与防汛响应持续多久。周一公用事业相对表现只能作为风险偏好观察，不能证明公司因此盈利。",
+      "title": "结论：高温仍是跨区域运营与健康风险，但今天没有足以支持新全球归因结论的事件证据",
+      "cardTitle": "结论：高温仍是跨区域运营与健康风险，但今天没有足以支持新全球归因结论的事件证据",
+      "body": "高温仍是跨区域运营与健康风险，但今天没有足以支持新全球归因结论的事件证据。",
       "implication": "关注极端天气是否进一步影响电网、保险、农业与公共卫生数据。",
       "source": "查看来源",
       "href": "#sources",
       "facts": [
-        "结论： 台风登陆后逐步减弱，但研究重点应转向交通、电网、港口与防汛响应持续多久。周一公用事业相对表现只能作为风险偏好观察，不能证明公司因此盈利。",
-        "硬证据： AP报道Bavi登陆浙江并称超过100万人疏散；香港天文台7月12日08:00仍记录中心附近最高持续风速约140公里/小时；日本气象厅与中国国家气象中心提供独立路径和强度记录。",
-        "机制： 风速下降并不立即消除累积降雨、道路中断、电力抢修和水库调度压力；运营恢复速度决定经济损失，风暴名称本身不决定资产方向。"
+        "结论： 高温仍是跨区域运营与健康风险，但今天没有足以支持新全球归因结论的事件证据。",
+        "硬证据： WHO于7月13日更新高温与健康资料，强调热应激会加重心血管、糖尿病、肾病和呼吸系统风险；WHO欧洲此前警告更致命的高温周仍可能出现。WHO高温与健康｜WHO欧洲声明｜WMO气候与健康",
+        "机制： 高温→劳动效率与户外工时下降→用电峰值、医疗需求和电网备用上升→城市冷却、水资源、保险和公共预算受压；夜间高温、老龄化和慢病放大同温度负担。"
       ],
       "sources": [
         {
-          "label": "AP",
-          "href": "https://apnews.com/article/bfdfdbb239f38b6c22a54c8349ce8d28"
+          "label": "WHO高温与健康",
+          "href": "https://www.who.int/news-room/fact-sheets/detail/climate-change-heat-and-health"
         },
         {
-          "label": "香港天文台",
-          "href": "https://www.weather.gov.hk/textonly/v2/tc/tcp.htm"
+          "label": "WHO欧洲声明",
+          "href": "https://www.who.int/europe/news/item/07-07-2026-statement---extreme-heat--more-deadly-weeks-may-still-lie-ahead-for-the-european-region"
         },
         {
-          "label": "日本气象厅",
-          "href": "https://www.data.jma.go.jp/multi/cyclone/index.html"
-        },
-        {
-          "label": "中国国家气象中心",
-          "href": "https://nmc.cn/publish/typhoon/typhoon_new.html"
+          "label": "WMO气候与健康",
+          "href": "https://wmo.int/topics/climate-and-health"
         }
       ],
-      "predictionId": "2026-07-12-P01",
-      "relatedPredictionIds": [
-        "2026-07-12-P01"
-      ],
-      "analysis": "台风Bavi登陆后继续减弱，但浙江及邻近地区在7月13日前仍出现可核验的交通、电力或防汛运营扰动通报",
-      "confidence": "高",
-      "horizon": "1日",
+      "predictionId": "",
+      "relatedPredictionIds": [],
+      "analysis": "关注极端天气是否进一步影响电网、保险、农业与公共卫生数据。",
+      "confidence": "待验证",
+      "horizon": "复合冲击",
       "drivers": [
-        "Bavi登陆浙江、超过100万人疏散，香港天文台7月12日仍将其列为台风"
+        "结论： 高温仍是跨区域运营与健康风险，但今天没有足以支持新全球归因结论的事件证据。",
+        "硬证据： WHO于7月13日更新高温与健康资料，强调热应激会加重心血管、糖尿病、肾病和呼吸系统风险；WHO欧洲此前警告更致命的高温周仍可能出现。WHO高温与健康｜WHO欧洲声明｜WMO气候与健康",
+        "机制： 高温→劳动效率与户外工时下降→用电峰值、医疗需求和电网备用上升→城市冷却、水资源、保险和公共预算受压；夜间高温、老龄化和慢病放大同温度负担。"
       ],
       "beneficiaries": [],
       "pressures": [],
       "verificationSignals": [
-        "中国气象部门降级路径",
-        "浙江交通电力恢复通报",
-        "官方伤亡与损失更新"
+        "关注极端天气是否进一步影响电网、保险、农业与公共卫生数据。"
       ],
-      "instruments": [
-        {
-          "symbol": "600900.SH",
-          "exchange": "SSE",
-          "type": "观察标的",
-          "thesis": "等待进一步验证",
-          "risk": "存在价格与执行偏差风险"
-        }
-      ],
-      "id": "2026-07-12-04-气候"
+      "instruments": [],
+      "id": "2026-07-15-04-气候"
     },
     {
       "category": "宏观",
       "time": "价格验证",
-      "title": "结论：一周内两次全国停电说明风险来自燃料、老化机组和系统同步的组合",
-      "cardTitle": "结论：一周内两次全国停电说明风险来自燃料、老化机组和系统同步的组合",
-      "body": "一周内两次全国停电说明风险来自燃料、老化机组和系统同步的组合；一次恢复并网不能证明约束解除。",
-      "implication": "一次恢复并网不能证明约束解除。",
+      "title": "结论：英印贸易制度降低双边摩擦，而霍尔木兹风险提高全球运输与能源成本，两条传导链对增长和通胀方向相反",
+      "cardTitle": "结论：英印贸易制度降低双边摩擦，而霍尔木兹风险提高全球运输与能源成本，两条传导链对增长和通胀方向相反",
+      "body": "英印贸易制度降低双边摩擦，而霍尔木兹风险提高全球运输与能源成本，两条传导链对增长和通胀方向相反。",
+      "implication": "关注价格、利率、汇率与库存数据能否确认当前市场方向。",
       "source": "查看来源",
       "href": "#sources",
       "facts": [
-        "结论： 一周内两次全国停电说明风险来自燃料、老化机组和系统同步的组合；一次恢复并网不能证明约束解除。",
-        "硬证据： AP报道第二次全国停电并引述古巴电力联盟确认；古巴官方媒体Granma此前宣布全国恢复并网；EFE记录本周较早的全国系统崩溃。恢复—再崩溃序列比单一停电标题更有信息量。",
-        "机制： 燃料不足降低可调度容量，老化机组提高故障率，低备用容量使局部故障更容易扩散为系统失稳。"
+        "结论： 英印贸易制度降低双边摩擦，而霍尔木兹风险提高全球运输与能源成本，两条传导链对增长和通胀方向相反。",
+        "硬证据： CETA于今天生效；英国政府估算其将削减出口关税，印度同时强调社会保障协定与专业人员流动。官方估算是情景模型，不是已实现GDP或公司收入。英国政府生效公告｜印度官方公告｜原产地规则操作页 霍尔木兹方面，联合国与IMO确认安全风险。",
+        "机制： 降税和社保双重缴费减少→贸易与跨境服务成本下降→订单、投资和人员流动可能增加；另一端，通航不确定性→战争险/库存需求上升→炼化利润、航空成本与输入型通胀承压。"
       ],
       "sources": [
         {
-          "label": "AP",
-          "href": "https://apnews.com/article/1a812d96a36c301cba6214767a87630f"
+          "label": "英国政府生效公告",
+          "href": "https://www.gov.uk/government/news/the-countdown-begins-uk-india-fta-enters-into-force-on-july-15th"
         },
         {
-          "label": "Granma",
-          "href": "https://www.granma.cu/cuba/2026-07-08/interconectado-el-sistema-electrico-nacional-08-07-2026-11-07-23"
+          "label": "印度官方公告",
+          "href": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2274280&lang=1&reg=20"
         },
         {
-          "label": "EFE",
-          "href": "https://efe.com/economia/2026-07-06/cuba-nueva-caida-nacional-sistema-electrico-julio-2026/"
-        }
-      ],
-      "predictionId": "2026-07-12-P03",
-      "relatedPredictionIds": [
-        "2026-07-12-P03"
-      ],
-      "analysis": "古巴电网在7月19日前仍将出现全国性系统失稳、显著供电缺口或大范围轮流停电的官方通报",
-      "confidence": "中",
-      "horizon": "1周",
-      "drivers": [
-        "一周内第二次全国停电，燃料短缺与老化电网同时存在"
-      ],
-      "beneficiaries": [],
-      "pressures": [],
-      "verificationSignals": [
-        "Unión Eléctrica供需通报",
-        "全国电网同步状态",
-        "燃料和机组可用率"
-      ],
-      "instruments": [],
-      "id": "2026-07-12-05-宏观"
-    },
-    {
-      "category": "社会",
-      "time": "中期影响",
-      "title": "结论：今天没有足够证据支持新的全球疫情主线",
-      "cardTitle": "结论：今天没有足够证据支持新的全球疫情主线",
-      "body": "今天没有足够证据支持新的全球疫情主线；更可验证的公共卫生风险来自台风疏散与古巴停电对供水、制冷、医院和慢病用药的二次影响。",
-      "implication": "今天没有足够证据支持新的全球疫情主线；更可验证的公共卫生风险来自台风疏散与古巴停电对供水、制冷、医院和慢病用药的二次影响。",
-      "source": "查看来源",
-      "href": "#sources",
-      "facts": [
-        "结论： 今天没有足够证据支持新的全球疫情主线；更可验证的公共卫生风险来自台风疏散与古巴停电对供水、制冷、医院和慢病用药的二次影响。",
-        "硬证据： Bavi的大规模疏散见AP登陆报道与香港天文台；古巴停电覆盖全国系统，见AP古巴电网报道。医院和供水对备用电力高度敏感。当前RSS中的健康线索没有达到“一手来源+独立确认”的核心门槛，因此不升级为新疫情判断。",
-        "机制： 疏散和积水增加人群聚集与水卫生压力；长时间停电破坏冷链、制冷、供水和医疗设备连续运行。"
-      ],
-      "sources": [
-        {
-          "label": "AP登陆报道",
-          "href": "https://apnews.com/article/bfdfdbb239f38b6c22a54c8349ce8d28"
+          "label": "原产地规则操作页",
+          "href": "https://www.business.gov.uk/campaign/alive-with-opportunity/the-uk-india-trade-deal/rules-of-origin/"
         },
         {
-          "label": "香港天文台",
-          "href": "https://www.weather.gov.hk/textonly/v2/tc/tcp.htm"
+          "label": "联合国",
+          "href": "https://www.un.org/sg/en/content/highlight/2026-07-14.html"
         },
         {
-          "label": "AP古巴电网报道",
-          "href": "https://apnews.com/article/1a812d96a36c301cba6214767a87630f"
+          "label": "IMO",
+          "href": "https://www.imo.org/en/MediaCentre/HotTopics/Pages/Middle-East-Strait-of-Hormuz.aspx"
+        },
+        {
+          "label": "英国议会研究",
+          "href": "https://commonslibrary.parliament.uk/research-briefings/cbp-10258/"
         }
       ],
       "predictionId": "",
       "relatedPredictionIds": [
-        "2026-07-12-P01",
-        "2026-07-12-P03"
+        "2026-07-15-P02",
+        "2026-07-15-P01"
       ],
-      "analysis": "今天没有足够证据支持新的全球疫情主线；更可验证的公共卫生风险来自台风疏散与古巴停电对供水、制冷、医院和慢病用药的二次影响。",
+      "analysis": "关注价格、利率、汇率与库存数据能否确认当前市场方向。",
       "confidence": "待验证",
-      "horizon": "中期影响",
+      "horizon": "价格验证",
       "drivers": [
-        "结论： 今天没有足够证据支持新的全球疫情主线；更可验证的公共卫生风险来自台风疏散与古巴停电对供水、制冷、医院和慢病用药的二次影响。",
-        "硬证据： Bavi的大规模疏散见AP登陆报道与香港天文台；古巴停电覆盖全国系统，见AP古巴电网报道。医院和供水对备用电力高度敏感。当前RSS中的健康线索没有达到“一手来源+独立确认”的核心门槛，因此不升级为新疫情判断。",
-        "机制： 疏散和积水增加人群聚集与水卫生压力；长时间停电破坏冷链、制冷、供水和医疗设备连续运行。"
+        "结论： 英印贸易制度降低双边摩擦，而霍尔木兹风险提高全球运输与能源成本，两条传导链对增长和通胀方向相反。",
+        "硬证据： CETA于今天生效；英国政府估算其将削减出口关税，印度同时强调社会保障协定与专业人员流动。官方估算是情景模型，不是已实现GDP或公司收入。英国政府生效公告｜印度官方公告｜原产地规则操作页 霍尔木兹方面，联合国与IMO确认安全风险。",
+        "机制： 降税和社保双重缴费减少→贸易与跨境服务成本下降→订单、投资和人员流动可能增加；另一端，通航不确定性→战争险/库存需求上升→炼化利润、航空成本与输入型通胀承压。"
       ],
       "beneficiaries": [],
       "pressures": [],
       "verificationSignals": [
-        "今天没有足够证据支持新的全球疫情主线；更可验证的公共卫生风险来自台风疏散与古巴停电对供水、制冷、医院和慢病用药的二次影响。"
+        "关注价格、利率、汇率与库存数据能否确认当前市场方向。"
       ],
       "instruments": [],
-      "id": "2026-07-12-06-社会"
+      "id": "2026-07-15-05-宏观"
+    },
+    {
+      "category": "社会",
+      "time": "中期影响",
+      "title": "结论：刚果（金）传播和地理扩展仍在加剧",
+      "cardTitle": "结论：刚果（金）传播和地理扩展仍在加剧",
+      "body": "刚果（金）传播和地理扩展仍在加剧；公共卫生准备与医护保护比证券映射更具决策价值。",
+      "implication": "公共卫生准备与医护保护比证券映射更具决策价值。",
+      "source": "查看来源",
+      "href": "#sources",
+      "facts": [
+        "结论： 刚果（金）传播和地理扩展仍在加剧；公共卫生准备与医护保护比证券映射更具决策价值。",
+        "硬证据： WHO 7月3日通报截至7月1日刚果（金）累计1,460例确诊、452例死亡，乌干达20例确诊；ECDC在7月13日更新至刚果（金）1,926例确诊、702例相关死亡，并记录新增省份与持续传播。WHO暴发通报｜ECDC最新页｜WHO非洲区域周报",
+        "时间线与归因： 数据增长部分来自真实传播，也部分来自监测、检测能力扩大；不能把报告数全部解释为同等速度的新增感染。法国输入病例和乌干达二代传播说明跨境准备必要，但ECDC仍把风险管理重点放在监测、医疗机构防护、实验室与旅行相关准备。"
+      ],
+      "sources": [
+        {
+          "label": "WHO暴发通报",
+          "href": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON612"
+        },
+        {
+          "label": "ECDC最新页",
+          "href": "https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda"
+        },
+        {
+          "label": "WHO非洲区域周报",
+          "href": "https://www.afro.who.int/health-topics/disease-outbreaks/ebola-who-african-region?page=0"
+        }
+      ],
+      "predictionId": "",
+      "relatedPredictionIds": [],
+      "analysis": "公共卫生准备与医护保护比证券映射更具决策价值。",
+      "confidence": "待验证",
+      "horizon": "中期影响",
+      "drivers": [
+        "结论： 刚果（金）传播和地理扩展仍在加剧；公共卫生准备与医护保护比证券映射更具决策价值。",
+        "硬证据： WHO 7月3日通报截至7月1日刚果（金）累计1,460例确诊、452例死亡，乌干达20例确诊；ECDC在7月13日更新至刚果（金）1,926例确诊、702例相关死亡，并记录新增省份与持续传播。WHO暴发通报｜ECDC最新页｜WHO非洲区域周报",
+        "时间线与归因： 数据增长部分来自真实传播，也部分来自监测、检测能力扩大；不能把报告数全部解释为同等速度的新增感染。法国输入病例和乌干达二代传播说明跨境准备必要，但ECDC仍把风险管理重点放在监测、医疗机构防护、实验室与旅行相关准备。"
+      ],
+      "beneficiaries": [],
+      "pressures": [],
+      "verificationSignals": [
+        "公共卫生准备与医护保护比证券映射更具决策价值。"
+      ],
+      "instruments": [],
+      "id": "2026-07-15-06-社会"
     },
     {
       "category": "中国",
       "time": "结构分化",
-      "title": "7月12日是周日，35个中国观察标的仍对应7月10日收盘",
-      "cardTitle": "7月12日是周日，35个中国观察标的仍对应7月10日收盘",
-      "body": "上证 -1.00%、沪深300 -1.96%、创业板 -4.37%、科创50 -5.53%；510300.SH -1.77%、588000.SH -5.11%、512480.SH -6.93%、512660.SH +3.06%。香港方面恒生指数 +0.60%、恒生科技 -0.21%。",
-      "implication": "流动性与名义价格改善不能替代企业盈利和市场宽度验证。",
+      "title": "腾讯行情快照截至7月15日收盘：上证指数-0.29%、深证成指-0.97%、沪深300-0.20%、创业板指-1.21%、科创50-4.25%…",
+      "cardTitle": "腾讯行情快照截至7月15日收盘：上证指数-0.29%、深证成指-0.97%、沪深300-0.20%、创业板指-1.21%、科创50-4.25%…",
+      "body": "腾讯行情快照截至7月15日收盘：上证指数-0.29%、深证成指-0.97%、沪深300-0.20%、创业板指-1.21%、科创50-4.25%；恒生指数+1.34%、恒生科技+1.18%。ETF中510300.SH +0.02%、159915.SZ -1.01%、588000.SH -4.56%、512480.SH -5.81%、512660.SH -1.30%、512880.SH +2.36%、2800.HK +1.13%、3033.HK +1.00%。",
+      "implication": "这更像境内硬科技去拥挤与港股平台风险偏好改善的组合，不能仅凭一天价格推断盈利或政策变化。",
       "source": "查看来源",
       "href": "#sources",
       "facts": [
-        "7月12日是周日，35个中国观察标的仍对应7月10日收盘。上证 -1.00%、沪深300 -1.96%、创业板 -4.37%、科创50 -5.53%；510300.SH -1.77%、588000.SH -5.11%、512480.SH -6.93%、512660.SH +3.06%。香港方面恒生指数 +0.60%、恒生科技 -0.21%。四个结构化接口均在8秒门限超时，全部标的使用腾讯报价回退，因此今天不生成新的盘中结论，最高只保留中置信相对表现假设。 中国国家统计局此前公布6月CPI同比+1.0%、环比-0.3%，见NBS CPI；PPI同比+4.1%、环比-0.3%，见NBS PPI。流动性与名义价格改善不能替代企业盈利和市场宽度验证。"
+        "腾讯行情快照截至7月15日收盘：上证指数-0.29%、深证成指-0.97%、沪深300-0.20%、创业板指-1.21%、科创50-4.25%；恒生指数+1.34%、恒生科技+1.18%。ETF中510300.SH +0.02%、159915.SZ -1.01%、588000.SH -4.56%、512480.SH -5.81%、512660.SH -1.30%、512880.SH +2.36%、2800.HK +1.13%、3033.HK +1.00%。 确认事实： 35个观察项全部成功采集，来源为腾讯点行情；A股硬科技明显弱于宽基，港股科技和宽基同步上涨，消费与金融个股相对强。分析判断： 这更像境内硬科技去拥挤与港股平台风险偏好改善的组合，不能仅凭一天价格推断盈利或政策变化。因果链： 高估值硬科技回撤→ETF赎回/风险预算下降→成交和相对收益走弱；港股平台上涨→南向与离岸风险偏好改善→互联网/消费服务弹性上升。反证： A股…"
       ],
       "sources": [
         {
-          "label": "NBS CPI",
-          "href": "https://www.stats.gov.cn/english/PressRelease/202607/t20260710_1964094.html"
+          "label": "腾讯行情快照",
+          "href": "https://qt.gtimg.cn/"
         },
         {
-          "label": "NBS PPI",
-          "href": "https://www.stats.gov.cn/english/PressRelease/202607/t20260710_1964093.html"
+          "label": "上交所",
+          "href": "https://www.sse.com.cn/market/price/trends/"
+        },
+        {
+          "label": "港交所",
+          "href": "https://www.hkex.com.hk/Market-Data/Securities-Prices/Equities?sc_lang=en"
         }
       ],
-      "predictionId": "2026-07-12-P05",
-      "relatedPredictionIds": [
-        "2026-07-12-P05"
-      ],
-      "analysis": "7月13日收盘510300.SH单日回报高于588000.SH，宽基继续相对跑赢拥挤成长",
-      "confidence": "中",
-      "horizon": "1日",
+      "predictionId": "",
+      "relatedPredictionIds": [],
+      "analysis": "这更像境内硬科技去拥挤与港股平台风险偏好改善的组合，不能仅凭一天价格推断盈利或政策变化。",
+      "confidence": "待验证",
+      "horizon": "结构分化",
       "drivers": [
-        "7月10日科创50与半导体ETF大幅回撤，而宽基跌幅较小；周末无新交易价格"
+        "腾讯行情快照截至7月15日收盘：上证指数-0.29%、深证成指-0.97%、沪深300-0.20%、创业板指-1.21%、科创50-4.25%；恒生指数+1.34%、恒生科技+1.18%。ETF中510300.SH +0.02%、159915.SZ -1.01%、588000.SH -4.56%、512480.SH -5.81%、512660.SH -1.30%、512880.SH +2.36%、2800.HK +1.13%、3033.HK +1.00%。 确认事实： 35个观察项全部成功采集，来源为腾讯点行情；A股硬科技明显弱于宽基，港股科技和宽基同步上涨，消费与金融个股相对强。分析判断： 这更像境内硬科技去拥挤与港股平台风险偏好改善的组合，不能仅凭一天价格推断盈利或政策变化。因果链： 高估值硬科技回撤→ETF赎回/风险预算下降→成交和相对收益走弱；港股平台上涨→南向与离岸风险偏好改善→互联网/消费服务弹性上升。反证： A股…"
       ],
       "beneficiaries": [],
       "pressures": [],
       "verificationSignals": [
-        "7月13日两只ETF复权收盘价",
-        "成交额与涨跌家数",
-        "科创相对沪深300强弱"
+        "这更像境内硬科技去拥挤与港股平台风险偏好改善的组合，不能仅凭一天价格推断盈利或政策变化。"
       ],
-      "instruments": [
-        {
-          "symbol": "510300.SH",
-          "exchange": "SSE",
-          "type": "观察标的",
-          "thesis": "等待进一步验证",
-          "risk": "存在价格与执行偏差风险"
-        },
-        {
-          "symbol": "588000.SH",
-          "exchange": "SSE",
-          "type": "观察标的",
-          "thesis": "等待进一步验证",
-          "risk": "存在价格与执行偏差风险"
-        }
-      ],
-      "id": "2026-07-12-07-中国"
+      "instruments": [],
+      "id": "2026-07-15-07-中国"
     }
   ],
   "scenarios": [
     {
-      "id": "2026-07-12-P01",
+      "id": "2026-07-15-P01",
       "horizon": "1日",
-      "scenario": "台风Bavi登陆后继续减弱，但浙江及邻近地区在7月13日前仍出现可核验的交通、电力或防汛运营扰动通报",
+      "scenario": "截至7月16日23:59（上海时间），美伊仍不会形成同时具备执行方、时间表和监督机制的公开降级文本",
       "chance": "高",
       "status": "open",
       "drivers": [
-        "Bavi登陆浙江、超过100万人疏散，香港天文台7月12日仍将其列为台风"
+        "港口封锁重新实施",
+        "双方报复链条延续",
+        "联合国与地区调停方尚未公布执行文本"
       ],
-      "beneficiaries": [],
-      "pressures": [],
+      "beneficiaries": [
+        "避险资产研究",
+        "能源安全与航运风险研究"
+      ],
+      "pressures": [
+        "航空与高燃油敏感行业",
+        "海湾航运和保险"
+      ],
       "verificationSignals": [
-        "中国气象部门降级路径",
-        "浙江交通电力恢复通报",
-        "官方伤亡与损失更新"
+        "公开协议是否具备三项执行要素",
+        "IMO航运安全通报",
+        "GLD相对SPY的完整收盘窗口"
       ],
-      "watch": "中国气象部门降级路径",
-      "instruments": [
-        {
-          "symbol": "600900.SH",
-          "exchange": "SSE",
-          "type": "观察标的",
-          "thesis": "等待进一步验证",
-          "risk": "存在价格与执行偏差风险"
-        }
-      ],
-      "sourceRefs": [
-        {
-          "label": "Hong Kong Observatory",
-          "href": "https://www.weather.gov.hk/textonly/v2/tc/tcp.htm"
-        },
-        {
-          "label": "AP",
-          "href": "https://apnews.com/article/bfdfdbb239f38b6c22a54c8349ce8d28"
-        }
-      ]
-    },
-    {
-      "id": "2026-07-12-P02",
-      "horizon": "1日",
-      "scenario": "美伊在7月13日前不会形成包含执行主体、时间表和航运监督机制的公开降级文本",
-      "chance": "高",
-      "status": "open",
-      "drivers": [
-        "伊朗最高领袖公开承诺报复，美国继续威胁打击，调停仍未形成执行文本"
-      ],
-      "beneficiaries": [],
-      "pressures": [],
-      "verificationSignals": [
-        "美伊或阿曼官方文本",
-        "霍尔木兹通航与战争险",
-        "公开停火执行主体"
-      ],
-      "watch": "美伊或阿曼官方文本",
+      "watch": "公开协议是否具备三项执行要素",
       "instruments": [
         {
           "symbol": "GLD",
-          "exchange": "NYSE Arca",
-          "type": "观察标的",
-          "thesis": "等待进一步验证",
-          "risk": "存在价格与执行偏差风险"
-        },
-        {
-          "symbol": "JETS",
-          "exchange": "NYSE Arca",
-          "type": "观察标的",
-          "thesis": "等待进一步验证",
-          "risk": "存在价格与执行偏差风险"
+          "exchange": "NYSE ARCA",
+          "type": "ETF",
+          "thesis": "观察冲突风险与实际利率的净效应",
+          "risk": "美元和实际利率上升可能压过避险买盘"
         }
       ],
       "sourceRefs": [
         {
-          "label": "AP",
-          "href": "https://apnews.com/article/533b52cf249314ba1d9b5f9a30b1ca43"
+          "label": "United Nations",
+          "href": "https://www.un.org/sg/en/content/highlight/2026-07-14.html"
         },
         {
-          "label": "Axios",
-          "href": "https://www.axios.com/2026/07/11/iran-trump-revenge-assassination"
+          "label": "Associated Press",
+          "href": "https://apnews.com/article/b7c592f269d822407dd6b5641602bf25"
         }
       ]
     },
     {
-      "id": "2026-07-12-P05",
-      "horizon": "1日",
-      "scenario": "7月13日收盘510300.SH单日回报高于588000.SH，宽基继续相对跑赢拥挤成长",
-      "chance": "中",
-      "status": "open",
-      "drivers": [
-        "7月10日科创50与半导体ETF大幅回撤，而宽基跌幅较小；周末无新交易价格"
-      ],
-      "beneficiaries": [],
-      "pressures": [],
-      "verificationSignals": [
-        "7月13日两只ETF复权收盘价",
-        "成交额与涨跌家数",
-        "科创相对沪深300强弱"
-      ],
-      "watch": "7月13日两只ETF复权收盘价",
-      "instruments": [
-        {
-          "symbol": "510300.SH",
-          "exchange": "SSE",
-          "type": "观察标的",
-          "thesis": "等待进一步验证",
-          "risk": "存在价格与执行偏差风险"
-        },
-        {
-          "symbol": "588000.SH",
-          "exchange": "SSE",
-          "type": "观察标的",
-          "thesis": "等待进一步验证",
-          "risk": "存在价格与执行偏差风险"
-        }
-      ],
-      "sourceRefs": [
-        {
-          "label": "ATLAS China market snapshot",
-          "href": "https://qt.gtimg.cn/"
-        },
-        {
-          "label": "National Bureau of Statistics of China",
-          "href": "https://www.stats.gov.cn/english/PressRelease/202607/t20260710_1964094.html"
-        }
-      ]
-    },
-    {
-      "id": "2026-07-12-P03",
+      "id": "2026-07-15-P02",
       "horizon": "1周",
-      "scenario": "古巴电网在7月19日前仍将出现全国性系统失稳、显著供电缺口或大范围轮流停电的官方通报",
-      "chance": "中",
-      "status": "open",
-      "drivers": [
-        "一周内第二次全国停电，燃料短缺与老化电网同时存在"
-      ],
-      "beneficiaries": [],
-      "pressures": [],
-      "verificationSignals": [
-        "Unión Eléctrica供需通报",
-        "全国电网同步状态",
-        "燃料和机组可用率"
-      ],
-      "watch": "Unión Eléctrica供需通报",
-      "instruments": [],
-      "sourceRefs": [
-        {
-          "label": "Granma",
-          "href": "https://www.granma.cu/cuba/2026-07-08/interconectado-el-sistema-electrico-nacional-08-07-2026-11-07-23"
-        },
-        {
-          "label": "AP",
-          "href": "https://apnews.com/article/1a812d96a36c301cba6214767a87630f"
-        },
-        {
-          "label": "EFE",
-          "href": "https://efe.com/economia/2026-07-06/cuba-nueva-caida-nacional-sistema-electrico-julio-2026/"
-        }
-      ]
-    },
-    {
-      "id": "2026-07-12-P04",
-      "horizon": "1周",
-      "scenario": "俄乌双方在7月19日前至少再出现一次由官方确认的大规模导弹、无人机或能源运输设施打击",
+      "scenario": "英印CETA在首周保持生效，双方不会在7月22日前宣布全面暂停或回滚核心关税实施",
       "chance": "高",
       "status": "open",
       "drivers": [
-        "俄罗斯单夜发射12枚导弹和121架无人机，乌方同时扩大对油轮与能源链打击"
+        "两国已完成实施准备",
+        "关税削减的企业利益",
+        "政治层面需要展示协议兑现"
       ],
-      "beneficiaries": [],
-      "pressures": [],
+      "beneficiaries": [
+        "印度出口链研究",
+        "英国烈酒与汽车出口研究",
+        "跨境专业服务"
+      ],
+      "pressures": [
+        "受进口竞争行业",
+        "原产地合规不足企业"
+      ],
       "verificationSignals": [
-        "乌克兰总统府和紧急服务通报",
-        "俄罗斯官方损失声明",
-        "独立通讯社交叉确认"
+        "两国海关实施通告",
+        "首周原产地申报指引",
+        "是否出现官方暂停通知"
       ],
-      "watch": "乌克兰总统府和紧急服务通报",
+      "watch": "两国海关实施通告",
       "instruments": [
         {
-          "symbol": "ITA",
-          "exchange": "NYSE Arca",
-          "type": "观察标的",
-          "thesis": "等待进一步验证",
-          "risk": "存在价格与执行偏差风险"
+          "symbol": "INDA",
+          "exchange": "NYSE ARCA",
+          "type": "ETF",
+          "thesis": "观察印度市场是否相对全球股票吸收贸易便利化预期",
+          "risk": "宏观估值、油价和外资流可能压过贸易协定效应"
         }
       ],
       "sourceRefs": [
         {
-          "label": "AP",
-          "href": "https://apnews.com/article/578044d589f94cc985b699ffcf301297"
+          "label": "UK Department for Business and Trade",
+          "href": "https://www.gov.uk/government/news/the-countdown-begins-uk-india-fta-enters-into-force-on-july-15th"
         },
         {
-          "label": "President of Ukraine",
-          "href": "https://www.president.gov.ua/en/news/last"
+          "label": "Press Information Bureau of India",
+          "href": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2274280&lang=1&reg=20"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-15-P03",
+      "horizon": "1个月",
+      "scenario": "截至8月14日，中国国家层面将新增至少一项支持人工智能、集成电路或科技融资的可执行政策文件",
+      "chance": "中",
+      "status": "open",
+      "drivers": [
+        "十五五人工智能与科技自立部署",
+        "科技金融工具扩围",
+        "地方场景和产业基金进入项目执行期"
+      ],
+      "beneficiaries": [
+        "人工智能基础设施研究",
+        "集成电路与科技融资研究"
+      ],
+      "pressures": [
+        "纯主题但缺少业绩验证的高估值暴露",
+        "政策不及预期的拥挤交易"
+      ],
+      "verificationSignals": [
+        "国家部委政策原文",
+        "资金工具或项目责任主体",
+        "588000.SH相对510300.SH的独立收盘窗口"
+      ],
+      "watch": "国家部委政策原文",
+      "instruments": [
+        {
+          "symbol": "588000.SH",
+          "exchange": "SSE",
+          "type": "ETF",
+          "thesis": "观察国家科技政策能否转化为A股硬科技相对收益",
+          "risk": "政策已计价、盈利不及预期或拥挤去化可能压过催化"
+        }
+      ],
+      "sourceRefs": [
+        {
+          "label": "国家金融监督管理总局",
+          "href": "https://www.nfra.gov.cn/cn/view/pages/governmentDetail.html?docId=1261784&generaltype=1&itemId=861"
         },
         {
-          "label": "Le Monde",
-          "href": "https://www.lemonde.fr/en/international/article/2026/07/11/war-in-ukraine-kyiv-spends-sleepless-nights-underground-as-russia-intensifies-attacks_6755371_4.html"
+          "label": "科学技术部",
+          "href": "https://most.gov.cn/xxgk/xinxifenlei/fdzdgknr/fgzc/zcjd/202603/t20260302_196012.html"
+        },
+        {
+          "label": "Tencent quote market snapshot",
+          "href": "https://qt.gtimg.cn/q=s_sh588000,s_sh510300"
         }
       ]
     }
@@ -636,68 +578,68 @@
   "markets": {
     "us": {
       "label": "美国 / 全球",
-      "asOf": "2026-07-10",
+      "asOf": "2026-07-13",
       "freshness": "最近收盘",
       "isStale": true,
       "items": [
         {
           "label": "SPY",
-          "change": "+0.43%",
-          "direction": "up"
+          "change": "-0.77%",
+          "direction": "down"
         },
         {
           "label": "QQQ",
-          "change": "+0.31%",
-          "direction": "up"
+          "change": "-1.90%",
+          "direction": "down"
         },
         {
           "label": "SMH",
-          "change": "+0.54%",
-          "direction": "up"
+          "change": "-4.16%",
+          "direction": "down"
         },
         {
           "label": "CIBR",
-          "change": "-2.52%",
-          "direction": "down"
+          "change": "+3.15%",
+          "direction": "up"
         },
         {
           "label": "GLD",
-          "change": "-0.31%",
+          "change": "-2.62%",
           "direction": "down"
         }
       ],
-      "note": "截至 2026-07-10 最近有效收盘。"
+      "note": "截至 2026-07-13 最近有效收盘。"
     },
     "china": {
       "label": "中国 / 香港",
-      "asOf": "2026-07-12",
+      "asOf": "2026-07-15",
       "freshness": "报告日",
       "isStale": false,
       "items": [
         {
           "label": "沪深300",
-          "change": "-1.96%",
+          "change": "-0.20%",
           "direction": "down"
         },
         {
           "label": "创业板指",
-          "change": "-4.37%",
+          "change": "-1.21%",
           "direction": "down"
         },
         {
           "label": "科创50",
-          "change": "-5.53%",
+          "change": "-4.25%",
           "direction": "down"
         },
         {
           "label": "恒生",
-          "change": "+0.60%",
+          "change": "+1.34%",
           "direction": "up"
         },
         {
           "label": "恒生科技",
-          "change": "-0.21%",
-          "direction": "down"
+          "change": "+1.18%",
+          "direction": "up"
         }
       ],
       "note": "结构化行情源可用。"
@@ -706,593 +648,220 @@
   "portfolios": {
     "us": {
       "name": "US 虚拟组合",
-      "value": "100,249.91",
-      "return": "+0.25%",
-      "returnPct": 0.25,
+      "return": "-0.65%",
+      "returnPct": -0.65,
       "allocations": [
         {
           "label": "现金",
-          "pct": 29.9
+          "pct": 30.2
         },
         {
-          "label": "SMH",
-          "pct": 23.0
+          "label": "匿名资产 1",
+          "pct": 22.8
         },
         {
-          "label": "ITA",
-          "pct": 17.1
+          "label": "匿名资产 2",
+          "pct": 17.0
         },
         {
           "label": "其他",
           "pct": 30.0
         }
       ],
-      "accountId": "global-briefing-us-paper-trading",
-      "asOf": "2026-07-11",
-      "baseCurrency": "USD",
-      "initialCash": 100000.0,
-      "cash": 30000.0,
-      "cashPct": 29.93,
-      "equity": 100249.91,
-      "realizedPnl": 0.0,
-      "positions": [
-        {
-          "symbol": "SMH",
-          "exchange": "NASDAQ",
-          "marketType": "US",
-          "currency": "USD",
-          "baseCurrency": "USD",
-          "fxToBase": 1.0,
-          "quantity": 37.688,
-          "avgCost": 610.2733,
-          "lastPrice": 611.03,
-          "marketValue": 23028.52,
-          "marketValueNative": 23028.52,
-          "costBasis": 23000.0,
-          "unrealizedPnl": 28.52,
-          "returnPct": 0.12,
-          "priceDate": "2026-07-11",
-          "priceSource": "data/market-snapshot-2026-07-11.json; yfinance close 2026-07-10"
-        },
-        {
-          "symbol": "ITA",
-          "exchange": "NYSE ARCA",
-          "marketType": "US",
-          "currency": "USD",
-          "baseCurrency": "USD",
-          "fxToBase": 1.0,
-          "quantity": 71.7328,
-          "avgCost": 223.0501,
-          "lastPrice": 239.06,
-          "marketValue": 17148.43,
-          "marketValueNative": 17148.43,
-          "costBasis": 16000.0,
-          "unrealizedPnl": 1148.43,
-          "returnPct": 7.18,
-          "priceDate": "2026-07-11",
-          "priceSource": "data/market-snapshot-2026-07-11.json; yfinance close 2026-07-10; NATO Ankara summit"
-        },
-        {
-          "symbol": "GLD",
-          "exchange": "NYSE ARCA",
-          "marketType": "US",
-          "currency": "USD",
-          "baseCurrency": "USD",
-          "fxToBase": 1.0,
-          "quantity": 26.5245,
-          "avgCost": 377.01,
-          "lastPrice": 377.01,
-          "marketValue": 10000.0,
-          "marketValueNative": 10000.0,
-          "costBasis": 10000.0,
-          "unrealizedPnl": 0.0,
-          "returnPct": 0.0,
-          "priceDate": "2026-07-11",
-          "priceSource": "data/market-snapshot-2026-07-11.json; yfinance close 2026-07-10; AP/IMO Hormuz evidence"
-        },
-        {
-          "symbol": "JETS",
-          "exchange": "NYSE ARCA",
-          "marketType": "US",
-          "currency": "USD",
-          "baseCurrency": "USD",
-          "fxToBase": 1.0,
-          "quantity": 230.614,
-          "avgCost": 34.69,
-          "lastPrice": 32.09,
-          "marketValue": 7400.4,
-          "marketValueNative": 7400.4,
-          "costBasis": 8000.0,
-          "unrealizedPnl": -599.6,
-          "returnPct": -7.49,
-          "priceDate": "2026-07-10",
-          "priceSource": "work/global-briefing/data/market-snapshot-2026-07-11.json; yfinance.download batch"
-        },
-        {
-          "symbol": "CIBR",
-          "exchange": "NASDAQ",
-          "marketType": "US",
-          "currency": "USD",
-          "baseCurrency": "USD",
-          "fxToBase": 1.0,
-          "quantity": 74.9813,
-          "avgCost": 80.02,
-          "lastPrice": 91.88,
-          "marketValue": 6889.28,
-          "marketValueNative": 6889.28,
-          "costBasis": 6000.0,
-          "unrealizedPnl": 889.28,
-          "returnPct": 14.82,
-          "priceDate": "2026-07-10",
-          "priceSource": "work/global-briefing/data/market-snapshot-2026-07-11.json; yfinance.download batch"
-        },
-        {
-          "symbol": "PHO",
-          "exchange": "NASDAQ",
-          "marketType": "US",
-          "currency": "USD",
-          "baseCurrency": "USD",
-          "fxToBase": 1.0,
-          "quantity": 83.7621,
-          "avgCost": 83.57,
-          "lastPrice": 69.0441,
-          "marketValue": 5783.28,
-          "marketValueNative": 5783.28,
-          "costBasis": 7000.0,
-          "unrealizedPnl": -1216.72,
-          "returnPct": -17.38,
-          "priceDate": "2026-07-10",
-          "priceSource": "work/global-briefing/data/market-snapshot-2026-07-11.json; yfinance.download batch"
-        }
-      ],
       "review": "本期维持虚拟研究账户，仅按最近可得价格完成标记。",
       "paperTradingOnly": true,
-      "detailAvailable": true,
-      "limitations": []
+      "publicDataOnly": true,
+      "limitations": [
+        "公开站点仅展示聚合收益率和匿名资产配置；账户、持仓、成本、现金与盈亏明细不进入发布载荷。"
+      ]
     },
     "china": {
       "name": "CHINA 虚拟组合",
-      "value": "102,494.23",
-      "return": "+2.49%",
-      "returnPct": 2.49,
+      "return": "+0.27%",
+      "returnPct": 0.27,
       "allocations": [
         {
           "label": "现金",
-          "pct": 31.1
+          "pct": 22.1
         },
         {
-          "label": "510300.SH",
-          "pct": 20.7
+          "label": "匿名资产 1",
+          "pct": 21.2
         },
         {
-          "label": "512660.SH",
-          "pct": 14.7
+          "label": "匿名资产 2",
+          "pct": 13.5
         },
         {
           "label": "其他",
-          "pct": 33.5
-        }
-      ],
-      "accountId": "global-briefing-china-paper-trading",
-      "asOf": "2026-07-11",
-      "baseCurrency": "CNY",
-      "initialCash": 100000.0,
-      "cash": 31849.24,
-      "cashPct": 31.07,
-      "equity": 102494.23,
-      "realizedPnl": 0.0,
-      "positions": [
-        {
-          "symbol": "510300.SH",
-          "exchange": "SH",
-          "marketType": "A_SHARE",
-          "currency": "CNY",
-          "baseCurrency": "CNY",
-          "fxToBase": 1.0,
-          "quantity": 4400.0,
-          "avgCost": 4.8252,
-          "lastPrice": 4.829,
-          "marketValue": 21247.6,
-          "marketValueNative": 21247.6,
-          "costBasis": 21231.0,
-          "unrealizedPnl": 16.6,
-          "returnPct": 0.08,
-          "priceDate": "2026-07-11",
-          "priceSource": "data/china-market-snapshot-2026-07-11.json; Tencent quote fallback; NBS/PBOC"
-        },
-        {
-          "symbol": "512660.SH",
-          "exchange": "SH",
-          "marketType": "A_SHARE",
-          "currency": "CNY",
-          "baseCurrency": "CNY",
-          "fxToBase": 1.0,
-          "quantity": 11800.0,
-          "avgCost": 1.2667,
-          "lastPrice": 1.281,
-          "marketValue": 15115.8,
-          "marketValueNative": 15115.8,
-          "costBasis": 14947.2,
-          "unrealizedPnl": 168.6,
-          "returnPct": 1.13,
-          "priceDate": "2026-07-11",
-          "priceSource": "data/china-market-snapshot-2026-07-11.json; Tencent quote fallback; NATO procurement evidence"
-        },
-        {
-          "symbol": "588000.SH",
-          "exchange": "SH",
-          "marketType": "A_SHARE",
-          "currency": "CNY",
-          "baseCurrency": "CNY",
-          "fxToBase": 1.0,
-          "quantity": 5100.0,
-          "avgCost": 1.76,
-          "lastPrice": 2.209,
-          "marketValue": 11265.9,
-          "marketValueNative": 11265.9,
-          "costBasis": 8976.0,
-          "unrealizedPnl": 2289.9,
-          "returnPct": 25.51,
-          "priceDate": "2026-07-10",
-          "priceSource": "work/global-briefing/data/china-market-snapshot-2026-07-11.json; Tencent quote fallback"
-        },
-        {
-          "symbol": "2800.HK",
-          "exchange": "HK",
-          "marketType": "HK",
-          "currency": "HKD",
-          "baseCurrency": "CNY",
-          "fxToBase": 0.92,
-          "quantity": 400.0,
-          "avgCost": 24.6325,
-          "lastPrice": 24.62,
-          "marketValue": 9060.16,
-          "marketValueNative": 9848.0,
-          "costBasis": 9064.76,
-          "unrealizedPnl": -4.6,
-          "returnPct": -0.05,
-          "priceDate": "2026-07-11",
-          "priceSource": "data/china-market-snapshot-2026-07-11.json; Tencent quote fallback"
-        },
-        {
-          "symbol": "600900.SH",
-          "exchange": "SH",
-          "marketType": "A_SHARE",
-          "currency": "CNY",
-          "baseCurrency": "CNY",
-          "fxToBase": 1.0,
-          "quantity": 300.0,
-          "avgCost": 28.0467,
-          "lastPrice": 28.03,
-          "marketValue": 8409.0,
-          "marketValueNative": 8409.0,
-          "costBasis": 8414.0,
-          "unrealizedPnl": -5.0,
-          "returnPct": -0.06,
-          "priceDate": "2026-07-11",
-          "priceSource": "data/china-market-snapshot-2026-07-11.json; Tencent quote fallback; WHO/WMO heat evidence"
-        },
-        {
-          "symbol": "3033.HK",
-          "exchange": "HK",
-          "marketType": "HK",
-          "currency": "HKD",
-          "baseCurrency": "CNY",
-          "fxToBase": 0.92,
-          "quantity": 1301.0,
-          "avgCost": 4.61,
-          "lastPrice": 4.634,
-          "marketValue": 5546.53,
-          "marketValueNative": 6028.83,
-          "costBasis": 5517.8,
-          "unrealizedPnl": 28.73,
-          "returnPct": 0.52,
-          "priceDate": "2026-07-10",
-          "priceSource": "work/global-briefing/data/china-market-snapshot-2026-07-11.json; Tencent quote fallback"
+          "pct": 43.2
         }
       ],
       "review": "本期维持虚拟研究账户，仅按最近可得价格完成标记。",
       "paperTradingOnly": true,
-      "detailAvailable": true,
-      "limitations": []
+      "publicDataOnly": true,
+      "limitations": [
+        "公开站点仅展示聚合收益率和匿名资产配置；账户、持仓、成本、现金与盈亏明细不进入发布载荷。"
+      ]
     }
   },
   "watchlist": [
-    "Bavi降级速度与浙江交通、电力、防汛恢复通报。",
-    "美伊或阿曼是否发布包含执行、时间表和监督机制的文本。",
-    "古巴电力联盟是否再次报告显著供电缺口或大范围轮停。",
-    "俄乌下一轮无人机、导弹与能源运输设施打击是否达到预注册阈值。",
-    "Apple诉讼是否出现禁令申请、法院日程或被告正式答辩。"
+    "美伊是否出现执行主体、时间表、监督机制齐全的公开降级文本。",
+    "IMO袭船记录、霍尔木兹船流、战争险和港口封锁是否同步缓和。",
+    "英印CETA首周是否出现清关、原产地申报或官方暂停问题。",
+    "Bundibugyo埃博拉新增卫生区、医护感染和跨境病例是否继续上升。",
+    "3033.HK相对588000.SH的成交宽度与收盘超额收益是否延续。"
   ],
   "risks": [
-    "外交—执行脱节： 会谈继续但没有监督机制，不能视为航运风险解除。",
-    "灾害—运营脱节： 台风减弱不代表道路、电网和港口即时恢复。",
-    "新闻—资产脱节： 诉讼、军事和气候事实成立，都不自动等于ETF上涨。"
+    "冲突误判风险： 当事方伤亡和战果数字未完全独立核验；用声明替代船流、保险和可执行文本会高估信息质量。",
+    "事件—资产脱节风险： 即便事件命中，利率、美元、估值与仓位也可能让GLD、INDA或科技ETF映射失败。",
+    "单源中国行情风险： 腾讯快照完整但仍是单一供应商；A股/港股跨市场比较还受币种、交易制度和节假日影响。"
   ],
   "sources": [
     {
-      "label": "AP",
-      "href": "https://apnews.com/article/533b52cf249314ba1d9b5f9a30b1ca43"
+      "label": "联合国7月14日简报",
+      "href": "https://www.un.org/sg/en/content/highlight/2026-07-14.html"
     },
     {
-      "label": "Axios",
-      "href": "https://www.axios.com/2026/07/11/iran-trump-revenge-assassination"
+      "label": "腾讯同源快照",
+      "href": "https://qt.gtimg.cn/"
     },
     {
-      "label": "Reuters Connect",
-      "href": "https://www.reutersconnect.com/item/irans-supreme-leader-vows-revenge-for-the-death-of-his-father/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX1ZBMzQxMjEyMDMyMDI2UlAx"
+      "label": "美联社",
+      "href": "https://apnews.com/article/b7c592f269d822407dd6b5641602bf25"
     },
     {
-      "label": "AP",
-      "href": "https://apnews.com/article/6fff8833f5889d86406b89a02dd8fb16"
+      "label": "联合国声明",
+      "href": "https://www.un.org/sg/en/content/sg/statements/2026-07-12/statement-attributable-the-spokesperson-for-the-secretary-general-the-middle-east"
     },
     {
-      "label": "Axios",
-      "href": "https://www.axios.com/2026/07/10/apple-sues-openai-trade-secret-theft"
+      "label": "France 24地区进展",
+      "href": "https://www.france24.com/en/middle-east/20260715-middle-east-live-tehran-and-us-exchange-strikes-as-blockade-of-iranian-ports-resumes"
     },
     {
-      "label": "CBS",
-      "href": "https://www.cbsnews.com/news/apple-sues-openai-chatgpt-stealing-trade-secrets/"
+      "label": "半岛电视台",
+      "href": "https://www.aljazeera.com/tag/strait-of-hormuz/"
     },
     {
-      "label": "AP",
-      "href": "https://apnews.com/article/bfdfdbb239f38b6c22a54c8349ce8d28"
+      "label": "英国政府",
+      "href": "https://www.gov.uk/government/news/the-countdown-begins-uk-india-fta-enters-into-force-on-july-15th"
     },
     {
-      "label": "香港天文台",
-      "href": "https://www.weather.gov.hk/textonly/v2/tc/tcp.htm"
+      "label": "印度新闻信息局",
+      "href": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2274280&lang=1&reg=20"
     },
     {
-      "label": "日本气象厅",
-      "href": "https://www.data.jma.go.jp/multi/cyclone/index.html"
+      "label": "英国议会研究简报",
+      "href": "https://commonslibrary.parliament.uk/research-briefings/cbp-10258/"
     },
     {
-      "label": "中国国家气象中心",
-      "href": "https://nmc.cn/publish/typhoon/typhoon_new.html"
+      "label": "欧盟委员会行动计划",
+      "href": "https://commission.europa.eu/news-and-media/news/new-eu-plan-address-risks-and-opportunities-advanced-ai-cybersecurity-2026-07-07_en"
     },
     {
-      "label": "AP",
-      "href": "https://apnews.com/article/578044d589f94cc985b699ffcf301297"
+      "label": "AI Act官方页面",
+      "href": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
     },
     {
-      "label": "乌克兰总统府",
-      "href": "https://www.president.gov.ua/en/news/last"
+      "label": "AI内容标识规范",
+      "href": "https://digital-strategy.ec.europa.eu/en/news/commission-publishes-code-practice-marking-and-labelling-ai-generated-content"
     },
     {
-      "label": "Le Monde",
-      "href": "https://www.lemonde.fr/en/international/article/2026/07/11/war-in-ukraine-kyiv-spends-sleepless-nights-underground-as-russia-intensifies-attacks_6755371_4.html"
+      "label": "WHO高温与健康",
+      "href": "https://www.who.int/news-room/fact-sheets/detail/climate-change-heat-and-health"
     },
     {
-      "label": "AP",
-      "href": "https://apnews.com/article/1a812d96a36c301cba6214767a87630f"
+      "label": "WHO欧洲声明",
+      "href": "https://www.who.int/europe/news/item/07-07-2026-statement---extreme-heat--more-deadly-weeks-may-still-lie-ahead-for-the-european-region"
     },
     {
-      "label": "Granma",
-      "href": "https://www.granma.cu/cuba/2026-07-08/interconectado-el-sistema-electrico-nacional-08-07-2026-11-07-23"
+      "label": "WMO气候与健康",
+      "href": "https://wmo.int/topics/climate-and-health"
     },
     {
-      "label": "EFE",
-      "href": "https://efe.com/economia/2026-07-06/cuba-nueva-caida-nacional-sistema-electrico-julio-2026/"
+      "label": "IMO海峡专题",
+      "href": "https://www.imo.org/en/MediaCentre/HotTopics/Pages/Middle-East-Strait-of-Hormuz.aspx"
     },
     {
-      "label": "NBS CPI",
-      "href": "https://www.stats.gov.cn/english/PressRelease/202607/t20260710_1964094.html"
+      "label": "原产地规则操作页",
+      "href": "https://www.business.gov.uk/campaign/alive-with-opportunity/the-uk-india-trade-deal/rules-of-origin/"
     },
     {
-      "label": "NBS PPI",
-      "href": "https://www.stats.gov.cn/english/PressRelease/202607/t20260710_1964093.html"
+      "label": "WHO暴发通报",
+      "href": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON612"
+    },
+    {
+      "label": "ECDC最新页",
+      "href": "https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda"
+    },
+    {
+      "label": "WHO非洲区域周报",
+      "href": "https://www.afro.who.int/health-topics/disease-outbreaks/ebola-who-african-region?page=0"
     }
   ],
   "system": {
-    "asOf": "2026-07-12",
-    "cycleId": "ATLAS-CYCLE-20260712",
+    "asOf": "2026-07-15",
     "overallPassed": true,
-    "blockingReasons": [],
     "stages": [
       {
         "name": "doctor",
-        "status": "passed",
-        "detail": [
-          {
-            "detail": "3.12.7",
-            "name": "Python",
-            "required": true,
-            "status": "ok"
-          },
-          {
-            "detail": "v24.11.1",
-            "name": "Node.js",
-            "required": true,
-            "status": "ok"
-          },
-          {
-            "detail": "work\\global-briefing\\scripts\\briefing_store.py",
-            "name": "global-briefing",
-            "required": true,
-            "status": "ok"
-          },
-          {
-            "detail": "work\\trading-core\\src\\trading_core\\cli.py",
-            "name": "trading-core",
-            "required": true,
-            "status": "ok"
-          },
-          {
-            "detail": "src\\package.json",
-            "name": "ATLAS site",
-            "required": true,
-            "status": "ok"
-          },
-          {
-            "detail": "work\\global-briefing\\scripts\\export_trading_core_signals.py",
-            "name": "prediction adapter",
-            "required": true,
-            "status": "ok"
-          },
-          {
-            "detail": "work\\global-briefing\\scripts\\research_quality.py",
-            "name": "research quality gate",
-            "required": true,
-            "status": "ok"
-          },
-          {
-            "detail": "installed",
-            "name": "Python data dependencies",
-            "required": true,
-            "status": "ok"
-          },
-          {
-            "detail": "trading-core 4.0.0",
-            "name": "trading-core CLI",
-            "required": true,
-            "status": "ok"
-          },
-          {
-            "detail": "2026-07-12 (每日全球晨间简报-2026-07-12.md); age_days=0; max_age_days=3",
-            "name": "latest briefing",
-            "required": true,
-            "status": "ok"
-          },
-          {
-            "detail": "reportDate=2026-07-12",
-            "name": "site data",
-            "required": false,
-            "status": "ok"
-          },
-          {
-            "detail": "work\\global-briefing\\data\\macro_signals-2026-07-12.jsonl",
-            "name": "briefing → trading-core bridge",
-            "required": false,
-            "status": "ok"
-          },
-          {
-            "detail": "source and local hashes match",
-            "name": "macro bridge freshness",
-            "required": false,
-            "status": "ok"
-          },
-          {
-            "detail": "installed",
-            "name": "site dependencies",
-            "required": false,
-            "status": "ok"
-          }
-        ]
+        "status": "passed"
       },
       {
         "name": "sync",
-        "status": "passed",
-        "detail": {
-          "returncode": 0
-        }
+        "status": "passed"
       },
       {
         "name": "canonical_virtual_ledger_audit",
-        "status": "passed",
-        "detail": {
-          "account_count": 4,
-          "audit_path": "C:\\Users\\26084\\Documents\\Codex\\2026-06-12\\new-chat\\work\\shared\\atlas\\virtual_execution\\atlas_virtual_execution_audit.json",
-          "event_count": 586,
-          "write_performed": false,
-          "write_requested": false
-        }
+        "status": "passed"
       },
       {
         "name": "replay_shadow_gate",
-        "status": "passed",
-        "detail": {
-          "replay_passed": true,
-          "shadow_promotion_gate_passed": true,
-          "strategy_evidence_passed": false,
-          "validation_scope": "execution_isolation_only"
-        }
+        "status": "passed"
       },
       {
         "name": "targeted_integration_tests",
-        "status": "passed",
-        "detail": {
-          "returncode": 0,
-          "scope": {
-            "briefing_unittest_discovery": true,
-            "full_suite": false,
-            "kind": "targeted_integration_suite",
-            "root_unittest_discovery": true,
-            "site_test_included": false,
-            "trading_core_selected_file_count": 8
-          }
-        }
+        "status": "passed"
       },
       {
         "name": "canonical_virtual_ledger_commit",
-        "status": "passed",
-        "detail": {
-          "all_required_gates_passed": true,
-          "blocked_by": [],
-          "write_performed": true
-        }
+        "status": "passed"
       }
     ],
     "ledger": {
-      "auditPassed": true,
-      "eventCount": 586,
-      "accountCount": 4,
-      "contentHash": "52dfe115c385310235ef800418319a0d2126daaf3e9f00fe50aaf4b2f44adaa8",
-      "sourceCounts": {
-        "global_briefing_isolated_replay": 401,
-        "global_briefing_paper_china": 86,
-        "global_briefing_paper_us": 99
-      }
+      "auditPassed": true
     },
     "replay": {
-      "passed": true,
       "executionSafetyPassed": true,
-      "strategyEvidencePassed": false,
-      "validationScope": "execution_isolation_only",
-      "periodStart": "2024-01-02",
-      "periodEnd": "2024-12-31"
+      "strategyEvidencePassed": false
     },
     "shadow": {
-      "passed": true,
       "recommendedState": "shadow",
-      "evidenceStatus": "insufficient",
-      "recommendation": "keep_shadow_insufficient_verified_evidence",
-      "autoApplied": false
+      "evidenceStatus": "insufficient"
     },
     "selfHealing": {
-      "status": "healthy",
-      "checks": 11,
-      "passed": 11,
-      "repairsAttempted": 1,
-      "repairsVerified": 1,
-      "unresolved": 0,
-      "blocking": 0,
-      "sourceCodeAutoModified": false,
-      "productionAutoDeployed": false
+      "status": "healthy"
     },
     "improvements": {
-      "status": "degraded",
-      "total": 13,
-      "verified": 1,
-      "monitoring": 8,
-      "open": 3,
-      "regressed": 1,
-      "overdue": 0,
-      "blocking": 0,
-      "capabilityGaps": 4
+      "status": "degraded"
     },
     "boundary": {
       "paperTradingOnly": true,
       "realBrokerOrdersAllowed": false,
-      "legacyLedgersReadOnly": true
+      "sourceCodeAutoModified": false,
+      "productionAutoDeployed": false,
+      "automaticPromotionAllowed": false
     }
   },
-  "forecastReviews": [],
+  "forecastReviews": [
+    "2026-07-13-P01：validated，事件结果=1，两个资产映射均命中。 截至7月14日结束，没有执行主体、时间表、监督机制齐全的美伊降级文本；联合国7月14日简报反而记录航运袭击和人员伤亡。7月14日GLD约+1.37%、SPY约+0.36%，GLD超额约+1.01个百分点；JETS约-1.19%，相对SPY超额约-1.54个百分点。迭代：事件和资产本次同向，也仍须分账；黄金受实际利率/美元影响，航空受油价/需求影响。",
+    "2026-07-12-P01：事件维度此前已validated；今天补结资产维度=1。 7月13日腾讯同源快照显示600900.SH +0.75%、沪深300 -1.34%，相对收益约+2.09个百分点。此前自动工作台因同源窗口不足而正确地保持未结算；人工核验后才追加市场复盘，不改写原事件结论。",
+    "全账本有80项到期任务，本轮复盘容量12项；优先关闭全部到期v2事件/资产硬门槛。其余多为缺少机器规则的旧版积压，不以不完整证据强行结算。合格v2事件结果样本仍远低于30个最低校准样本，Brier/ECE继续处于shadow，不能声称预测系统已校准。"
+  ],
   "frameworkUpdates": [
-    "Proper-scoring分母从今天起只包含到期v2预测；61条旧分类预测作为历史诊断，不再永久稀释新样本覆盖率。",
-    "旧历史的早关、缺评分和重复ID保留为诊断警告，但不再形成永远无法解除的晋升死锁。",
-    "每个命名标的必须有方向、基准、验证规则和独立 evaluation_deadline；周末截止日对齐下一可观察交易时点。",
-    "体育/生活方式新闻不能因“strike”等歧义词进入军事核心队列；World Cup聚类已从核心研究队列移除。",
-    "今日五条v2预测已通过契约验证；在首条样本到期前，Brier、Log Loss和ECE保持不可计算，系统继续 shadow。"
+    "从今天起每个新预测必须登记event_family_id、基线状态、新增信息与独立性说明；滚动预测按同一事件族折权，不因改截止日重复计分。",
+    "每个市场映射必须登记稳定market_thesis_id，并保留可直接打开的行情页或带SHA-256的本地快照；缺少同源窗口时保持未结算。",
+    "事件、资产和虚拟账户动作继续三账分离：事件正确不等于资产映射正确，资产正确也不授权真实交易。"
   ],
   "evolution": {
     "active_rules": [
@@ -1337,37 +906,119 @@
         "trigger_count": 1
       }
     ],
-    "as_of": "2026-07-12",
+    "as_of": "2026-07-15",
     "boundary": {
       "auto_promote_strategy": false,
       "auto_rewrite_historical_records": false,
       "real_broker_orders_allowed": false
     },
+    "event_scoring": {
+      "asset_only_matured_prediction_count_excluded": 1,
+      "brier_score": 0.0582,
+      "calibration_bins": [
+        {
+          "absolute_gap": 0.24,
+          "count": 3,
+          "independence_weight": 2.0,
+          "mean_probability": 0.76,
+          "observed_rate": 1.0,
+          "range": [
+            0.6,
+            0.8
+          ]
+        }
+      ],
+      "cutoff": "2026-07-15",
+      "eligible_sample_count": 3,
+      "exclusion_counts": {
+        "asset_only_prediction": 1,
+        "rolling_family_restatement_downweighted": 1
+      },
+      "expected_calibration_error": 0.24,
+      "gates": {
+        "brier_at_or_below_threshold": true,
+        "ece_at_or_below_threshold": false,
+        "minimum_sample": false,
+        "resolved_coverage_at_least_80pct": true
+      },
+      "independent_event_family_count": 2,
+      "is_research_ready": false,
+      "legacy_matured_prediction_count_excluded": 67,
+      "log_loss": 0.274966,
+      "matured_independent_event_family_count": 2,
+      "matured_prediction_count": 3,
+      "matured_v2_prediction_count": 4,
+      "metric_standard": "binary proper scoring with unit weight per independent event family; lower is better",
+      "resolved_coverage_pct": 100.0,
+      "rolling_restatement_count_downweighted": 1,
+      "samples": [
+        {
+          "brier": 0.0484,
+          "event_family_id": "2026-07-12-P01",
+          "independence_weight": 1.0,
+          "log_loss": 0.248461,
+          "observed_outcome": 1,
+          "prediction_id": "2026-07-12-P01",
+          "probability": 0.78
+        },
+        {
+          "brier": 0.0784,
+          "event_family_id": "US_IRAN_EXECUTABLE_DEESCALATION_2026_07",
+          "independence_weight": 0.5,
+          "log_loss": 0.328504,
+          "observed_outcome": 1,
+          "prediction_id": "2026-07-12-P02",
+          "probability": 0.72
+        },
+        {
+          "brier": 0.0576,
+          "event_family_id": "US_IRAN_EXECUTABLE_DEESCALATION_2026_07",
+          "independence_weight": 0.5,
+          "log_loss": 0.274437,
+          "observed_outcome": 1,
+          "prediction_id": "2026-07-13-P01",
+          "probability": 0.76
+        }
+      ],
+      "thresholds": {
+        "maximum_brier": 0.25,
+        "maximum_expected_calibration_error": 0.15,
+        "minimum_resolved_coverage_pct": 80.0,
+        "minimum_sample": 30,
+        "minimum_sample_unit": "independent_event_family"
+      },
+      "total_matured_prediction_count": 71
+    },
     "gate_reasons": [
       "proper_scoring:minimum_sample",
-      "proper_scoring:resolved_coverage_at_least_80pct",
-      "proper_scoring:brier_at_or_below_threshold",
       "proper_scoring:ece_at_or_below_threshold"
     ],
     "integrity": {
-      "as_of": "2026-07-12",
+      "as_of": "2026-07-15",
       "early_closed_without_terminal_evidence": [
+        "2026-06-12-P01",
         "2026-06-12-P02",
         "2026-06-12-P04",
         "2026-06-12-P05",
+        "2026-06-13-P01",
         "2026-06-13-P02",
+        "2026-06-14-P01",
         "2026-06-14-P03",
         "2026-06-14-P06",
+        "2026-06-15-P01",
         "2026-06-15-P03",
         "2026-06-15-P04",
         "2026-06-15-P05",
         "2026-06-15-P06",
+        "2026-06-16-P01",
         "2026-06-16-P03",
         "2026-06-16-P05",
         "2026-06-16-P06",
         "2026-06-17-P02",
         "2026-06-17-P03",
         "2026-06-17-P05",
+        "2026-06-23-P01",
+        "2026-06-26-P01",
         "2026-06-26-P02",
         "2026-06-26-P03",
         "2026-06-26-P04",
@@ -1378,49 +1029,103 @@
         "2026-06-29-P03",
         "2026-06-29-P05",
         "2026-06-29-P06",
+        "2026-07-01-P01",
         "2026-07-01-P02",
         "2026-07-01-P03",
         "2026-07-01-P05",
         "2026-07-01-P06",
+        "2026-07-02-P01",
         "2026-07-02-P02",
         "2026-07-02-P03",
         "2026-07-02-P05",
         "2026-07-02-P06",
+        "2026-07-03-P01",
+        "2026-07-03-P02",
         "2026-07-03-P03",
-        "2026-07-03-P04"
+        "2026-07-03-P04",
+        "2026-07-04-P01",
+        "2026-07-05-P01",
+        "2026-07-10-P01",
+        "2026-07-10-P02",
+        "2026-07-11-P01",
+        "2026-07-11-P02"
       ],
       "explicit_failure_reason_coverage_pct": 82.86,
-      "explicit_score_coverage_pct": 42.11,
-      "matured_prediction_count": 61,
-      "original_prediction_count": 118,
+      "explicit_score_coverage_pct": 39.34,
+      "matured_prediction_count": 71,
+      "original_prediction_count": 127,
       "overdue_unreviewed_prediction_ids": [
+        "2026-06-12-P01",
+        "2026-06-12-P02",
         "2026-06-12-P03",
+        "2026-06-12-P04",
+        "2026-06-12-P05",
+        "2026-06-13-P01",
+        "2026-06-13-P02",
         "2026-06-13-P03",
+        "2026-06-13-P04",
+        "2026-06-13-P05",
         "2026-06-13-P06",
+        "2026-06-14-P01",
         "2026-06-14-P02",
+        "2026-06-14-P03",
+        "2026-06-14-P04",
+        "2026-06-14-P05",
+        "2026-06-14-P06",
+        "2026-06-15-P01",
         "2026-06-15-P02",
+        "2026-06-15-P03",
+        "2026-06-16-P01",
         "2026-06-16-P02",
+        "2026-06-16-P03",
+        "2026-06-17-P02",
+        "2026-06-17-P03",
+        "2026-06-23-P01",
         "2026-06-23-P02",
         "2026-06-23-P03",
         "2026-06-24-P02",
         "2026-06-24-P03",
+        "2026-06-26-P01",
+        "2026-06-26-P02",
+        "2026-06-26-P03",
         "2026-06-27-P02",
         "2026-06-27-P03",
+        "2026-06-29-P02",
+        "2026-06-29-P03",
+        "2026-07-01-P01",
+        "2026-07-01-P02",
+        "2026-07-01-P03",
+        "2026-07-02-P01",
+        "2026-07-02-P02",
+        "2026-07-02-P03",
+        "2026-07-03-P01",
+        "2026-07-03-P02",
+        "2026-07-03-P03",
+        "2026-07-03-P04",
+        "2026-07-04-P01",
         "2026-07-04-P02",
         "2026-07-04-P03",
         "2026-07-04-P04",
+        "2026-07-05-P01",
         "2026-07-05-P02",
         "2026-07-05-P03",
         "2026-07-05-P04",
         "2026-07-06-P01",
-        "2026-07-06-P02"
+        "2026-07-06-P02",
+        "2026-07-06-P03",
+        "2026-07-06-P04",
+        "2026-07-10-P01",
+        "2026-07-10-P02",
+        "2026-07-11-P01",
+        "2026-07-11-P02"
       ],
-      "review_count": 57,
+      "review_count": 61,
       "status_counts": {
         "expired": 1,
         "partial": 34,
-        "validated": 22
+        "validated": 26
       },
+      "valid_review_count": 8,
       "warnings": [
         "early_closure_bias: forecasts were closed before maturity without terminal evidence",
         "review_coverage_gap: matured forecasts remain unreviewed",
@@ -1434,36 +1139,165 @@
       "legacy_explicit_score_coverage_below_80pct"
     ],
     "lookback_period": "month",
+    "market_mapping_scoring": {
+      "by_direction": {
+        "outperform": {
+          "hit_rate_pct": 66.67,
+          "resolved_count": 3
+        },
+        "underperform": {
+          "hit_rate_pct": 100.0,
+          "resolved_count": 1
+        }
+      },
+      "cutoff": "2026-07-15",
+      "exclusion_counts": {
+        "reciprocal_duplicate_mapping": 3
+      },
+      "hit_rate_pct": 75.0,
+      "matured_mapping_count": 4,
+      "mean_signed_performance_pct": 1.338669,
+      "metric_standard": "independent benchmark-relative mapping evaluation; event probability is not reused",
+      "reciprocal_duplicate_mapping_count_excluded": 3,
+      "resolved_coverage_pct": 100.0,
+      "resolved_mapping_count": 4,
+      "samples": [
+        {
+          "benchmark": "000300.SH",
+          "benchmark_return_pct": -1.34,
+          "direction": "outperform",
+          "evaluation_deadline": "2026-07-13",
+          "excess_return_pct": 2.09,
+          "mapping_id": "2026-07-12-P01|600900.SH|000300.SH|2026-07-13",
+          "observed_outcome": 1,
+          "prediction_id": "2026-07-12-P01",
+          "review_date": "2026-07-15",
+          "signed_performance_pct": 2.09,
+          "symbol": "600900.SH",
+          "symbol_return_pct": 0.75
+        },
+        {
+          "benchmark": "SPY",
+          "benchmark_return_pct": -0.765617,
+          "direction": "outperform",
+          "evaluation_deadline": "2026-07-13",
+          "excess_return_pct": -1.855004,
+          "mapping_id": "2026-07-12-P02|GLD|SPY|2026-07-13",
+          "observed_outcome": 0,
+          "prediction_id": "2026-07-12-P02",
+          "review_date": "2026-07-14",
+          "signed_performance_pct": -1.855004,
+          "symbol": "GLD",
+          "symbol_return_pct": -2.620621
+        },
+        {
+          "benchmark": "SPY",
+          "benchmark_return_pct": -0.765617,
+          "direction": "underperform",
+          "evaluation_deadline": "2026-07-13",
+          "excess_return_pct": -1.94551,
+          "mapping_id": "2026-07-12-P02|JETS|SPY|2026-07-13",
+          "observed_outcome": 1,
+          "prediction_id": "2026-07-12-P02",
+          "review_date": "2026-07-14",
+          "signed_performance_pct": 1.94551,
+          "symbol": "JETS",
+          "symbol_return_pct": -2.711128
+        },
+        {
+          "benchmark": "588000.SH",
+          "benchmark_return_pct": -4.934368,
+          "direction": "outperform",
+          "evaluation_deadline": "2026-07-13",
+          "excess_return_pct": 3.174169,
+          "mapping_id": "2026-07-12-P05|510300.SH|588000.SH|2026-07-13",
+          "observed_outcome": 1,
+          "prediction_id": "2026-07-12-P05",
+          "review_date": "2026-07-14",
+          "signed_performance_pct": 3.174169,
+          "symbol": "510300.SH",
+          "symbol_return_pct": -1.760199
+        }
+      ]
+    },
     "mode": "gated_self_evolution",
     "promotion_allowed": false,
     "proper_scoring": {
-      "brier_score": null,
-      "calibration_bins": [],
-      "cutoff": "2026-07-12",
-      "eligible_sample_count": 0,
-      "exclusion_counts": {},
-      "expected_calibration_error": null,
+      "asset_only_matured_prediction_count_excluded": 1,
+      "brier_score": 0.0582,
+      "calibration_bins": [
+        {
+          "absolute_gap": 0.24,
+          "count": 3,
+          "independence_weight": 2.0,
+          "mean_probability": 0.76,
+          "observed_rate": 1.0,
+          "range": [
+            0.6,
+            0.8
+          ]
+        }
+      ],
+      "cutoff": "2026-07-15",
+      "eligible_sample_count": 3,
+      "exclusion_counts": {
+        "asset_only_prediction": 1,
+        "rolling_family_restatement_downweighted": 1
+      },
+      "expected_calibration_error": 0.24,
       "gates": {
-        "brier_at_or_below_threshold": false,
+        "brier_at_or_below_threshold": true,
         "ece_at_or_below_threshold": false,
         "minimum_sample": false,
-        "resolved_coverage_at_least_80pct": false
+        "resolved_coverage_at_least_80pct": true
       },
+      "independent_event_family_count": 2,
       "is_research_ready": false,
-      "legacy_matured_prediction_count_excluded": 61,
-      "log_loss": null,
-      "matured_prediction_count": 0,
-      "matured_v2_prediction_count": 0,
-      "metric_standard": "binary proper scoring; lower is better",
-      "resolved_coverage_pct": 0.0,
-      "samples": [],
+      "legacy_matured_prediction_count_excluded": 67,
+      "log_loss": 0.274966,
+      "matured_independent_event_family_count": 2,
+      "matured_prediction_count": 3,
+      "matured_v2_prediction_count": 4,
+      "metric_standard": "binary proper scoring with unit weight per independent event family; lower is better",
+      "resolved_coverage_pct": 100.0,
+      "rolling_restatement_count_downweighted": 1,
+      "samples": [
+        {
+          "brier": 0.0484,
+          "event_family_id": "2026-07-12-P01",
+          "independence_weight": 1.0,
+          "log_loss": 0.248461,
+          "observed_outcome": 1,
+          "prediction_id": "2026-07-12-P01",
+          "probability": 0.78
+        },
+        {
+          "brier": 0.0784,
+          "event_family_id": "US_IRAN_EXECUTABLE_DEESCALATION_2026_07",
+          "independence_weight": 0.5,
+          "log_loss": 0.328504,
+          "observed_outcome": 1,
+          "prediction_id": "2026-07-12-P02",
+          "probability": 0.72
+        },
+        {
+          "brier": 0.0576,
+          "event_family_id": "US_IRAN_EXECUTABLE_DEESCALATION_2026_07",
+          "independence_weight": 0.5,
+          "log_loss": 0.274437,
+          "observed_outcome": 1,
+          "prediction_id": "2026-07-13-P01",
+          "probability": 0.76
+        }
+      ],
       "thresholds": {
         "maximum_brier": 0.25,
         "maximum_expected_calibration_error": 0.15,
         "minimum_resolved_coverage_pct": 80.0,
-        "minimum_sample": 30
+        "minimum_sample": 30,
+        "minimum_sample_unit": "independent_event_family"
       },
-      "total_matured_prediction_count": 61
+      "total_matured_prediction_count": 71
     },
     "report_contract": {
       "ban_generic_fillers": true,
@@ -1482,8 +1316,8 @@
     },
     "schema_version": 1,
     "scorecard": {
-      "average_score": 73.32,
-      "end": "2026-07-12",
+      "average_score": 76.31,
+      "end": "2026-07-15",
       "failure_reasons": {
         "asset_mapping_error": 6,
         "data_stale": 2,
@@ -1492,27 +1326,79 @@
         "source_quality_issue": 3,
         "time_window_too_short": 2
       },
-      "hit_rate_pct": 48.0,
-      "review_count": 25,
+      "hit_rate_pct": 55.17,
+      "review_count": 29,
       "start": "2026-07-01",
       "status_counts": {
         "expired": 1,
         "partial": 12,
-        "validated": 12
+        "validated": 16
       },
-      "useful_rate_pct": 96.0,
-      "wrong_or_expired_rate_pct": 4.0
+      "useful_rate_pct": 96.55,
+      "wrong_or_expired_rate_pct": 3.45
     },
     "state": "shadow"
   },
   "reportQuality": {
     "passed": true,
-    "characterCount": 8262,
-    "sourceCount": 18,
+    "characterCount": 11799,
+    "sourceCount": 35,
     "coreDecisionCount": 5,
     "primaryThesisCount": 5,
     "topicSectionCount": 6,
-    "sourceDomainCount": 12,
+    "coreThesisCount": 4,
+    "coreStoryAudits": [
+      {
+        "title": "外交窗口未关闭，但海上强制与报复链重新主导",
+        "sourceCount": 8,
+        "sourceDomainCount": 7,
+        "roles": {
+          "primary": true,
+          "eventRegion": true,
+          "externalVerification": true
+        },
+        "errors": [],
+        "passed": true
+      },
+      {
+        "title": "高温仍是跨区域运营与健康风险，今天没有新的全球归因结论",
+        "sourceCount": 3,
+        "sourceDomainCount": 2,
+        "roles": {
+          "primary": true,
+          "eventRegion": true,
+          "externalVerification": true
+        },
+        "errors": [],
+        "passed": true
+      },
+      {
+        "title": "贸易制度改善与能源冲击并存，市场传导方向相反",
+        "sourceCount": 6,
+        "sourceDomainCount": 6,
+        "roles": {
+          "primary": true,
+          "eventRegion": true,
+          "externalVerification": true
+        },
+        "errors": [],
+        "passed": true
+      },
+      {
+        "title": "刚果（金）—乌干达Bundibugyo埃博拉仍在扩展，准备度比市场映射更重要",
+        "sourceCount": 3,
+        "sourceDomainCount": 3,
+        "roles": {
+          "primary": true,
+          "eventRegion": true,
+          "externalVerification": true
+        },
+        "errors": [],
+        "passed": true
+      }
+    ],
+    "storyEvidenceEnforced": true,
+    "sourceDomainCount": 19,
     "deepResearchMode": true,
     "deepResearchEnforced": true,
     "deepResearchEnforceFromDate": "2026-07-12",
@@ -1522,19 +1408,23 @@
     "minimumDistinctDomains": 8,
     "observationCount": 6,
     "fillerCount": 0,
-    "repeatedPairCount": 0,
-    "decisionLayerDensityPct": 32.61,
+    "repeatedPairCount": 1,
+    "decisionLayerDensityPct": 23.53,
     "errors": [],
-    "warnings": [],
-    "repeatedPairs": []
+    "warnings": [
+      "found 1 highly similar statement pairs"
+    ],
+    "repeatedPairs": [
+      {
+        "left": "证据角色： 一手来源=WHO；事件地区来源=WHO欧洲；外部核验=WMO",
+        "right": "证据角色： 一手来源=WHO；事件地区来源=WHO非洲区域；外部核验=ECDC",
+        "similarity": 0.85
+      }
+    ]
   },
   "limitations": [
-    "> 截至 01:30（Asia/Shanghai）。今天为周日，美股、A股与港股仍使用7月10日收盘，不使用“盘中”措辞。RSS采集294条、7条源错误；中国35个观察标的全部由腾讯报价回退链取得，四个结构化接口超时。RSS只负责发现，正文核心事实已回到气象机构、政府材料、法院主张或独立通讯社。预测系统从今天起使用v2预注册：数值概率、独立事件/资产截止日和二元解析标准。",
-    "7月12日是周日，35个中国观察标的仍对应7月10日收盘。上证 -1.00%、沪深300 -1.96%、创业板 -4.37%、科创50 -5.53%；510300.SH -1.77%、588000.SH -5.11%、512480.SH -6.93%、512660.SH +3.06%。香港方面恒生指数 +0.60%、恒生科技 -0.21%。四个结构化接口均在8秒门限超时，全部标的使用腾讯报价回退，因此今天不生成新的盘中结论，最高只保留中置信相对表现假设。",
-    "|CHINA|31,849.24 CNY|6|HOLD|market_closed_without_fresh_close；中国报价为7月10日收盘回退源|",
-    "5. 来源回退风险： 中国结构化接口全数超时，单一回退行情不能支撑高置信交易映射。",
-    "数据限制：RSS有7条抓取错误；五个核心RSS dossier在自动阶段均缺少一手来源，已通过人工公开检索补充或明确降级。中国四类结构化接口超时，35个标的全部使用腾讯回退报价；全球行情为7月10日收盘。严格研究晋升仍因合格到期v2样本少于30条而阻断。",
-    "RSS 采集出现 2 个错误。",
-    "RSS 使用 2 次回退。"
+    "RSS 采集出现 1 个错误。",
+    "RSS 使用 1 次回退。",
+    "RSS 时间戳质量受限：88 条过期、45 条未知，合计占 35.09%。"
   ]
 }

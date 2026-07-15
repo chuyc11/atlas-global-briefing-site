@@ -7,6 +7,23 @@ type SourceRef = { label: string; href: string };
 type BriefEvent = (typeof generated.events)[number];
 type Scenario = (typeof generated.scenarios)[number];
 type Portfolio = typeof generated.portfolios.us;
+type EventScoring = {
+  eligible_sample_count?: number;
+  matured_v2_prediction_count?: number;
+  brier_score?: number | null;
+  resolved_coverage_pct?: number;
+};
+type MarketMappingScoring = {
+  matured_mapping_count?: number;
+  resolved_mapping_count?: number;
+  resolved_coverage_pct?: number;
+  hit_rate_pct?: number | null;
+};
+type EvolutionWithSeparateScoring = typeof generated.evolution & {
+  event_scoring?: EventScoring;
+  proper_scoring?: EventScoring;
+  market_mapping_scoring?: MarketMappingScoring;
+};
 
 const events = generated.events as BriefEvent[];
 const scenarios = generated.scenarios as Scenario[];
@@ -14,6 +31,13 @@ const watchItems = generated.watchlist;
 const filters = ["全部", ...Array.from(new Set(events.map((item) => item.category)))];
 const selfHealing = generated.system.selfHealing;
 const improvements = generated.system.improvements;
+const evolution = generated.evolution as EvolutionWithSeparateScoring;
+const eventScoring = evolution.event_scoring ?? evolution.proper_scoring ?? {};
+const marketMappingScoring = evolution.market_mapping_scoring ?? {};
+
+function metric(value: number | null | undefined, suffix = ""): string {
+  return typeof value === "number" && Number.isFinite(value) ? `${value}${suffix}` : "N/A";
+}
 
 function safePublicHref(value: string): string {
   if (/^#[A-Za-z][A-Za-z0-9_-]*$/.test(value)) return value;
@@ -147,7 +171,7 @@ function PortfolioDialog({ portfolio, onClose }: { portfolio: Portfolio; onClose
     <div className="detail-backdrop" onMouseDown={(mouseEvent) => mouseEvent.currentTarget === mouseEvent.target && onClose()}>
       <section className="detail-panel portfolio-detail" role="dialog" aria-modal="true" aria-labelledby="portfolio-detail-title" onKeyDown={trapDialogFocus}>
         <header className="detail-header">
-          <div><span>唯一虚拟执行域</span><small>{portfolio.accountId}</small></div>
+          <div><span>公开聚合视图</span><small>账户与持仓明细不进入公开载荷</small></div>
           <button ref={closeRef} type="button" className="icon-button" onClick={onClose} aria-label="关闭组合详情">×</button>
         </header>
         <div className="detail-scroll">
@@ -155,28 +179,13 @@ function PortfolioDialog({ portfolio, onClose }: { portfolio: Portfolio; onClose
           <h2 id="portfolio-detail-title">{portfolio.name}</h2>
           <p className="detail-lead">{portfolio.review}</p>
           <div className="portfolio-facts">
-            <div><span>权益</span><strong>{portfolio.equity.toLocaleString(undefined, { minimumFractionDigits: 2 })}</strong></div>
-            <div><span>现金</span><strong>{portfolio.cash.toLocaleString(undefined, { minimumFractionDigits: 2 })}</strong></div>
-            <div><span>现金占比</span><strong>{portfolio.cashPct.toFixed(1)}%</strong></div>
-            <div><span>已实现盈亏</span><strong>{portfolio.realizedPnl.toFixed(2)}</strong></div>
+            <div><span>聚合收益率</span><strong>{portfolio.return}</strong></div>
+            <div><span>账户类型</span><strong>{portfolio.paperTradingOnly ? "虚拟研究" : "不可用"}</strong></div>
           </div>
           {portfolio.limitations.length > 0 && <div className="data-limitation"><b>数据限制</b><DetailList items={portfolio.limitations} /></div>}
           <section className="position-section">
-            <h3>持仓、成本与标记来源</h3>
-            {portfolio.positions.length ? (
-              <div className="position-table">
-                <div className="position-row position-head"><span>标的</span><span>数量</span><span>成本 / 现价</span><span>市值</span><span>未实现盈亏</span></div>
-                {portfolio.positions.map((position) => (
-                  <div className="position-row" key={`${portfolio.accountId}-${position.symbol}`}>
-                    <span><strong>{position.symbol}</strong><small>{position.exchange} · {position.priceDate}</small></span>
-                    <span>{position.quantity.toLocaleString()}</span>
-                    <span>{position.avgCost} / {position.lastPrice}<small>{position.priceSource}</small></span>
-                    <span>{position.marketValue.toLocaleString(undefined, { minimumFractionDigits: 2 })}</span>
-                    <span className={position.unrealizedPnl >= 0 ? "positive" : "negative"}>{position.unrealizedPnl.toFixed(2)}<small>{position.returnPct === null ? "N/A" : `${position.returnPct.toFixed(2)}%`}</small></span>
-                  </div>
-                ))}
-              </div>
-            ) : <p className="detail-empty">该历史日期只有账户估值汇总，没有使用未来持仓快照。</p>}
+            <h3>匿名资产配置</h3>
+            <div className="allocation-legend">{portfolio.allocations.map((item) => <span key={item.label}>{item.label} {item.pct}%</span>)}</div>
           </section>
           <p className="paper-boundary">仅用于虚拟研究验证，不连接券商，不产生真实订单。</p>
         </div>
@@ -193,16 +202,15 @@ export default function Home() {
   const [expandedScenario, setExpandedScenario] = useState<string | null>(null);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const dialogTriggerRef = useRef<HTMLButtonElement | null>(null);
+  const restoreDialogFocusRef = useRef(false);
   const reportDate = generated.reportDate.replaceAll("-", ".");
   const highConfidenceSignals = events.filter((item) => item.confidence === "高").length;
   const modalOpen = Boolean(selectedEvent || selectedPortfolio);
 
   const closeDialog = useCallback(() => {
+    restoreDialogFocusRef.current = true;
     setSelectedEvent(null);
     setSelectedPortfolio(null);
-    const trigger = dialogTriggerRef.current;
-    dialogTriggerRef.current = null;
-    window.requestAnimationFrame(() => trigger?.focus());
   }, []);
 
   const visibleEvents = useMemo(
@@ -235,6 +243,14 @@ export default function Home() {
       window.removeEventListener("keydown", closeOnEscape);
     };
   }, [closeDialog, modalOpen]);
+
+  useEffect(() => {
+    if (modalOpen || !restoreDialogFocusRef.current) return;
+    restoreDialogFocusRef.current = false;
+    const trigger = dialogTriggerRef.current;
+    dialogTriggerRef.current = null;
+    trigger?.focus({ preventScroll: true });
+  }, [modalOpen]);
 
   const toggleWatch = (index: number) => {
     setChecked((current) => {
@@ -340,14 +356,14 @@ export default function Home() {
       </section>
 
       <section className="portfolio-section">
-        {([generated.portfolios.us, generated.portfolios.china] as Portfolio[]).map((portfolio, index) => <div className={`portfolio-card ${index === 0 ? "dark" : "paper"}`} key={portfolio.name}><div className="portfolio-top"><span>{portfolio.name}</span><small>研究验证账户</small></div><strong className="portfolio-value">{portfolio.value}</strong><div className={`return ${portfolio.returnPct >= 0 ? "positive" : "negative"}`}>{portfolio.return} 总收益</div><div className="allocation-bar" aria-label={`${portfolio.name}资产配置`}>{portfolio.allocations.map((item) => <span style={{ width: `${item.pct}%` }} key={item.label}></span>)}</div><div className="allocation-legend">{portfolio.allocations.map((item) => <span key={item.label}>{item.label} {item.pct}%</span>)}</div><button type="button" className="portfolio-open" onClick={(clickEvent) => openPortfolio(portfolio, clickEvent.currentTarget)}>查看持仓与归因 <span aria-hidden="true">→</span></button></div>)}
+        {([generated.portfolios.us, generated.portfolios.china] as Portfolio[]).map((portfolio, index) => <div className={`portfolio-card ${index === 0 ? "dark" : "paper"}`} key={portfolio.name}><div className="portfolio-top"><span>{portfolio.name}</span><small>公开聚合视图</small></div><strong className="portfolio-value">匿名配置</strong><div className={`return ${portfolio.returnPct >= 0 ? "positive" : "negative"}`}>{portfolio.return} 总收益</div><div className="allocation-bar" aria-label={`${portfolio.name}资产配置`}>{portfolio.allocations.map((item) => <span style={{ width: `${item.pct}%` }} key={item.label}></span>)}</div><div className="allocation-legend">{portfolio.allocations.map((item) => <span key={item.label}>{item.label} {item.pct}%</span>)}</div><button type="button" className="portfolio-open" onClick={(clickEvent) => openPortfolio(portfolio, clickEvent.currentTarget)}>查看公开归因摘要 <span aria-hidden="true">→</span></button></div>)}
       </section>
 
       <section className="system-section" id="system">
         <div className="system-heading"><p className="section-number">04 / ATLAS CYCLE</p><h2>研究不是结论，<br />是可审计的循环。</h2><p>只读展示最近完成的统一 cycle、唯一虚拟账本、隔离回放和影子晋升门禁。</p></div>
         <div className="system-board">
-          <div className="system-metrics"><article><span>Cycle</span><strong>{generated.system.overallPassed ? "运行完成" : "阻断"}</strong><small>{generated.system.overallPassed ? "定向集成与安全门禁通过" : "存在阻断项"}</small></article><article><span>Canonical Ledger</span><strong>{generated.system.ledger.eventCount}</strong><small>{generated.system.ledger.accountCount} 个账户域 · audit {generated.system.ledger.auditPassed ? "pass" : "fail"}</small></article><article><span>Replay Safety</span><strong>{generated.system.replay.executionSafetyPassed ? "执行隔离通过" : "未通过"}</strong><small>策略证据：{generated.system.replay.strategyEvidencePassed ? "已验证" : "未验证"}</small></article><article><span>Shadow Gate</span><strong>{generated.system.shadow.recommendedState}</strong><small>evidence: {generated.system.shadow.evidenceStatus}</small></article><article><span>Self Healing</span><strong>{selfHealing.status === "healthy" ? "健康" : selfHealing.status === "blocked" ? "阻断" : selfHealing.status === "degraded" ? "降级" : "未运行"}</strong><small>{selfHealing.passed}/{selfHealing.checks} 检查通过 · {selfHealing.repairsVerified}/{selfHealing.repairsAttempted} 修复验证</small></article><article><span>Review Actions</span><strong>{improvements.verified}/{improvements.total}</strong><small>{improvements.monitoring} 观察 · {improvements.open} 待办 · {improvements.regressed} 复发</small></article></div>
-          <details className="system-detail"><summary>查看阶段、边界与限制</summary><div className="stage-list">{generated.system.stages.map((stage) => <span className={stage.status} key={stage.name}>{stage.name}<b>{stage.status}</b></span>)}</div><div className="boundary-list"><p>纸面虚拟交易：是</p><p>真实券商订单：禁止</p><p>低风险派生数据：允许受控自愈</p><p>源代码自动修改：禁止</p><p>生产自动发布：禁止</p><p>自动晋升 active-normal：禁止</p></div>{improvements.regressed + improvements.overdue + improvements.open > 0 && <div className="data-limitation"><b>复盘改进仍在闭环</b><p>{improvements.open} 项待办、{improvements.regressed} 项复发、{improvements.overdue} 项逾期；另有 {improvements.capabilityGaps} 个能力缺口。</p></div>}{selfHealing.unresolved > 0 && <div className="data-limitation"><b>自愈仍有待处理项</b><p>{selfHealing.unresolved} 个问题尚未关闭，其中 {selfHealing.blocking} 个属于阻断级；高风险问题不会被自动修改。</p></div>}{!generated.system.replay.strategyEvidencePassed && <div className="data-limitation"><b>策略有效性未验证</b><p>当前回放只证明隔离执行和账本安全，没有基准收益、回撤、成本与样本外标签证据。</p></div>}{generated.system.shadow.evidenceStatus !== "verified" && <div className="data-limitation"><b>门禁保持 shadow</b><p>当前缺少已验证的样本外证据，因此不会自动晋升。</p></div>}</details>
+          <div className="system-metrics"><article><span>Cycle</span><strong>{generated.system.overallPassed ? "运行完成" : "阻断"}</strong><small>{generated.system.overallPassed ? "公开安全状态已更新" : "存在阻断项"}</small></article><article><span>Canonical Ledger</span><strong>{generated.system.ledger.auditPassed ? "审计通过" : "未通过"}</strong><small>账户、事件与哈希明细不公开</small></article><article><span>Replay Safety</span><strong>{generated.system.replay.executionSafetyPassed ? "执行隔离通过" : "未通过"}</strong><small>策略证据：{generated.system.replay.strategyEvidencePassed ? "已验证" : "未验证"}</small></article><article><span>Shadow Gate</span><strong>{generated.system.shadow.recommendedState}</strong><small>evidence: {generated.system.shadow.evidenceStatus}</small></article><article><span>Self Healing</span><strong>{selfHealing.status === "healthy" ? "健康" : selfHealing.status === "blocked" ? "阻断" : selfHealing.status === "degraded" ? "降级" : "未运行"}</strong><small>内部检查与修复数量不公开</small></article><article><span>Review Actions</span><strong>{improvements.status}</strong><small>内部任务数量与能力缺口不公开</small></article></div>
+          <details className="system-detail"><summary>查看阶段、边界与限制</summary><div className="stage-list">{generated.system.stages.map((stage) => <span className={stage.status} key={stage.name}>{stage.name}<b>{stage.status}</b></span>)}</div><div className="boundary-list"><p>纸面虚拟交易：是</p><p>真实券商订单：禁止</p><p>账户与持仓明细：不公开</p><p>源代码自动修改：禁止</p><p>生产自动发布：禁止</p><p>自动晋升 active-normal：禁止</p></div>{!generated.system.replay.strategyEvidencePassed && <div className="data-limitation"><b>策略有效性未验证</b><p>当前回放只证明隔离执行和账本安全，没有基准收益、回撤、成本与样本外标签证据。</p></div>}{generated.system.shadow.evidenceStatus !== "verified" && <div className="data-limitation"><b>门禁保持 shadow</b><p>当前缺少已验证的样本外证据，因此不会自动晋升。</p></div>}</details>
         </div>
       </section>
 
@@ -357,14 +373,15 @@ export default function Home() {
       </section>
 
       <section className="review-section">
-        <div><p className="section-number">06 / SELF EVOLUTION</p><h2>不回避错判，<br />才算真的进化。</h2><p className="evolution-state">当前状态 <b>{generated.evolution.state}</b> · 自动晋升关闭</p></div>
+        <div><p className="section-number">06 / SELF EVOLUTION</p><h2>事件与资产分开算，<br />复盘才不会自欺。</h2><p className="evolution-state">当前状态 <b>{generated.evolution.state}</b> · 自动晋升关闭</p></div>
         <div>
           <div className="evolution-scoreboard">
-            <span>本月复盘<strong>{generated.evolution.scorecard.review_count}</strong></span>
-            <span>命中率<strong>{generated.evolution.scorecard.hit_rate_pct}%</strong></span>
-            <span>显式评分覆盖<strong>{generated.evolution.integrity.explicit_score_coverage_pct}%</strong></span>
-            <span>错判 / 过期<strong>{generated.evolution.scorecard.wrong_or_expired_rate_pct}%</strong></span>
+            <span>事件有效样本<strong>{eventScoring.eligible_sample_count ?? 0}/{eventScoring.matured_v2_prediction_count ?? 0}</strong></span>
+            <span>事件 Brier<strong>{metric(eventScoring.brier_score)}</strong></span>
+            <span>资产映射解析<strong>{marketMappingScoring.resolved_mapping_count ?? 0}/{marketMappingScoring.matured_mapping_count ?? 0}</strong></span>
+            <span>映射命中率<strong>{metric(marketMappingScoring.hit_rate_pct, "%")}</strong></span>
           </div>
+          <p className="evolution-state">事件概率只进入 Brier / Log loss / ECE；资产映射只按预注册基准和交易日回报评分。</p>
           <h3>本轮暴露的问题</h3>
           <ul className="evolution-warnings"><li>复盘结果没有 wrong / expired，存在乐观偏差。</li><li>{generated.evolution.integrity.early_closed_without_terminal_evidence.length} 条预测在到期前关闭。</li><li>{generated.evolution.integrity.overdue_unreviewed_prediction_ids.length} 条到期预测仍未复盘。</li></ul>
           <h3>下一轮强制规则</h3>

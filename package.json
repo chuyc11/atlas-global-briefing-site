@@ -9,7 +9,7 @@
     "dev": "node build/run-vinext.mjs dev",
     "build": "node build/run-vinext.mjs build",
     "start": "node build/run-vinext.mjs start",
-    "test": "npm run build && node --test tests/rendered-html.test.mjs",
+    "test": "npm run build && node --test tests/*.test.mjs",
     "test:ui": "python tests/interactive-ui.py",
     "typecheck": "tsc --noEmit",
     "quality": "npm run lint && npm run typecheck && npm test",

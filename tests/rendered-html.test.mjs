@@ -53,7 +53,7 @@ test("server-renders the ATLAS briefing", async () => {
   assert.match(html, /今天必须知道的/);
   assert.match(html, /查看完整分析/);
   assert.match(html, /运行闭环/);
-  assert.match(html, /研究验证账户/);
+  assert.match(html, /公开聚合视图/);
   assert.doesNotMatch(html, /codex-preview|Codex is working|react-loading-skeleton/i);
 });
 
@@ -84,22 +84,33 @@ test("uses generated briefing data without starter preview residue", async () =>
   const eventsByCategory = new Map(payload.events.map((item) => [item.category, item]));
   assert.equal(eventsByCategory.get("科技")?.predictionId, "");
   assert.doesNotMatch(eventsByCategory.get("科技")?.analysis ?? "", /510300\.SH|588000\.SH/);
-  const typhoonScenario = payload.scenarios.find((item) => item.id === "2026-07-12-P01");
-  assert.deepEqual(
-    new Set(typhoonScenario?.sourceRefs.map((source) => source.href)),
-    new Set([
-      "https://www.weather.gov.hk/textonly/v2/tc/tcp.htm",
-      "https://apnews.com/article/bfdfdbb239f38b6c22a54c8349ce8d28",
-    ]),
+  assert.ok(payload.scenarios.every((item) => item.id.startsWith(`${payload.reportDate}-P`)));
+  assert.ok(
+    payload.scenarios.every((item) =>
+      item.sourceRefs.every((source) => /^https?:\/\//.test(source.href)),
+    ),
   );
-  assert.ok(Array.isArray(payload.portfolios.us.positions));
-  assert.ok(Array.isArray(payload.portfolios.china.positions));
+  assert.ok(
+    payload.scenarios.every(
+      (item) => new Set(item.sourceRefs.map((source) => source.href)).size === item.sourceRefs.length,
+    ),
+  );
+  for (const portfolio of [payload.portfolios.us, payload.portfolios.china]) {
+    assert.equal(portfolio.publicDataOnly, true);
+    assert.equal(portfolio.paperTradingOnly, true);
+    for (const field of ["accountId", "positions", "cash", "equity", "realizedPnl", "initialCash"]) {
+      assert.equal(Object.hasOwn(portfolio, field), false, `public portfolio leaked ${field}`);
+    }
+  }
+  assert.equal(Object.hasOwn(payload.system.ledger, "contentHash"), false);
+  assert.equal(Object.hasOwn(payload.system.ledger, "accountCount"), false);
+  assert.doesNotMatch(generated, /[A-Za-z]:\\\\(?:Users|Documents)\\|\/(?:Users|home)\//i);
   assert.equal(payload.system.boundary.realBrokerOrdersAllowed, false);
   assert.ok(payload.system.selfHealing);
-  assert.equal(payload.system.selfHealing.sourceCodeAutoModified, false);
-  assert.equal(payload.system.selfHealing.productionAutoDeployed, false);
+  assert.equal(payload.system.boundary.sourceCodeAutoModified, false);
+  assert.equal(payload.system.boundary.productionAutoDeployed, false);
   assert.ok(payload.system.improvements);
-  assert.ok(payload.system.improvements.total >= payload.system.improvements.verified);
+  assert.equal(typeof payload.system.improvements.status, "string");
   assert.equal(payload.evolution.mode, "gated_self_evolution");
   assert.equal(payload.evolution.state, "shadow");
   assert.equal(payload.evolution.boundary.auto_promote_strategy, false);

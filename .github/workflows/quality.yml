@@ -24,6 +24,7 @@ jobs:
       - run: npm ci
       - run: npm run quality
       - run: npm audit --audit-level=high --registry=https://registry.npmjs.org
+      - run: npm audit --omit=dev --audit-level=high --registry=https://registry.npmjs.org
       - run: python -m pip install playwright==1.55.0
       - run: python -m playwright install --with-deps chromium
       - name: Responsive interaction gate
