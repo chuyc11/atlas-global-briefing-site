@@ -1,26 +1,5 @@
 {
   "schemaVersion": 1,
-  "reviewedAt": "2026-07-14",
-  "exceptions": [
-    {
-      "advisory": "GHSA-67mh-4wv8-2f99",
-      "severity": "moderate",
-      "dependencyPath": "drizzle-kit > @esbuild-kit/esm-loader > @esbuild-kit/core-utils > esbuild",
-      "exposure": "development-only",
-      "rationale": "The affected esbuild development server is not exposed by the production Worker; CI continues to block high and critical findings.",
-      "compensatingControls": ["development server binds only for local/CI use", "production build contains no esbuild server"],
-      "owner": "frontend-maintainers",
-      "expiresAt": "2026-08-31"
-    },
-    {
-      "advisory": "GHSA-qx2v-qp2m-jg93",
-      "severity": "moderate",
-      "dependencyPath": "next > postcss",
-      "exposure": "production dependency without a current user-controlled CSS input path",
-      "rationale": "The application does not parse or stringify user-controlled CSS. Upgrade when a compatible Next.js release carries PostCSS 8.5.10 or later.",
-      "compensatingControls": ["no user CSS feature", "nonce CSP without unsafe-inline script", "high and critical audit gate"],
-      "owner": "frontend-maintainers",
-      "expiresAt": "2026-08-31"
-    }
-  ]
+  "reviewedAt": "2026-07-16",
+  "exceptions": []
 }

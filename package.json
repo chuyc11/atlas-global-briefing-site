@@ -14,10 +14,9 @@
     "typecheck": "tsc --noEmit",
     "quality": "npm run lint && npm run typecheck && npm test",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
-    "db:generate": "drizzle-kit generate"
+    "audit:policy": "node security/audit-policy.mjs"
   },
   "dependencies": {
-    "drizzle-orm": "0.45.2",
     "next": "16.2.10",
     "react": "19.2.6",
     "react-dom": "19.2.6"
@@ -31,7 +30,6 @@
     "@types/react-dom": "19.2.3",
     "@vitejs/plugin-react": "6.0.2",
     "@vitejs/plugin-rsc": "0.5.26",
-    "drizzle-kit": "0.31.10",
     "eslint": "9.39.4",
     "eslint-config-next": "16.2.10",
     "react-server-dom-webpack": "19.2.6",
@@ -40,6 +38,9 @@
     "vinext": "0.2.1",
     "vite": "8.1.4",
     "wrangler": "4.110.0"
+  },
+  "overrides": {
+    "postcss": "8.5.17"
   },
   "type": "module"
 }

@@ -24,6 +24,11 @@ type EvolutionWithSeparateScoring = typeof generated.evolution & {
   proper_scoring?: EventScoring;
   market_mapping_scoring?: MarketMappingScoring;
 };
+type SystemWithExplicitGates = typeof generated.system & {
+  operationalGatePassed?: boolean;
+  releaseCandidatePassed?: boolean;
+  researchPromotionPassed?: boolean;
+};
 
 const events = generated.events as BriefEvent[];
 const scenarios = generated.scenarios as Scenario[];
@@ -31,6 +36,10 @@ const watchItems = generated.watchlist;
 const filters = ["全部", ...Array.from(new Set(events.map((item) => item.category)))];
 const selfHealing = generated.system.selfHealing;
 const improvements = generated.system.improvements;
+const systemStatus = generated.system as SystemWithExplicitGates;
+const operationalGatePassed = systemStatus.operationalGatePassed ?? systemStatus.overallPassed;
+const releaseCandidatePassed = systemStatus.releaseCandidatePassed ?? false;
+const researchPromotionPassed = systemStatus.researchPromotionPassed ?? false;
 const evolution = generated.evolution as EvolutionWithSeparateScoring;
 const eventScoring = evolution.event_scoring ?? evolution.proper_scoring ?? {};
 const marketMappingScoring = evolution.market_mapping_scoring ?? {};
@@ -362,7 +371,7 @@ export default function Home() {
       <section className="system-section" id="system">
         <div className="system-heading"><p className="section-number">04 / ATLAS CYCLE</p><h2>研究不是结论，<br />是可审计的循环。</h2><p>只读展示最近完成的统一 cycle、唯一虚拟账本、隔离回放和影子晋升门禁。</p></div>
         <div className="system-board">
-          <div className="system-metrics"><article><span>Cycle</span><strong>{generated.system.overallPassed ? "运行完成" : "阻断"}</strong><small>{generated.system.overallPassed ? "公开安全状态已更新" : "存在阻断项"}</small></article><article><span>Canonical Ledger</span><strong>{generated.system.ledger.auditPassed ? "审计通过" : "未通过"}</strong><small>账户、事件与哈希明细不公开</small></article><article><span>Replay Safety</span><strong>{generated.system.replay.executionSafetyPassed ? "执行隔离通过" : "未通过"}</strong><small>策略证据：{generated.system.replay.strategyEvidencePassed ? "已验证" : "未验证"}</small></article><article><span>Shadow Gate</span><strong>{generated.system.shadow.recommendedState}</strong><small>evidence: {generated.system.shadow.evidenceStatus}</small></article><article><span>Self Healing</span><strong>{selfHealing.status === "healthy" ? "健康" : selfHealing.status === "blocked" ? "阻断" : selfHealing.status === "degraded" ? "降级" : "未运行"}</strong><small>内部检查与修复数量不公开</small></article><article><span>Review Actions</span><strong>{improvements.status}</strong><small>内部任务数量与能力缺口不公开</small></article></div>
+          <div className="system-metrics"><article><span>Operational Cycle</span><strong>{operationalGatePassed ? "运行门禁通过" : "阻断"}</strong><small>{operationalGatePassed ? "公开安全状态已更新" : "存在阻断项"}</small></article><article><span>Release Candidate</span><strong>{releaseCandidatePassed ? "发布证据完整" : "未认证"}</strong><small>需要全量回归与幂等复跑</small></article><article><span>Canonical Ledger</span><strong>{generated.system.ledger.auditPassed ? "审计通过" : "未通过"}</strong><small>账户、事件与哈希明细不公开</small></article><article><span>Replay Safety</span><strong>{generated.system.replay.executionSafetyPassed ? "执行隔离通过" : "未通过"}</strong><small>研究晋级：{researchPromotionPassed ? "证据通过" : "未通过"}</small></article><article><span>Shadow Gate</span><strong>{generated.system.shadow.recommendedState}</strong><small>evidence: {generated.system.shadow.evidenceStatus}</small></article><article><span>Self Healing</span><strong>{selfHealing.status === "healthy" ? "健康" : selfHealing.status === "blocked" ? "阻断" : selfHealing.status === "degraded" ? "降级" : "未运行"}</strong><small>内部检查与修复数量不公开</small></article><article><span>Review Actions</span><strong>{improvements.status}</strong><small>内部任务数量与能力缺口不公开</small></article></div>
           <details className="system-detail"><summary>查看阶段、边界与限制</summary><div className="stage-list">{generated.system.stages.map((stage) => <span className={stage.status} key={stage.name}>{stage.name}<b>{stage.status}</b></span>)}</div><div className="boundary-list"><p>纸面虚拟交易：是</p><p>真实券商订单：禁止</p><p>账户与持仓明细：不公开</p><p>源代码自动修改：禁止</p><p>生产自动发布：禁止</p><p>自动晋升 active-normal：禁止</p></div>{!generated.system.replay.strategyEvidencePassed && <div className="data-limitation"><b>策略有效性未验证</b><p>当前回放只证明隔离执行和账本安全，没有基准收益、回撤、成本与样本外标签证据。</p></div>}{generated.system.shadow.evidenceStatus !== "verified" && <div className="data-limitation"><b>门禁保持 shadow</b><p>当前缺少已验证的样本外证据，因此不会自动晋升。</p></div>}</details>
         </div>
       </section>

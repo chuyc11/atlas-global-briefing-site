@@ -16,9 +16,11 @@ npm run dev
 
 ```powershell
 npm test
+npm run audit:policy
 ```
 
 测试会完成 vinext/Cloudflare Worker 构建，并验证服务端输出、结构化深度数据、来源、情景和组合数据。
+安全策略从 npm 官方端点审计全部依赖，未豁免任何已知漏洞；CI 同时固定 Action 提交并扫描误提交秘密。
 
 页面运行后可执行真实浏览器回归：
 
@@ -42,6 +44,6 @@ python atlas.py sync
 python work\global-briefing\scripts\sync_briefing_site.py --force
 ```
 
-网页卡片只保留决策摘要；“查看完整分析”会展示已确认事实、驱动与传导、受益/承压方向、验证信号、观察标的、证伪条件和来源。运行闭环区域只读展示 cycle、canonical ledger、隔离 replay 与 shadow gate。
+网页卡片只保留决策摘要；“查看完整分析”会展示已确认事实、驱动与传导、受益/承压方向、验证信号、观察标的、证伪条件和来源。运行闭环区域分别展示日常运行门禁、发布候选、canonical ledger、隔离 replay 与研究晋级，避免把局部绿色解释为整体可发布。
 
 网页为研究展示，不连接券商，也不产生真实订单。
