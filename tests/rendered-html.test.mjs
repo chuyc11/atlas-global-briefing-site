@@ -124,6 +124,14 @@ test("uses generated briefing data without starter preview residue", async () =>
   assert.ok(payload.reportQuality.characterCount <= payload.reportQuality.maximumCharacters);
   assert.ok(new Set(payload.events.map((item) => item.implication)).size > 1);
   assert.ok(payload.events.every((item) => /^(https?:\/\/|#[A-Za-z])/.test(item.href)));
+  assert.notEqual(payload.hero.headline.join(""), payload.hero.dek);
+  assert.notEqual(payload.hero.dek, payload.hero.editorNote);
+  assert.ok(
+    payload.events.every(
+      (item) => !/^(结论|确认事实|分析判断|判断)[：:]/.test(item.cardTitle),
+    ),
+  );
+  assert.doesNotMatch(generated, /｜｜/);
 
   await assert.rejects(access(new URL("app/_sites-preview", projectRoot)));
 });

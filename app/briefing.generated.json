@@ -3,16 +3,16 @@
   "reportDate": "2026-07-15",
   "retrievedAt": "2026-07-15 16:10",
   "issue": "VOL. 023",
-  "contentHash": "b10f0c97ce066233c9c20e60bb66d2dca8b911b4a90b1e5be2919dd5ccb016e5",
+  "contentHash": "f8f0b0038cb3c824dbf45aac84a73c64fd7df458eda579d5ea3d91796ae9ac38",
   "generatedAt": "2026-07-15T00:00:00+08:00",
   "hero": {
     "eyebrow": "每日全球晨间简报",
     "headline": [
-      "结论：最近24小时的新增是封锁、袭船与互袭升级，",
-      "不是可执行降级文本"
+      "霍尔木兹风险重新",
+      "压过外交窗口"
     ],
-    "dek": "最近24小时的新增是封锁、袭船与互袭升级，不是可执行降级文本；外交窗口仍在，但尚未主导行为。",
-    "editorNote": "外交窗口仍在，但尚未主导行为。"
+    "dek": "美国恢复对伊朗港口封锁，双方继续打击，IMO记录船员伤亡；没有包含执行主体、时间表和监督机制的公开降级文本，航运与能源风险仍在上升",
+    "editorNote": "接下来验证协议文本、船流、战争险。"
   },
   "metrics": {
     "riskTemperature": 55,
@@ -21,27 +21,33 @@
     "freshness": "中等",
     "sourceHealth": {
       "label": "中等",
-      "score": 73,
+      "score": 85,
       "rssItemCount": 379,
       "rssFresh24hCount": 246,
-      "rssStaleCount": 88,
+      "rssBackgroundCount": 88,
+      "rssLookbackHours": 72,
+      "rssStaleCount": 0,
       "rssUnknownTimestampCount": 45,
-      "rssStaleOrUnknownPct": 35.09,
+      "rssStaleOrUnknownPct": 11.87,
       "rssErrorCount": 1,
       "rssFallbackCount": 1,
       "rssSourceCoveragePct": 100.0,
       "chinaErrorCount": 0,
       "chinaFallbackItemCount": 0,
       "chinaItemCount": 35,
+      "chinaMissingPriceDateItemCount": 0,
+      "chinaInferredPriceDateItemCount": 35,
+      "chinaStalePriceItemCount": 0,
       "staleMarketItemCount": 0,
       "priorCloseMarketItemCount": 8,
       "marketItemCount": 8,
       "limitations": [
         "RSS 采集出现 1 个错误。",
         "RSS 使用 1 次回退。",
-        "RSS 时间戳质量受限：88 条过期、45 条未知，合计占 35.09%。"
+        "RSS 时间戳质量受限：0 条过期、45 条未知，合计占 11.87%。",
+        "中国行情有 35 条旧版记录未显式写入价格日期；因其在报告日16:00后抓取，按报告日收盘作保守推断。"
       ],
-      "method": "artifact_backed_source_health_v2"
+      "method": "artifact_backed_source_health_v3"
     },
     "riskModel": {
       "kind": "heuristic_signal_index",
@@ -51,22 +57,22 @@
       "mediumScenarioCount": 1,
       "riskItemCount": 3
     },
-    "readingMinutes": 14
+    "readingMinutes": 12
   },
   "events": [
     {
       "category": "地缘",
       "time": "首要变量",
-      "title": "结论：最近24小时的新增是封锁、袭船与互袭升级，不是可执行降级文本",
-      "cardTitle": "结论：最近24小时的新增是封锁、袭船与互袭升级，不是可执行降级文本",
-      "body": "最近24小时的新增是封锁、袭船与互袭升级，不是可执行降级文本；外交窗口仍在，但尚未主导行为。",
-      "implication": "外交窗口仍在，但尚未主导行为。",
+      "title": "霍尔木兹风险重新压过外交窗口",
+      "cardTitle": "霍尔木兹风险重新压过外交窗口",
+      "body": "最近24小时的增量是封锁、袭船和互袭，不是可执行的降级安排；外交渠道仍在，但尚未改变海上行为。",
+      "implication": "袭船与封锁压缩承运人和保险人的风险额度，随后推高战争险、运价、库存占用和融资成本；炼厂替代采购、航空燃油和亚洲输入型通胀是第二层传导。",
       "source": "查看来源",
       "href": "#sources",
       "facts": [
-        "结论： 最近24小时的新增是封锁、袭船与互袭升级，不是可执行降级文本；外交窗口仍在，但尚未主导行为。",
-        "硬证据： 7月12日联合国秘书长要求美伊紧急恢复谈判；7月14日联合国又确认美国打击伊朗、伊朗攻击周边目标，以及霍尔木兹附近最新袭船造成至少两名船员死亡。7月15日美联社报道美国重新实施港口封锁并出现新一轮互袭。联合国声明｜联合国简报｜France 24地区进展",
-        "反证： 伊朗政府公布最新伤亡数字，美方把行动描述为对袭船与航行受阻的回应；战时伤亡和具体目标效果尚未充分独立核验。地区调停仍在继续，有限行动也可能服务于谈判筹码，而非无限升级。"
+        "最近24小时的增量是封锁、袭船和互袭，不是可执行的降级安排；外交渠道仍在，但尚未改变海上行为。",
+        "7月12日联合国要求美伊恢复谈判；7月14日联合国简报记录新一轮袭船及船员伤亡；7月15日美联社报道美国恢复港口封锁并出现新一轮互袭。联合国声明与France 24地区报道提供了时间线交叉核验。",
+        "袭船与封锁压缩承运人和保险人的风险额度，随后推高战争险、运价、库存占用和融资成本；炼厂替代采购、航空燃油和亚洲输入型通胀是第二层传导。"
       ],
       "sources": [
         {
@@ -78,64 +84,67 @@
           "href": "https://www.un.org/sg/en/content/sg/statements/2026-07-12/statement-attributable-the-spokesperson-for-the-secretary-general-the-middle-east"
         },
         {
-          "label": "联合国简报",
-          "href": "https://www.un.org/sg/en/content/highlight/2026-07-14.html"
+          "label": "France 24地区报道",
+          "href": "https://www.france24.com/en/middle-east/20260715-middle-east-live-tehran-and-us-exchange-strikes-as-blockade-of-iranian-ports-resumes"
         },
         {
-          "label": "France 24地区进展",
-          "href": "https://www.france24.com/en/middle-east/20260715-middle-east-live-tehran-and-us-exchange-strikes-as-blockade-of-iranian-ports-resumes"
+          "label": "联合国",
+          "href": "https://www.un.org/sg/en/content/highlight/2026-07-14.html"
         },
         {
           "label": "半岛电视台",
           "href": "https://www.aljazeera.com/tag/strait-of-hormuz/"
-        },
-        {
-          "label": "英国政府",
-          "href": "https://www.gov.uk/government/news/the-countdown-begins-uk-india-fta-enters-into-force-on-july-15th"
-        },
-        {
-          "label": "印度新闻信息局",
-          "href": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2274280&lang=1&reg=20"
-        },
-        {
-          "label": "英国议会研究简报",
-          "href": "https://commonslibrary.parliament.uk/research-briefings/cbp-10258/"
         }
       ],
-      "predictionId": "",
+      "predictionId": "2026-07-15-P01",
       "relatedPredictionIds": [
-        "2026-07-15-P01",
-        "2026-07-15-P02"
+        "2026-07-15-P01"
       ],
-      "analysis": "外交窗口仍在，但尚未主导行为。",
-      "confidence": "待验证",
-      "horizon": "首要变量",
+      "analysis": "截至7月16日23:59（上海时间），美伊仍不会形成同时具备执行方、时间表和监督机制的公开降级文本",
+      "confidence": "高",
+      "horizon": "1日",
       "drivers": [
-        "结论： 最近24小时的新增是封锁、袭船与互袭升级，不是可执行降级文本；外交窗口仍在，但尚未主导行为。",
-        "硬证据： 7月12日联合国秘书长要求美伊紧急恢复谈判；7月14日联合国又确认美国打击伊朗、伊朗攻击周边目标，以及霍尔木兹附近最新袭船造成至少两名船员死亡。7月15日美联社报道美国重新实施港口封锁并出现新一轮互袭。联合国声明｜联合国简报｜France 24地区进展",
-        "反证： 伊朗政府公布最新伤亡数字，美方把行动描述为对袭船与航行受阻的回应；战时伤亡和具体目标效果尚未充分独立核验。地区调停仍在继续，有限行动也可能服务于谈判筹码，而非无限升级。"
+        "港口封锁重新实施",
+        "双方报复链条延续",
+        "联合国与地区调停方尚未公布执行文本"
       ],
-      "beneficiaries": [],
-      "pressures": [],
+      "beneficiaries": [
+        "避险资产研究",
+        "能源安全与航运风险研究"
+      ],
+      "pressures": [
+        "航空与高燃油敏感行业",
+        "海湾航运和保险"
+      ],
       "verificationSignals": [
-        "外交窗口仍在，但尚未主导行为。"
+        "公开协议是否具备三项执行要素",
+        "IMO航运安全通报",
+        "GLD相对SPY的完整收盘窗口"
       ],
-      "instruments": [],
+      "instruments": [
+        {
+          "symbol": "GLD",
+          "exchange": "NYSE ARCA",
+          "type": "ETF",
+          "thesis": "观察冲突风险与实际利率的净效应",
+          "risk": "美元和实际利率上升可能压过避险买盘"
+        }
+      ],
       "id": "2026-07-15-01-地缘"
     },
     {
       "category": "安全",
       "time": "一周窗口",
-      "title": "确认事实：霍尔木兹军事风险已经从口头威胁回到船舶遇袭、港口封锁和跨境打击",
-      "cardTitle": "确认事实：霍尔木兹军事风险已经从口头威胁回到船舶遇袭、港口封锁和跨境打击",
-      "body": "霍尔木兹军事风险已经从口头威胁回到船舶遇袭、港口封锁和跨境打击。IMO在联合国7月14日简报中称最新航运攻击造成船员死亡和受伤；持续强调船员安全与航行自由。",
-      "implication": "持续强调船员安全与航行自由。",
-      "source": "IMO海峡专题",
-      "href": "https://www.imo.org/en/MediaCentre/HotTopics/Pages/Middle-East-Strait-of-Hormuz.aspx",
+      "title": "海湾军事风险已从口头威胁回到船舶遇袭、港口封锁和跨境打击",
+      "cardTitle": "海湾军事风险已从口头威胁回到船舶遇袭、港口封锁和跨境打击",
+      "body": "短期关键不是武器平台涨跌，而是护航、防空和补给消耗是否进入持续状态。",
+      "implication": "海上事件增加护航、反无人机、防空、雷达、通信、弹药和维修保障需求；持续时间越长，风险越可能从一次性平台采购扩展到补给与关键基础设施防护。误判会把海湾国家和民用港口卷入冲突。",
+      "source": "查看来源",
+      "href": "#sources",
       "facts": [
-        "确认事实： 霍尔木兹军事风险已经从口头威胁回到船舶遇袭、港口封锁和跨境打击。IMO在联合国7月14日简报中称最新航运攻击造成船员死亡和受伤；IMO海峡专题持续强调船员安全与航行自由。",
-        "当事方主张： 美方称行动回应商业船舶受袭并保障通行；伊朗方面把地区军事设施和能源出口作为反制对象。具体打击战果、伤亡规模与责任链条仍处冲突叙事环境，未独立确认的数字不作为确定事实。",
-        "因果链： 海上事件→护航和反无人机/防空需求→基地、雷达、通信、弹药和维修保障消耗上升；若冲突持续，采购关注会从平台扩展到补给、网络防护和关键基础设施。第二阶风险是误判导致海湾国家被卷入，以及民用卫星、港口和能源设施的军民两用边界模糊。"
+        "海湾军事风险已从口头威胁回到船舶遇袭、港口封锁和跨境打击，短期关键不是武器平台涨跌，而是护航、防空和补给消耗是否进入持续状态。",
+        "IMO在联合国7月14日简报中报告最新航运攻击造成船员死伤；IMO海峡专题强调船员安全与航行自由。联合国简报和美联社确认封锁与互袭仍在继续。",
+        "海上事件增加护航、反无人机、防空、雷达、通信、弹药和维修保障需求；持续时间越长，风险越可能从一次性平台采购扩展到补给与关键基础设施防护。误判会把海湾国家和民用港口卷入冲突。"
       ],
       "sources": [
         {
@@ -143,16 +152,12 @@
           "href": "https://www.imo.org/en/MediaCentre/HotTopics/Pages/Middle-East-Strait-of-Hormuz.aspx"
         },
         {
-          "label": "联合国",
+          "label": "联合国简报",
           "href": "https://www.un.org/sg/en/content/highlight/2026-07-14.html"
         },
         {
           "label": "美联社",
           "href": "https://apnews.com/article/b7c592f269d822407dd6b5641602bf25"
-        },
-        {
-          "label": "半岛电视台",
-          "href": "https://www.aljazeera.com/tag/strait-of-hormuz/"
         }
       ],
       "predictionId": "2026-07-15-P01",
@@ -194,16 +199,16 @@
     {
       "category": "科技",
       "time": "结构迁移",
-      "title": "确认事实：最近约24小时没有达到“三个独立来源＋一手文件”门槛的全新全球AI核心发布",
-      "cardTitle": "确认事实：最近约24小时没有达到“三个独立来源＋一手文件”门槛的全新全球AI核心发布",
-      "body": "最近约24小时没有达到“三个独立来源＋一手文件”门槛的全新全球AI核心发布。连续性背景是欧盟7月7日提出先进AI网络安全行动计划，计划建立欧盟评估能力、第三方能力/风险测试及与ENISA协作的安全测试平台；AI生成内容标识指引与AI Act适用时间表仍在推进。",
-      "implication": "AI生成内容标识指引与AI Act适用时间表仍在推进。｜｜",
-      "source": "欧盟委员会行动计划",
-      "href": "https://commission.europa.eu/news-and-media/news/new-eu-plan-address-risks-and-opportunities-advanced-ai-cybersecurity-2026-07-07_en",
+      "title": "最近约24小时没有达到“三个独立来源加一手文件”门槛的全新全球AI核心事件",
+      "cardTitle": "最近约24小时没有达到“三个独立来源加一手文件”门槛的全新全球AI核心事件",
+      "body": "当前更重要的变量，是监管机构能否提供可执行的测试能力，以及企业能否把合规成本转化为可部署产品。",
+      "implication": "明确测试入口和责任边界，会增加网络安全、身份、审计和模型治理需求；若适用范围收窄或平台延期，短期部署摩擦下降，但信任和采购验证也会放慢。政策仍在过渡期，不能直接推导公司收入或ETF超额收益。",
+      "source": "查看来源",
+      "href": "#sources",
       "facts": [
-        "确认事实： 最近约24小时没有达到“三个独立来源＋一手文件”门槛的全新全球AI核心发布。连续性背景是欧盟7月7日提出先进AI网络安全行动计划，计划建立欧盟评估能力、第三方能力/风险测试及与ENISA协作的安全测试平台；AI生成内容标识指引与AI Act适用时间表仍在推进。欧盟委员会行动计划｜AI Act官方页面｜AI内容标识规范",
-        "分析判断： 当前投资与产业变量不是“监管更多/更少”这一句口号，而是测试能力、责任边界、合规工具是否足以让能源、金融、医疗和公共部门部署先进模型。企业激励是缩短部署周期；监管方激励是降低系统性网络风险与信息真实性风险。",
-        "因果链： 明确评估规则和安全测试入口→合规预算与第三方验证需求上升→身份、网络安全、审计和模型治理受关注；若期限推迟或范围收窄，短期摩擦下降但长期信任建设可能减慢。反证是政策仍处过渡期，不能直接推导收入或ETF超额收益。"
+        "最近约24小时没有达到“三个独立来源加一手文件”门槛的全新全球AI核心事件。当前更重要的变量，是监管机构能否提供可执行的测试能力，以及企业能否把合规成本转化为可部署产品。",
+        "欧盟7月7日提出先进AI网络安全行动计划，包括评估能力、第三方风险测试和与ENISA协作的安全测试平台；AI生成内容标识与AI Act实施时间表仍在推进。欧盟委员会行动计划、AI Act官方页面与AI内容标识规范构成连续性证据。",
+        "明确测试入口和责任边界，会增加网络安全、身份、审计和模型治理需求；若适用范围收窄或平台延期，短期部署摩擦下降，但信任和采购验证也会放慢。政策仍在过渡期，不能直接推导公司收入或ETF超额收益。"
       ],
       "sources": [
         {
@@ -221,18 +226,18 @@
       ],
       "predictionId": "",
       "relatedPredictionIds": [],
-      "analysis": "AI生成内容标识指引与AI Act适用时间表仍在推进。｜｜",
+      "analysis": "明确测试入口和责任边界，会增加网络安全、身份、审计和模型治理需求；若适用范围收窄或平台延期，短期部署摩擦下降，但信任和采购验证也会放慢。政策仍在过渡期，不能直接推导公司收入或ETF超额收益。",
       "confidence": "待验证",
       "horizon": "结构迁移",
       "drivers": [
-        "确认事实： 最近约24小时没有达到“三个独立来源＋一手文件”门槛的全新全球AI核心发布。连续性背景是欧盟7月7日提出先进AI网络安全行动计划，计划建立欧盟评估能力、第三方能力/风险测试及与ENISA协作的安全测试平台；AI生成内容标识指引与AI Act适用时间表仍在推进。欧盟委员会行动计划｜AI Act官方页面｜AI内容标识规范",
-        "分析判断： 当前投资与产业变量不是“监管更多/更少”这一句口号，而是测试能力、责任边界、合规工具是否足以让能源、金融、医疗和公共部门部署先进模型。企业激励是缩短部署周期；监管方激励是降低系统性网络风险与信息真实性风险。",
-        "因果链： 明确评估规则和安全测试入口→合规预算与第三方验证需求上升→身份、网络安全、审计和模型治理受关注；若期限推迟或范围收窄，短期摩擦下降但长期信任建设可能减慢。反证是政策仍处过渡期，不能直接推导收入或ETF超额收益。"
+        "最近约24小时没有达到“三个独立来源加一手文件”门槛的全新全球AI核心事件。当前更重要的变量，是监管机构能否提供可执行的测试能力，以及企业能否把合规成本转化为可部署产品。",
+        "欧盟7月7日提出先进AI网络安全行动计划，包括评估能力、第三方风险测试和与ENISA协作的安全测试平台；AI生成内容标识与AI Act实施时间表仍在推进。欧盟委员会行动计划、AI Act官方页面与AI内容标识规范构成连续性证据。",
+        "明确测试入口和责任边界，会增加网络安全、身份、审计和模型治理需求；若适用范围收窄或平台延期，短期部署摩擦下降，但信任和采购验证也会放慢。政策仍在过渡期，不能直接推导公司收入或ETF超额收益。"
       ],
       "beneficiaries": [],
       "pressures": [],
       "verificationSignals": [
-        "AI生成内容标识指引与AI Act适用时间表仍在推进。｜｜"
+        "明确测试入口和责任边界，会增加网络安全、身份、审计和模型治理需求；若适用范围收窄或平台延期，短期部署摩擦下降，但信任和采购验证也会放慢。政策仍在过渡期，不能直接推导公司收入或ETF超额收益。"
       ],
       "instruments": [],
       "id": "2026-07-15-03-科技"
@@ -240,16 +245,16 @@
     {
       "category": "气候",
       "time": "复合冲击",
-      "title": "结论：高温仍是跨区域运营与健康风险，但今天没有足以支持新全球归因结论的事件证据",
-      "cardTitle": "结论：高温仍是跨区域运营与健康风险，但今天没有足以支持新全球归因结论的事件证据",
-      "body": "高温仍是跨区域运营与健康风险，但今天没有足以支持新全球归因结论的事件证据。",
-      "implication": "关注极端天气是否进一步影响电网、保险、农业与公共卫生数据。",
+      "title": "高温仍是跨区域运营和健康风险",
+      "cardTitle": "高温仍是跨区域运营和健康风险",
+      "body": "但今天没有足以支持新全球归因结论的事件证据。",
+      "implication": "高温先影响户外工时、用电峰值、急诊需求和电网备用，再传到城市冷却、水资源、保险和公共预算。预警、冷却中心、建筑隔热与医疗准备可以显著降低同温度下的损失。",
       "source": "查看来源",
       "href": "#sources",
       "facts": [
-        "结论： 高温仍是跨区域运营与健康风险，但今天没有足以支持新全球归因结论的事件证据。",
-        "硬证据： WHO于7月13日更新高温与健康资料，强调热应激会加重心血管、糖尿病、肾病和呼吸系统风险；WHO欧洲此前警告更致命的高温周仍可能出现。WHO高温与健康｜WHO欧洲声明｜WMO气候与健康",
-        "机制： 高温→劳动效率与户外工时下降→用电峰值、医疗需求和电网备用上升→城市冷却、水资源、保险和公共预算受压；夜间高温、老龄化和慢病放大同温度负担。"
+        "高温仍是跨区域运营和健康风险，但今天没有足以支持新全球归因结论的事件证据。",
+        "WHO于7月13日更新高温与健康资料，指出热应激会加重心血管、糖尿病、肾病和呼吸系统负担；WHO欧洲此前警告更致命的高温周仍可能出现。WHO高温与健康、WHO欧洲声明与WMO气候和健康资料支持这一风险框架。",
+        "高温先影响户外工时、用电峰值、急诊需求和电网备用，再传到城市冷却、水资源、保险和公共预算。预警、冷却中心、建筑隔热与医疗准备可以显著降低同温度下的损失。"
       ],
       "sources": [
         {
@@ -261,24 +266,24 @@
           "href": "https://www.who.int/europe/news/item/07-07-2026-statement---extreme-heat--more-deadly-weeks-may-still-lie-ahead-for-the-european-region"
         },
         {
-          "label": "WMO气候与健康",
+          "label": "WMO气候和健康资料",
           "href": "https://wmo.int/topics/climate-and-health"
         }
       ],
       "predictionId": "",
       "relatedPredictionIds": [],
-      "analysis": "关注极端天气是否进一步影响电网、保险、农业与公共卫生数据。",
+      "analysis": "高温先影响户外工时、用电峰值、急诊需求和电网备用，再传到城市冷却、水资源、保险和公共预算。预警、冷却中心、建筑隔热与医疗准备可以显著降低同温度下的损失。",
       "confidence": "待验证",
       "horizon": "复合冲击",
       "drivers": [
-        "结论： 高温仍是跨区域运营与健康风险，但今天没有足以支持新全球归因结论的事件证据。",
-        "硬证据： WHO于7月13日更新高温与健康资料，强调热应激会加重心血管、糖尿病、肾病和呼吸系统风险；WHO欧洲此前警告更致命的高温周仍可能出现。WHO高温与健康｜WHO欧洲声明｜WMO气候与健康",
-        "机制： 高温→劳动效率与户外工时下降→用电峰值、医疗需求和电网备用上升→城市冷却、水资源、保险和公共预算受压；夜间高温、老龄化和慢病放大同温度负担。"
+        "高温仍是跨区域运营和健康风险，但今天没有足以支持新全球归因结论的事件证据。",
+        "WHO于7月13日更新高温与健康资料，指出热应激会加重心血管、糖尿病、肾病和呼吸系统负担；WHO欧洲此前警告更致命的高温周仍可能出现。WHO高温与健康、WHO欧洲声明与WMO气候和健康资料支持这一风险框架。",
+        "高温先影响户外工时、用电峰值、急诊需求和电网备用，再传到城市冷却、水资源、保险和公共预算。预警、冷却中心、建筑隔热与医疗准备可以显著降低同温度下的损失。"
       ],
       "beneficiaries": [],
       "pressures": [],
       "verificationSignals": [
-        "关注极端天气是否进一步影响电网、保险、农业与公共卫生数据。"
+        "高温先影响户外工时、用电峰值、急诊需求和电网备用，再传到城市冷却、水资源、保险和公共预算。预警、冷却中心、建筑隔热与医疗准备可以显著降低同温度下的损失。"
       ],
       "instruments": [],
       "id": "2026-07-15-04-气候"
@@ -286,16 +291,16 @@
     {
       "category": "宏观",
       "time": "价格验证",
-      "title": "结论：英印贸易制度降低双边摩擦，而霍尔木兹风险提高全球运输与能源成本，两条传导链对增长和通胀方向相反",
-      "cardTitle": "结论：英印贸易制度降低双边摩擦，而霍尔木兹风险提高全球运输与能源成本，两条传导链对增长和通胀方向相反",
-      "body": "英印贸易制度降低双边摩擦，而霍尔木兹风险提高全球运输与能源成本，两条传导链对增长和通胀方向相反。",
-      "implication": "关注价格、利率、汇率与库存数据能否确认当前市场方向。",
+      "title": "英印CETA降摩擦，海湾风险增成本",
+      "cardTitle": "英印CETA降摩擦，海湾风险增成本",
+      "body": "英印协议降低双边制度摩擦，而霍尔木兹风险提高全球运输与能源成本；两条链对增长和通胀的方向相反。",
+      "implication": "降税、社保协调与通关便利可能降低订单和人员流动成本；另一端，通航不确定性推高战争险、库存和融资占用，压缩航空与部分制造业利润，并增加输入型通胀压力。",
       "source": "查看来源",
       "href": "#sources",
       "facts": [
-        "结论： 英印贸易制度降低双边摩擦，而霍尔木兹风险提高全球运输与能源成本，两条传导链对增长和通胀方向相反。",
-        "硬证据： CETA于今天生效；英国政府估算其将削减出口关税，印度同时强调社会保障协定与专业人员流动。官方估算是情景模型，不是已实现GDP或公司收入。英国政府生效公告｜印度官方公告｜原产地规则操作页 霍尔木兹方面，联合国与IMO确认安全风险。",
-        "机制： 降税和社保双重缴费减少→贸易与跨境服务成本下降→订单、投资和人员流动可能增加；另一端，通航不确定性→战争险/库存需求上升→炼化利润、航空成本与输入型通胀承压。"
+        "英印协议降低双边制度摩擦，而霍尔木兹风险提高全球运输与能源成本；两条链对增长和通胀的方向相反。",
+        "英国政府生效公告和印度官方公告确认CETA于今天生效；英国原产地规则操作页说明企业仍需满足实际申报条件。官方长期增量是模型估算，不是已经实现的GDP或收入。",
+        "降税、社保协调与通关便利可能降低订单和人员流动成本；另一端，通航不确定性推高战争险、库存和融资占用，压缩航空与部分制造业利润，并增加输入型通胀压力。"
       ],
       "sources": [
         {
@@ -307,56 +312,64 @@
           "href": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2274280&lang=1&reg=20"
         },
         {
-          "label": "原产地规则操作页",
+          "label": "英国原产地规则操作页",
           "href": "https://www.business.gov.uk/campaign/alive-with-opportunity/the-uk-india-trade-deal/rules-of-origin/"
-        },
-        {
-          "label": "联合国",
-          "href": "https://www.un.org/sg/en/content/highlight/2026-07-14.html"
-        },
-        {
-          "label": "IMO",
-          "href": "https://www.imo.org/en/MediaCentre/HotTopics/Pages/Middle-East-Strait-of-Hormuz.aspx"
         },
         {
           "label": "英国议会研究",
           "href": "https://commonslibrary.parliament.uk/research-briefings/cbp-10258/"
         }
       ],
-      "predictionId": "",
+      "predictionId": "2026-07-15-P02",
       "relatedPredictionIds": [
-        "2026-07-15-P02",
-        "2026-07-15-P01"
+        "2026-07-15-P02"
       ],
-      "analysis": "关注价格、利率、汇率与库存数据能否确认当前市场方向。",
-      "confidence": "待验证",
-      "horizon": "价格验证",
+      "analysis": "英印CETA在首周保持生效，双方不会在7月22日前宣布全面暂停或回滚核心关税实施",
+      "confidence": "高",
+      "horizon": "1周",
       "drivers": [
-        "结论： 英印贸易制度降低双边摩擦，而霍尔木兹风险提高全球运输与能源成本，两条传导链对增长和通胀方向相反。",
-        "硬证据： CETA于今天生效；英国政府估算其将削减出口关税，印度同时强调社会保障协定与专业人员流动。官方估算是情景模型，不是已实现GDP或公司收入。英国政府生效公告｜印度官方公告｜原产地规则操作页 霍尔木兹方面，联合国与IMO确认安全风险。",
-        "机制： 降税和社保双重缴费减少→贸易与跨境服务成本下降→订单、投资和人员流动可能增加；另一端，通航不确定性→战争险/库存需求上升→炼化利润、航空成本与输入型通胀承压。"
+        "两国已完成实施准备",
+        "关税削减的企业利益",
+        "政治层面需要展示协议兑现"
       ],
-      "beneficiaries": [],
-      "pressures": [],
+      "beneficiaries": [
+        "印度出口链研究",
+        "英国烈酒与汽车出口研究",
+        "跨境专业服务"
+      ],
+      "pressures": [
+        "受进口竞争行业",
+        "原产地合规不足企业"
+      ],
       "verificationSignals": [
-        "关注价格、利率、汇率与库存数据能否确认当前市场方向。"
+        "两国海关实施通告",
+        "首周原产地申报指引",
+        "是否出现官方暂停通知"
       ],
-      "instruments": [],
+      "instruments": [
+        {
+          "symbol": "INDA",
+          "exchange": "NYSE ARCA",
+          "type": "ETF",
+          "thesis": "观察印度市场是否相对全球股票吸收贸易便利化预期",
+          "risk": "宏观估值、油价和外资流可能压过贸易协定效应"
+        }
+      ],
       "id": "2026-07-15-05-宏观"
     },
     {
       "category": "社会",
       "time": "中期影响",
-      "title": "结论：刚果（金）传播和地理扩展仍在加剧",
-      "cardTitle": "结论：刚果（金）传播和地理扩展仍在加剧",
-      "body": "刚果（金）传播和地理扩展仍在加剧；公共卫生准备与医护保护比证券映射更具决策价值。",
-      "implication": "公共卫生准备与医护保护比证券映射更具决策价值。",
+      "title": "埃博拉扩展首先是公共卫生能力问题",
+      "cardTitle": "埃博拉扩展首先是公共卫生能力问题",
+      "body": "刚果（金）传播和地理扩展仍在加剧，医疗准备、医护保护和跨境监测比证券映射更具决策价值。",
+      "implication": "社区传播增加接触者追踪、隔离与实验室资源需求，随后挤压常规医疗和边境卫生；医护感染会直接削弱医疗供给，跨境病例则增加航空和旅行行为的风险溢价。",
       "source": "查看来源",
       "href": "#sources",
       "facts": [
-        "结论： 刚果（金）传播和地理扩展仍在加剧；公共卫生准备与医护保护比证券映射更具决策价值。",
-        "硬证据： WHO 7月3日通报截至7月1日刚果（金）累计1,460例确诊、452例死亡，乌干达20例确诊；ECDC在7月13日更新至刚果（金）1,926例确诊、702例相关死亡，并记录新增省份与持续传播。WHO暴发通报｜ECDC最新页｜WHO非洲区域周报",
-        "时间线与归因： 数据增长部分来自真实传播，也部分来自监测、检测能力扩大；不能把报告数全部解释为同等速度的新增感染。法国输入病例和乌干达二代传播说明跨境准备必要，但ECDC仍把风险管理重点放在监测、医疗机构防护、实验室与旅行相关准备。"
+        "刚果（金）传播和地理扩展仍在加剧，医疗准备、医护保护和跨境监测比证券映射更具决策价值。",
+        "WHO 7月3日通报截至7月1日刚果（金）累计1,460例确诊、452例死亡，乌干达20例确诊；ECDC于7月13日更新至刚果（金）1,926例确诊、702例相关死亡，并记录新增省份与持续传播。WHO暴发通报、ECDC最新页与WHO非洲区域周报给出不同时间截点。",
+        "社区传播增加接触者追踪、隔离与实验室资源需求，随后挤压常规医疗和边境卫生；医护感染会直接削弱医疗供给，跨境病例则增加航空和旅行行为的风险溢价。"
       ],
       "sources": [
         {
@@ -374,18 +387,18 @@
       ],
       "predictionId": "",
       "relatedPredictionIds": [],
-      "analysis": "公共卫生准备与医护保护比证券映射更具决策价值。",
+      "analysis": "社区传播增加接触者追踪、隔离与实验室资源需求，随后挤压常规医疗和边境卫生；医护感染会直接削弱医疗供给，跨境病例则增加航空和旅行行为的风险溢价。",
       "confidence": "待验证",
       "horizon": "中期影响",
       "drivers": [
-        "结论： 刚果（金）传播和地理扩展仍在加剧；公共卫生准备与医护保护比证券映射更具决策价值。",
-        "硬证据： WHO 7月3日通报截至7月1日刚果（金）累计1,460例确诊、452例死亡，乌干达20例确诊；ECDC在7月13日更新至刚果（金）1,926例确诊、702例相关死亡，并记录新增省份与持续传播。WHO暴发通报｜ECDC最新页｜WHO非洲区域周报",
-        "时间线与归因： 数据增长部分来自真实传播，也部分来自监测、检测能力扩大；不能把报告数全部解释为同等速度的新增感染。法国输入病例和乌干达二代传播说明跨境准备必要，但ECDC仍把风险管理重点放在监测、医疗机构防护、实验室与旅行相关准备。"
+        "刚果（金）传播和地理扩展仍在加剧，医疗准备、医护保护和跨境监测比证券映射更具决策价值。",
+        "WHO 7月3日通报截至7月1日刚果（金）累计1,460例确诊、452例死亡，乌干达20例确诊；ECDC于7月13日更新至刚果（金）1,926例确诊、702例相关死亡，并记录新增省份与持续传播。WHO暴发通报、ECDC最新页与WHO非洲区域周报给出不同时间截点。",
+        "社区传播增加接触者追踪、隔离与实验室资源需求，随后挤压常规医疗和边境卫生；医护感染会直接削弱医疗供给，跨境病例则增加航空和旅行行为的风险溢价。"
       ],
       "beneficiaries": [],
       "pressures": [],
       "verificationSignals": [
-        "公共卫生准备与医护保护比证券映射更具决策价值。"
+        "社区传播增加接触者追踪、隔离与实验室资源需求，随后挤压常规医疗和边境卫生；医护感染会直接削弱医疗供给，跨境病例则增加航空和旅行行为的风险溢价。"
       ],
       "instruments": [],
       "id": "2026-07-15-06-社会"
@@ -393,19 +406,29 @@
     {
       "category": "中国",
       "time": "结构分化",
-      "title": "腾讯行情快照截至7月15日收盘：上证指数-0.29%、深证成指-0.97%、沪深300-0.20%、创业板指-1.21%、科创50-4.25%…",
-      "cardTitle": "腾讯行情快照截至7月15日收盘：上证指数-0.29%、深证成指-0.97%、沪深300-0.20%、创业板指-1.21%、科创50-4.25%…",
-      "body": "腾讯行情快照截至7月15日收盘：上证指数-0.29%、深证成指-0.97%、沪深300-0.20%、创业板指-1.21%、科创50-4.25%；恒生指数+1.34%、恒生科技+1.18%。ETF中510300.SH +0.02%、159915.SZ -1.01%、588000.SH -4.56%、512480.SH -5.81%、512660.SH -1.30%、512880.SH +2.36%、2800.HK +1.13%、3033.HK +1.00%。",
-      "implication": "这更像境内硬科技去拥挤与港股平台风险偏好改善的组合，不能仅凭一天价格推断盈利或政策变化。",
+      "title": "7月15日A股硬科技显著弱于宽基",
+      "cardTitle": "7月15日A股硬科技显著弱于宽基",
+      "body": "港股科技与宽基同步上涨，更像境内硬科技去拥挤与离岸平台风险偏好改善的组合，不能仅凭一天价格推断盈利或政策变化。",
+      "implication": "高估值硬科技回撤会压低风险预算和成交宽度；港股平台上涨则可能吸引南向和离岸资金。若科创板在高成交下快速收复跌幅，今天也可能只是一次技术性挤压。",
       "source": "查看来源",
       "href": "#sources",
       "facts": [
-        "腾讯行情快照截至7月15日收盘：上证指数-0.29%、深证成指-0.97%、沪深300-0.20%、创业板指-1.21%、科创50-4.25%；恒生指数+1.34%、恒生科技+1.18%。ETF中510300.SH +0.02%、159915.SZ -1.01%、588000.SH -4.56%、512480.SH -5.81%、512660.SH -1.30%、512880.SH +2.36%、2800.HK +1.13%、3033.HK +1.00%。 确认事实： 35个观察项全部成功采集，来源为腾讯点行情；A股硬科技明显弱于宽基，港股科技和宽基同步上涨，消费与金融个股相对强。分析判断： 这更像境内硬科技去拥挤与港股平台风险偏好改善的组合，不能仅凭一天价格推断盈利或政策变化。因果链： 高估值硬科技回撤→ETF赎回/风险预算下降→成交和相对收益走弱；港股平台上涨→南向与离岸风险偏好改善→互联网/消费服务弹性上升。反证： A股…"
+        "7月15日A股硬科技显著弱于宽基，港股科技与宽基同步上涨，更像境内硬科技去拥挤与离岸平台风险偏好改善的组合，不能仅凭一天价格推断盈利或政策变化。",
+        "腾讯行情快照显示，上证指数-0.29%、深证成指-0.97%、沪深300-0.20%、创业板指-1.21%、科创50-4.25%；恒生指数+1.34%、恒生科技+1.18%。ETF中510300.SH +0.02%、159915.SZ -1.01%、588000.SH -4.56%、512480.SH -5.81%、512880.SH +2.36%、2800.HK +1.13%、3033.HK +1.00%。",
+        "高估值硬科技回撤会压低风险预算和成交宽度；港股平台上涨则可能吸引南向和离岸资金。若科创板在高成交下快速收复跌幅，今天也可能只是一次技术性挤压。"
       ],
       "sources": [
         {
           "label": "腾讯行情快照",
-          "href": "https://qt.gtimg.cn/"
+          "href": "https://qt.gtimg.cn/q=s_sh588000,s_sh510300"
+        },
+        {
+          "label": "金融监管总局",
+          "href": "https://www.nfra.gov.cn/cn/view/pages/governmentDetail.html?docId=1261784&generaltype=1&itemId=861"
+        },
+        {
+          "label": "科技部",
+          "href": "https://most.gov.cn/xxgk/xinxifenlei/fdzdgknr/fgzc/zcjd/202603/t20260302_196012.html"
         },
         {
           "label": "上交所",
@@ -416,20 +439,40 @@
           "href": "https://www.hkex.com.hk/Market-Data/Securities-Prices/Equities?sc_lang=en"
         }
       ],
-      "predictionId": "",
-      "relatedPredictionIds": [],
-      "analysis": "这更像境内硬科技去拥挤与港股平台风险偏好改善的组合，不能仅凭一天价格推断盈利或政策变化。",
-      "confidence": "待验证",
-      "horizon": "结构分化",
+      "predictionId": "2026-07-15-P03",
+      "relatedPredictionIds": [
+        "2026-07-15-P03"
+      ],
+      "analysis": "截至8月14日，中国国家层面将新增至少一项支持人工智能、集成电路或科技融资的可执行政策文件",
+      "confidence": "中",
+      "horizon": "1个月",
       "drivers": [
-        "腾讯行情快照截至7月15日收盘：上证指数-0.29%、深证成指-0.97%、沪深300-0.20%、创业板指-1.21%、科创50-4.25%；恒生指数+1.34%、恒生科技+1.18%。ETF中510300.SH +0.02%、159915.SZ -1.01%、588000.SH -4.56%、512480.SH -5.81%、512660.SH -1.30%、512880.SH +2.36%、2800.HK +1.13%、3033.HK +1.00%。 确认事实： 35个观察项全部成功采集，来源为腾讯点行情；A股硬科技明显弱于宽基，港股科技和宽基同步上涨，消费与金融个股相对强。分析判断： 这更像境内硬科技去拥挤与港股平台风险偏好改善的组合，不能仅凭一天价格推断盈利或政策变化。因果链： 高估值硬科技回撤→ETF赎回/风险预算下降→成交和相对收益走弱；港股平台上涨→南向与离岸风险偏好改善→互联网/消费服务弹性上升。反证： A股…"
+        "十五五人工智能与科技自立部署",
+        "科技金融工具扩围",
+        "地方场景和产业基金进入项目执行期"
       ],
-      "beneficiaries": [],
-      "pressures": [],
+      "beneficiaries": [
+        "人工智能基础设施研究",
+        "集成电路与科技融资研究"
+      ],
+      "pressures": [
+        "纯主题但缺少业绩验证的高估值暴露",
+        "政策不及预期的拥挤交易"
+      ],
       "verificationSignals": [
-        "这更像境内硬科技去拥挤与港股平台风险偏好改善的组合，不能仅凭一天价格推断盈利或政策变化。"
+        "国家部委政策原文",
+        "资金工具或项目责任主体",
+        "588000.SH相对510300.SH的独立收盘窗口"
       ],
-      "instruments": [],
+      "instruments": [
+        {
+          "symbol": "588000.SH",
+          "exchange": "SSE",
+          "type": "ETF",
+          "thesis": "观察国家科技政策能否转化为A股硬科技相对收益",
+          "risk": "政策已计价、盈利不及预期或拥挤去化可能压过催化"
+        }
+      ],
       "id": "2026-07-15-07-中国"
     }
   ],
@@ -578,24 +621,24 @@
   "markets": {
     "us": {
       "label": "美国 / 全球",
-      "asOf": "2026-07-13",
+      "asOf": "2026-07-14",
       "freshness": "最近收盘",
       "isStale": true,
       "items": [
         {
           "label": "SPY",
-          "change": "-0.77%",
-          "direction": "down"
+          "change": "+0.36%",
+          "direction": "up"
         },
         {
           "label": "QQQ",
-          "change": "-1.90%",
-          "direction": "down"
+          "change": "+1.12%",
+          "direction": "up"
         },
         {
           "label": "SMH",
-          "change": "-4.16%",
-          "direction": "down"
+          "change": "+2.51%",
+          "direction": "up"
         },
         {
           "label": "CIBR",
@@ -604,11 +647,11 @@
         },
         {
           "label": "GLD",
-          "change": "-2.62%",
-          "direction": "down"
+          "change": "+1.37%",
+          "direction": "up"
         }
       ],
-      "note": "截至 2026-07-13 最近有效收盘。"
+      "note": "截至 2026-07-14 最近有效收盘。"
     },
     "china": {
       "label": "中国 / 香港",
@@ -706,25 +749,21 @@
     }
   },
   "watchlist": [
-    "美伊是否出现执行主体、时间表、监督机制齐全的公开降级文本。",
-    "IMO袭船记录、霍尔木兹船流、战争险和港口封锁是否同步缓和。",
+    "美伊是否发布执行主体、时间表、监督机制齐全的公开降级文本。",
+    "IMO安全记录、霍尔木兹船流、战争险和港口封锁是否同步缓和。",
     "英印CETA首周是否出现清关、原产地申报或官方暂停问题。",
     "Bundibugyo埃博拉新增卫生区、医护感染和跨境病例是否继续上升。",
-    "3033.HK相对588000.SH的成交宽度与收盘超额收益是否延续。"
+    "3033.HK相对588000.SH的成交宽度与收盘相对收益是否延续。"
   ],
   "risks": [
-    "冲突误判风险： 当事方伤亡和战果数字未完全独立核验；用声明替代船流、保险和可执行文本会高估信息质量。",
-    "事件—资产脱节风险： 即便事件命中，利率、美元、估值与仓位也可能让GLD、INDA或科技ETF映射失败。",
-    "单源中国行情风险： 腾讯快照完整但仍是单一供应商；A股/港股跨市场比较还受币种、交易制度和节假日影响。"
+    "冲突信息风险： 当事方伤亡和战果数字未完全独立核验，声明不能替代船流、保险报价与可执行文本。",
+    "事件与资产脱节： 即使事件判断命中，利率、美元、估值和仓位也可能让GLD、INDA或科技ETF映射失败。",
+    "中国行情单源： 腾讯快照覆盖完整，但跨市场比较仍受币种、交易制度和节假日影响。"
   ],
   "sources": [
     {
       "label": "联合国7月14日简报",
       "href": "https://www.un.org/sg/en/content/highlight/2026-07-14.html"
-    },
-    {
-      "label": "腾讯同源快照",
-      "href": "https://qt.gtimg.cn/"
     },
     {
       "label": "美联社",
@@ -735,24 +774,12 @@
       "href": "https://www.un.org/sg/en/content/sg/statements/2026-07-12/statement-attributable-the-spokesperson-for-the-secretary-general-the-middle-east"
     },
     {
-      "label": "France 24地区进展",
+      "label": "France 24地区报道",
       "href": "https://www.france24.com/en/middle-east/20260715-middle-east-live-tehran-and-us-exchange-strikes-as-blockade-of-iranian-ports-resumes"
     },
     {
       "label": "半岛电视台",
       "href": "https://www.aljazeera.com/tag/strait-of-hormuz/"
-    },
-    {
-      "label": "英国政府",
-      "href": "https://www.gov.uk/government/news/the-countdown-begins-uk-india-fta-enters-into-force-on-july-15th"
-    },
-    {
-      "label": "印度新闻信息局",
-      "href": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2274280&lang=1&reg=20"
-    },
-    {
-      "label": "英国议会研究简报",
-      "href": "https://commonslibrary.parliament.uk/research-briefings/cbp-10258/"
     },
     {
       "label": "欧盟委员会行动计划",
@@ -775,7 +802,7 @@
       "href": "https://www.who.int/europe/news/item/07-07-2026-statement---extreme-heat--more-deadly-weeks-may-still-lie-ahead-for-the-european-region"
     },
     {
-      "label": "WMO气候与健康",
+      "label": "WMO气候和健康资料",
       "href": "https://wmo.int/topics/climate-and-health"
     },
     {
@@ -783,8 +810,20 @@
       "href": "https://www.imo.org/en/MediaCentre/HotTopics/Pages/Middle-East-Strait-of-Hormuz.aspx"
     },
     {
-      "label": "原产地规则操作页",
+      "label": "英国政府生效公告",
+      "href": "https://www.gov.uk/government/news/the-countdown-begins-uk-india-fta-enters-into-force-on-july-15th"
+    },
+    {
+      "label": "印度官方公告",
+      "href": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2274280&lang=1&reg=20"
+    },
+    {
+      "label": "英国原产地规则操作页",
       "href": "https://www.business.gov.uk/campaign/alive-with-opportunity/the-uk-india-trade-deal/rules-of-origin/"
+    },
+    {
+      "label": "英国议会研究",
+      "href": "https://commonslibrary.parliament.uk/research-briefings/cbp-10258/"
     },
     {
       "label": "WHO暴发通报",
@@ -797,11 +836,19 @@
     {
       "label": "WHO非洲区域周报",
       "href": "https://www.afro.who.int/health-topics/disease-outbreaks/ebola-who-african-region?page=0"
+    },
+    {
+      "label": "腾讯行情快照",
+      "href": "https://qt.gtimg.cn/q=s_sh588000,s_sh510300"
     }
   ],
   "system": {
     "asOf": "2026-07-15",
     "overallPassed": true,
+    "gateScope": "daily_operational",
+    "operationalGatePassed": true,
+    "releaseCandidatePassed": false,
+    "researchPromotionPassed": false,
     "stages": [
       {
         "name": "doctor",
@@ -809,7 +856,7 @@
       },
       {
         "name": "sync",
-        "status": "passed"
+        "status": "skipped"
       },
       {
         "name": "canonical_virtual_ledger_audit",
@@ -825,7 +872,7 @@
       },
       {
         "name": "canonical_virtual_ledger_commit",
-        "status": "passed"
+        "status": "blocked"
       }
     ],
     "ledger": {
@@ -854,14 +901,14 @@
     }
   },
   "forecastReviews": [
-    "2026-07-13-P01：validated，事件结果=1，两个资产映射均命中。 截至7月14日结束，没有执行主体、时间表、监督机制齐全的美伊降级文本；联合国7月14日简报反而记录航运袭击和人员伤亡。7月14日GLD约+1.37%、SPY约+0.36%，GLD超额约+1.01个百分点；JETS约-1.19%，相对SPY超额约-1.54个百分点。迭代：事件和资产本次同向，也仍须分账；黄金受实际利率/美元影响，航空受油价/需求影响。",
-    "2026-07-12-P01：事件维度此前已validated；今天补结资产维度=1。 7月13日腾讯同源快照显示600900.SH +0.75%、沪深300 -1.34%，相对收益约+2.09个百分点。此前自动工作台因同源窗口不足而正确地保持未结算；人工核验后才追加市场复盘，不改写原事件结论。",
-    "全账本有80项到期任务，本轮复盘容量12项；优先关闭全部到期v2事件/资产硬门槛。其余多为缺少机器规则的旧版积压，不以不完整证据强行结算。合格v2事件结果样本仍远低于30个最低校准样本，Brier/ECE继续处于shadow，不能声称预测系统已校准。"
+    "2026-07-13-P01：事件与两项资产映射均命中。 截至7月14日结束，未出现执行主体、时间表、监督机制齐全的美伊降级文本；联合国7月14日简报记录了新的航运袭击和人员伤亡。7月14日GLD约上涨1.37%、SPY约上涨0.36%，GLD相对收益约+1.01个百分点；JETS约下跌1.19%，相对SPY约-1.54个百分点。事件判断正确不代表资产关系必然重复，黄金仍受实际利率和美元影响，航空仍受油价与需求影响。",
+    "2026-07-12-P01：事件命中；资产窗口已于7月16日更正。 7月15日初版曾误用7月12日作为资产窗口起点，但当天是非交易日。复核改用上一共同交易日7月10日后，600900.SH约上涨0.75%、沪深300约下跌1.34%，相对收益约+2.09个百分点，资产映射仍为命中。修订不改变事件结论，只纠正计算基期。",
+    "研究状态： 可用于校准的独立结果仍低于30个最低样本门槛，因此概率只代表预注册研究判断，不能解释为已校准胜率。系统继续把事件结果、资产映射和虚拟账户动作分开记录。"
   ],
   "frameworkUpdates": [
-    "从今天起每个新预测必须登记event_family_id、基线状态、新增信息与独立性说明；滚动预测按同一事件族折权，不因改截止日重复计分。",
-    "每个市场映射必须登记稳定market_thesis_id，并保留可直接打开的行情页或带SHA-256的本地快照；缺少同源窗口时保持未结算。",
-    "事件、资产和虚拟账户动作继续三账分离：事件正确不等于资产映射正确，资产正确也不授权真实交易。"
+    "滚动预测按同一事件族折权，改动截止日不新增独立样本。",
+    "每项资产映射必须使用可比交易日、同源价格窗口和明确基准；条件不完整时保持未结算。",
+    "事件结果、资产结果和虚拟账户动作继续分账，任何一项命中都不自动授权真实交易。"
   ],
   "evolution": {
     "active_rules": [
@@ -1341,17 +1388,17 @@
   },
   "reportQuality": {
     "passed": true,
-    "characterCount": 11799,
-    "sourceCount": 35,
+    "characterCount": 9869,
+    "sourceCount": 38,
     "coreDecisionCount": 5,
     "primaryThesisCount": 5,
     "topicSectionCount": 6,
-    "coreThesisCount": 4,
+    "coreThesisCount": 3,
     "coreStoryAudits": [
       {
-        "title": "外交窗口未关闭，但海上强制与报复链重新主导",
-        "sourceCount": 8,
-        "sourceDomainCount": 7,
+        "title": "霍尔木兹风险重新压过外交窗口",
+        "sourceCount": 5,
+        "sourceDomainCount": 4,
         "roles": {
           "primary": true,
           "eventRegion": true,
@@ -1361,9 +1408,9 @@
         "passed": true
       },
       {
-        "title": "高温仍是跨区域运营与健康风险，今天没有新的全球归因结论",
-        "sourceCount": 3,
-        "sourceDomainCount": 2,
+        "title": "英印CETA降摩擦，海湾风险增成本",
+        "sourceCount": 4,
+        "sourceDomainCount": 4,
         "roles": {
           "primary": true,
           "eventRegion": true,
@@ -1373,19 +1420,7 @@
         "passed": true
       },
       {
-        "title": "贸易制度改善与能源冲击并存，市场传导方向相反",
-        "sourceCount": 6,
-        "sourceDomainCount": 6,
-        "roles": {
-          "primary": true,
-          "eventRegion": true,
-          "externalVerification": true
-        },
-        "errors": [],
-        "passed": true
-      },
-      {
-        "title": "刚果（金）—乌干达Bundibugyo埃博拉仍在扩展，准备度比市场映射更重要",
+        "title": "埃博拉扩展首先是公共卫生能力问题",
         "sourceCount": 3,
         "sourceDomainCount": 3,
         "roles": {
@@ -1398,7 +1433,7 @@
       }
     ],
     "storyEvidenceEnforced": true,
-    "sourceDomainCount": 19,
+    "sourceDomainCount": 21,
     "deepResearchMode": true,
     "deepResearchEnforced": true,
     "deepResearchEnforceFromDate": "2026-07-12",
@@ -1408,23 +1443,16 @@
     "minimumDistinctDomains": 8,
     "observationCount": 6,
     "fillerCount": 0,
-    "repeatedPairCount": 1,
-    "decisionLayerDensityPct": 23.53,
+    "repeatedPairCount": 0,
+    "decisionLayerDensityPct": 18.29,
     "errors": [],
-    "warnings": [
-      "found 1 highly similar statement pairs"
-    ],
-    "repeatedPairs": [
-      {
-        "left": "证据角色： 一手来源=WHO；事件地区来源=WHO欧洲；外部核验=WMO",
-        "right": "证据角色： 一手来源=WHO；事件地区来源=WHO非洲区域；外部核验=ECDC",
-        "similarity": 0.85
-      }
-    ]
+    "warnings": [],
+    "repeatedPairs": []
   },
   "limitations": [
     "RSS 采集出现 1 个错误。",
     "RSS 使用 1 次回退。",
-    "RSS 时间戳质量受限：88 条过期、45 条未知，合计占 35.09%。"
+    "RSS 时间戳质量受限：0 条过期、45 条未知，合计占 11.87%。",
+    "中国行情有 35 条旧版记录未显式写入价格日期；因其在报告日16:00后抓取，按报告日收盘作保守推断。"
   ]
 }
