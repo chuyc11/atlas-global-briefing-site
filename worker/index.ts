@@ -25,6 +25,10 @@ const APP_SECURITY_HEADERS = {
   "Permissions-Policy": "camera=(), microphone=(), geolocation=(), browsing-topics=()",
 } as const;
 
+// Staged exact-host rollout. Deliberately excludes includeSubDomains and preload
+// until the production verification artifact has remained healthy over time.
+const STRICT_TRANSPORT_SECURITY = "max-age=86400";
+
 function contentSecurityPolicy(nonce: string): string {
   return [
     "default-src 'self'",
@@ -44,6 +48,7 @@ function contentSecurityPolicy(nonce: string): string {
 function withAppSecurityHeaders(response: Response, policy: string): Response {
   const headers = new Headers(response.headers);
   headers.set("Content-Security-Policy", policy);
+  headers.set("Strict-Transport-Security", STRICT_TRANSPORT_SECURITY);
   for (const [key, value] of Object.entries(APP_SECURITY_HEADERS)) {
     headers.set(key, value);
   }
@@ -59,6 +64,7 @@ function withImageSecurityHeaders(response: Response): Response {
   headers.set("X-Content-Type-Options", "nosniff");
   headers.set("Cross-Origin-Resource-Policy", "same-origin");
   headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
+  headers.set("Strict-Transport-Security", STRICT_TRANSPORT_SECURITY);
   return new Response(response.body, {
     status: response.status,
     statusText: response.statusText,

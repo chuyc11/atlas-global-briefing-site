@@ -280,7 +280,7 @@ export default function Home() {
   };
 
   return (
-    <main>
+    <main data-atlas-report-date={generated.reportDate} data-atlas-content-hash={generated.contentHash}>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="返回报告顶部">
           <span className="brand-mark">A</span>

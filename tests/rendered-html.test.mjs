@@ -35,6 +35,7 @@ test("server-renders the ATLAS briefing", async () => {
   assert.equal(response.headers.get("x-content-type-options"), "nosniff");
   assert.equal(response.headers.get("x-frame-options"), "DENY");
   assert.equal(response.headers.get("referrer-policy"), "strict-origin-when-cross-origin");
+  assert.equal(response.headers.get("strict-transport-security"), "max-age=86400");
   const policy = response.headers.get("content-security-policy") ?? "";
   assert.match(policy, /frame-ancestors 'none'/);
   assert.match(policy, /script-src 'self' 'nonce-[A-Za-z0-9+/_-]+' 'strict-dynamic'/);
@@ -48,6 +49,8 @@ test("server-renders the ATLAS briefing", async () => {
   assert.ok(inlineScripts.every((match) => match[1].includes(`nonce="${nonce}"`)));
   assert.match(html, /<title>ATLAS｜全球决策晨报<\/title>/i);
   assert.match(html, /ATLAS/);
+  assert.match(html, new RegExp(`data-atlas-report-date="${payload.reportDate}"`));
+  assert.match(html, new RegExp(`data-atlas-content-hash="${payload.contentHash}"`));
   assert.match(html, /GLOBAL INTELLIGENCE/);
   assert.ok(html.includes(payload.hero.editorNote));
   assert.match(html, /今天必须知道的/);
@@ -141,4 +144,5 @@ test("hardens image-optimizer error responses", async () => {
   assert.equal(response.headers.get("x-content-type-options"), "nosniff");
   assert.equal(response.headers.get("cross-origin-resource-policy"), "same-origin");
   assert.equal(response.headers.get("referrer-policy"), "strict-origin-when-cross-origin");
+  assert.equal(response.headers.get("strict-transport-security"), "max-age=86400");
 });
