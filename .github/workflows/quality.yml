@@ -30,7 +30,11 @@ jobs:
       - run: python -m pip install detect-secrets==1.5.0
       - name: Detect committed secrets
         shell: bash
-        run: git ls-files -z | xargs -0 detect-secrets-hook
+        run: |
+          # The generated briefing carries a public SHA-256 integrity value, not a credential.
+          # Keep every detector enabled while narrowly exempting that typed JSON field.
+          git ls-files -z | xargs -0 detect-secrets-hook \
+            --exclude-lines '^\s*"contentHash"\s*:\s*"[0-9a-f]{64}"\s*,?\s*$'
       - run: python -m pip install playwright==1.55.0
       - run: python -m playwright install --with-deps chromium
       - name: Responsive interaction gate
