@@ -5,7 +5,7 @@ ATLAS 是统一研究工作台的网页展示层。页面读取
 
 ## 本地运行
 
-需要 Node.js `>=22.13.0`：
+需要 Node.js `>=22.15.0`，并使用项目固定的 npm `10.9.2` 生成锁文件：
 
 ```powershell
 npm install
@@ -17,10 +17,16 @@ npm run dev
 ```powershell
 npm test
 npm run audit:policy
+npm run audit:sources
 ```
 
 测试会完成 vinext/Cloudflare Worker 构建，并验证服务端输出、结构化深度数据、来源、情景和组合数据。
-安全策略从 npm 官方端点审计全部依赖，未豁免任何已知漏洞；CI 同时固定 Action 提交并扫描误提交秘密。
+安全策略从 npm 官方端点审计全部依赖，并在安装前拒绝镜像、私有源、非 HTTPS
+源、嵌入凭据和缺少 SHA-512 完整性校验的锁文件条目；CI 同时固定 Action
+提交并扫描误提交秘密。项目级 `.npmrc` 固定使用 npm 官方 registry，避免本机
+全局镜像设置污染可部署锁文件。
+`packageManager` 同时固定 Sites 构建器兼容的 npm 主版本，避免 npm 11 生成的
+锁文件在 npm 10 冷启动时被判定为依赖缺失。
 
 页面运行后可执行真实浏览器回归：
 

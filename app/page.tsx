@@ -48,6 +48,16 @@ function metric(value: number | null | undefined, suffix = ""): string {
   return typeof value === "number" && Number.isFinite(value) ? `${value}${suffix}` : "N/A";
 }
 
+function money(value: number | null | undefined, currency: string, signed = false): string {
+  if (typeof value !== "number" || !Number.isFinite(value)) return "N/A";
+  const prefix = signed ? (value > 0 ? "+" : value < 0 ? "−" : "") : value < 0 ? "−" : "";
+  const formatted = new Intl.NumberFormat("en-US", {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }).format(Math.abs(value));
+  return `${prefix}${formatted} ${currency}`;
+}
+
 function safePublicHref(value: string): string {
   if (/^#[A-Za-z][A-Za-z0-9_-]*$/.test(value)) return value;
   try {
@@ -180,7 +190,7 @@ function PortfolioDialog({ portfolio, onClose }: { portfolio: Portfolio; onClose
     <div className="detail-backdrop" onMouseDown={(mouseEvent) => mouseEvent.currentTarget === mouseEvent.target && onClose()}>
       <section className="detail-panel portfolio-detail" role="dialog" aria-modal="true" aria-labelledby="portfolio-detail-title" onKeyDown={trapDialogFocus}>
         <header className="detail-header">
-          <div><span>公开聚合视图</span><small>账户与持仓明细不进入公开载荷</small></div>
+          <div><span>虚拟账户公开摘要</span><small>账户总额公开，持仓成本与编号隐藏</small></div>
           <button ref={closeRef} type="button" className="icon-button" onClick={onClose} aria-label="关闭组合详情">×</button>
         </header>
         <div className="detail-scroll">
@@ -188,8 +198,10 @@ function PortfolioDialog({ portfolio, onClose }: { portfolio: Portfolio; onClose
           <h2 id="portfolio-detail-title">{portfolio.name}</h2>
           <p className="detail-lead">{portfolio.review}</p>
           <div className="portfolio-facts">
-            <div><span>聚合收益率</span><strong>{portfolio.return}</strong></div>
-            <div><span>账户类型</span><strong>{portfolio.paperTradingOnly ? "虚拟研究" : "不可用"}</strong></div>
+            <div><span>总权益</span><strong>{money(portfolio.equity, portfolio.baseCurrency)}</strong></div>
+            <div><span>现金</span><strong>{money(portfolio.cash, portfolio.baseCurrency)}</strong></div>
+            <div><span>最近一期盈亏</span><strong>{money(portfolio.periodPnl, portfolio.baseCurrency, true)}</strong></div>
+            <div><span>累计收益</span><strong>{portfolio.return}</strong></div>
           </div>
           {portfolio.limitations.length > 0 && <div className="data-limitation"><b>数据限制</b><DetailList items={portfolio.limitations} /></div>}
           <section className="position-section">
@@ -365,14 +377,14 @@ export default function Home() {
       </section>
 
       <section className="portfolio-section">
-        {([generated.portfolios.us, generated.portfolios.china] as Portfolio[]).map((portfolio, index) => <div className={`portfolio-card ${index === 0 ? "dark" : "paper"}`} key={portfolio.name}><div className="portfolio-top"><span>{portfolio.name}</span><small>公开聚合视图</small></div><strong className="portfolio-value">匿名配置</strong><div className={`return ${portfolio.returnPct >= 0 ? "positive" : "negative"}`}>{portfolio.return} 总收益</div><div className="allocation-bar" aria-label={`${portfolio.name}资产配置`}>{portfolio.allocations.map((item) => <span style={{ width: `${item.pct}%` }} key={item.label}></span>)}</div><div className="allocation-legend">{portfolio.allocations.map((item) => <span key={item.label}>{item.label} {item.pct}%</span>)}</div><button type="button" className="portfolio-open" onClick={(clickEvent) => openPortfolio(portfolio, clickEvent.currentTarget)}>查看公开归因摘要 <span aria-hidden="true">→</span></button></div>)}
+        {([generated.portfolios.us, generated.portfolios.china] as Portfolio[]).map((portfolio, index) => <div className={`portfolio-card ${index === 0 ? "dark" : "paper"}`} key={portfolio.name}><div className="portfolio-top"><span>{portfolio.name}</span><small>虚拟账户透明摘要</small></div><strong className="portfolio-value">{portfolio.value} {portfolio.baseCurrency}</strong><div className={`return ${(portfolio.periodPnl ?? portfolio.returnPct) >= 0 ? "positive" : "negative"}`}>本期 {money(portfolio.periodPnl, portfolio.baseCurrency, true)} · 累计 {portfolio.return} · 现金 {money(portfolio.cash, portfolio.baseCurrency)}</div><div className="allocation-bar" aria-label={`${portfolio.name}资产配置`}>{portfolio.allocations.map((item) => <span style={{ width: `${item.pct}%` }} key={item.label}></span>)}</div><div className="allocation-legend">{portfolio.allocations.map((item) => <span key={item.label}>{item.label} {item.pct}%</span>)}</div><button type="button" className="portfolio-open" onClick={(clickEvent) => openPortfolio(portfolio, clickEvent.currentTarget)}>查看账户摘要 <span aria-hidden="true">→</span></button></div>)}
       </section>
 
       <section className="system-section" id="system">
         <div className="system-heading"><p className="section-number">04 / ATLAS CYCLE</p><h2>研究不是结论，<br />是可审计的循环。</h2><p>只读展示最近完成的统一 cycle、唯一虚拟账本、隔离回放和影子晋升门禁。</p></div>
         <div className="system-board">
           <div className="system-metrics"><article><span>Operational Cycle</span><strong>{operationalGatePassed ? "运行门禁通过" : "阻断"}</strong><small>{operationalGatePassed ? "公开安全状态已更新" : "存在阻断项"}</small></article><article><span>Release Candidate</span><strong>{releaseCandidatePassed ? "发布证据完整" : "未认证"}</strong><small>需要全量回归与幂等复跑</small></article><article><span>Canonical Ledger</span><strong>{generated.system.ledger.auditPassed ? "审计通过" : "未通过"}</strong><small>账户、事件与哈希明细不公开</small></article><article><span>Replay Safety</span><strong>{generated.system.replay.executionSafetyPassed ? "执行隔离通过" : "未通过"}</strong><small>研究晋级：{researchPromotionPassed ? "证据通过" : "未通过"}</small></article><article><span>Shadow Gate</span><strong>{generated.system.shadow.recommendedState}</strong><small>evidence: {generated.system.shadow.evidenceStatus}</small></article><article><span>Self Healing</span><strong>{selfHealing.status === "healthy" ? "健康" : selfHealing.status === "blocked" ? "阻断" : selfHealing.status === "degraded" ? "降级" : "未运行"}</strong><small>内部检查与修复数量不公开</small></article><article><span>Review Actions</span><strong>{improvements.status}</strong><small>内部任务数量与能力缺口不公开</small></article></div>
-          <details className="system-detail"><summary>查看阶段、边界与限制</summary><div className="stage-list">{generated.system.stages.map((stage) => <span className={stage.status} key={stage.name}>{stage.name}<b>{stage.status}</b></span>)}</div><div className="boundary-list"><p>纸面虚拟交易：是</p><p>真实券商订单：禁止</p><p>账户与持仓明细：不公开</p><p>源代码自动修改：禁止</p><p>生产自动发布：禁止</p><p>自动晋升 active-normal：禁止</p></div>{!generated.system.replay.strategyEvidencePassed && <div className="data-limitation"><b>策略有效性未验证</b><p>当前回放只证明隔离执行和账本安全，没有基准收益、回撤、成本与样本外标签证据。</p></div>}{generated.system.shadow.evidenceStatus !== "verified" && <div className="data-limitation"><b>门禁保持 shadow</b><p>当前缺少已验证的样本外证据，因此不会自动晋升。</p></div>}</details>
+          <details className="system-detail"><summary>查看阶段、边界与限制</summary><div className="stage-list">{generated.system.stages.map((stage) => <span className={stage.status} key={stage.name}>{stage.name}<b>{stage.status}</b></span>)}</div><div className="boundary-list"><p>纸面虚拟交易：是</p><p>真实券商订单：禁止</p><p>总权益、现金与收益：公开</p><p>账户编号与持仓成本：不公开</p><p>源代码自动修改：禁止</p><p>生产自动发布：禁止</p><p>自动晋升 active-normal：禁止</p></div>{!generated.system.replay.strategyEvidencePassed && <div className="data-limitation"><b>策略有效性未验证</b><p>当前回放只证明隔离执行和账本安全，没有基准收益、回撤、成本与样本外标签证据。</p></div>}{generated.system.shadow.evidenceStatus !== "verified" && <div className="data-limitation"><b>门禁保持 shadow</b><p>当前缺少已验证的样本外证据，因此不会自动晋升。</p></div>}</details>
         </div>
       </section>
 

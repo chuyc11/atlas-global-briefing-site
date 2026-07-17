@@ -56,7 +56,11 @@ test("server-renders the ATLAS briefing", async () => {
   assert.match(html, /今天必须知道的/);
   assert.match(html, /查看完整分析/);
   assert.match(html, /运行闭环/);
-  assert.match(html, /公开聚合视图/);
+  assert.match(html, /虚拟账户透明摘要/);
+  assert.ok(html.includes(payload.portfolios.us.value));
+  assert.ok(html.includes(payload.portfolios.china.value));
+  assert.match(html, /USD/);
+  assert.match(html, /CNY/);
   assert.doesNotMatch(html, /codex-preview|Codex is working|react-loading-skeleton/i);
 });
 
@@ -101,7 +105,11 @@ test("uses generated briefing data without starter preview residue", async () =>
   for (const portfolio of [payload.portfolios.us, payload.portfolios.china]) {
     assert.equal(portfolio.publicDataOnly, true);
     assert.equal(portfolio.paperTradingOnly, true);
-    for (const field of ["accountId", "positions", "cash", "equity", "realizedPnl", "initialCash"]) {
+    assert.equal(typeof portfolio.equity, "number");
+    assert.equal(typeof portfolio.cash, "number");
+    assert.ok(portfolio.periodPnl === null || typeof portfolio.periodPnl === "number");
+    assert.match(portfolio.baseCurrency, /^(USD|CNY)$/);
+    for (const field of ["accountId", "positions", "realizedPnl", "initialCash", "previousEquity"]) {
       assert.equal(Object.hasOwn(portfolio, field), false, `public portfolio leaked ${field}`);
     }
   }

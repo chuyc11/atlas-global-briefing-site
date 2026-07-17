@@ -2,6 +2,7 @@
   "name": "atlas-global-briefing",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "npm@10.9.2",
   "engines": {
     "node": ">=22.15.0"
   },
@@ -9,12 +10,13 @@
     "dev": "node build/run-vinext.mjs dev",
     "build": "node build/run-vinext.mjs build",
     "start": "node build/run-vinext.mjs start",
-    "test": "npm run build && node --test tests/*.test.mjs",
+    "test": "npm run audit:sources && npm run build && node --test tests/*.test.mjs",
     "test:ui": "python tests/interactive-ui.py",
     "typecheck": "tsc --noEmit",
     "quality": "npm run lint && npm run typecheck && npm test",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
-    "audit:policy": "node security/audit-policy.mjs"
+    "audit:policy": "node security/audit-policy.mjs",
+    "audit:sources": "node security/dependency-source-policy.mjs"
   },
   "dependencies": {
     "next": "16.2.10",

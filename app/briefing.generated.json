@@ -1,51 +1,48 @@
 {
   "schemaVersion": 4,
-  "reportDate": "2026-07-15",
-  "retrievedAt": "2026-07-15 16:10",
-  "issue": "VOL. 023",
-  "contentHash": "f8f0b0038cb3c824dbf45aac84a73c64fd7df458eda579d5ea3d91796ae9ac38",
-  "generatedAt": "2026-07-15T00:00:00+08:00",
+  "reportDate": "2026-07-16",
+  "retrievedAt": "2026-07-16 16:20（Asia/Shanghai）",
+  "issue": "VOL. 024",
+  "contentHash": "ee9538c55b4b5716da9b0f344f7b29d9856613a3725aa57c0ee1127840ba0b18",
+  "generatedAt": "2026-07-16T00:00:00+08:00",
   "hero": {
     "eyebrow": "每日全球晨间简报",
     "headline": [
-      "霍尔木兹风险重新",
-      "压过外交窗口"
+      "美伊冲突横向扩展",
+      "等待下一项验证"
     ],
-    "dek": "美国恢复对伊朗港口封锁，双方继续打击，IMO记录船员伤亡；没有包含执行主体、时间表和监督机制的公开降级文本，航运与能源风险仍在上升",
-    "editorNote": "接下来验证协议文本、船流、战争险。"
+    "dek": "美国扩大对伊朗打击，伊朗称打击巴林、科威特和约旦内的军事目标；局势由霍尔木兹海上冲突向地区基地扩散，短期可执行降级概率继续下降",
+    "editorNote": "接下来验证三要素降级文本、基地与商船遇袭、船流。"
   },
   "metrics": {
-    "riskTemperature": 55,
+    "riskTemperature": 59,
     "posture": "适度进取",
     "signalCount": 7,
-    "freshness": "中等",
+    "freshness": "良好",
     "sourceHealth": {
-      "label": "中等",
-      "score": 85,
-      "rssItemCount": 379,
-      "rssFresh24hCount": 246,
-      "rssBackgroundCount": 88,
+      "label": "良好",
+      "score": 98,
+      "rssItemCount": 386,
+      "rssFresh24hCount": 278,
+      "rssBackgroundCount": 98,
       "rssLookbackHours": 72,
       "rssStaleCount": 0,
-      "rssUnknownTimestampCount": 45,
-      "rssStaleOrUnknownPct": 11.87,
-      "rssErrorCount": 1,
-      "rssFallbackCount": 1,
+      "rssUnknownTimestampCount": 15,
+      "rssStaleOrUnknownPct": 3.84,
+      "rssErrorCount": 0,
+      "rssFallbackCount": 0,
       "rssSourceCoveragePct": 100.0,
       "chinaErrorCount": 0,
       "chinaFallbackItemCount": 0,
       "chinaItemCount": 35,
       "chinaMissingPriceDateItemCount": 0,
-      "chinaInferredPriceDateItemCount": 35,
+      "chinaInferredPriceDateItemCount": 0,
       "chinaStalePriceItemCount": 0,
       "staleMarketItemCount": 0,
-      "priorCloseMarketItemCount": 8,
-      "marketItemCount": 8,
+      "priorCloseMarketItemCount": 9,
+      "marketItemCount": 9,
       "limitations": [
-        "RSS 采集出现 1 个错误。",
-        "RSS 使用 1 次回退。",
-        "RSS 时间戳质量受限：0 条过期、45 条未知，合计占 11.87%。",
-        "中国行情有 35 条旧版记录未显式写入价格日期；因其在报告日16:00后抓取，按报告日收盘作保守推断。"
+        "RSS 时间戳质量受限：0 条过期、15 条未知，合计占 3.84%。"
       ],
       "method": "artifact_backed_source_health_v3"
     },
@@ -53,60 +50,60 @@
       "kind": "heuristic_signal_index",
       "calibrated": false,
       "formula": "20 + 高概率情景×8 + 中概率情景×4 + 风险条目×5，上限100",
-      "highScenarioCount": 2,
-      "mediumScenarioCount": 1,
+      "highScenarioCount": 3,
+      "mediumScenarioCount": 0,
       "riskItemCount": 3
     },
-    "readingMinutes": 12
+    "readingMinutes": 14
   },
   "events": [
     {
       "category": "地缘",
       "time": "首要变量",
-      "title": "霍尔木兹风险重新压过外交窗口",
-      "cardTitle": "霍尔木兹风险重新压过外交窗口",
-      "body": "最近24小时的增量是封锁、袭船和互袭，不是可执行的降级安排；外交渠道仍在，但尚未改变海上行为。",
-      "implication": "袭船与封锁压缩承运人和保险人的风险额度，随后推高战争险、运价、库存占用和融资成本；炼厂替代采购、航空燃油和亚洲输入型通胀是第二层传导。",
+      "title": "美伊冲突从海峡向地区基地横向扩展",
+      "cardTitle": "美伊冲突从海峡向地区基地横向扩展",
+      "body": "最近24小时新增的是打击范围和报复对象扩展，不是外交执行机制；调停渠道仍存在，但没有改变军事行为。",
+      "implication": "更多海湾国家被卷入会提高基地防空、港口安全和误判成本；保险与承运人的风险额度随后收缩，传导至油运、航空燃料、库存占用、亚洲输入型通胀和财政补贴。第二层效应是海湾国家在安全依赖与避免全面战争之间承受更大外交压力。",
       "source": "查看来源",
       "href": "#sources",
       "facts": [
-        "最近24小时的增量是封锁、袭船和互袭，不是可执行的降级安排；外交渠道仍在，但尚未改变海上行为。",
-        "7月12日联合国要求美伊恢复谈判；7月14日联合国简报记录新一轮袭船及船员伤亡；7月15日美联社报道美国恢复港口封锁并出现新一轮互袭。联合国声明与France 24地区报道提供了时间线交叉核验。",
-        "袭船与封锁压缩承运人和保险人的风险额度，随后推高战争险、运价、库存占用和融资成本；炼厂替代采购、航空燃油和亚洲输入型通胀是第二层传导。"
+        "最近24小时新增的是打击范围和报复对象扩展，不是外交执行机制；调停渠道仍存在，但没有改变军事行为。",
+        "AP 7月16日报道称美国扩大对伊朗北部的打击并攻击试图突破封锁的船只，同时伊朗向巴林、科威特和约旦内目标发射导弹和无人机。BBC与半岛电视台提供外部和地区视角。联合国7月12日材料仍以敦促恢复谈判为主。",
+        "更多海湾国家被卷入会提高基地防空、港口安全和误判成本；保险与承运人的风险额度随后收缩，传导至油运、航空燃料、库存占用、亚洲输入型通胀和财政补贴。第二层效应是海湾国家在安全依赖与避免全面战争之间承受更大外交压力。"
       ],
       "sources": [
         {
-          "label": "美联社",
-          "href": "https://apnews.com/article/b7c592f269d822407dd6b5641602bf25"
+          "label": "AP 7月16日报道",
+          "href": "https://apnews.com/article/f98ff56554de2336f0e85bb5fdcae769"
         },
         {
-          "label": "联合国声明",
-          "href": "https://www.un.org/sg/en/content/sg/statements/2026-07-12/statement-attributable-the-spokesperson-for-the-secretary-general-the-middle-east"
-        },
-        {
-          "label": "France 24地区报道",
-          "href": "https://www.france24.com/en/middle-east/20260715-middle-east-live-tehran-and-us-exchange-strikes-as-blockade-of-iranian-ports-resumes"
-        },
-        {
-          "label": "联合国",
-          "href": "https://www.un.org/sg/en/content/highlight/2026-07-14.html"
+          "label": "BBC",
+          "href": "https://www.bbc.co.uk/news/articles/c2lq1ed28jxo"
         },
         {
           "label": "半岛电视台",
-          "href": "https://www.aljazeera.com/tag/strait-of-hormuz/"
+          "href": "https://www.aljazeera.com/news/liveblog/2026/7/16/iran-war-live-sirens-in-bahrain-kuwait-us-disables-iranian-oil-tanker"
+        },
+        {
+          "label": "联合国7月12日材料",
+          "href": "https://www.un.org/en/un-chief-urges-iran-and-us-%E2%80%98urgently-resume-negotiations%E2%80%99-gulf-strikes-escalate"
+        },
+        {
+          "label": "半岛电视台",
+          "href": "https://www.aljazeera.com/news/2026/7/15/iran-says-peace-deal-voided-fighting-existential-war-after-us-attacks"
         }
       ],
-      "predictionId": "2026-07-15-P01",
+      "predictionId": "2026-07-16-P01",
       "relatedPredictionIds": [
-        "2026-07-15-P01"
+        "2026-07-16-P01"
       ],
-      "analysis": "截至7月16日23:59（上海时间），美伊仍不会形成同时具备执行方、时间表和监督机制的公开降级文本",
+      "analysis": "截至7月17日23:59（上海时间），美伊仍不会形成同时具备执行方、时间表和监督机制的公开降级文本",
       "confidence": "高",
       "horizon": "1日",
       "drivers": [
-        "港口封锁重新实施",
-        "双方报复链条延续",
-        "联合国与地区调停方尚未公布执行文本"
+        "美国打击范围扩大到伊朗北部并攻击试图突破封锁的船只",
+        "伊朗对巴林、科威特和约旦的军事目标发动报复性打击",
+        "联合国与地区调停仍以呼吁恢复谈判为主，尚未公布可执行安排"
       ],
       "beneficiaries": [
         "避险资产研究",
@@ -114,321 +111,340 @@
       ],
       "pressures": [
         "航空与高燃油敏感行业",
-        "海湾航运和保险"
+        "海湾航运、保险和输入型通胀"
       ],
       "verificationSignals": [
         "公开协议是否具备三项执行要素",
-        "IMO航运安全通报",
-        "GLD相对SPY的完整收盘窗口"
+        "海湾基地和商船遇袭是否停止",
+        "IMO船舶安全记录与通航状态"
       ],
       "instruments": [
         {
           "symbol": "GLD",
           "exchange": "NYSE ARCA",
           "type": "ETF",
-          "thesis": "观察冲突风险与实际利率的净效应",
-          "risk": "美元和实际利率上升可能压过避险买盘"
+          "thesis": "观察冲突升级与实际利率、美元变化的净效应",
+          "risk": "实际利率或美元上升、仓位拥挤可能压过避险需求"
         }
       ],
-      "id": "2026-07-15-01-地缘"
+      "id": "2026-07-16-01-地缘"
     },
     {
       "category": "安全",
       "time": "一周窗口",
-      "title": "海湾军事风险已从口头威胁回到船舶遇袭、港口封锁和跨境打击",
-      "cardTitle": "海湾军事风险已从口头威胁回到船舶遇袭、港口封锁和跨境打击",
-      "body": "短期关键不是武器平台涨跌，而是护航、防空和补给消耗是否进入持续状态。",
-      "implication": "海上事件增加护航、反无人机、防空、雷达、通信、弹药和维修保障需求；持续时间越长，风险越可能从一次性平台采购扩展到补给与关键基础设施防护。误判会把海湾国家和民用港口卷入冲突。",
+      "title": "欧乌Drone Deal把战场经验接入欧洲工业体系",
+      "cardTitle": "欧乌Drone Deal把战场经验接入欧洲工业体系",
+      "body": "合作已经从政治支持进入正式工业伙伴关系，但尚需项目、采购和产能节点验证，不能直接把协议等同于上市公司收入。",
+      "implication": "乌克兰提供战场验证和快速迭代，欧盟提供资本、安全产地和规模制造；传导从整机延伸至雷达、传感器、通信、电子战和维修，并要求协调采购与知识产权。",
       "source": "查看来源",
       "href": "#sources",
       "facts": [
-        "海湾军事风险已从口头威胁回到船舶遇袭、港口封锁和跨境打击，短期关键不是武器平台涨跌，而是护航、防空和补给消耗是否进入持续状态。",
-        "IMO在联合国7月14日简报中报告最新航运攻击造成船员死伤；IMO海峡专题强调船员安全与航行自由。联合国简报和美联社确认封锁与互袭仍在继续。",
-        "海上事件增加护航、反无人机、防空、雷达、通信、弹药和维修保障需求；持续时间越长，风险越可能从一次性平台采购扩展到补给与关键基础设施防护。误判会把海湾国家和民用港口卷入冲突。"
+        "合作已经从政治支持进入正式工业伙伴关系，但尚需项目、采购和产能节点验证，不能直接把协议等同于上市公司收入。",
+        "乌克兰总统府确认双方签署Drone Deal第一步文件；欧委会称目标包括2026年底前推动无人机与反无人机联合生产，并追加10亿欧元；AP独立报道合作范围。与此同时，乌克兰—东南欧峰会声明继续记录俄罗斯导弹和无人机攻击压力。",
+        "乌克兰提供战场验证和快速迭代，欧盟提供资本、安全产地和规模制造；传导从整机延伸至雷达、传感器、通信、电子战和维修，并要求协调采购与知识产权。"
       ],
       "sources": [
         {
-          "label": "IMO海峡专题",
-          "href": "https://www.imo.org/en/MediaCentre/HotTopics/Pages/Middle-East-Strait-of-Hormuz.aspx"
+          "label": "乌克兰总统府",
+          "href": "https://www.president.gov.ua/news/prezident-ukrayini-ta-prezidentka-yevrokomisiyi-pidpisali-do-105465"
         },
         {
-          "label": "联合国简报",
-          "href": "https://www.un.org/sg/en/content/highlight/2026-07-14.html"
+          "label": "欧委会",
+          "href": "https://france.representation.ec.europa.eu/informations-et-evenements/informations/lue-lance-le-partenariat-industriel-de-defense-avec-lukraine-2026-07-15_fr"
         },
         {
-          "label": "美联社",
-          "href": "https://apnews.com/article/b7c592f269d822407dd6b5641602bf25"
+          "label": "AP",
+          "href": "https://apnews.com/article/3d6de7a70a87f0a3cc9f4f7f0317c9b2"
+        },
+        {
+          "label": "乌克兰—东南欧峰会声明",
+          "href": "https://www.president.gov.ua/en/news/samit-ukrayina-pivdenno-shidna-yevropa-kiyivska-deklaraciya-105453"
         }
       ],
-      "predictionId": "2026-07-15-P01",
+      "predictionId": "2026-07-16-P02",
       "relatedPredictionIds": [
-        "2026-07-15-P01"
+        "2026-07-16-P02"
       ],
-      "analysis": "截至7月16日23:59（上海时间），美伊仍不会形成同时具备执行方、时间表和监督机制的公开降级文本",
+      "analysis": "欧盟与乌克兰将在7月23日前公布至少一项无人机、防无人机或联合防务生产的可核验实施步骤",
       "confidence": "高",
-      "horizon": "1日",
+      "horizon": "1周",
       "drivers": [
-        "港口封锁重新实施",
-        "双方报复链条延续",
-        "联合国与地区调停方尚未公布执行文本"
+        "欧盟与乌克兰已签署防务工业伙伴关系和Drone Deal起始文件",
+        "欧委会已追加拨付10亿欧元支持乌克兰无人机能力",
+        "双方目标包括2026年底前推进无人机与反无人机联合生产"
       ],
       "beneficiaries": [
-        "避险资产研究",
-        "能源安全与航运风险研究"
+        "无人机与反无人机供应链",
+        "雷达、传感器、安全通信与欧洲防务产能"
       ],
       "pressures": [
-        "航空与高燃油敏感行业",
-        "海湾航运和保险"
+        "缺少订单和产能兑现的主题交易",
+        "欧洲财政与供应链瓶颈"
       ],
       "verificationSignals": [
-        "公开协议是否具备三项执行要素",
-        "IMO航运安全通报",
-        "GLD相对SPY的完整收盘窗口"
+        "责任主体和项目名称",
+        "采购或资金拨付文件",
+        "生产、测试或交付时间点"
       ],
       "instruments": [
         {
-          "symbol": "GLD",
+          "symbol": "ITA",
           "exchange": "NYSE ARCA",
           "type": "ETF",
-          "thesis": "观察冲突风险与实际利率的净效应",
-          "risk": "美元和实际利率上升可能压过避险买盘"
+          "thesis": "观察防务工业合作能否转化为相对广泛市场的持续风险溢价",
+          "risk": "ETF成分偏美国，可能与欧洲无人机项目的直接受益错配"
         }
       ],
-      "id": "2026-07-15-02-安全"
+      "id": "2026-07-16-02-安全"
     },
     {
       "category": "科技",
       "time": "结构迁移",
-      "title": "最近约24小时没有达到“三个独立来源加一手文件”门槛的全新全球AI核心事件",
-      "cardTitle": "最近约24小时没有达到“三个独立来源加一手文件”门槛的全新全球AI核心事件",
-      "body": "当前更重要的变量，是监管机构能否提供可执行的测试能力，以及企业能否把合规成本转化为可部署产品。",
-      "implication": "明确测试入口和责任边界，会增加网络安全、身份、审计和模型治理需求；若适用范围收窄或平台延期，短期部署摩擦下降，但信任和采购验证也会放慢。政策仍在过渡期，不能直接推导公司收入或ETF超额收益。",
-      "source": "查看来源",
-      "href": "#sources",
+      "title": "欧盟AI办公室7月15日发布百余名专家关于前沿AI竞争力、主权和安全的汇总报告",
+      "cardTitle": "欧盟AI办公室7月15日发布百余名专家关于前沿AI竞争力、主权和安全的汇总报告",
+      "body": "7月7日的网络安全与AI行动计划继续推动模型评估、第三方测试和ENISA协作。、均为官方材料。",
+      "implication": "AI竞争焦点正转向评估资格、内容溯源、举报响应和责任分配；受益链更可能落在网络安全、身份、审计与模型治理。反证与验证： 监管文件不等于采购收入；若评估规则延期、预算收缩或诉讼证据不符，治理投入假设应下调。观察欧盟评估资格、内容标识义务和企业预算。",
+      "source": "AI办公室报告",
+      "href": "https://digital-strategy.ec.europa.eu/en/library/ai-office-publishes-frontier-ai-expert-findings-eu-competitiveness-sovereignty-and-security",
       "facts": [
-        "最近约24小时没有达到“三个独立来源加一手文件”门槛的全新全球AI核心事件。当前更重要的变量，是监管机构能否提供可执行的测试能力，以及企业能否把合规成本转化为可部署产品。",
-        "欧盟7月7日提出先进AI网络安全行动计划，包括评估能力、第三方风险测试和与ENISA协作的安全测试平台；AI生成内容标识与AI Act实施时间表仍在推进。欧盟委员会行动计划、AI Act官方页面与AI内容标识规范构成连续性证据。",
-        "明确测试入口和责任边界，会增加网络安全、身份、审计和模型治理需求；若适用范围收窄或平台延期，短期部署摩擦下降，但信任和采购验证也会放慢。政策仍在过渡期，不能直接推导公司收入或ETF超额收益。"
+        "欧盟AI办公室7月15日发布百余名专家关于前沿AI竞争力、主权和安全的汇总报告；7月7日的网络安全与AI行动计划继续推动模型评估、第三方测试和ENISA协作。AI办公室报告、行动计划均为官方材料。",
+        "来源归因： Reuters报道xAI起诉一名涉嫌绕过Grok防护生成儿童性虐待材料的用户；诉状数字属于公司陈述，本期未找到完整法院卷宗，因此不写成确认事实。",
+        "AI竞争焦点正转向评估资格、内容溯源、举报响应和责任分配；受益链更可能落在网络安全、身份、审计与模型治理。"
       ],
       "sources": [
         {
-          "label": "欧盟委员会行动计划",
-          "href": "https://commission.europa.eu/news-and-media/news/new-eu-plan-address-risks-and-opportunities-advanced-ai-cybersecurity-2026-07-07_en"
+          "label": "AI办公室报告",
+          "href": "https://digital-strategy.ec.europa.eu/en/library/ai-office-publishes-frontier-ai-expert-findings-eu-competitiveness-sovereignty-and-security"
         },
         {
-          "label": "AI Act官方页面",
-          "href": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+          "label": "行动计划",
+          "href": "https://digital-strategy.ec.europa.eu/en/library/eu-action-plan-cybersecurity-and-artificial-intelligence"
         },
         {
-          "label": "AI内容标识规范",
-          "href": "https://digital-strategy.ec.europa.eu/en/news/commission-publishes-code-practice-marking-and-labelling-ai-generated-content"
+          "label": "Reuters",
+          "href": "https://www.investing.com/news/world-news/musks-xai-sues-grok-user-over-sexualized-deepfakes-4794035"
         }
       ],
       "predictionId": "",
       "relatedPredictionIds": [],
-      "analysis": "明确测试入口和责任边界，会增加网络安全、身份、审计和模型治理需求；若适用范围收窄或平台延期，短期部署摩擦下降，但信任和采购验证也会放慢。政策仍在过渡期，不能直接推导公司收入或ETF超额收益。",
+      "analysis": "AI竞争焦点正转向评估资格、内容溯源、举报响应和责任分配；受益链更可能落在网络安全、身份、审计与模型治理。反证与验证： 监管文件不等于采购收入；若评估规则延期、预算收缩或诉讼证据不符，治理投入假设应下调。观察欧盟评估资格、内容标识义务和企业预算。",
       "confidence": "待验证",
       "horizon": "结构迁移",
       "drivers": [
-        "最近约24小时没有达到“三个独立来源加一手文件”门槛的全新全球AI核心事件。当前更重要的变量，是监管机构能否提供可执行的测试能力，以及企业能否把合规成本转化为可部署产品。",
-        "欧盟7月7日提出先进AI网络安全行动计划，包括评估能力、第三方风险测试和与ENISA协作的安全测试平台；AI生成内容标识与AI Act实施时间表仍在推进。欧盟委员会行动计划、AI Act官方页面与AI内容标识规范构成连续性证据。",
-        "明确测试入口和责任边界，会增加网络安全、身份、审计和模型治理需求；若适用范围收窄或平台延期，短期部署摩擦下降，但信任和采购验证也会放慢。政策仍在过渡期，不能直接推导公司收入或ETF超额收益。"
+        "欧盟AI办公室7月15日发布百余名专家关于前沿AI竞争力、主权和安全的汇总报告；7月7日的网络安全与AI行动计划继续推动模型评估、第三方测试和ENISA协作。AI办公室报告、行动计划均为官方材料。",
+        "来源归因： Reuters报道xAI起诉一名涉嫌绕过Grok防护生成儿童性虐待材料的用户；诉状数字属于公司陈述，本期未找到完整法院卷宗，因此不写成确认事实。",
+        "AI竞争焦点正转向评估资格、内容溯源、举报响应和责任分配；受益链更可能落在网络安全、身份、审计与模型治理。"
       ],
       "beneficiaries": [],
       "pressures": [],
       "verificationSignals": [
-        "明确测试入口和责任边界，会增加网络安全、身份、审计和模型治理需求；若适用范围收窄或平台延期，短期部署摩擦下降，但信任和采购验证也会放慢。政策仍在过渡期，不能直接推导公司收入或ETF超额收益。"
+        "AI竞争焦点正转向评估资格、内容溯源、举报响应和责任分配；受益链更可能落在网络安全、身份、审计与模型治理。反证与验证： 监管文件不等于采购收入；若评估规则延期、预算收缩或诉讼证据不符，治理投入假设应下调。观察欧盟评估资格、内容标识义务和企业预算。"
       ],
       "instruments": [],
-      "id": "2026-07-15-03-科技"
+      "id": "2026-07-16-03-科技"
     },
     {
       "category": "气候",
       "time": "复合冲击",
-      "title": "高温仍是跨区域运营和健康风险",
-      "cardTitle": "高温仍是跨区域运营和健康风险",
-      "body": "但今天没有足以支持新全球归因结论的事件证据。",
-      "implication": "高温先影响户外工时、用电峰值、急诊需求和电网备用，再传到城市冷却、水资源、保险和公共预算。预警、冷却中心、建筑隔热与医疗准备可以显著降低同温度下的损失。",
+      "title": "加拿大山火烟霾把气候风险转为即时公共运营风险",
+      "cardTitle": "加拿大山火烟霾把气候风险转为即时公共运营风险",
+      "body": "本次可确认的是烟霾、空气质量警告和跨境影响；不能仅凭一次烟霾事件完成长期气候归因，但其健康和运营成本已经发生。",
+      "implication": "PM2.5先影响儿童、老年人和心肺疾病人群，随后增加急诊、户外工作调整、航班能见度风险和室内过滤需求；第二层效应包括电网负荷和保险损失。",
       "source": "查看来源",
       "href": "#sources",
       "facts": [
-        "高温仍是跨区域运营和健康风险，但今天没有足以支持新全球归因结论的事件证据。",
-        "WHO于7月13日更新高温与健康资料，指出热应激会加重心血管、糖尿病、肾病和呼吸系统负担；WHO欧洲此前警告更致命的高温周仍可能出现。WHO高温与健康、WHO欧洲声明与WMO气候和健康资料支持这一风险框架。",
-        "高温先影响户外工时、用电峰值、急诊需求和电网备用，再传到城市冷却、水资源、保险和公共预算。预警、冷却中心、建筑隔热与医疗准备可以显著降低同温度下的损失。"
+        "本次可确认的是烟霾、空气质量警告和跨境影响；不能仅凭一次烟霾事件完成长期气候归因，但其健康和运营成本已经发生。",
+        "加拿大官方警告覆盖多伦多并要求居民防护室内空气；美国国家气象局确认加拿大山火烟霾触发美国空气质量警报；AP报道加拿大超过100起山火及美国多州风险；多伦多市空气质量页提供地区监测入口。",
+        "PM2.5先影响儿童、老年人和心肺疾病人群，随后增加急诊、户外工作调整、航班能见度风险和室内过滤需求；第二层效应包括电网负荷和保险损失。"
       ],
       "sources": [
         {
-          "label": "WHO高温与健康",
-          "href": "https://www.who.int/news-room/fact-sheets/detail/climate-change-heat-and-health"
+          "label": "加拿大官方警告",
+          "href": "https://www.ecalertme.weather.gc.ca/warning-latest_en.php?ualert_id=4425"
         },
         {
-          "label": "WHO欧洲声明",
-          "href": "https://www.who.int/europe/news/item/07-07-2026-statement---extreme-heat--more-deadly-weeks-may-still-lie-ahead-for-the-european-region"
+          "label": "美国国家气象局",
+          "href": "https://forecast.weather.gov/wwamap/wwatxtget.php?cwa=usa&wwa=Air+Quality+Alert"
         },
         {
-          "label": "WMO气候和健康资料",
-          "href": "https://wmo.int/topics/climate-and-health"
+          "label": "AP",
+          "href": "https://apnews.com/article/08d3fb58a434a5d42803ab1c2bbda0b3"
+        },
+        {
+          "label": "多伦多市空气质量页",
+          "href": "https://www.toronto.ca/health/airquality/aqhi/currentreading.htm"
         }
       ],
       "predictionId": "",
       "relatedPredictionIds": [],
-      "analysis": "高温先影响户外工时、用电峰值、急诊需求和电网备用，再传到城市冷却、水资源、保险和公共预算。预警、冷却中心、建筑隔热与医疗准备可以显著降低同温度下的损失。",
+      "analysis": "PM2.5先影响儿童、老年人和心肺疾病人群，随后增加急诊、户外工作调整、航班能见度风险和室内过滤需求；第二层效应包括电网负荷和保险损失。",
       "confidence": "待验证",
       "horizon": "复合冲击",
       "drivers": [
-        "高温仍是跨区域运营和健康风险，但今天没有足以支持新全球归因结论的事件证据。",
-        "WHO于7月13日更新高温与健康资料，指出热应激会加重心血管、糖尿病、肾病和呼吸系统负担；WHO欧洲此前警告更致命的高温周仍可能出现。WHO高温与健康、WHO欧洲声明与WMO气候和健康资料支持这一风险框架。",
-        "高温先影响户外工时、用电峰值、急诊需求和电网备用，再传到城市冷却、水资源、保险和公共预算。预警、冷却中心、建筑隔热与医疗准备可以显著降低同温度下的损失。"
+        "本次可确认的是烟霾、空气质量警告和跨境影响；不能仅凭一次烟霾事件完成长期气候归因，但其健康和运营成本已经发生。",
+        "加拿大官方警告覆盖多伦多并要求居民防护室内空气；美国国家气象局确认加拿大山火烟霾触发美国空气质量警报；AP报道加拿大超过100起山火及美国多州风险；多伦多市空气质量页提供地区监测入口。",
+        "PM2.5先影响儿童、老年人和心肺疾病人群，随后增加急诊、户外工作调整、航班能见度风险和室内过滤需求；第二层效应包括电网负荷和保险损失。"
       ],
       "beneficiaries": [],
       "pressures": [],
       "verificationSignals": [
-        "高温先影响户外工时、用电峰值、急诊需求和电网备用，再传到城市冷却、水资源、保险和公共预算。预警、冷却中心、建筑隔热与医疗准备可以显著降低同温度下的损失。"
+        "PM2.5先影响儿童、老年人和心肺疾病人群，随后增加急诊、户外工作调整、航班能见度风险和室内过滤需求；第二层效应包括电网负荷和保险损失。"
       ],
       "instruments": [],
-      "id": "2026-07-15-04-气候"
+      "id": "2026-07-16-04-气候"
     },
     {
       "category": "宏观",
       "time": "价格验证",
-      "title": "英印CETA降摩擦，海湾风险增成本",
-      "cardTitle": "英印CETA降摩擦，海湾风险增成本",
-      "body": "英印协议降低双边制度摩擦，而霍尔木兹风险提高全球运输与能源成本；两条链对增长和通胀的方向相反。",
-      "implication": "降税、社保协调与通关便利可能降低订单和人员流动成本；另一端，通航不确定性推高战争险、库存和融资占用，压缩航空与部分制造业利润，并增加输入型通胀压力。",
+      "title": "中国二季度放缓提高内需政策执行压力",
+      "cardTitle": "中国二季度放缓提高内需政策执行压力",
+      "body": "中国经济仍由出口和部分新动能支撑，但消费、投资和地产形成明显短板；市场今天的A股下跌与港股上涨说明资金并未形成单一“中国风险”判断。",
+      "implication": "弱消费和投资压低收入预期与信用需求，推动政策从长期规划转向补贴、公共服务、试点和责任分工；若仍依赖出口和供给扩张，内外失衡将延续。海湾冲突还通过油价和运费挤压购买力。",
       "source": "查看来源",
       "href": "#sources",
       "facts": [
-        "英印协议降低双边制度摩擦，而霍尔木兹风险提高全球运输与能源成本；两条链对增长和通胀的方向相反。",
-        "英国政府生效公告和印度官方公告确认CETA于今天生效；英国原产地规则操作页说明企业仍需满足实际申报条件。官方长期增量是模型估算，不是已经实现的GDP或收入。",
-        "降税、社保协调与通关便利可能降低订单和人员流动成本；另一端，通航不确定性推高战争险、库存和融资占用，压缩航空与部分制造业利润，并增加输入型通胀压力。"
+        "中国经济仍由出口和部分新动能支撑，但消费、投资和地产形成明显短板；市场今天的A股下跌与港股上涨说明资金并未形成单一“中国风险”判断。",
+        "国家统计局公布上半年GDP同比增长4.7%，二季度4.3%，低于一季度5.0%；固定资产投资下降5.7%，社会消费品零售总额增长1.3%，房地产开发投资下降18.0%。国务院消费规划要求地方和部门细化实施；AP提供外部核验。",
+        "弱消费和投资压低收入预期与信用需求，推动政策从长期规划转向补贴、公共服务、试点和责任分工；若仍依赖出口和供给扩张，内外失衡将延续。海湾冲突还通过油价和运费挤压购买力。"
       ],
       "sources": [
         {
-          "label": "英国政府生效公告",
-          "href": "https://www.gov.uk/government/news/the-countdown-begins-uk-india-fta-enters-into-force-on-july-15th"
+          "label": "国家统计局",
+          "href": "https://www.stats.gov.cn/english/PressRelease/202607/t20260715_1964120.html"
         },
         {
-          "label": "印度官方公告",
-          "href": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2274280&lang=1&reg=20"
+          "label": "固定资产投资",
+          "href": "https://www.stats.gov.cn/sj/zxfbhjd/202607/t20260715_1964124.html"
         },
         {
-          "label": "英国原产地规则操作页",
-          "href": "https://www.business.gov.uk/campaign/alive-with-opportunity/the-uk-india-trade-deal/rules-of-origin/"
+          "label": "社会消费品零售总额",
+          "href": "https://www.stats.gov.cn/sj/zxfb/202607/t20260715_1964127.html"
         },
         {
-          "label": "英国议会研究",
-          "href": "https://commonslibrary.parliament.uk/research-briefings/cbp-10258/"
+          "label": "房地产开发投资",
+          "href": "https://www.stats.gov.cn/sj/zxfbhjd/202607/t20260715_1964126.html"
+        },
+        {
+          "label": "国务院消费规划",
+          "href": "https://english.www.gov.cn/policies/latestreleases/202607/14/content_WS6a558bdfc6d00ca5f9a0c2cf.html"
+        },
+        {
+          "label": "AP",
+          "href": "https://apnews.com/article/95136222f87d5a1e62918f41efab00be"
         }
       ],
-      "predictionId": "2026-07-15-P02",
+      "predictionId": "2026-07-16-P03",
       "relatedPredictionIds": [
-        "2026-07-15-P02"
+        "2026-07-16-P03"
       ],
-      "analysis": "英印CETA在首周保持生效，双方不会在7月22日前宣布全面暂停或回滚核心关税实施",
+      "analysis": "截至8月16日，中国至少一个中央部门或省级政府将发布扩大消费规划的可执行细化措施",
       "confidence": "高",
-      "horizon": "1周",
+      "horizon": "1个月",
       "drivers": [
-        "两国已完成实施准备",
-        "关税削减的企业利益",
-        "政治层面需要展示协议兑现"
+        "二季度GDP同比增速从一季度5.0%放缓至4.3%",
+        "上半年固定资产投资下降5.7%、社会消费品零售总额仅增长1.3%",
+        "国务院已批准扩大消费十五五规划并要求地方和部门细化实施"
       ],
       "beneficiaries": [
-        "印度出口链研究",
-        "英国烈酒与汽车出口研究",
-        "跨境专业服务"
+        "大众消费与服务消费",
+        "宽基大盘和政策执行相关行业研究"
       ],
       "pressures": [
-        "受进口竞争行业",
-        "原产地合规不足企业"
+        "缺少盈利验证的高估值硬科技",
+        "地产与民间投资继续走弱的周期行业"
       ],
       "verificationSignals": [
-        "两国海关实施通告",
-        "首周原产地申报指引",
-        "是否出现官方暂停通知"
+        "中央部门或省级政府政策原文",
+        "资金、补贴、试点、责任主体或时间表",
+        "510300.SH与588000.SH同源收盘相对回报"
       ],
       "instruments": [
         {
-          "symbol": "INDA",
-          "exchange": "NYSE ARCA",
+          "symbol": "510300.SH",
+          "exchange": "SSE",
           "type": "ETF",
-          "thesis": "观察印度市场是否相对全球股票吸收贸易便利化预期",
-          "risk": "宏观估值、油价和外资流可能压过贸易协定效应"
+          "thesis": "观察内需细化政策是否使宽基相对硬科技更有韧性",
+          "risk": "出口和科技催化反弹可能令科创风格重新占优"
         }
       ],
-      "id": "2026-07-15-05-宏观"
+      "id": "2026-07-16-05-宏观"
     },
     {
       "category": "社会",
       "time": "中期影响",
-      "title": "埃博拉扩展首先是公共卫生能力问题",
-      "cardTitle": "埃博拉扩展首先是公共卫生能力问题",
-      "body": "刚果（金）传播和地理扩展仍在加剧，医疗准备、医护保护和跨境监测比证券映射更具决策价值。",
-      "implication": "社区传播增加接触者追踪、隔离与实验室资源需求，随后挤压常规医疗和边境卫生；医护感染会直接削弱医疗供给，跨境病例则增加航空和旅行行为的风险溢价。",
+      "title": "埃博拉扩展的核心仍是发现、转诊和隔离能力",
+      "cardTitle": "埃博拉扩展的核心仍是发现、转诊和隔离能力",
+      "body": "疫情继续影响刚果（金）和乌干达，社区死亡比例和地理扩展说明公共卫生能力仍承压；本主题不做个股虚拟交易。",
+      "implication": "社区死亡意味着识别和转诊较晚，增加家庭与医护暴露，并挤压常规医疗、实验室、边境卫生和人道资源。",
       "source": "查看来源",
       "href": "#sources",
       "facts": [
-        "刚果（金）传播和地理扩展仍在加剧，医疗准备、医护保护和跨境监测比证券映射更具决策价值。",
-        "WHO 7月3日通报截至7月1日刚果（金）累计1,460例确诊、452例死亡，乌干达20例确诊；ECDC于7月13日更新至刚果（金）1,926例确诊、702例相关死亡，并记录新增省份与持续传播。WHO暴发通报、ECDC最新页与WHO非洲区域周报给出不同时间截点。",
-        "社区传播增加接触者追踪、隔离与实验室资源需求，随后挤压常规医疗和边境卫生；医护感染会直接削弱医疗供给，跨境病例则增加航空和旅行行为的风险溢价。"
+        "疫情继续影响刚果（金）和乌干达，社区死亡比例和地理扩展说明公共卫生能力仍承压；本主题不做个股虚拟交易。",
+        "ECDC 7月15日更新称疫情仍在两国持续，并引用截至7月12日的WHO非洲区域数据；430例被调查死亡中92.3%发生在社区或入院前。WHO暴发通报、WHO非洲区域周报入口与Le Monde构成机构与外部报道交叉验证。",
+        "社区死亡意味着识别和转诊较晚，增加家庭与医护暴露，并挤压常规医疗、实验室、边境卫生和人道资源。"
       ],
       "sources": [
+        {
+          "label": "ECDC 7月15日更新",
+          "href": "https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda"
+        },
         {
           "label": "WHO暴发通报",
           "href": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON612"
         },
         {
-          "label": "ECDC最新页",
-          "href": "https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda"
+          "label": "WHO非洲区域周报入口",
+          "href": "https://www.afro.who.int/health-topics/disease-outbreaks/ebola-who-african-region?page=0"
         },
         {
-          "label": "WHO非洲区域周报",
-          "href": "https://www.afro.who.int/health-topics/disease-outbreaks/ebola-who-african-region?page=0"
+          "label": "Le Monde",
+          "href": "https://www.lemonde.fr/en/le-monde-africa/article/2026/07/10/ebola-outbreak-remains-out-of-control-spreads-at-record-speed-in-the-drc_6755357_124.html"
         }
       ],
       "predictionId": "",
       "relatedPredictionIds": [],
-      "analysis": "社区传播增加接触者追踪、隔离与实验室资源需求，随后挤压常规医疗和边境卫生；医护感染会直接削弱医疗供给，跨境病例则增加航空和旅行行为的风险溢价。",
+      "analysis": "社区死亡意味着识别和转诊较晚，增加家庭与医护暴露，并挤压常规医疗、实验室、边境卫生和人道资源。",
       "confidence": "待验证",
       "horizon": "中期影响",
       "drivers": [
-        "刚果（金）传播和地理扩展仍在加剧，医疗准备、医护保护和跨境监测比证券映射更具决策价值。",
-        "WHO 7月3日通报截至7月1日刚果（金）累计1,460例确诊、452例死亡，乌干达20例确诊；ECDC于7月13日更新至刚果（金）1,926例确诊、702例相关死亡，并记录新增省份与持续传播。WHO暴发通报、ECDC最新页与WHO非洲区域周报给出不同时间截点。",
-        "社区传播增加接触者追踪、隔离与实验室资源需求，随后挤压常规医疗和边境卫生；医护感染会直接削弱医疗供给，跨境病例则增加航空和旅行行为的风险溢价。"
+        "疫情继续影响刚果（金）和乌干达，社区死亡比例和地理扩展说明公共卫生能力仍承压；本主题不做个股虚拟交易。",
+        "ECDC 7月15日更新称疫情仍在两国持续，并引用截至7月12日的WHO非洲区域数据；430例被调查死亡中92.3%发生在社区或入院前。WHO暴发通报、WHO非洲区域周报入口与Le Monde构成机构与外部报道交叉验证。",
+        "社区死亡意味着识别和转诊较晚，增加家庭与医护暴露，并挤压常规医疗、实验室、边境卫生和人道资源。"
       ],
       "beneficiaries": [],
       "pressures": [],
       "verificationSignals": [
-        "社区传播增加接触者追踪、隔离与实验室资源需求，随后挤压常规医疗和边境卫生；医护感染会直接削弱医疗供给，跨境病例则增加航空和旅行行为的风险溢价。"
+        "社区死亡意味着识别和转诊较晚，增加家庭与医护暴露，并挤压常规医疗、实验室、边境卫生和人道资源。"
       ],
       "instruments": [],
-      "id": "2026-07-15-06-社会"
+      "id": "2026-07-16-06-社会"
     },
     {
       "category": "中国",
       "time": "结构分化",
-      "title": "7月15日A股硬科技显著弱于宽基",
-      "cardTitle": "7月15日A股硬科技显著弱于宽基",
-      "body": "港股科技与宽基同步上涨，更像境内硬科技去拥挤与离岸平台风险偏好改善的组合，不能仅凭一天价格推断盈利或政策变化。",
-      "implication": "高估值硬科技回撤会压低风险预算和成交宽度；港股平台上涨则可能吸引南向和离岸资金。若科创板在高成交下快速收复跌幅，今天也可能只是一次技术性挤压。",
-      "source": "查看来源",
-      "href": "#sources",
+      "title": "A股：7月16日显示上证和沪深300均-1.85%、创业板-2.95%、科创50 -4.02%",
+      "cardTitle": "A股：7月16日显示上证和沪深300均-1.85%、创业板-2.95%、科创50 -4.02%",
+      "body": "7月16日显示上证和沪深300均-1.85%、创业板-2.95%、科创50 -4.02%；510300.SH -1.76%、159915.SZ -2.74%、588000.SH -4.09%、512480.SH -5.93%。硬科技跌幅大于宽基。",
+      "implication": "510300.SH -1.76%、159915.SZ -2.74%、588000.SH -4.09%、512480.SH -5.93%。硬科技跌幅大于宽基。",
+      "source": "腾讯快照",
+      "href": "https://qt.gtimg.cn/q=s_sh000001,s_sh000300,s_sz399006,s_sh000688",
       "facts": [
-        "7月15日A股硬科技显著弱于宽基，港股科技与宽基同步上涨，更像境内硬科技去拥挤与离岸平台风险偏好改善的组合，不能仅凭一天价格推断盈利或政策变化。",
-        "腾讯行情快照显示，上证指数-0.29%、深证成指-0.97%、沪深300-0.20%、创业板指-1.21%、科创50-4.25%；恒生指数+1.34%、恒生科技+1.18%。ETF中510300.SH +0.02%、159915.SZ -1.01%、588000.SH -4.56%、512480.SH -5.81%、512880.SH +2.36%、2800.HK +1.13%、3033.HK +1.00%。",
-        "高估值硬科技回撤会压低风险预算和成交宽度；港股平台上涨则可能吸引南向和离岸资金。若科创板在高成交下快速收复跌幅，今天也可能只是一次技术性挤压。"
+        "A股： 7月16日腾讯快照显示上证和沪深300均-1.85%、创业板-2.95%、科创50 -4.02%；510300.SH -1.76%、159915.SZ -2.74%、588000.SH -4.09%、512480.SH -5.93%。硬科技跌幅大于宽基。",
+        "香港： 恒指+1.35%、恒生科技+1.92%、2800.HK +1.59%、3033.HK +2.02%；腾讯、阿里、美团和小米均上涨。港股相对A股成长占优，但跨币种和制度差异限制比较。",
+        "政策与宏观： GDP、零售、投资和地产数据提高消费细化政策的必要性，但存量规划不等于新增刺激。核验入口包括国家统计局、中国政府网、上交所与港交所。"
       ],
       "sources": [
         {
-          "label": "腾讯行情快照",
-          "href": "https://qt.gtimg.cn/q=s_sh588000,s_sh510300"
+          "label": "腾讯快照",
+          "href": "https://qt.gtimg.cn/q=s_sh000001,s_sh000300,s_sz399006,s_sh000688"
         },
         {
-          "label": "金融监管总局",
-          "href": "https://www.nfra.gov.cn/cn/view/pages/governmentDetail.html?docId=1261784&generaltype=1&itemId=861"
+          "label": "国家统计局",
+          "href": "https://www.stats.gov.cn/"
         },
         {
-          "label": "科技部",
-          "href": "https://most.gov.cn/xxgk/xinxifenlei/fdzdgknr/fgzc/zcjd/202603/t20260302_196012.html"
+          "label": "中国政府网",
+          "href": "https://www.gov.cn/"
         },
         {
           "label": "上交所",
@@ -439,54 +455,36 @@
           "href": "https://www.hkex.com.hk/Market-Data/Securities-Prices/Equities?sc_lang=en"
         }
       ],
-      "predictionId": "2026-07-15-P03",
-      "relatedPredictionIds": [
-        "2026-07-15-P03"
-      ],
-      "analysis": "截至8月14日，中国国家层面将新增至少一项支持人工智能、集成电路或科技融资的可执行政策文件",
-      "confidence": "中",
-      "horizon": "1个月",
+      "predictionId": "",
+      "relatedPredictionIds": [],
+      "analysis": "510300.SH -1.76%、159915.SZ -2.74%、588000.SH -4.09%、512480.SH -5.93%。硬科技跌幅大于宽基。",
+      "confidence": "待验证",
+      "horizon": "结构分化",
       "drivers": [
-        "十五五人工智能与科技自立部署",
-        "科技金融工具扩围",
-        "地方场景和产业基金进入项目执行期"
+        "A股： 7月16日腾讯快照显示上证和沪深300均-1.85%、创业板-2.95%、科创50 -4.02%；510300.SH -1.76%、159915.SZ -2.74%、588000.SH -4.09%、512480.SH -5.93%。硬科技跌幅大于宽基。",
+        "香港： 恒指+1.35%、恒生科技+1.92%、2800.HK +1.59%、3033.HK +2.02%；腾讯、阿里、美团和小米均上涨。港股相对A股成长占优，但跨币种和制度差异限制比较。",
+        "政策与宏观： GDP、零售、投资和地产数据提高消费细化政策的必要性，但存量规划不等于新增刺激。核验入口包括国家统计局、中国政府网、上交所与港交所。"
       ],
-      "beneficiaries": [
-        "人工智能基础设施研究",
-        "集成电路与科技融资研究"
-      ],
-      "pressures": [
-        "纯主题但缺少业绩验证的高估值暴露",
-        "政策不及预期的拥挤交易"
-      ],
+      "beneficiaries": [],
+      "pressures": [],
       "verificationSignals": [
-        "国家部委政策原文",
-        "资金工具或项目责任主体",
-        "588000.SH相对510300.SH的独立收盘窗口"
+        "510300.SH -1.76%、159915.SZ -2.74%、588000.SH -4.09%、512480.SH -5.93%。硬科技跌幅大于宽基。"
       ],
-      "instruments": [
-        {
-          "symbol": "588000.SH",
-          "exchange": "SSE",
-          "type": "ETF",
-          "thesis": "观察国家科技政策能否转化为A股硬科技相对收益",
-          "risk": "政策已计价、盈利不及预期或拥挤去化可能压过催化"
-        }
-      ],
-      "id": "2026-07-15-07-中国"
+      "instruments": [],
+      "id": "2026-07-16-07-中国"
     }
   ],
   "scenarios": [
     {
-      "id": "2026-07-15-P01",
+      "id": "2026-07-16-P01",
       "horizon": "1日",
-      "scenario": "截至7月16日23:59（上海时间），美伊仍不会形成同时具备执行方、时间表和监督机制的公开降级文本",
+      "scenario": "截至7月17日23:59（上海时间），美伊仍不会形成同时具备执行方、时间表和监督机制的公开降级文本",
       "chance": "高",
       "status": "open",
       "drivers": [
-        "港口封锁重新实施",
-        "双方报复链条延续",
-        "联合国与地区调停方尚未公布执行文本"
+        "美国打击范围扩大到伊朗北部并攻击试图突破封锁的船只",
+        "伊朗对巴林、科威特和约旦的军事目标发动报复性打击",
+        "联合国与地区调停仍以呼吁恢复谈判为主，尚未公布可执行安排"
       ],
       "beneficiaries": [
         "避险资产研究",
@@ -494,12 +492,12 @@
       ],
       "pressures": [
         "航空与高燃油敏感行业",
-        "海湾航运和保险"
+        "海湾航运、保险和输入型通胀"
       ],
       "verificationSignals": [
         "公开协议是否具备三项执行要素",
-        "IMO航运安全通报",
-        "GLD相对SPY的完整收盘窗口"
+        "海湾基地和商船遇袭是否停止",
+        "IMO船舶安全记录与通航状态"
       ],
       "watch": "公开协议是否具备三项执行要素",
       "instruments": [
@@ -507,113 +505,120 @@
           "symbol": "GLD",
           "exchange": "NYSE ARCA",
           "type": "ETF",
-          "thesis": "观察冲突风险与实际利率的净效应",
-          "risk": "美元和实际利率上升可能压过避险买盘"
+          "thesis": "观察冲突升级与实际利率、美元变化的净效应",
+          "risk": "实际利率或美元上升、仓位拥挤可能压过避险需求"
         }
       ],
       "sourceRefs": [
         {
-          "label": "United Nations",
-          "href": "https://www.un.org/sg/en/content/highlight/2026-07-14.html"
+          "label": "Associated Press",
+          "href": "https://apnews.com/article/f98ff56554de2336f0e85bb5fdcae769"
         },
         {
-          "label": "Associated Press",
-          "href": "https://apnews.com/article/b7c592f269d822407dd6b5641602bf25"
+          "label": "United Nations",
+          "href": "https://www.un.org/en/un-chief-urges-iran-and-us-%E2%80%98urgently-resume-negotiations%E2%80%99-gulf-strikes-escalate"
         }
       ]
     },
     {
-      "id": "2026-07-15-P02",
+      "id": "2026-07-16-P02",
       "horizon": "1周",
-      "scenario": "英印CETA在首周保持生效，双方不会在7月22日前宣布全面暂停或回滚核心关税实施",
+      "scenario": "欧盟与乌克兰将在7月23日前公布至少一项无人机、防无人机或联合防务生产的可核验实施步骤",
       "chance": "高",
       "status": "open",
       "drivers": [
-        "两国已完成实施准备",
-        "关税削减的企业利益",
-        "政治层面需要展示协议兑现"
+        "欧盟与乌克兰已签署防务工业伙伴关系和Drone Deal起始文件",
+        "欧委会已追加拨付10亿欧元支持乌克兰无人机能力",
+        "双方目标包括2026年底前推进无人机与反无人机联合生产"
       ],
       "beneficiaries": [
-        "印度出口链研究",
-        "英国烈酒与汽车出口研究",
-        "跨境专业服务"
+        "无人机与反无人机供应链",
+        "雷达、传感器、安全通信与欧洲防务产能"
       ],
       "pressures": [
-        "受进口竞争行业",
-        "原产地合规不足企业"
+        "缺少订单和产能兑现的主题交易",
+        "欧洲财政与供应链瓶颈"
       ],
       "verificationSignals": [
-        "两国海关实施通告",
-        "首周原产地申报指引",
-        "是否出现官方暂停通知"
+        "责任主体和项目名称",
+        "采购或资金拨付文件",
+        "生产、测试或交付时间点"
       ],
-      "watch": "两国海关实施通告",
+      "watch": "责任主体和项目名称",
       "instruments": [
         {
-          "symbol": "INDA",
+          "symbol": "ITA",
           "exchange": "NYSE ARCA",
           "type": "ETF",
-          "thesis": "观察印度市场是否相对全球股票吸收贸易便利化预期",
-          "risk": "宏观估值、油价和外资流可能压过贸易协定效应"
+          "thesis": "观察防务工业合作能否转化为相对广泛市场的持续风险溢价",
+          "risk": "ETF成分偏美国，可能与欧洲无人机项目的直接受益错配"
         }
       ],
       "sourceRefs": [
         {
-          "label": "UK Department for Business and Trade",
-          "href": "https://www.gov.uk/government/news/the-countdown-begins-uk-india-fta-enters-into-force-on-july-15th"
+          "label": "President of Ukraine",
+          "href": "https://www.president.gov.ua/news/prezident-ukrayini-ta-prezidentka-yevrokomisiyi-pidpisali-do-105465"
         },
         {
-          "label": "Press Information Bureau of India",
-          "href": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2274280&lang=1&reg=20"
+          "label": "European Commission",
+          "href": "https://france.representation.ec.europa.eu/informations-et-evenements/informations/lue-lance-le-partenariat-industriel-de-defense-avec-lukraine-2026-07-15_fr"
+        },
+        {
+          "label": "Associated Press",
+          "href": "https://apnews.com/article/3d6de7a70a87f0a3cc9f4f7f0317c9b2"
         }
       ]
     },
     {
-      "id": "2026-07-15-P03",
+      "id": "2026-07-16-P03",
       "horizon": "1个月",
-      "scenario": "截至8月14日，中国国家层面将新增至少一项支持人工智能、集成电路或科技融资的可执行政策文件",
-      "chance": "中",
+      "scenario": "截至8月16日，中国至少一个中央部门或省级政府将发布扩大消费规划的可执行细化措施",
+      "chance": "高",
       "status": "open",
       "drivers": [
-        "十五五人工智能与科技自立部署",
-        "科技金融工具扩围",
-        "地方场景和产业基金进入项目执行期"
+        "二季度GDP同比增速从一季度5.0%放缓至4.3%",
+        "上半年固定资产投资下降5.7%、社会消费品零售总额仅增长1.3%",
+        "国务院已批准扩大消费十五五规划并要求地方和部门细化实施"
       ],
       "beneficiaries": [
-        "人工智能基础设施研究",
-        "集成电路与科技融资研究"
+        "大众消费与服务消费",
+        "宽基大盘和政策执行相关行业研究"
       ],
       "pressures": [
-        "纯主题但缺少业绩验证的高估值暴露",
-        "政策不及预期的拥挤交易"
+        "缺少盈利验证的高估值硬科技",
+        "地产与民间投资继续走弱的周期行业"
       ],
       "verificationSignals": [
-        "国家部委政策原文",
-        "资金工具或项目责任主体",
-        "588000.SH相对510300.SH的独立收盘窗口"
+        "中央部门或省级政府政策原文",
+        "资金、补贴、试点、责任主体或时间表",
+        "510300.SH与588000.SH同源收盘相对回报"
       ],
-      "watch": "国家部委政策原文",
+      "watch": "中央部门或省级政府政策原文",
       "instruments": [
         {
-          "symbol": "588000.SH",
+          "symbol": "510300.SH",
           "exchange": "SSE",
           "type": "ETF",
-          "thesis": "观察国家科技政策能否转化为A股硬科技相对收益",
-          "risk": "政策已计价、盈利不及预期或拥挤去化可能压过催化"
+          "thesis": "观察内需细化政策是否使宽基相对硬科技更有韧性",
+          "risk": "出口和科技催化反弹可能令科创风格重新占优"
         }
       ],
       "sourceRefs": [
         {
-          "label": "国家金融监督管理总局",
-          "href": "https://www.nfra.gov.cn/cn/view/pages/governmentDetail.html?docId=1261784&generaltype=1&itemId=861"
+          "label": "National Bureau of Statistics of China",
+          "href": "https://www.stats.gov.cn/english/PressRelease/202607/t20260715_1964120.html"
         },
         {
-          "label": "科学技术部",
-          "href": "https://most.gov.cn/xxgk/xinxifenlei/fdzdgknr/fgzc/zcjd/202603/t20260302_196012.html"
+          "label": "State Council of China",
+          "href": "https://english.www.gov.cn/policies/latestreleases/202607/14/content_WS6a558bdfc6d00ca5f9a0c2cf.html"
+        },
+        {
+          "label": "Associated Press",
+          "href": "https://apnews.com/article/95136222f87d5a1e62918f41efab00be"
         },
         {
           "label": "Tencent quote market snapshot",
-          "href": "https://qt.gtimg.cn/q=s_sh588000,s_sh510300"
+          "href": "https://qt.gtimg.cn/q=s_sh510300,s_sh588000"
         }
       ]
     }
@@ -621,67 +626,62 @@
   "markets": {
     "us": {
       "label": "美国 / 全球",
-      "asOf": "2026-07-14",
+      "asOf": "2026-07-15",
       "freshness": "最近收盘",
       "isStale": true,
       "items": [
         {
           "label": "SPY",
-          "change": "+0.36%",
-          "direction": "up"
-        },
-        {
-          "label": "QQQ",
-          "change": "+1.12%",
+          "change": "+0.40%",
           "direction": "up"
         },
         {
           "label": "SMH",
-          "change": "+2.51%",
-          "direction": "up"
+          "change": "-1.59%",
+          "direction": "down"
         },
         {
           "label": "CIBR",
-          "change": "+3.15%",
-          "direction": "up"
+          "change": "-1.73%",
+          "direction": "down"
         },
         {
           "label": "GLD",
-          "change": "+1.37%",
+          "change": "+0.05%",
           "direction": "up"
         }
       ],
-      "note": "截至 2026-07-14 最近有效收盘。"
+      "note": "截至 2026-07-15 最近有效收盘。"
     },
     "china": {
       "label": "中国 / 香港",
-      "asOf": "2026-07-15",
+      "asOf": "2026-07-16",
       "freshness": "报告日",
       "isStale": false,
       "items": [
         {
           "label": "沪深300",
-          "change": "-0.20%",
+          "change": "-1.85%",
           "direction": "down"
         },
         {
           "label": "创业板指",
-          "change": "-1.21%",
+          "change": "-2.95%",
           "direction": "down"
         },
         {
           "label": "科创50",
-          "change": "-4.25%",
+          "change": "-4.02%",
           "direction": "down"
         },
         {
           "label": "恒生",
-          "change": "+1.34%",
+          "change": "+1.35%",
           "direction": "up"
         },
         {
           "label": "恒生科技",
-          "change": "+1.18%",
+          "change": "+1.92%",
           "direction": "up"
         }
       ],
@@ -691,159 +691,175 @@
   "portfolios": {
     "us": {
       "name": "US 虚拟组合",
-      "return": "-0.65%",
-      "returnPct": -0.65,
+      "value": "99,008.90",
+      "return": "-0.99%",
+      "returnPct": -0.99,
+      "asOf": "2026-07-16",
+      "baseCurrency": "USD",
+      "cash": 30000.0,
+      "cashPct": 30.3,
+      "equity": 99008.9,
+      "periodPnl": -340.16,
+      "periodReturnPct": -0.34,
       "allocations": [
         {
           "label": "现金",
-          "pct": 30.2
+          "pct": 30.3
         },
         {
           "label": "匿名资产 1",
-          "pct": 22.8
+          "pct": 22.5
         },
         {
           "label": "匿名资产 2",
-          "pct": 17.0
+          "pct": 17.1
         },
         {
           "label": "其他",
-          "pct": 30.0
+          "pct": 30.1
         }
       ],
       "review": "本期维持虚拟研究账户，仅按最近可得价格完成标记。",
       "paperTradingOnly": true,
       "publicDataOnly": true,
       "limitations": [
-        "公开站点仅展示聚合收益率和匿名资产配置；账户、持仓、成本、现金与盈亏明细不进入发布载荷。"
+        "公开站点展示总权益、现金、最近一期盈亏和累计收益；账户编号、逐笔持仓、成本基础与已实现盈亏明细不进入发布载荷。"
       ]
     },
     "china": {
       "name": "CHINA 虚拟组合",
-      "return": "+0.27%",
-      "returnPct": 0.27,
+      "value": "99,052.67",
+      "return": "-0.95%",
+      "returnPct": -0.95,
+      "asOf": "2026-07-16",
+      "baseCurrency": "CNY",
+      "cash": 22400.67,
+      "cashPct": 22.61,
+      "equity": 99052.67,
+      "periodPnl": -1220.52,
+      "periodReturnPct": -1.22,
       "allocations": [
         {
           "label": "现金",
-          "pct": 22.1
+          "pct": 22.6
         },
         {
           "label": "匿名资产 1",
-          "pct": 21.2
+          "pct": 21.1
         },
         {
           "label": "匿名资产 2",
-          "pct": 13.5
+          "pct": 14.2
         },
         {
           "label": "其他",
-          "pct": 43.2
+          "pct": 42.1
         }
       ],
       "review": "本期维持虚拟研究账户，仅按最近可得价格完成标记。",
       "paperTradingOnly": true,
       "publicDataOnly": true,
       "limitations": [
-        "公开站点仅展示聚合收益率和匿名资产配置；账户、持仓、成本、现金与盈亏明细不进入发布载荷。"
+        "公开站点展示总权益、现金、最近一期盈亏和累计收益；账户编号、逐笔持仓、成本基础与已实现盈亏明细不进入发布载荷。"
       ]
     }
   },
   "watchlist": [
-    "美伊是否发布执行主体、时间表、监督机制齐全的公开降级文本。",
-    "IMO安全记录、霍尔木兹船流、战争险和港口封锁是否同步缓和。",
-    "英印CETA首周是否出现清关、原产地申报或官方暂停问题。",
-    "Bundibugyo埃博拉新增卫生区、医护感染和跨境病例是否继续上升。",
-    "3033.HK相对588000.SH的成交宽度与收盘相对收益是否延续。"
+    "美伊是否出现执行方、时间表和监督机制齐全的公开降级文本。",
+    "巴林、科威特、约旦基地与霍尔木兹商船事件是否继续扩散。",
+    "欧乌Drone Deal是否公布具体项目、资金、采购、产能或测试节点。",
+    "中国消费规划是否出现中央或省级执行细则，以及510300.SH相对588000.SH是否稳定。",
+    "埃博拉社区死亡、医护感染、受影响卫生区和跨境病例是否下降。"
   ],
   "risks": [
-    "冲突信息风险： 当事方伤亡和战果数字未完全独立核验，声明不能替代船流、保险报价与可执行文本。",
-    "事件与资产脱节： 即使事件判断命中，利率、美元、估值和仓位也可能让GLD、INDA或科技ETF映射失败。",
-    "中国行情单源： 腾讯快照覆盖完整，但跨市场比较仍受币种、交易制度和节假日影响。"
+    "冲突核验风险： 当事方战果与伤亡数字未完全独立核验，声明不能替代船舶事件、基地损害和可执行文本。",
+    "跨市场传导风险： 欧乌合作不必然利好ITA或A股军工；中国消费政策也不必然使宽基跑赢硬科技。",
+    "行情来源风险： 中国快照虽完整无报错，但仍是单一供应商；美股价格为上一完整交易日，未用于模拟7月16日新成交。"
   ],
   "sources": [
     {
-      "label": "联合国7月14日简报",
-      "href": "https://www.un.org/sg/en/content/highlight/2026-07-14.html"
+      "label": "AP",
+      "href": "https://apnews.com/article/abd060c55feea216625689e57d8f76be"
     },
     {
-      "label": "美联社",
-      "href": "https://apnews.com/article/b7c592f269d822407dd6b5641602bf25"
+      "label": "Reuters经ThePrint转载",
+      "href": "https://theprint.in/world/us-launches-fresh-strikes-against-iran-as-escalation-threatens-shipping/2987622/"
     },
     {
-      "label": "联合国声明",
-      "href": "https://www.un.org/sg/en/content/sg/statements/2026-07-12/statement-attributable-the-spokesperson-for-the-secretary-general-the-middle-east"
+      "label": "IMO",
+      "href": "https://www.imo.org/en/mediacentre/pressbriefings/pages/imo-council-reaffirms-commitment-to-protecting-vital-shipping-lanes.aspx"
     },
     {
-      "label": "France 24地区报道",
-      "href": "https://www.france24.com/en/middle-east/20260715-middle-east-live-tehran-and-us-exchange-strikes-as-blockade-of-iranian-ports-resumes"
+      "label": "AP 7月16日报道",
+      "href": "https://apnews.com/article/f98ff56554de2336f0e85bb5fdcae769"
+    },
+    {
+      "label": "BBC",
+      "href": "https://www.bbc.co.uk/news/articles/c2lq1ed28jxo"
     },
     {
       "label": "半岛电视台",
-      "href": "https://www.aljazeera.com/tag/strait-of-hormuz/"
+      "href": "https://www.aljazeera.com/news/liveblog/2026/7/16/iran-war-live-sirens-in-bahrain-kuwait-us-disables-iranian-oil-tanker"
     },
     {
-      "label": "欧盟委员会行动计划",
-      "href": "https://commission.europa.eu/news-and-media/news/new-eu-plan-address-risks-and-opportunities-advanced-ai-cybersecurity-2026-07-07_en"
+      "label": "联合国7月12日材料",
+      "href": "https://www.un.org/en/un-chief-urges-iran-and-us-%E2%80%98urgently-resume-negotiations%E2%80%99-gulf-strikes-escalate"
     },
     {
-      "label": "AI Act官方页面",
-      "href": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+      "label": "半岛电视台",
+      "href": "https://www.aljazeera.com/news/2026/7/15/iran-says-peace-deal-voided-fighting-existential-war-after-us-attacks"
     },
     {
-      "label": "AI内容标识规范",
-      "href": "https://digital-strategy.ec.europa.eu/en/news/commission-publishes-code-practice-marking-and-labelling-ai-generated-content"
+      "label": "AI办公室报告",
+      "href": "https://digital-strategy.ec.europa.eu/en/library/ai-office-publishes-frontier-ai-expert-findings-eu-competitiveness-sovereignty-and-security"
     },
     {
-      "label": "WHO高温与健康",
-      "href": "https://www.who.int/news-room/fact-sheets/detail/climate-change-heat-and-health"
+      "label": "行动计划",
+      "href": "https://digital-strategy.ec.europa.eu/en/library/eu-action-plan-cybersecurity-and-artificial-intelligence"
     },
     {
-      "label": "WHO欧洲声明",
-      "href": "https://www.who.int/europe/news/item/07-07-2026-statement---extreme-heat--more-deadly-weeks-may-still-lie-ahead-for-the-european-region"
+      "label": "Reuters",
+      "href": "https://www.investing.com/news/world-news/musks-xai-sues-grok-user-over-sexualized-deepfakes-4794035"
     },
     {
-      "label": "WMO气候和健康资料",
-      "href": "https://wmo.int/topics/climate-and-health"
+      "label": "加拿大官方警告",
+      "href": "https://www.ecalertme.weather.gc.ca/warning-latest_en.php?ualert_id=4425"
     },
     {
-      "label": "IMO海峡专题",
-      "href": "https://www.imo.org/en/MediaCentre/HotTopics/Pages/Middle-East-Strait-of-Hormuz.aspx"
+      "label": "美国国家气象局",
+      "href": "https://forecast.weather.gov/wwamap/wwatxtget.php?cwa=usa&wwa=Air+Quality+Alert"
     },
     {
-      "label": "英国政府生效公告",
-      "href": "https://www.gov.uk/government/news/the-countdown-begins-uk-india-fta-enters-into-force-on-july-15th"
+      "label": "AP",
+      "href": "https://apnews.com/article/08d3fb58a434a5d42803ab1c2bbda0b3"
     },
     {
-      "label": "印度官方公告",
-      "href": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2274280&lang=1&reg=20"
+      "label": "多伦多市空气质量页",
+      "href": "https://www.toronto.ca/health/airquality/aqhi/currentreading.htm"
     },
     {
-      "label": "英国原产地规则操作页",
-      "href": "https://www.business.gov.uk/campaign/alive-with-opportunity/the-uk-india-trade-deal/rules-of-origin/"
+      "label": "乌克兰总统府",
+      "href": "https://www.president.gov.ua/news/prezident-ukrayini-ta-prezidentka-yevrokomisiyi-pidpisali-do-105465"
     },
     {
-      "label": "英国议会研究",
-      "href": "https://commonslibrary.parliament.uk/research-briefings/cbp-10258/"
+      "label": "欧委会",
+      "href": "https://france.representation.ec.europa.eu/informations-et-evenements/informations/lue-lance-le-partenariat-industriel-de-defense-avec-lukraine-2026-07-15_fr"
     },
     {
-      "label": "WHO暴发通报",
-      "href": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON612"
+      "label": "AP",
+      "href": "https://apnews.com/article/3d6de7a70a87f0a3cc9f4f7f0317c9b2"
     },
     {
-      "label": "ECDC最新页",
-      "href": "https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda"
+      "label": "乌克兰—东南欧峰会声明",
+      "href": "https://www.president.gov.ua/en/news/samit-ukrayina-pivdenno-shidna-yevropa-kiyivska-deklaraciya-105453"
     },
     {
-      "label": "WHO非洲区域周报",
-      "href": "https://www.afro.who.int/health-topics/disease-outbreaks/ebola-who-african-region?page=0"
-    },
-    {
-      "label": "腾讯行情快照",
-      "href": "https://qt.gtimg.cn/q=s_sh588000,s_sh510300"
+      "label": "国家统计局",
+      "href": "https://www.stats.gov.cn/english/PressRelease/202607/t20260715_1964120.html"
     }
   ],
   "system": {
-    "asOf": "2026-07-15",
+    "asOf": "2026-07-16",
     "overallPassed": true,
     "gateScope": "daily_operational",
     "operationalGatePassed": true,
@@ -901,14 +917,15 @@
     }
   },
   "forecastReviews": [
-    "2026-07-13-P01：事件与两项资产映射均命中。 截至7月14日结束，未出现执行主体、时间表、监督机制齐全的美伊降级文本；联合国7月14日简报记录了新的航运袭击和人员伤亡。7月14日GLD约上涨1.37%、SPY约上涨0.36%，GLD相对收益约+1.01个百分点；JETS约下跌1.19%，相对SPY约-1.54个百分点。事件判断正确不代表资产关系必然重复，黄金仍受实际利率和美元影响，航空仍受油价与需求影响。",
-    "2026-07-12-P01：事件命中；资产窗口已于7月16日更正。 7月15日初版曾误用7月12日作为资产窗口起点，但当天是非交易日。复核改用上一共同交易日7月10日后，600900.SH约上涨0.75%、沪深300约下跌1.34%，相对收益约+2.09个百分点，资产映射仍为命中。修订不改变事件结论，只纠正计算基期。",
-    "研究状态： 可用于校准的独立结果仍低于30个最低样本门槛，因此概率只代表预注册研究判断，不能解释为已校准胜率。系统继续把事件结果、资产映射和虚拟账户动作分开记录。"
+    "2026-07-14-P01：事件与GLD映射联合命中。 截至7月15日结束，仍无执行方、时间表和监督机制齐全的降级文本；AP、Reuters经ThePrint转载和IMO支持判断。GLD约涨1.42%，SPY约涨0.75%，超额约0.67个百分点。事件和资产仍分别结算。",
+    "2026-07-12-P01：市场窗口更正。 原复核误用非交易日起点；改用7月10日共同基期后，600900.SH约+0.75%、沪深300约-1.34%，超额约+2.09个百分点，结论仍命中。",
+    "尚未到期： 2026-07-15-P01的事件截止日为今天全天，普通复核必须在7月17日进行；P02和P03分别到7月22日、8月14日。本期不提前关闭。",
+    "自我迭代： 仅4个v2结果、2个独立事件族，低于30个样本门槛且ECE未达阈值，研究状态保持shadow；资产与事件继续分账。"
   ],
   "frameworkUpdates": [
-    "滚动预测按同一事件族折权，改动截止日不新增独立样本。",
-    "每项资产映射必须使用可比交易日、同源价格窗口和明确基准；条件不完整时保持未结算。",
-    "事件结果、资产结果和虚拟账户动作继续分账，任何一项命中都不自动授权真实交易。"
+    "同一美伊事件族继续折权；滚动截止日只更新信息状态，不创造独立校准样本。",
+    "正式协议必须拆成“签署、资金、项目、产能、交付”五层验证，避免把政治文件直接映射为盈利。",
+    "中国宏观预测以可执行细则结算，存量规划和媒体解读不算命中；资产只按预注册同源窗口独立评分。"
   ],
   "evolution": {
     "active_rules": [
@@ -953,7 +970,7 @@
         "trigger_count": 1
       }
     ],
-    "as_of": "2026-07-15",
+    "as_of": "2026-07-16",
     "boundary": {
       "auto_promote_strategy": false,
       "auto_rewrite_historical_records": false,
@@ -961,13 +978,13 @@
     },
     "event_scoring": {
       "asset_only_matured_prediction_count_excluded": 1,
-      "brier_score": 0.0582,
+      "brier_score": 0.054217,
       "calibration_bins": [
         {
-          "absolute_gap": 0.24,
-          "count": 3,
+          "absolute_gap": 0.2317,
+          "count": 4,
           "independence_weight": 2.0,
-          "mean_probability": 0.76,
+          "mean_probability": 0.7683,
           "observed_rate": 1.0,
           "range": [
             0.6,
@@ -975,13 +992,13 @@
           ]
         }
       ],
-      "cutoff": "2026-07-15",
-      "eligible_sample_count": 3,
+      "cutoff": "2026-07-16",
+      "eligible_sample_count": 4,
       "exclusion_counts": {
         "asset_only_prediction": 1,
-        "rolling_family_restatement_downweighted": 1
+        "rolling_family_restatement_downweighted": 2
       },
-      "expected_calibration_error": 0.24,
+      "expected_calibration_error": 0.231667,
       "gates": {
         "brier_at_or_below_threshold": true,
         "ece_at_or_below_threshold": false,
@@ -990,14 +1007,14 @@
       },
       "independent_event_family_count": 2,
       "is_research_ready": false,
-      "legacy_matured_prediction_count_excluded": 67,
-      "log_loss": 0.274966,
+      "legacy_matured_prediction_count_excluded": 70,
+      "log_loss": 0.264008,
       "matured_independent_event_family_count": 2,
-      "matured_prediction_count": 3,
-      "matured_v2_prediction_count": 4,
+      "matured_prediction_count": 4,
+      "matured_v2_prediction_count": 5,
       "metric_standard": "binary proper scoring with unit weight per independent event family; lower is better",
       "resolved_coverage_pct": 100.0,
-      "rolling_restatement_count_downweighted": 1,
+      "rolling_restatement_count_downweighted": 2,
       "samples": [
         {
           "brier": 0.0484,
@@ -1011,7 +1028,7 @@
         {
           "brier": 0.0784,
           "event_family_id": "US_IRAN_EXECUTABLE_DEESCALATION_2026_07",
-          "independence_weight": 0.5,
+          "independence_weight": 0.33333333,
           "log_loss": 0.328504,
           "observed_outcome": 1,
           "prediction_id": "2026-07-12-P02",
@@ -1020,11 +1037,20 @@
         {
           "brier": 0.0576,
           "event_family_id": "US_IRAN_EXECUTABLE_DEESCALATION_2026_07",
-          "independence_weight": 0.5,
+          "independence_weight": 0.33333333,
           "log_loss": 0.274437,
           "observed_outcome": 1,
           "prediction_id": "2026-07-13-P01",
           "probability": 0.76
+        },
+        {
+          "brier": 0.0441,
+          "event_family_id": "US_IRAN_EXECUTABLE_DEESCALATION_2026_07",
+          "independence_weight": 0.33333333,
+          "log_loss": 0.235722,
+          "observed_outcome": 1,
+          "prediction_id": "2026-07-14-P01",
+          "probability": 0.79
         }
       ],
       "thresholds": {
@@ -1034,14 +1060,14 @@
         "minimum_sample": 30,
         "minimum_sample_unit": "independent_event_family"
       },
-      "total_matured_prediction_count": 71
+      "total_matured_prediction_count": 75
     },
     "gate_reasons": [
       "proper_scoring:minimum_sample",
       "proper_scoring:ece_at_or_below_threshold"
     ],
     "integrity": {
-      "as_of": "2026-07-15",
+      "as_of": "2026-07-16",
       "early_closed_without_terminal_evidence": [
         "2026-06-12-P01",
         "2026-06-12-P02",
@@ -1098,9 +1124,9 @@
         "2026-07-11-P02"
       ],
       "explicit_failure_reason_coverage_pct": 82.86,
-      "explicit_score_coverage_pct": 39.34,
-      "matured_prediction_count": 71,
-      "original_prediction_count": 127,
+      "explicit_score_coverage_pct": 40.32,
+      "matured_prediction_count": 75,
+      "original_prediction_count": 130,
       "overdue_unreviewed_prediction_ids": [
         "2026-06-12-P01",
         "2026-06-12-P02",
@@ -1122,6 +1148,9 @@
         "2026-06-15-P01",
         "2026-06-15-P02",
         "2026-06-15-P03",
+        "2026-06-15-P04",
+        "2026-06-15-P05",
+        "2026-06-15-P06",
         "2026-06-16-P01",
         "2026-06-16-P02",
         "2026-06-16-P03",
@@ -1166,13 +1195,13 @@
         "2026-07-11-P01",
         "2026-07-11-P02"
       ],
-      "review_count": 61,
+      "review_count": 62,
       "status_counts": {
         "expired": 1,
         "partial": 34,
-        "validated": 26
+        "validated": 27
       },
-      "valid_review_count": 8,
+      "valid_review_count": 9,
       "warnings": [
         "early_closure_bias: forecasts were closed before maturity without terminal evidence",
         "review_coverage_gap: matured forecasts remain unreviewed",
@@ -1197,31 +1226,31 @@
           "resolved_count": 1
         }
       },
-      "cutoff": "2026-07-15",
+      "cutoff": "2026-07-16",
       "exclusion_counts": {
-        "reciprocal_duplicate_mapping": 3
+        "reciprocal_duplicate_mapping": 4
       },
       "hit_rate_pct": 75.0,
       "matured_mapping_count": 4,
-      "mean_signed_performance_pct": 1.338669,
+      "mean_signed_performance_pct": 1.338768,
       "metric_standard": "independent benchmark-relative mapping evaluation; event probability is not reused",
-      "reciprocal_duplicate_mapping_count_excluded": 3,
+      "reciprocal_duplicate_mapping_count_excluded": 4,
       "resolved_coverage_pct": 100.0,
       "resolved_mapping_count": 4,
       "samples": [
         {
           "benchmark": "000300.SH",
-          "benchmark_return_pct": -1.34,
+          "benchmark_return_pct": -1.341201,
           "direction": "outperform",
           "evaluation_deadline": "2026-07-13",
-          "excess_return_pct": 2.09,
+          "excess_return_pct": 2.090398,
           "mapping_id": "2026-07-12-P01|600900.SH|000300.SH|2026-07-13",
           "observed_outcome": 1,
           "prediction_id": "2026-07-12-P01",
-          "review_date": "2026-07-15",
-          "signed_performance_pct": 2.09,
+          "review_date": "2026-07-16",
+          "signed_performance_pct": 2.090398,
           "symbol": "600900.SH",
-          "symbol_return_pct": 0.75
+          "symbol_return_pct": 0.749197
         },
         {
           "benchmark": "SPY",
@@ -1271,13 +1300,13 @@
     "promotion_allowed": false,
     "proper_scoring": {
       "asset_only_matured_prediction_count_excluded": 1,
-      "brier_score": 0.0582,
+      "brier_score": 0.054217,
       "calibration_bins": [
         {
-          "absolute_gap": 0.24,
-          "count": 3,
+          "absolute_gap": 0.2317,
+          "count": 4,
           "independence_weight": 2.0,
-          "mean_probability": 0.76,
+          "mean_probability": 0.7683,
           "observed_rate": 1.0,
           "range": [
             0.6,
@@ -1285,13 +1314,13 @@
           ]
         }
       ],
-      "cutoff": "2026-07-15",
-      "eligible_sample_count": 3,
+      "cutoff": "2026-07-16",
+      "eligible_sample_count": 4,
       "exclusion_counts": {
         "asset_only_prediction": 1,
-        "rolling_family_restatement_downweighted": 1
+        "rolling_family_restatement_downweighted": 2
       },
-      "expected_calibration_error": 0.24,
+      "expected_calibration_error": 0.231667,
       "gates": {
         "brier_at_or_below_threshold": true,
         "ece_at_or_below_threshold": false,
@@ -1300,14 +1329,14 @@
       },
       "independent_event_family_count": 2,
       "is_research_ready": false,
-      "legacy_matured_prediction_count_excluded": 67,
-      "log_loss": 0.274966,
+      "legacy_matured_prediction_count_excluded": 70,
+      "log_loss": 0.264008,
       "matured_independent_event_family_count": 2,
-      "matured_prediction_count": 3,
-      "matured_v2_prediction_count": 4,
+      "matured_prediction_count": 4,
+      "matured_v2_prediction_count": 5,
       "metric_standard": "binary proper scoring with unit weight per independent event family; lower is better",
       "resolved_coverage_pct": 100.0,
-      "rolling_restatement_count_downweighted": 1,
+      "rolling_restatement_count_downweighted": 2,
       "samples": [
         {
           "brier": 0.0484,
@@ -1321,7 +1350,7 @@
         {
           "brier": 0.0784,
           "event_family_id": "US_IRAN_EXECUTABLE_DEESCALATION_2026_07",
-          "independence_weight": 0.5,
+          "independence_weight": 0.33333333,
           "log_loss": 0.328504,
           "observed_outcome": 1,
           "prediction_id": "2026-07-12-P02",
@@ -1330,11 +1359,20 @@
         {
           "brier": 0.0576,
           "event_family_id": "US_IRAN_EXECUTABLE_DEESCALATION_2026_07",
-          "independence_weight": 0.5,
+          "independence_weight": 0.33333333,
           "log_loss": 0.274437,
           "observed_outcome": 1,
           "prediction_id": "2026-07-13-P01",
           "probability": 0.76
+        },
+        {
+          "brier": 0.0441,
+          "event_family_id": "US_IRAN_EXECUTABLE_DEESCALATION_2026_07",
+          "independence_weight": 0.33333333,
+          "log_loss": 0.235722,
+          "observed_outcome": 1,
+          "prediction_id": "2026-07-14-P01",
+          "probability": 0.79
         }
       ],
       "thresholds": {
@@ -1344,7 +1382,7 @@
         "minimum_sample": 30,
         "minimum_sample_unit": "independent_event_family"
       },
-      "total_matured_prediction_count": 71
+      "total_matured_prediction_count": 75
     },
     "report_contract": {
       "ban_generic_fillers": true,
@@ -1363,8 +1401,8 @@
     },
     "schema_version": 1,
     "scorecard": {
-      "average_score": 76.31,
-      "end": "2026-07-15",
+      "average_score": 76.93,
+      "end": "2026-07-16",
       "failure_reasons": {
         "asset_mapping_error": 6,
         "data_stale": 2,
@@ -1373,30 +1411,30 @@
         "source_quality_issue": 3,
         "time_window_too_short": 2
       },
-      "hit_rate_pct": 55.17,
-      "review_count": 29,
+      "hit_rate_pct": 56.67,
+      "review_count": 30,
       "start": "2026-07-01",
       "status_counts": {
         "expired": 1,
         "partial": 12,
-        "validated": 16
+        "validated": 17
       },
-      "useful_rate_pct": 96.55,
-      "wrong_or_expired_rate_pct": 3.45
+      "useful_rate_pct": 96.67,
+      "wrong_or_expired_rate_pct": 3.33
     },
     "state": "shadow"
   },
   "reportQuality": {
     "passed": true,
-    "characterCount": 9869,
-    "sourceCount": 38,
+    "characterCount": 11723,
+    "sourceCount": 47,
     "coreDecisionCount": 5,
     "primaryThesisCount": 5,
     "topicSectionCount": 6,
-    "coreThesisCount": 3,
+    "coreThesisCount": 5,
     "coreStoryAudits": [
       {
-        "title": "霍尔木兹风险重新压过外交窗口",
+        "title": "美伊冲突从海峡向地区基地横向扩展",
         "sourceCount": 5,
         "sourceDomainCount": 4,
         "roles": {
@@ -1408,7 +1446,7 @@
         "passed": true
       },
       {
-        "title": "英印CETA降摩擦，海湾风险增成本",
+        "title": "加拿大山火烟霾把气候风险转为即时公共运营风险",
         "sourceCount": 4,
         "sourceDomainCount": 4,
         "roles": {
@@ -1420,9 +1458,33 @@
         "passed": true
       },
       {
-        "title": "埃博拉扩展首先是公共卫生能力问题",
-        "sourceCount": 3,
+        "title": "欧乌Drone Deal把战场经验接入欧洲工业体系",
+        "sourceCount": 4,
         "sourceDomainCount": 3,
+        "roles": {
+          "primary": true,
+          "eventRegion": true,
+          "externalVerification": true
+        },
+        "errors": [],
+        "passed": true
+      },
+      {
+        "title": "中国二季度放缓提高内需政策执行压力",
+        "sourceCount": 6,
+        "sourceDomainCount": 3,
+        "roles": {
+          "primary": true,
+          "eventRegion": true,
+          "externalVerification": true
+        },
+        "errors": [],
+        "passed": true
+      },
+      {
+        "title": "埃博拉扩展的核心仍是发现、转诊和隔离能力",
+        "sourceCount": 4,
+        "sourceDomainCount": 4,
         "roles": {
           "primary": true,
           "eventRegion": true,
@@ -1433,7 +1495,7 @@
       }
     ],
     "storyEvidenceEnforced": true,
-    "sourceDomainCount": 21,
+    "sourceDomainCount": 27,
     "deepResearchMode": true,
     "deepResearchEnforced": true,
     "deepResearchEnforceFromDate": "2026-07-12",
@@ -1444,15 +1506,12 @@
     "observationCount": 6,
     "fillerCount": 0,
     "repeatedPairCount": 0,
-    "decisionLayerDensityPct": 18.29,
+    "decisionLayerDensityPct": 28.09,
     "errors": [],
     "warnings": [],
     "repeatedPairs": []
   },
   "limitations": [
-    "RSS 采集出现 1 个错误。",
-    "RSS 使用 1 次回退。",
-    "RSS 时间戳质量受限：0 条过期、45 条未知，合计占 11.87%。",
-    "中国行情有 35 条旧版记录未显式写入价格日期；因其在报告日16:00后抓取，按报告日收盘作保守推断。"
+    "RSS 时间戳质量受限：0 条过期、15 条未知，合计占 3.84%。"
   ]
 }
