@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "frozen": false,
+  "reportDate": "2026-07-16",
+  "contentHash": "ee9538c55b4b5716da9b0f344f7b29d9856613a3725aa57c0ee1127840ba0b18",
+  "payloadSha256": "0477b3657242a368da1a8a3f54ff80d95939e6aac1e38247fbccc74f88d110d5",
+  "snapshotRevision": 0,
+  "snapshotSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "candidateFingerprint": "0000000000000000000000000000000000000000000000000000000000000000",
+  "repositoryCommits": {
+    "root": "64ca8d2c2fbadea69a63a5d1d14b781268cfbb41",
+    "site": "d190ed6b6154060262a0230b91e9f96dd63e426f",
+    "trading-core": "d7c16a67e4c28f8bf4f8f47e48c123c68e934583"
+  },
+  "buildId": "atlas-build-unfrozen-2026-07-16",
+  "deploymentId": "atlas-deployment-unfrozen-2026-07-16"
+}

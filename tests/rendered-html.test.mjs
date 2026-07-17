@@ -29,6 +29,9 @@ test("server-renders the ATLAS briefing", async () => {
   const payload = JSON.parse(
     await readFile(new URL("../app/briefing.generated.json", import.meta.url), "utf8"),
   );
+  const publication = JSON.parse(
+    await readFile(new URL("../app/publication.generated.json", import.meta.url), "utf8"),
+  );
   const response = await render();
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
@@ -51,6 +54,12 @@ test("server-renders the ATLAS briefing", async () => {
   assert.match(html, /ATLAS/);
   assert.match(html, new RegExp(`data-atlas-report-date="${payload.reportDate}"`));
   assert.match(html, new RegExp(`data-atlas-content-hash="${payload.contentHash}"`));
+  assert.match(html, new RegExp(`data-atlas-payload-sha256="${publication.payloadSha256}"`));
+  assert.match(html, new RegExp(`data-atlas-snapshot-revision="${publication.snapshotRevision}"`));
+  assert.match(html, new RegExp(`data-atlas-snapshot-sha256="${publication.snapshotSha256}"`));
+  assert.match(html, new RegExp(`data-atlas-candidate-fingerprint="${publication.candidateFingerprint}"`));
+  assert.match(html, new RegExp(`data-atlas-build-id="${publication.buildId}"`));
+  assert.match(html, new RegExp(`data-atlas-deployment-id="${publication.deploymentId}"`));
   assert.match(html, /GLOBAL INTELLIGENCE/);
   assert.ok(html.includes(payload.hero.editorNote));
   assert.match(html, /今天必须知道的/);
@@ -65,19 +74,36 @@ test("server-renders the ATLAS briefing", async () => {
 });
 
 test("uses generated briefing data without starter preview residue", async () => {
-  const [page, layout, generated, runner] = await Promise.all([
+  const [page, layout, generated, publicationRaw, runner] = await Promise.all([
     readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/layout.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/briefing.generated.json", import.meta.url), "utf8"),
+    readFile(new URL("../app/publication.generated.json", import.meta.url), "utf8"),
     readFile(new URL("../build/run-vinext.mjs", import.meta.url), "utf8"),
   ]);
 
   const payload = JSON.parse(generated);
+  const publication = JSON.parse(publicationRaw);
   assert.match(page, /import generated from "\.\/briefing\.generated\.json"/);
+  assert.match(page, /import publication from "\.\/publication\.generated\.json"/);
   assert.match(layout, /ATLAS｜全球决策晨报/);
   assert.match(runner, /WRANGLER_LOG_PATH/);
   assert.match(payload.reportDate, /^\d{4}-\d{2}-\d{2}$/);
   assert.equal(payload.schemaVersion, 4);
+  assert.equal(publication.schemaVersion, 1);
+  assert.equal(publication.reportDate, payload.reportDate);
+  assert.equal(publication.contentHash, payload.contentHash);
+  assert.match(publication.payloadSha256, /^[0-9a-f]{64}$/);
+  assert.match(publication.snapshotSha256, /^[0-9a-f]{64}$/);
+  assert.match(publication.candidateFingerprint, /^[0-9a-f]{64}$/);
+  assert.match(publication.buildId, /^atlas-build-[a-z0-9-]+$/);
+  assert.match(publication.deploymentId, /^atlas-deployment-[a-z0-9-]+$/);
+  assert.deepEqual(Object.keys(publication.repositoryCommits).sort(), ["root", "site", "trading-core"]);
+  if (publication.frozen) {
+    assert.ok(publication.snapshotRevision > 0);
+  } else {
+    assert.equal(publication.snapshotRevision, 0);
+  }
   assert.ok(Array.isArray(payload.events) && payload.events.length > 0);
   assert.ok(payload.events.length >= 5 && payload.events.length <= 7);
   assert.ok(payload.scenarios.length > 0 && payload.scenarios.length <= 7);

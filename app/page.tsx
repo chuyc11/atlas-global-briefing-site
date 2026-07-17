@@ -2,6 +2,7 @@
 
 import { type KeyboardEvent as ReactKeyboardEvent, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import generated from "./briefing.generated.json";
+import publication from "./publication.generated.json";
 
 type SourceRef = { label: string; href: string };
 type BriefEvent = (typeof generated.events)[number];
@@ -292,7 +293,16 @@ export default function Home() {
   };
 
   return (
-    <main data-atlas-report-date={generated.reportDate} data-atlas-content-hash={generated.contentHash}>
+    <main
+      data-atlas-report-date={generated.reportDate}
+      data-atlas-content-hash={generated.contentHash}
+      data-atlas-payload-sha256={publication.payloadSha256}
+      data-atlas-snapshot-revision={publication.snapshotRevision}
+      data-atlas-snapshot-sha256={publication.snapshotSha256}
+      data-atlas-candidate-fingerprint={publication.candidateFingerprint}
+      data-atlas-build-id={publication.buildId}
+      data-atlas-deployment-id={publication.deploymentId}
+    >
       <header className="site-header">
         <a className="brand" href="#top" aria-label="返回报告顶部">
           <span className="brand-mark">A</span>
