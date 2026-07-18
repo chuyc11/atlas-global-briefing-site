@@ -55,9 +55,17 @@ async function readRetainedGenerations(projectRoot) {
 export async function snapshotCurrentStaticAssets(projectRoot) {
   const staticRoot = path.join(projectRoot, "dist", "client", "_next", "static");
   if (!(await exists(staticRoot))) return null;
-  const retainedGenerations = await readRetainedGenerations(projectRoot);
-  const retained = new Set(retainedGenerations.flat());
+  const configuredGenerations = await readRetainedGenerations(projectRoot);
   const currentFiles = await listFiles(staticRoot);
+  const currentFileSet = new Set(currentFiles);
+  // The retention manifest is mutable runtime state and can outlive a cleaned
+  // dist directory.  Only accept paths that were independently enumerated from
+  // the current static root; this both removes stale entries and prevents a
+  // crafted manifest from turning copyFile into a path-traversal read.
+  const retainedGenerations = configuredGenerations
+    .map((generation) => [...new Set(generation.filter((relative) => currentFileSet.has(relative)))])
+    .filter((generation) => generation.length);
+  const retained = new Set(retainedGenerations.flat());
   const activeGeneration = currentFiles.filter((relative) => !retained.has(relative)).sort();
   const generations = [activeGeneration, ...retainedGenerations]
     .filter((generation) => generation.length)
