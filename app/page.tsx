@@ -7,7 +7,10 @@ import publication from "./publication.generated.json";
 type SourceRef = { label: string; href: string };
 type BriefEvent = (typeof generated.events)[number];
 type Scenario = (typeof generated.scenarios)[number];
-type Portfolio = typeof generated.portfolios.us;
+type Portfolio = typeof generated.portfolios.us & {
+  valuationAsOf?: string | null;
+  valuationIsStale?: boolean;
+};
 type EventScoring = {
   eligible_sample_count?: number;
   matured_v2_prediction_count?: number;
@@ -204,6 +207,14 @@ function PortfolioDialog({ portfolio, onClose }: { portfolio: Portfolio; onClose
             <div><span>最近一期盈亏</span><strong>{money(portfolio.periodPnl, portfolio.baseCurrency, true)}</strong></div>
             <div><span>累计收益</span><strong>{portfolio.return}</strong></div>
           </div>
+          <div className="data-limitation">
+            <b>{portfolio.valuationIsStale ? "价格标记并非报告日" : "价格标记日期"}</b>
+            <p>
+              {portfolio.valuationAsOf
+                ? `持仓价格标记最早截至 ${portfolio.valuationAsOf}；账户现金与成交截至 ${portfolio.asOf}。`
+                : "持仓价格缺少可验证标记日期；总权益不能视为报告日估值。"}
+            </p>
+          </div>
           {portfolio.limitations.length > 0 && <div className="data-limitation"><b>数据限制</b><DetailList items={portfolio.limitations} /></div>}
           <section className="position-section">
             <h3>匿名资产配置</h3>
@@ -387,7 +398,7 @@ export default function Home() {
       </section>
 
       <section className="portfolio-section">
-        {([generated.portfolios.us, generated.portfolios.china] as Portfolio[]).map((portfolio, index) => <div className={`portfolio-card ${index === 0 ? "dark" : "paper"}`} key={portfolio.name}><div className="portfolio-top"><span>{portfolio.name}</span><small>虚拟账户透明摘要</small></div><strong className="portfolio-value">{portfolio.value} {portfolio.baseCurrency}</strong><div className={`return ${(portfolio.periodPnl ?? portfolio.returnPct) >= 0 ? "positive" : "negative"}`}>本期 {money(portfolio.periodPnl, portfolio.baseCurrency, true)} · 累计 {portfolio.return} · 现金 {money(portfolio.cash, portfolio.baseCurrency)}</div><div className="allocation-bar" aria-label={`${portfolio.name}资产配置`}>{portfolio.allocations.map((item) => <span style={{ width: `${item.pct}%` }} key={item.label}></span>)}</div><div className="allocation-legend">{portfolio.allocations.map((item) => <span key={item.label}>{item.label} {item.pct}%</span>)}</div><button type="button" className="portfolio-open" onClick={(clickEvent) => openPortfolio(portfolio, clickEvent.currentTarget)}>查看账户摘要 <span aria-hidden="true">→</span></button></div>)}
+        {([generated.portfolios.us, generated.portfolios.china] as Portfolio[]).map((portfolio, index) => <div className={`portfolio-card ${index === 0 ? "dark" : "paper"}`} key={portfolio.name}><div className="portfolio-top"><span>{portfolio.name}</span><small>虚拟账户透明摘要</small></div><strong className="portfolio-value">{portfolio.value} {portfolio.baseCurrency}</strong><div className={`return ${(portfolio.periodPnl ?? portfolio.returnPct) >= 0 ? "positive" : "negative"}`}>本期 {money(portfolio.periodPnl, portfolio.baseCurrency, true)} · 累计 {portfolio.return} · 现金 {money(portfolio.cash, portfolio.baseCurrency)}</div><small>{portfolio.valuationIsStale ? `价格标记截至 ${portfolio.valuationAsOf ?? "未提供日期"}（非报告日）` : `价格标记截至 ${portfolio.valuationAsOf ?? portfolio.asOf}`}</small><div className="allocation-bar" aria-label={`${portfolio.name}资产配置`}>{portfolio.allocations.map((item) => <span style={{ width: `${item.pct}%` }} key={item.label}></span>)}</div><div className="allocation-legend">{portfolio.allocations.map((item) => <span key={item.label}>{item.label} {item.pct}%</span>)}</div><button type="button" className="portfolio-open" onClick={(clickEvent) => openPortfolio(portfolio, clickEvent.currentTarget)}>查看账户摘要 <span aria-hidden="true">→</span></button></div>)}
       </section>
 
       <section className="system-section" id="system">
