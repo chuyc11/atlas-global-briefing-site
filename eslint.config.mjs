@@ -9,6 +9,9 @@ const eslintConfig = defineConfig([
   globalIgnores([
     // Default ignores of eslint-config-next:
     ".next/**",
+    // vinext stores generated build state and retained production assets here.
+    // These files are deployment artifacts, not lint-authoritative source.
+    ".vinext/**",
     "out/**",
     "build/**",
     "next-env.d.ts",

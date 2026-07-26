@@ -1,10 +1,11 @@
 import assert from "node:assert/strict";
-import { mkdtemp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
+import { mkdtemp, mkdir, readFile, rm, stat, utimes, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import test from "node:test";
 
 import {
+  cleanupStaleStaticAssetSnapshots,
   restorePreviousStaticAssets,
   snapshotCurrentStaticAssets,
 } from "../build/preserve-live-assets.mjs";
@@ -65,6 +66,38 @@ test("static snapshots ignore stale and out-of-root manifest entries", async () 
     assert.deepEqual(snapshot.generations, [["chunks/live.js"]]);
     assert.equal(await readFile(path.join(snapshot.root, "chunks", "live.js"), "utf8"), "live");
     await restorePreviousStaticAssets(root, snapshot);
+  } finally {
+    await rm(root, { recursive: true, force: true });
+  }
+});
+
+test("lint excludes generated vinext state and retained production snapshots", async () => {
+  const config = await readFile(new URL("../eslint.config.mjs", import.meta.url), "utf8");
+
+  assert.match(config, /["']\.vinext\/\*\*["']/);
+});
+
+test("snapshot cleanup removes only stale direct vinext build snapshots", async () => {
+  const root = await mkdtemp(path.join(os.tmpdir(), "atlas-live-assets-cleanup-"));
+  const stateRoot = path.join(root, ".vinext");
+  const stale = path.join(stateRoot, "live-static-snapshot-101-1000");
+  const fresh = path.join(stateRoot, "live-static-snapshot-202-2000");
+  const unrelated = path.join(stateRoot, "dev");
+  try {
+    await mkdir(stale, { recursive: true });
+    await mkdir(fresh, { recursive: true });
+    await mkdir(unrelated, { recursive: true });
+    await writeFile(path.join(stale, "old.js"), "old", "utf8");
+    const now = new Date("2026-07-22T12:00:00Z");
+    const old = new Date("2026-07-20T12:00:00Z");
+    await utimes(stale, old, old);
+
+    const removed = await cleanupStaleStaticAssetSnapshots(root, now.getTime());
+
+    assert.deepEqual(removed, ["live-static-snapshot-101-1000"]);
+    await assert.rejects(stat(stale), { code: "ENOENT" });
+    assert.equal((await stat(fresh)).isDirectory(), true);
+    assert.equal((await stat(unrelated)).isDirectory(), true);
   } finally {
     await rm(root, { recursive: true, force: true });
   }

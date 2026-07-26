@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
-  "frozen": false,
-  "reportDate": "2026-07-16",
-  "contentHash": "ee9538c55b4b5716da9b0f344f7b29d9856613a3725aa57c0ee1127840ba0b18",
-  "payloadSha256": "0477b3657242a368da1a8a3f54ff80d95939e6aac1e38247fbccc74f88d110d5",
-  "snapshotRevision": 0,
-  "snapshotSha256": "0000000000000000000000000000000000000000000000000000000000000000",
-  "candidateFingerprint": "0000000000000000000000000000000000000000000000000000000000000000",
+  "frozen": true,
+  "reportDate": "2026-07-26",
+  "contentHash": "50914b77fc91d25b9b7c272916b760ece0bd17aa63e4fcb57451dca0202db8c7",
+  "payloadSha256": "7c42767ca172a51a4b65275b5134050d6b2fde9113beca36dfb64bb119787076",
+  "snapshotRevision": 1,
+  "snapshotSha256": "7c3f829f329639c228c14691398d6f54165a6a56c2a343960c94195ce7336ea6",
+  "candidateFingerprint": "4d5efcb32718491e840fd4207fb717d475e0402794a44c8234314da26363cbce",
   "repositoryCommits": {
-    "root": "64ca8d2c2fbadea69a63a5d1d14b781268cfbb41",
-    "site": "d190ed6b6154060262a0230b91e9f96dd63e426f",
-    "trading-core": "d7c16a67e4c28f8bf4f8f47e48c123c68e934583"
+    "root": "e78904be63050026a8dff96e21e2293c6c445ac6",
+    "site": "2e5f7d41135a879d4c821085735f7e8ea9cb824b",
+    "trading-core": "249ed6c96b45196dcc083f7f0768761111898882"
   },
-  "buildId": "atlas-build-unfrozen-2026-07-16",
-  "deploymentId": "atlas-deployment-unfrozen-2026-07-16"
+  "buildId": "atlas-build-9160bbfd3ec0201ba0a21e42d55c3ae146dcc460afb059cacf1fb6039a2dbb29",
+  "deploymentId": "atlas-deployment-89b798dd3aeeb4d0364342df4f748a1c7fbafef1b44817eb9706dbe92717650e"
 }

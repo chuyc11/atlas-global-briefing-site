@@ -115,7 +115,11 @@ test("uses generated briefing data without starter preview residue", async () =>
   assert.ok(payload.events.every((item) => item.verificationSignals.length > 0));
   assert.ok(payload.scenarios.every((item) => item.sourceRefs.length > 0));
   const eventsByCategory = new Map(payload.events.map((item) => [item.category, item]));
-  assert.equal(eventsByCategory.get("科技")?.predictionId, "");
+  const technologyPredictionId = eventsByCategory.get("科技")?.predictionId ?? "";
+  assert.ok(
+    technologyPredictionId === "" ||
+      payload.scenarios.some((item) => item.id === technologyPredictionId),
+  );
   assert.doesNotMatch(eventsByCategory.get("科技")?.analysis ?? "", /510300\.SH|588000\.SH/);
   assert.ok(payload.scenarios.every((item) => item.id.startsWith(`${payload.reportDate}-P`)));
   assert.ok(

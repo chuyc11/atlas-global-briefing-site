@@ -12,6 +12,8 @@ import process from "node:process";
 
 const MANIFEST_NAME = "retained-static-assets.json";
 const MAX_RETAINED_GENERATIONS = 5;
+const STALE_SNAPSHOT_AGE_MS = 24 * 60 * 60 * 1000;
+const SNAPSHOT_DIRECTORY_PATTERN = /^live-static-snapshot-\d+-\d+$/;
 
 async function exists(target) {
   try {
@@ -52,7 +54,36 @@ async function readRetainedGenerations(projectRoot) {
   }
 }
 
+export async function cleanupStaleStaticAssetSnapshots(projectRoot, now = Date.now()) {
+  const stateRoot = path.resolve(projectRoot, ".vinext");
+  let entries;
+  try {
+    entries = await readdir(stateRoot, { withFileTypes: true });
+  } catch (error) {
+    if (error?.code === "ENOENT") return [];
+    throw error;
+  }
+
+  const removed = [];
+  for (const entry of entries) {
+    if (!entry.isDirectory() || !SNAPSHOT_DIRECTORY_PATTERN.test(entry.name)) continue;
+    const candidate = path.resolve(stateRoot, entry.name);
+    // The recursive removal target must remain one direct child of .vinext.
+    if (path.dirname(candidate) !== stateRoot) continue;
+    try {
+      const metadata = await stat(candidate);
+      if (now - metadata.mtimeMs < STALE_SNAPSHOT_AGE_MS) continue;
+      await rm(candidate, { recursive: true, force: true });
+      removed.push(entry.name);
+    } catch (error) {
+      if (error?.code !== "ENOENT") throw error;
+    }
+  }
+  return removed.sort();
+}
+
 export async function snapshotCurrentStaticAssets(projectRoot) {
+  await cleanupStaleStaticAssetSnapshots(projectRoot);
   const staticRoot = path.join(projectRoot, "dist", "client", "_next", "static");
   if (!(await exists(staticRoot))) return null;
   const configuredGenerations = await readRetainedGenerations(projectRoot);
