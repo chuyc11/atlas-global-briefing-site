@@ -62,3 +62,35 @@ test("current package lock satisfies the release policy", async () => {
   const result = evaluateDependencySources(lockfile);
   assert.equal(result.passed, true, result.errors.slice(0, 10).join("\n"));
 });
+
+test("security-sensitive dependency pins stay above the remediated releases", async () => {
+  const [manifest, lockfile] = await Promise.all([
+    readFile(new URL("../package.json", import.meta.url), "utf8").then(JSON.parse),
+    readFile(new URL("../package-lock.json", import.meta.url), "utf8").then(JSON.parse),
+  ]);
+
+  assert.deepEqual(manifest.overrides, {
+    postcss: "8.5.24",
+    sharp: "0.35.3",
+    "fast-uri": "4.1.1",
+    minimatch: "10.2.5",
+  });
+  assert.equal(manifest.dependencies.next, "16.2.12");
+  assert.equal(manifest.dependencies.react, "19.2.8");
+  assert.equal(manifest.dependencies["react-dom"], "19.2.8");
+  assert.equal(manifest.devDependencies["eslint-config-next"], "16.2.12");
+  assert.equal(manifest.devDependencies["react-server-dom-webpack"], "19.2.8");
+
+  for (const [path, version] of Object.entries({
+    "node_modules/next": "16.2.12",
+    "node_modules/react": "19.2.8",
+    "node_modules/react-dom": "19.2.8",
+    "node_modules/react-server-dom-webpack": "19.2.8",
+    "node_modules/postcss": "8.5.24",
+    "node_modules/sharp": "0.35.3",
+    "node_modules/fast-uri": "4.1.1",
+    "node_modules/minimatch": "10.2.5",
+  })) {
+    assert.equal(lockfile.packages[path]?.version, version, path);
+  }
+});
