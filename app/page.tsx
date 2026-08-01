@@ -5,8 +5,13 @@ import generated from "./briefing.generated.json";
 import publication from "./publication.generated.json";
 
 type SourceRef = { label: string; href: string };
-type BriefEvent = (typeof generated.events)[number];
-type Scenario = (typeof generated.scenarios)[number];
+type Instrument = { symbol: string; thesis: string; risk: string };
+type BriefEvent = Omit<(typeof generated.events)[number], "instruments"> & {
+  instruments: Instrument[];
+};
+type Scenario = Omit<(typeof generated.scenarios)[number], "instruments"> & {
+  instruments: Instrument[];
+};
 type Portfolio = typeof generated.portfolios.us & {
   valuationAsOf?: string | null;
   valuationIsStale?: boolean;
