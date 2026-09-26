@@ -19,7 +19,7 @@
     "audit:sources": "node security/dependency-source-policy.mjs"
   },
   "dependencies": {
-    "next": "16.2.12",
+    "next": "16.3.6",
     "react": "19.2.8",
     "react-dom": "19.2.8"
   },
